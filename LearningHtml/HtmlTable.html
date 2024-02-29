@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang ='en-US'>
+<head>
+<meta charset='utf-8'>
+<meta name='description' content='What are HTML Tables and how do they store and organise data. Make your very own table on your website using simple HTML codes now!'>
+<meta name='keywords' content='Html tables,Tables styles,organise data,table tags,th,tags,td tags,size of the table,code tables,align tables'>
+<meta name='author' content='MrWik'><link rel="apple-touch-icon" href="Imagedata/Revisezone/Logo.png"><meta name='theme-color' content='black'>
+<meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="shortcut icon" href="../../Imagedata/Revisezone/Logo.png" type="x-icon/image">
+<link class ="Style" rel='stylesheet' href='../../Style/Master.css' media ="screen and (min-width:1000px)">
+<link class ="Style" rel='stylesheet' href='../../Style/Mobile.css' media ="screen and (max-width:999px)">
+<link class ="Style" rel='stylesheet' href='../../Style/printstyle.css' media ="print">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-170507780-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-170507780-1');
+</script>
+
+<title>HTML Table  - Revise Zone</title>
+</head>
+<body onload="saved()">
+  
+  
+<div class="top-nav-main">
+<a href="../../home.html"title ="Home">Home</a>
+<a href="../Cs/CS.html"title ="Computer Science"><abbr>CS</abbr></a>
+<a href="../SEO/SEO.html" title ="SEO">SEO</a>
+<a href="../LearningHtml/Introduction.html">HTML</a>
+
+
+
+
+<div class="login-more">
+<a onclick="NightmodeOn()" id="Mode">Night</a>
+<a onclick="More()" id="more">More</a>
+
+</div>
+</div>
+<div class="dropdesign">
+<span id="goback-white" onclick="Gobackdropdown()">&#10006;</span>
+<div class="flex-box-row">
+<div>
+<h2>Revise Now</h2>
+<h3>Cambridge AS levels</h3>
+<a href="../Physics/Physics.html">Physics</a>
+<a href="../Chemistry/Chemistry.html">Chemistry</a>
+<a href="../Cs/CS.html">Computer Science</a>
+<h3>Programming and coding</h3>
+<a href="../LearningHtml/Introduction.html">Learn HTML</a>
+<a href="../SEO/SEO.html">Learn SEO</a>
+
+
+
+
+
+</div>
+<div>
+<h2>More</h2>
+<h3>What do you want<br> to do?</h3>
+
+<a href="../Other/ContactUs.html">Contact us</a>
+<a href="../Other/Donate.html">Donate</a>
+<a href="../Other/Support.html">Support</a>
+<a href="../Other/Services.html">More Services</a>
+<a href="https://twitter.com/MrWiscus">Send a tweet</a>
+<a href="../../home.html#socialmedia">Social media</a>
+
+
+
+</div>
+</div>
+</div>
+
+<div class="spacing"></div>
+<div class="grid-layout-main">
+<div>
+<div class="side-nav-universal">
+<br>
+<br>
+<br>
+<h2>HTML Basics</h2>
+<a href="Introduction.html"title="Introduction to html">Learn HTML</a>
+<a href="HtmlBasics.html"title="Basics">HTML Basics</a>
+<a href="Htmlelements.html" title="Html Elements">HTML Elements</a>
+<a href="HtmlAttributes.html" title="Html Attribute">HTML Attributes</a>
+<a href="HtmlComments.html"title="Html Comments">HTML Comments</a>
+<a href="HtmlColors.html"title="Html Colors">HTML Colors</a>
+<a href="HtmlStyle.html"title="Html Style">HTML Style</a>
+<a href="HtmlCSS.html"title="Html CSS">HTML CSS</a>
+<a href="HtmlHeadings.html"title="Html Headings and paragraphs">HTML Headings & Paragraphs</a>
+<a href="HtmlFormatting.html"title="Html Formatting">HTML Formatting</a>
+<a href="HtmlQuotations.html" title="Html Quotations">HTML Quotations</a>
+<a href="HtmlLinks.html"title="Html Links">HTML Links</a>
+<a href="HtmlImages.html" title="Html Images">HTML Images</a>
+<a href="HtmlList.html" title="Html Lists" >HTML Lists</a>
+<br>
+<h2>HTML Intermediate</h2>
+<a href="HtmlTable.html">HTML Tables</a>
+<a href="HtmlBlock.html">HTML Blocks</a>
+<a href="HtmlClasses.html">HTML Classes & Ids</a>
+<a href="HtmlIframes.html">HTML Iframes</a>
+<a href="HtmlHead.html">HTML Head</a>
+<a href="HtmlLayout.html">HTML Layouts</a>
+<a href="HtmlPaths.html">HTML File Paths</a>
+<a href="HtmlPictures.html">HTML Pictures</a>
+<a href="HtmlAudio.html">HTML Audio</a>
+<a href="HtmlVideo.html">HTML Video</a>
+<a href="HtmlYoutube.html">HTML Youtube</a>
+<br>
+<h2>HTML Advance</h2>
+<a href="HtmlForms.html">HTML Forms</a>
+<a href="HtmlSelect.html">HTML Form Attributes</a>
+<a href="HtmlPost.html">HTML POST & GET</a>
+<br>
+<h2>SEO Tips & Others</h2>
+<a href="HtmlSEO.html">SEO Tips</a>
+<a href="HtmlHosting.html">Hosting Sites</a>
+<a href="HtmlSEOTools.html">SEO Tools</a>
+
+
+</div>
+</div>
+<div>
+<div class="Mainpage">
+
+<br>
+<br>
+<br>
+<br>
+<div>
+
+
+
+<div class="pagenav">
+<a href="HtmlList.html">Back</a>
+<a href="HtmlBlock.html">Next</a>
+</div>
+<span  onclick="Mobilebut()"  id = "mobilebutton"><img alt="more topic chapters"  src="../../Imagedata/Revisezone/morecontent.png"/></span>
+<h1>HTML Table Tags</h1>
+<p>Tables are used to store data in a structured and organised way</p>
+<p>You can easily make tables using HTML coding. Also Tables make your website your organised and much more better looking.</p>
+<p>Here is an example of a simple table</p>
+<table class="table-design">
+<tr>
+<th> Type</th>
+<th>Speed in terms of c</th>
+<th>KE</th>
+</tr>
+<tr>
+<td>Alpha radiation</td>
+<td>5%c</td>
+<td>More than &beta;</td>
+</tr>
+<tr>
+<td>Beta radiation</td>
+<td>99%c</td>
+<td>Range of KE as due to range of speeds</td>
+</tr>
+<tr>
+<td>Gamma radiation</td>
+<td>c</td>
+<td>High - depends on the frequency- usually a specific value. Where as beta always changes.</td>
+
+</tr>
+</table>
+<p>As you can see i have made a table to structure and arrange related data in columns and each row is a different item or object which in this case is the type of radiation</p>
+<p>Tables can be style very easily using CSS</p>
+<p>We learn the simple syntax to create a simple HTML table</p>
+<p>Befor that just remember this elements/tags which are included in the formation of the table</p>
+<p>Trust me it looks difficult but it is very simple</p>
+<p>&#60;table> is the element which is used to create the overall outline and structure of the table</p>
+<p>&#60;tr> is the element which is used to create a single row. Every &#60;tr> tag is used to hold a single row - tr stands for table row</p>
+<p>&#60;th> is the element which is used to hold heading data for each cell or block of the table This is usually defined for the first row</p>
+<p>&#60;td> is the element which is used to hold data for each cell or block of the table This is usually defined for the rest of the rows.</p>
+<p>Let's see the same example in the code form. Remember the above table is designed using CSS styling</p>
+<textarea>
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Radiation</h2>
+<table>
+<tr>
+<th> Type</th>
+<th>Speed in terms of c</th>
+<th>KE</th>
+</tr>
+<tr>
+<td>Alpha radiation</td>
+<td>5%c</td>
+<td>More than &beta;</td>
+</tr>
+<tr>
+<td>Beta radiation</td>
+<td>99%c</td>
+<td>Range of KE as due to range of speeds</td>
+</tr>
+<tr>
+<td>Gamma radiation</td>
+<td>c</td>
+<td>High - depends on the frequency- usually a specific value. Where as beta always changes.</td>
+
+</tr>
+</table>
+
+</body>
+</html>
+</textarea>
+
+
+<a class="runbut" href ="../../Filedata/HtmlEx/table.html" target="table">Run</a>
+<iframe name="table" >
+</iframe>
+<p>As you can see the table may not have an outline or border. In most browsers, the default border or outline for tables is none. We need to style it using CSS to get the border. Most websites states a border is formed but this is outdated. This is because tables are very old tags which only give the structure of the table data.</p>
+<h2>&#60;caption> element & tag</h2>
+<p>If you want to add a small heading or title to a html table you could use the &#60;caption element</p>
+<p>But there is a rule which you must follow the &#60;caption> element must come just after the &#60;table> tag or else it wouldn't work</p>
+<p>Let's see another example</p>
+<textarea>
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Radiation</h2>
+
+<table>
+<caption>Property</caption>
+<tr>
+<th> Type</th>
+<th>Speed in terms of c</th>
+<th>KE</th>
+</tr>
+<tr>
+<td>Alpha radiation</td>
+<td>5%c</td>
+<td>More than &beta;</td>
+</tr>
+<tr>
+<td>Beta radiation</td>
+<td>99%c</td>
+<td>Range of KE as due to range of speeds</td>
+</tr>
+<tr>
+<td>Gamma radiation</td>
+<td>c</td>
+<td>High - depends on the frequency- usually a specific value. Where as beta always changes.</td>
+
+</tr>
+</table>
+
+</body>
+</html>
+</textarea>
+
+
+<a class="runbut" href ="../../Filedata/HtmlEx/caption.html" target="caption">Run</a>
+<iframe name="caption" >
+</iframe>
+<p>The only change made to it is the addition of a caption tag. This creates a small heading for the table</p>
+<h2>How to add a border to a HTML table</h2>
+<p>To add a html border or outline to the table, we need to use CSS styling or the style attribute</p>
+<p>We use the border property and define the property for the &#60;table> and &#60;th> and&#60;td> tags</p>
+<p>This should be under the style tag under head or under a CSS file</p>
+<pre>
+table,th,td {
+border:solid 1px black;
+}
+</pre>
+<p>Don't worry if you don't understand. This is a CSS topic we will talk about this fully under the CSS section</p>
+<p>Let us see an example</p>
+<textarea>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table,th,td {
+border:solid 1px black;
+}
+</style>
+</head>
+<body>
+<h2>Radiation</h2>
+<table>
+<tr>
+<th> Type</th>
+<th>Speed in terms of c</th>
+<th>KE</th>
+</tr>
+<tr>
+<td>Alpha radiation</td>
+<td>5%c</td>
+<td>More than &beta;</td>
+</tr>
+<tr>
+<td>Beta radiation</td>
+<td>99%c</td>
+<td>Range of KE as due to range of speeds</td>
+</tr>
+<tr>
+<td>Gamma radiation</td>
+<td>c</td>
+<td>High - depends on the frequency- usually a specific value. Where as beta always changes.</td>
+
+</tr>
+</table>
+
+</body>
+</html>
+</textarea>
+
+
+<a class="runbut" href ="../../Filedata/HtmlEx/bordertable.html" target="bordertable">Run</a>
+<iframe name="bordertable" >
+</iframe>
+<p>By default, the border is doubled and has spaces between. We can cancel this off by using the border-collapse property</p>
+<h4>border-collapse:collapse;</h4>
+<textarea>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table,th,td {
+border:1px solid black;
+
+}
+th,td{
+collapse-border:collapse;
+}
+</style>
+</head>
+<body>
+<h2>Radiation</h2>
+<table>
+<tr>
+<th> Type</th>
+<th>Speed in terms of c</th>
+<th>KE</th>
+</tr>
+<tr>
+<td>Alpha radiation</td>
+<td>5%c</td>
+<td>More than &beta;</td>
+</tr>
+<tr>
+<td>Beta radiation</td>
+<td>99%c</td>
+<td>Range of KE as due to range of speeds</td>
+</tr>
+<tr>
+<td>Gamma radiation</td>
+<td>c</td>
+<td>High - depends on the frequency- usually a specific value. Where as beta always changes.</td>
+
+</tr>
+</table>
+
+</body>
+</html>
+</textarea>
+
+
+<a class="runbut" href ="../../Filedata/HtmlEx/collapse.html" target="collapse">Run</a>
+<iframe name="collapse" >
+</iframe>
+
+<h2>The Border-spacing property</h2>
+<p>If you want to increase the spaces between the cells then we use the border-spacing property</p>
+<textarea>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table,th,td {
+border:1px solid black;
+
+}
+table{
+border-spacing:10px;
+}
+</style>
+</head>
+<body>
+<h2>Radiation</h2>
+<table>
+<tr>
+<th> Type</th>
+<th>Speed in terms of c</th>
+<th>KE</th>
+</tr>
+<tr>
+<td>Alpha radiation</td>
+<td>5%c</td>
+<td>More than &beta;</td>
+</tr>
+<tr>
+<td>Beta radiation</td>
+<td>99%c</td>
+<td>Range of KE as due to range of speeds</td>
+</tr>
+<tr>
+<td>Gamma radiation</td>
+<td>c</td>
+<td>High - depends on the frequency- usually a specific value. Where as beta always changes.</td>
+
+</tr>
+</table>
+
+</body>
+</html>
+</textarea>
+
+
+<a class="runbut" href ="../../Filedata/HtmlEx/spacing.html" target="spacing">Run</a>
+<iframe name="spacing" >
+</iframe>
+<p>The border-spacing property must be defined for the table because it is the same for all the cells in the table. Also remember this point.</p>
+<div class="noteparagraphred">
+<p>The border-spacing property will not work if the border-collapse property is set to collapse</p>
+</div>
+<h2>Power a of CSS styling</h2>
+
+<div class="noteparagraphgreen">
+<p>With CSS anything looks beautiful. Don't worry you will master CSS using our CSS resource and examples. It's that easy!</p>
+</div>
+<p>We won't talk much about styling because this is not the CSS styling chapter</p>
+<p>However, will state what are somethings which CSS styling can do to a table</p>
+<p>Align the text to center with in cells</p>
+<p>Change the background color of the table</p>
+<p>Change the size of the table</p>
+<p>Change the font of the text within the table</p>
+<p>Color individual cells</p>
+<p>Change the color of cells or rows or table when a mouse is over it</p>
+<br>
+<br>
+<div class="pagenav">
+<a href="HtmlList.html">Back</a>
+<a href="HtmlBlock.html">Next</a>
+</div>
+
+
+<br><br>
+
+</footer>
+</div>
+</div>
+<footer><p>Revisezone.com Copyright 2020 Developers & Coding section</p>
+</div>
+<script src="../../WebScript/Main-script.js">
+</script>
+</body></html>
+
+

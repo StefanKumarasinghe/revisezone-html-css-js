@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='description' content='What is an Algorithm and what you need to know for your Cambridge computer science practical paper!'>
+  <meta name='keywords' content=''>
+  <meta name='author' content='Wiscus'>
+  <link rel="apple-touch-icon" href="Imagedata/Revisezone/Logo.png">
+  <meta name='theme-color' content='black'>
+  <meta name='viewport' content='width=device-width initial-scale=1'>
+  <link rel="shortcut icon" href="../../Imagedata/Revisezone/Logo.png" type="x-icon/image">
+  <link class="Style" rel='stylesheet' href='../../Style/Master.css' media="screen and (min-width:1000px)">
+  <link class="Style" rel='stylesheet' href='../../Style/Mobile.css' media="screen and (max-width:999px)">
+  <link class="Style" rel='stylesheet' href='../../Style/printstyle.css' media="print"><!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170507780-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-170507780-1');
+  </script>
+  <title>Loops, Selections, Arrays & Python - Revise Zone</title>
+</head>
+<body onload="saved()">
+  <div class="progress-container"></div>
+  <div class="top-nav-main">
+    <a href="../../home.html" title="Home">Home</a> <a href="../Chemistry/Chemistry.html" title="Chemistry"><abbr>Chemistry</abbr></a> <a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../LearningHtml/Introduction.html">HTML</a>
+    <div class="login-more">
+      <a onclick="NightmodeOn()" id="Mode">Night</a> <a onclick="More()" id="more">More</a>
+    </div>
+  </div>
+  <div class="dropdesign">
+    <span id="goback-white" onclick="Gobackdropdown()">✖</span>
+    <div class="flex-box-row">
+      <div>
+        <h2>Revise Now</h2>
+        <h3>GCE Subjects</h3><a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../Chemistry/Chemistry.html" title="Chemistry">Chemistry</a> <a href="../Cs/CS.html" title="Computer Science">CS</a> <a href="../Accounting/Introduction.html" title="Accounting">Accounting</a>
+        <h3>Coding Lessons</h3><a href="../LearningHtml/Introduction.html" title="HTML">Learn HTML</a> <a href="../SEO/SEO.html" title="SEO">Learn SEO</a>
+      </div>
+      <div>
+        <h2>More</h2>
+        <h3>What do you want<br>
+        to do?</h3><a href="../Other/ContactUs.html" title="Contact us">Contact us</a> <a href="../Other/Support.html" title="Support">Support</a>
+      </div>
+    </div>
+  </div>
+  <div class="spacing"></div>
+  <div class="grid-layout-main">
+    <div>
+      <div class="side-nav-universal">
+        <br>
+        <br>
+        <br>
+        <h2>Computer Science AS</h2><a href="CS.html" title="Introduction">Introduction</a> <a href="InformationRepresentation.html" title="">Information Representation</a> <a href="Communication.html" title="Communication">Communications</a> <a href="Communication2.html" title="Communication">Communications 2</a> <a href="Hardware.html" title="Hardware">Hardware</a> <a href="LogicGates.html" title="LogicGates">Logic Circuits</a> <a href="ProcessorFundamentals.html" title="Processor">Processor Fundamentals</a> <a href="AssemblyLanguage.html" title="Assembly">Assembly Language</a> <a href="MonitorControlling.html" title="Sensors">Monitor & Control</a> <a href="SystemSoftware.html" title="System Software">System Software</a> <a href="DataSecurity.html" title="Security">Security, Privacy & Data Integrity</a> <a href="Ethics.html" title="Ethics">Ethics</a> <a href="Databases.html" title="databases">Databases</a><br>
+        <h2>AS Practical</h2><a href="Algorithm.html" title="Algorithm">Algorithm</a> <a href="Datastructures.html" title="Data Structures">Data Structures and more</a> <a href="Development.html" title="">Software development</a><br>
+        <br>
+        <h2>Computer Science A2</h2><a href="DataRepresentations.html" title="Data Representation">Data Representation</a> <a href="FileOrganisations.html" title="File Organisation">File Organisation</a> <a href="LogicCircuit.html" title="Logic Circuits">Advance Logic Gates</a> <a href="Internet.html" title="Internet">Internet</a> <a href="VirtualMachines.html" title="Virtual Machines">Virtual Machines</a> <a href="SystemA2.html" title="System Software">System Software</a> <a href="Security.html" title="Encryption and Security">Encryption & Security</a> <a href="AI.html" title="Artificial Intelligence">Artificial Intelligence</a><br>
+        <h2>A2 Practicals</h2><a href="../Developer/BinarySearch.html" title="Binary Search" target="blank">Binary Search</a> <a href="../Developer/LinearSearch.html" title="Linear Search" target="blank">Linear Search</a> <a href="../Developer/BubbleSort.html" title="Bubble Sort" target="blank">Bubble Sort</a> <a href="../Developer/InsertionSort.html" title="Inertion Sort" target="blank">Insertion Sort</a> <a href="../Developer/Combined.html" title="Combined Algorithm" target="blank">Combined Algorithm</a> <a href="../Developer/Stack.html" title="Stack" target="blank">Stacks</a> <a href="../Developer/Queue.html" title="Queue" target="blank">Queues</a> <a href="../Developer/LinkedList.html" title="Linked List" target="blank">Linked List</a> <a href="../Developer/BinaryTree.html" title="Binary Tree" target="blank">Binary Tree</a><br>
+        <h2>More</h2><a href="CSReference.html" title="CS Reference">Reference</a> <a href="CSEx.html" title="CS Questions">Pastpaper Questions</a>
+      </div>
+    </div>
+    <div>
+      <div class="Mainpage">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div>
+          <div class="pagenav">
+            <a href="Databases.html">Back</a> <a href="Datastructures.html">Next</a>
+          </div><span onclick="Mobilebut()" id="mobilebutton"><img alt="more topic chapters" src="../../Imagedata/Revisezone/morecontent.png"></span>
+          <h1>Loops, Selections, Arrays & Loops</h1>
+          <p>Basic algorithms won't be taught here</p>
+          <p>You need to know what an algorithm consists of:</p>
+          <p>1. Assignment</p>
+          <p>2. Sequence</p>
+          <p>3. Selection</p>
+          <p>4. Iteration</p>
+          <p>Sometimes assignment is not include as a separate point. So the Sequence , Selection and Iteration is the most important parts of an algorithm</p><br id="reference352">
+          <h2>Structured English</h2>
+          <p>This is a different form of representing an algorithm</p>
+          <p>The program is written using command words such as SET and DO</p>
+          <p>Let's see an example:</p>
+          <p>This is in pseudocode</p>
+          <pre>
+INPUT Number
+Total←0
+WHILE Number &lt;&gt; -1 DO
+  Total←Total+Number
+  INPUT Number
+ENDWHILE
+OUTPUT Total 
+</pre>
+          <p>In structured english:</p>
+          <pre>
+ENTER Number
+SET Total to 0
+WHILE Number Not equal to 0 INCREMENT TOTAL BY Number,ENTER Number
+DISPLAY Total
+</pre>
+          <p>You will need to know some points</p>
+          <p>For assignment</p>
+          <pre>SET X to 36</pre>
+          <pre>INCREMENT X BY 1</pre>
+          <p>For selection</p>
+          <pre>IF A IS GREATER THAN B
+         THEN
+            .....
+         ELSE
+            .....
+</pre>
+          <p>For Repetion</p>
+          <pre>REPEAT UNTIL A IS GREATER THAN B...
+</pre>
+          <pre>WHILE A IS GREATER THAN B ...</pre>
+          <p>For input and output</p>
+          <pre>
+     OUTPUT  A
+     DISPLAY A
+ 
+     INPUT A 
+     ENTER A
+         
+</pre><br id="reference353">
+          <h2>Assignment</h2>
+          <p>When you assign a value to a variable this is called assignment</p>
+          <pre>
+x ← 20</pre>
+          <p>We use an arrow in pseudocode to show that it is an assignment, the equal sign (=) is used in conditions and for comparisons</p>
+          <p>Totalling is a specific part of assignment</p>
+          <p>As totalling has the same principle but, the value is incremented by a certain value</p>
+          <pre>
+x ← x + 1</pre>
+          <p>However, x must be first initialised to 0</p><br id="reference354">
+          <h2>Identifier table</h2>
+          <p>Most questions asks you to draw an identifier table for your algorithm or code</p>
+          <p>This means to draw a table which contains the list of variable used in the program and their corresponding purposes and datatypes</p>
+          <p>This is a simple example</p>
+          <table class="table-design">
+            <caption>
+              Identifier Table
+            </caption>
+            <tr>
+              <th>Variable Name</th>
+              <th>Datatype</th>
+              <th>explanation</th>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td>REAL</td>
+              <td>Used to total up the class marks</td>
+            </tr>
+            <tr>
+              <td>Count</td>
+              <td>INTEGER</td>
+              <td>Used to increment the loop by 1 for every iteration</td>
+            </tr>
+            <tr>
+              <td></td>
+            </tr>
+            <tr>
+              <td>DoB</td>
+              <td>DATE</td>
+              <td>Used to record the date of birth of the user</td>
+            </tr>
+            <tr>
+              <td>Studentlist</td>
+              <td>ARRAY[1:10] OF STRING</td>
+              <td>Used to store the names of 10 students in an array</td>
+            </tr>
+          </table>
+          <p>If they ask you to draw an identifier table then you don't have to declare any variables</p><br id="reference355">
+          <h2>Selection</h2>
+          <p>Selection is when the output or code to performed depends on a certain condition being true</p>
+          <pre>
+
+IF (condition)
+
+     THEN
+           OUTPUT (statement)
+           
+     ELSE
+       OUTPUT (statement)
+                   
+END IF             
+</pre>
+          <p>This is in psudeocode and this is known as the IF statement</p>
+          <p>Notice how it is indented and also the keywords like IF are uppercase</p>
+          <p>If statements can have many condition to compare - for example if you want to check condition 1 and if it is false then check the second condition</p>
+          <pre>
+
+IF (condition1)
+
+    THEN
+      OUTPUT (statement)
+           
+    ELSE
+      IF (condition2)
+           
+         OUTPUT (statement)
+                           
+      ELSE
+                   
+         OUTPUT (statement)
+                         
+      END IF   
+                   
+END IF             
+</pre>
+          <figcaption>
+            This is simialr to an OR boolean condition
+          </figcaption>
+          <p>So the program will check the next condition if the previous one is false. If condition 1 is true it will not check the 2nd condition.</p>
+          <p>Also this is not Nested if statement</p><br id="reference356">
+          <h2>Nested If Statements</h2>
+          <p>Is an If statement within the if statement</p>
+          <pre>
+
+IF (condition1)
+
+     THEN
+         
+        IF (Condition2)
+            THEN
+              OUTPUT (statement1)
+        ENDIF
+           
+     ELSE
+         
+        OUTPUT (statement2)
+                                           
+END IF
+</pre>
+          <p>This ensures that both condition 1 and 2 must be true to do statement1</p>
+          <p>So first it checks the first condition then the second condition - Infact this is the same as an AND operator condition but, an order to it</p><br id="reference357">
+          <h2>Case Statements</h2>
+          <p>This is used when there are many conditions and a single output for each</p>
+          <pre>
+
+CASE OF (Variable)
+   (value1):(OUTPUT)
+   (value2):(OUTPUT)
+   (value2):(OUTPUT)
+   .
+   .
+   .
+   OTHERWISE:(OUTPUT)
+ENDCASE  
+   
+           
+</pre>
+          <p>The above code shows that the output to be performed depends on the value the variable contains</p>
+          <p>Below is more complex example</p>
+          <pre>
+
+CASE OF GRADE
+         'A':OUTPUT"Excellent"
+     'A','B':OUTPUT"Good"
+  'C' TO 'E':OUTPUT"Moderate"
+   .
+   .
+   .
+   OTHERWISE:OUTPUT"Fail"
+ENDCASE  
+   
+           
+</pre>
+          <p>Python doesn't have CASE statements but only elif</p><br id="reference358">
+          <h2>Count controlled loop</h2>
+          <p>This method is used when the loop is supposed to interate for a specified number of times and is use when the number of times is known</p>
+          <pre>
+FOR COUNT ← 1 TO 5
+   OUTPUT (Statement)
+ENDFOR
+   
+</pre>
+          <p>If you want, you can use NEXT COUNT instead of ENDFOR</p><br id="reference359">
+          <h2>Post conditioned loops</h2>
+          <p>The code interated or loops until a certain condition is true and the code is run atlEast once</p>
+          <pre>
+REPEAT
+   OUTPUT (statement)
+UNTIL (condition)
+
+</pre>
+          <p>While loops are better especially when there is a rogue value</p><br id="reference360">
+          <h2>Pre condition loops</h2>
+          <p>First it checks whether the condition is true and then loops while the condition is true. The program doesn't have to run atlEast once</p>
+          <pre>
+WHILE (condition) DO
+   OUTPUT (statment)
+ENDWHILE
+</pre>
+          <p>Conditon means such as comparing variables or checking a variable is larger than a value. You need to know what are arithmetical operators</p>
+          <p>Also the conditions could have boolean operators such AND or OR or NOT</p>
+          <p>An example is WHILE X&gt;3 OR X = -1 DO</p><br id="reference361">
+          <h2>Rogue Value</h2>
+          <p>When you need to loop a program but you don't know how times it will be running for and to loop it until you input all the values in an unknown list - we use a rogue value</p>
+          <p>A rogue value is a input value which terminates the loop when entered and this is usually a value which is not common in the set of input values - example (-1)</p>
+          <p>It is better to use a while loop rather than a repeat loop because the repeat loop will run atlEast once</p>
+          <p>So if the list is empty and so the first input value is a rogue value then this would either complicate the repeat loop or cause an error</p>
+          <p>Let's see a simple example</p>
+          <pre>
+INPUT Number
+Total←0
+WHILE Number &lt;&gt; -1 DO
+  Total←Total+Number
+  INPUT Number
+ENDWHILE
+OUTPUT Total 
+</pre>
+          <figcaption>
+            This totals the numbers in an unknown list which the list ends with -1
+          </figcaption><br id="reference362">
+          <h2>FLOW-CHARTS</h2>
+          <p>We will not discuss flowcharts as it is simple and just requires you to convert the psueduocode in to a graphical manner</p>
+          <p>You wiil need to know the shapes used for each type such as for conditions and outputs</p><br id="reference363">
+          <h2>1D Array</h2>
+          <p>This is used to store data of the same data type, we need to know how to declare an array</p>
+          <pre>
+DECLARE (Arrayname):ARRAY[x:y] OF DATATYPE
+</pre>
+          <p>Data type means whether it was REAL or STRING..</p>
+          <p>x and y are the boundaries, x usually start with 1 but, it could also start with 0</p>
+          <p>If we need to modify a value in the array:</p>
+          <pre>
+Arrayname[i] ← 20
+</pre>
+          <figcaption>
+            Where i is an integer(index)
+          </figcaption>
+          <p>More about arrays will be talked in the next chapter</p><br id="reference364">
+          <h2>Linear search</h2>
+          <p>This program must be remembered as they usually ask this</p>
+          <p>This is used to find a value in an array</p>
+          <pre>
+i = 0
+
+FOUND = FALSE
+MAX = 5 // This is actually the upper index
+INPUT Search
+REPEAT
+i ← i+1
+If Array[i] = Search
+   THEN
+     FOUND ← TRUE
+END If
+
+UNTIL FOUND = TRUE OR i = MAX
+IF FOUND = TRUE
+   THEN
+     OUTPUT"The value is at position",i
+   ELSE
+     OUTPUT"The value is not in the array"
+END If
+</pre>
+          <p>This is infact an easy code to remember and we could use repeat loop because the program must run atlEast once to compare</p>
+          <p>The program checks whether the value is present in the array and loops until it is present or if it reaches the end of the array.</p>
+          <p>If found the value is displayed</p>
+          <h2>Binary search</h2>
+          <p>This is an A2 topic so we will discuss this later</p><br id="reference365">
+          <h2>Bubble Sort</h2>
+          <p>In order for contents to be sorted in an array we could use some functions to do this, however we need to know the method used and so remember the code below</p>
+          <pre>
+NEW ← MAX-1
+
+INPUT ArrayName
+FOR COUNT ← 1 TO MAX-1
+
+   FOR i ← 1 TO NEW
+  
+     If ArrayName[i]&gt;ArrayName[i+1]
+       THEN
+        TempVariable ← ArrayName[i]
+        ArrayName[i] ← Arrayname[i+1]
+        ArrayName[i+1] ← TempVariable
+     END If
+
+   ENDFOR
+   NEW ← NEW-1
+  
+ENDFOR
+</pre>
+          <figcaption>
+            Another point to remember this code is used to order from lowest to the highest(ascending), if you want to switch it just change the conditions
+            <p>We will explain the above code:</p>
+            <p>So we first enter the array to be sorted</p>
+            <p>The reason why we use two loops will be explained</p>
+            <p>First inside the inner loop, the value in an element is compared with the next element. If the current element is larger than the next element then the values are swapped using a temporary variable as shown above</p>
+            <p>This gives us the idea that this sorts from Lowest to highest (ascending)</p>
+            <p>Moreover, the loop increments i to repeat the process and make sure the first element is compared with all other elements</p>
+            <p>The reason why we use MAX - 1 is that we only need to compare the elements one less than the number of elements in the array or else a value out of the array will be compared</p>
+            <p>The inner loop makes sure that the highest value is gone to the end of the array.</p>
+            <p>After one cycle has passed the program must repeat the process, this is because one cycle only makes sure that a single value is gone to the end(highest value). There is the new value(which was before the second element)and now it is at the top(but this depends)</p>
+            <p>To make it more efficient(this is important) we do not have to compare for each element in the array every time, this is because we know that for the first cycle the highest value is at the end. So for every cycle, we can compare one less of elements for every cycle</p>
+            <p>That's why we use NEW-1 , the code will still work if you don't put that but, it will compare the whole array and sometimes this is very inefficient if the array is very large</p><br>
+            <p>This is a more improved version and in my opinion I think you should use this</p>
+            <pre>
+NEW ← MAX-1
+
+INPUT ArrayName
+REPEAT
+  SORTED ← TRUE
+
+  FOR i ← 1 TO NEW
+  
+   If ArrayName[i]&gt;ArrayName[i+1]
+      THEN
+       TempVariable ← ArrayName[i]
+       ArrayName[i] ← Arrayname[i+1]
+       ArrayName[i+1] ← TempVariable
+       SORTED ← FALSE
+   END If
+
+  ENDFOR
+  NEW ← NEW-1
+  
+UNTIL SORTED = TRUE
+</pre>
+            <p>So this checks until the array is completely sorted and there is no more sorting done then obviously this means the array is already sorted and so this will end the sort when the sorted variable is true</p>
+            <h2>Text Files</h2>
+            <p>We will need to to know the pseudocode and python for how to read and write files</p><br id="reference366">
+            <h2>Create a file or write to a file</h2>
+            <p>This creates a file or overwrites an existing file</p>
+            <p>We will take the Doc.txt as an example</p>
+            <pre>
+OPENFILE "Doc.txt" FOR WRITE
+WRITEFILE "Doc.txt","Hello"
+CLOSEFILE "Doc.txt"
+</pre>
+            <figcaption>
+              This shows that the code writes the word "Hello" to the file Doc.txt
+            </figcaption>
+            <p>Instead of writing "Hello" we can write using a variable which stores a string</p><br id="reference367">
+            <h2>Appending Files</h2>
+            <p>This is used when you need to add something to an existing file</p>
+            <pre>
+OPENFILE "Doc.txt" FOR APPEND
+WRITEFILE "Doc.txt","Hello"
+CLOSEFILE "Doc.txt"
+</pre>
+            <p>The only thing which changes is the mode(append)</p><br id="reference368">
+            <h2>Reading Files</h2>
+            <pre>
+OPENFILE "Doc.txt" FOR READ
+READFILE "Doc.txt",Variable
+CLOSEFILE "Doc.txt"
+</pre>
+            <p>The variable stores the string or line which is read from the file.</p>
+            <p>Remember this only records a single line from the file and everytime the file is read, it reads the next line</p>
+            <p>If we want to read the whole file - line by line then we use:</p>
+            <pre>
+OPENFILE "Doc.txt" FOR READ
+WHILE NOT EOF("Doc.txt") DO
+   READFILE "Doc.txt",Variable
+   OUTPUT Variable
+ENDWHILE
+CLOSEFILE "Doc.txt"
+   
+</pre>
+            <p>The EOF() function checks whether the end of the file is reached. If the end is reached then the function will return true</p>
+            <p>Closefile is required</p>
+            <p>Python uses the same principle but, it doesn't have an EOF function and so it is a bit different</p><br>
+            <p>Usually these text files are asked with built-in functions so let us see what are built in functions</p><br id="reference369">
+            <h2>Built-in Functions</h2>
+            <p>These are some built-in functions used in pseudocode and in python. You will get this sheet in the exam however, you need to know the ones for python</p><br>
+            <p>We will use x as an example for a variable</p>
+            <div class="scrollflow">
+              <table class="table-design">
+                <caption>
+                  Built-in Functions
+                </caption>
+                <tr>
+                  <th>Purpose</th>
+                  <th>Psudocode</th>
+                  <th>Python</th>
+                </tr>
+                <tr>
+                  <td>Returns the length - returns an integer</td>
+                  <td>LENGTH(x)</td>
+                  <td>len(x)</td>
+                </tr>
+                <tr>
+                  <td>Returns the ASCII value of a character - returns an integer</td>
+                  <td>ASC(x)</td>
+                  <td>Not required</td>
+                </tr>
+                <tr>
+                  <td>Returns the character of the ASCII value - returns a char</td>
+                  <td>CHR(x)</td>
+                  <td>chr(x)</td>
+                </tr>
+                <tr>
+                  <td>Returns an truncated integer - returns an integer</td>
+                  <td>INT(x)</td>
+                  <td>int(x)</td>
+                </tr>
+                <tr>
+                  <td>Converts a number to a string - returns a string</td>
+                  <td>NUM_TO_STRING(x)</td>
+                  <td>str(x)</td>
+                </tr>
+                <tr>
+                  <td>Converts a string to a number - returns a real</td>
+                  <td>STRING_TO_NUM(x)</td>
+                  <td>float(x)</td>
+                </tr>
+                <tr>
+                  <td>Converts a char to uppercase - returns a char</td>
+                  <td>UCASE(x)</td>
+                  <td>Not required as these are not functions but methods</td>
+                </tr>
+                <tr>
+                  <td>Converts a char to lowercase - returns a char</td>
+                  <td>LCASE(x)</td>
+                  <td>Not required</td>
+                </tr>
+                <tr>
+                  <td>Converts a string to uppercase - returns a string</td>
+                  <td>TO_UPPER(x)</td>
+                  <td>Not required - same as UCASE</td>
+                </tr>
+                <tr>
+                  <td>Converts a string to lowercase - returns a string</td>
+                  <td>TO_LOWER(x)</td>
+                  <td>Not required - same as LCASE</td>
+                </tr>
+                <tr>
+                  <td>Slices a string(first part) - returns a string</td>
+                  <td>LEFT(x,y)</td>
+                  <td>StringVariable[:x]</td>
+                </tr>
+                <tr>
+                  <td>Slices a string(middle part) - returns a string</td>
+                  <td>MID(x,y,z)</td>
+                  <td>StringVariable[x:y]</td>
+                </tr>
+                <tr>
+                  <td>Slices a string(last part) - returns a string</td>
+                  <td>RIGHT(x,y)</td>
+                  <td>StringVariable[-x:]</td>
+                </tr>
+                <tr>
+                  <td>Returns a character of a string - returns char</td>
+                  <td>String[x]</td>
+                  <td>Variable[x]</td>
+                </tr>
+              </table>
+            </div>
+            <p>We will talk about slicing and INT(x) more</p><br id="reference370">
+            <h2>Slicing</h2>
+            <p>This is to obtain part of the array or the string</p>
+            <p>Let's take an example and use the word MR Beast</p>
+            <table class="table-design">
+              <tr>
+                <th>MR Beast</th>
+              </tr>
+            </table>
+            <p>Each character is separated and has its own index where the first character is index 1</p>
+            <p>When we use LEFT("MR Beast",4) we should get "MR B"</p>
+            <p>This means from the start, take the first 4 characters</p>
+            <p>When we use MID("MR Beast",4,2) we should get "BE" - so we start at the 4th character and take the next two characters</p>
+            <p>When we use RIGHT("MR Beast",4) we should get "East" - so this starts 4 characters before the end</p>
+            <p>In python it is a bit different</p><br id="reference371">
+            <h2>Truncating Numbers</h2>
+            <p>The INT(x) function only takes the whole number part of the real number</p>
+            <p>Example if we take INT(56.6) then we would get 56 not 57</p><br id="reference372">
+            <h2>Random Function</h2>
+            <p>The random function is used to generate any integer between two values, inclusive</p>
+            <pre>
+RANDINT(0,20)
+</pre>
+            <p>So this program returns an integer from 1 to 20 - it is different everytime</p>
+            <p>In python:</p>
+            <pre>
+randint(0,20) or randrange(0,21)
+</pre><br>
+            <br>
+            <div class="pagenav">
+              <a href="Databases.html">Back</a> <a href="Datastructures.html">Next</a>
+            </div><br>
+            <br>
+			 <h2>Recommended</h2>
+        <p>These are things you might like. Clicking these ads can help us improve our free services in the future...</p>
+            <div id="container-2a219c05affd07270c6855c66c9456d4" style="border-radius:20px;"></div>
+        
+            <div class="general container-extra flex-box-row">
+              <div>
+                <h5>End of Chapter Questions</h5>
+                <h6>Collection of Topic Questions to understand the topic more.</h6><br>
+                <a style="padding:10px; background-color:#4ea654; border-radius:3px; font:17px Os; color:#e8e4e3; text-decoration:none;" href="../../Filedata/Questions/CS/AlgorithmRevision.pdf" target="_blank">Try out</a>
+              </div>
+            </div><br>
+            <br>
+            <div class="general container-extra2 flex-box-row">
+              <div>
+                <h5>End of Chapter Videos</h5>
+                <h6>Collection of Videos to Support Your Understanding.</h6>
+                <h4>Remember these videos are handpicked by me and I feel these are the best ones out there. But I constantly update this list for each chapter. The Youtubers are more than welcome to contact me.</h4>
+                <h4>Also, don't forget to Subscribe to our Youtube channel - Wiscus</h4><br>
+                <a style="padding:10px; background-color:#4ea654; border-radius:3px; font:17px Os; color:#e8e4e3; text-decoration:none;" href="https://www.Youtube.com/watch?v=MbSfWN9KlkE&amp;list=PLfh04WZ4q7nVQc1DpiWUpVbvipjJ1nyV6" target="blank">Watch</a>
+              </div>
+            </div>
+          </figcaption>
+        </div>
+      </div><br>
+      <br>
+      <footer>
+        <p>Revisezone.com Copyright 2020</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../WebScript/Main-script.js"></script>
+</body>
+</html>

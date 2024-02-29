@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang ='en-US'>
+<head>
+<meta charset='utf-8'>
+<meta name='description' content='How do you create your own blogging site and code your very own user login page? How to recieve data from the user? Learn how to create your very forms in HTML now!'>
+<meta name='keywords' content='forms basics,HTML forms,how to recieve user data, user login,user input in websites,input tag,form tag,input types,php coding,javascript,php'>
+<meta name='author' content='MrWik'><link rel="apple-touch-icon" href="Imagedata/Revisezone/Logo.png"><meta name='theme-color' content='black'>
+<meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="shortcut icon" href="../../Imagedata/Revisezone/Logo.png" type="x-icon/image">
+<link class ="Style" rel='stylesheet' href='../../Style/Master.css' media ="screen and (min-width:1000px)">
+<link class ="Style" rel='stylesheet' href='../../Style/Mobile.css' media ="screen and (max-width:999px)">
+<link class ="Style" rel='stylesheet' href='../../Style/printstyle.css' media ="print">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-170507780-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-170507780-1');
+</script>
+
+<title>HTML Forms | Input Types - Revise Zone</title>
+</head>
+<body onload="saved()">
+  
+  
+<div class="top-nav-main">
+<a href="../../home.html"title ="Home">Home</a>
+<a href="../Cs/CS.html"title ="Computer Science"><abbr>CS</abbr></a>
+<a href="../SEO/SEO.html" title ="SEO">SEO</a>
+<a href="../LearningHtml/Introduction.html">HTML</a>
+
+
+
+
+<div class="login-more">
+<a onclick="NightmodeOn()" id="Mode">Night</a>
+<a onclick="More()" id="more">More</a>
+
+</div>
+</div>
+<div class="dropdesign">
+<span id="goback-white" onclick="Gobackdropdown()">&#10006;</span>
+<div class="flex-box-row">
+<div>
+<h2>Revise Now</h2>
+<h3>Cambridge AS levels</h3>
+<a href="../Physics/Physics.html">Physics</a>
+<a href="../Chemistry/Chemistry.html">Chemistry</a>
+<a href="../Cs/CS.html">Computer Science</a>
+<h3>Programming and coding</h3>
+<a href="../LearningHtml/Introduction.html">Learn HTML</a>
+<a href="../SEO/SEO.html">Learn SEO</a>
+
+
+
+
+
+</div>
+<div>
+<h2>More</h2>
+<h3>What do you want<br> to do?</h3>
+
+<a href="../Other/ContactUs.html">Contact us</a>
+<a href="../Other/Donate.html">Donate</a>
+<a href="../Other/Support.html">Support</a>
+<a href="../Other/Services.html">More Services</a>
+<a href="https://twitter.com/MrWiscus">Send a tweet</a>
+<a href="../../home.html#socialmedia">Social media</a>
+
+
+
+</div>
+</div>
+</div>
+
+<div class="spacing"></div>
+<div class="grid-layout-main">
+<div>
+<div class="side-nav-universal">
+<br>
+<br>
+<br>
+<h2>HTML Basics</h2>
+<a href="Introduction.html"title="Introduction to html">Learn HTML</a>
+<a href="HtmlBasics.html"title="Basics">HTML Basics</a>
+<a href="Htmlelements.html" title="Html Elements">HTML Elements</a>
+<a href="HtmlAttributes.html" title="Html Attribute">HTML Attributes</a>
+<a href="HtmlComments.html"title="Html Comments">HTML Comments</a>
+<a href="HtmlColors.html"title="Html Colors">HTML Colors</a>
+<a href="HtmlStyle.html"title="Html Style">HTML Style</a>
+<a href="HtmlCSS.html"title="Html CSS">HTML CSS</a>
+<a href="HtmlHeadings.html"title="Html Headings and paragraphs">HTML Headings & Paragraphs</a>
+<a href="HtmlFormatting.html"title="Html Formatting">HTML Formatting</a>
+<a href="HtmlQuotations.html" title="Html Quotations">HTML Quotations</a>
+<a href="HtmlLinks.html"title="Html Links">HTML Links</a>
+<a href="HtmlImages.html" title="Html Images">HTML Images</a>
+<a href="HtmlList.html" title="Html Lists" >HTML Lists</a>
+<br>
+<h2>HTML Intermediate</h2>
+<a href="HtmlTable.html">HTML Tables</a>
+<a href="HtmlBlock.html">HTML Blocks</a>
+<a href="HtmlClasses.html">HTML Classes & Ids</a>
+<a href="HtmlIframes.html">HTML Iframes</a>
+<a href="HtmlHead.html">HTML Head</a>
+<a href="HtmlLayout.html">HTML Layouts</a>
+<a href="HtmlPaths.html">HTML File Paths</a>
+<a href="HtmlPictures.html">HTML Pictures</a>
+<a href="HtmlAudio.html">HTML Audio</a>
+<a href="HtmlVideo.html">HTML Video</a>
+<a href="HtmlYoutube.html">HTML Youtube</a>
+<br>
+<h2>HTML Advance</h2>
+<a href="HtmlForms.html">HTML Forms</a>
+<a href="HtmlSelect.html">HTML Form Attributes</a>
+<a href="HtmlPost.html">HTML POST & GET</a>
+<br>
+<h2>SEO Tips & Others</h2>
+<a href="HtmlSEO.html">SEO Tips</a>
+<a href="HtmlHosting.html">Hosting Sites</a>
+<a href="HtmlSEOTools.html">SEO Tools</a>
+
+
+</div>
+</div>
+<div>
+<div class="Mainpage">
+
+<br>
+<br>
+<br>
+<br>
+<div>
+
+
+
+<div class="pagenav">
+<a href="HtmlYoutube.html">Back</a>
+<a href="HtmlSelect.html">Next</a>
+</div>
+<span  onclick="Mobilebut()"  id = "mobilebutton"><img alt="more topic chapters"  src="../../Imagedata/Revisezone/morecontent.png"/></span>
+<h1>HTML Forms and Inputs</h1>
+<p>If you want to enter data into your website. You need to know a seperate langugae called PHP</p>
+<div class="noteparagraphgreen">
+<p>Revise Zone will in time offer PHP tutorials</p>
+</div>
+<p>PHP is very easy actually and it with it you can accept data entered by the user and handle the request as you want</p>
+<p>A simple example would be - when a user enter his login details, the website takes the details and matches it with its internal protected database. Then the server gives the user the corresponding access rights</p>
+<p>Web development is not easy and so when a website is constructed using PHP there is greater risk for hacking and data breaches</p>
+<h2>HTML forms</h2>
+<p>In Html, we will learn the elements used to create the interface or the structure for the user to enter data</p>
+<p>Html does not handle any data entries! It is not a programming language</p>
+<h2>HTML Form Elements/Tags</h2>
+<p>The form element is used to group related input elements or tags together</p>
+<p>The form element is used to define to which PHP file the form entered data must be sent to.</p>
+<p>It also sets the method in which data is supposed to be transmitted - either GET or POST</p>
+<p>We will see a very general example for you to understand</p>
+<textarea>
+
+<!DOCTYPE html>
+<Html>
+<body>
+<h1>Sign up</h1>
+<form action="example.php" method="POST">
+<label for="email">Email</label>
+<input type="email" placeholder="example@email.com" name="email" id="email">
+<label for="password">Password</label>
+<input type="password" name="password" id="password">
+<input type="submit" value="Sign up">
+</form>
+</body>
+</html>
+</textarea>
+
+<a class="runbut" href ="../../Filedata/HtmlEx/form.html" target="form">Run</a>
+<iframe name="form">
+</iframe>
+<p>Creating and styling forms is very easy but, for them to work is super complicating</p>
+<p>The &#60;input> tag is used to display a data entry field. The type attribute defines what kind of data should be added and so the HTML forms can carry out some validations </p>
+<p>The type attribute can take many values but you don't need to know everything by heart. It's good to remember the important ones</p>
+<p>Here is the list:</p>
+<div class="noteparagraphgray">
+<p>type="button" - used to add a button which acts as a submit button</p>
+<p>type="checkbox" - used to add small check boxes for example - remember me</p>
+<p>type="color" - able to select a limited number of colors</p>
+<p>type="date" - used to enter the date</p>
+<p>type="datetime-local" - used to enter the date and time</p>
+<p>type="email" - used to enter an email</p>
+<p>type="file" - used to upload a file</p>
+<p>type="hidden" - not visible but can carry data to the PHP file</p>
+<p>type="image" - the image acts a submit button and the coordinates clicked is sent</p>
+<p>type="month" - to enter the month</p>
+<p>type="number" - to enter a number</p>
+<p>type="password" - to enter a password</p>
+<p>type="radio" - same as checkbox but circles instead</p>
+<p>type="range" - to enter a value using a range widgjet</p>
+<p>type="reset" - when clicked resets all the values in each field</p>
+<p>type="search" - same as text but used for searching purposes</p>
+<p>type="submit" - to submit the form to a PHP file</p>
+<p>type="tel" - used to enter a telephone</p>
+<p>type="text" - used to add any kind of string</p>
+<p>type="time" - used to enter the time</p>
+<p>type="url" - used to enter a url (used by SEO optimising websites)
+<p>type="week" - to enter the week</p>
+</div>
+<br>
+<p>We will see an example for each one this</p>
+<textarea>
+
+<!DOCTYPE html>
+<Html>
+<body>
+<h1>Sign up</h1>
+<form action="example.php" method="POST" id="login">
+<p>Enter only date</p>
+<input type="date">
+<br>
+<p>Enter both date and time</p>
+<input type="datetime-local">
+<br>
+<p>Enter only email</p>
+<input type="email">
+<br>
+<p>Upload a file - requires proper validation!</p>
+<input type="file">
+<br>
+<p>Hidden is not shown<p>
+<input type="hidden">
+<br>
+<p>Submits using an image</p>
+<input type="image" src="image.png">
+<br>
+<p>Enters a month</p>
+<input type="month">
+<br>
+<p>Enter a number</p>
+<input type="number">
+<br>
+<p>Enter a password</p>
+<input type="password">
+<br>
+<p>Check me</p>
+<input type="radio">
+<br>
+<p>Choose a value</p>
+<input type="range">
+<br>
+<p>Enter a telephone</p>
+<input type="tel">
+<br>
+<p>Enter any text</p>
+<input type="text">
+<br>
+<p>Enter your time</p>
+<input type="time">
+<br>
+<p>Enter an url</p>
+<input type="url">
+<br>
+<p>Enter a week</p>
+<input type="week">
+<br>
+<p>Remember me</p>
+<input type="checkbox">
+<br>
+<input type="color">
+<input type="search" plaseholder="SEARCH">
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+<input type="button" form="login" value="Submit">
+</form>
+</body>
+</html>
+</textarea>
+
+<a class="runbut" href ="../../Filedata/HtmlEx/input.html" target="input">Run</a>
+<iframe name="input">
+</iframe>
+<p>We have not linked to a proper PHP file so when you submit the form it will not work.</p>
+<h2>HTML Textarea tags</h2>
+<p>This can also act as a input field. The textarea is used to enter large amounts of text</p>
+<p>This is usually used for commenting and blogging purposes where you need to type in large amounts of data</p>
+<p>We will see an example</p>
+<textarea>
+
+
+<Html>
+<body>
+&#60;h2>Share</h2>
+<form action="" method="GET"   id="blogger" >
+&#60;textarea name="blogger" form="blogger" name="blog" style="width:70%;  resize:none; overflow:auto;">
+&#60;/textarea>
+<input type="submit" value="Post">
+</form>
+</body>
+</html>
+</textarea>
+<p>This textarea is designed using CSS</p>
+
+<a class="runbut" href ="../../Filedata/HtmlEx/textarea.html" target="blog">Run</a>
+<iframe name="blog">
+</iframe>
+<h2>HTML Form attributes</p>
+<p>As we have seen there are some attribute which the &#60;form> element can take</p>
+<p>action - directs the form details to a PHP file</p>
+<p>method - how data is to be transmitted - GET or POST. Discussed below</p>
+<p>autocomplete - provides suggestion(usually this is default for most browsers</p>
+<p>enctype - encoding to be used with POST</p>
+<p>id - used to identify the form element</p>
+
+<br> 
+<p>We will see an example</p>
+<textarea>
+
+<!DOCTYPE html>
+<Html>
+<body>
+<h1>Sign up</h1>
+<form action="" method="GET"  autocomplete="on" id="signup" enctype="multipart/form-data">
+<label for="email">Email</label>
+<input type="email" placeholder="example@email.com" name="email" id="email">
+<label for="password">Password</label>
+<input type="password" name="password" id="password">
+<input type="submit" value="Sign up">
+</form>
+</body>
+</html>
+</textarea>
+
+<a class="runbut" href ="../../Filedata/HtmlEx/formrequired.html" target="required">Run</a>
+<iframe name="required">
+</iframe>
+<p>We will disuss each attribute in detail</p>
+<h2>ENCTYPE attribute</h2>
+<p>HTML forms provide three methods of encoding.<p>
+<p>1. application/x-www-form-urlencoded (the default)</p>
+<p>2. multipart/form-data</p>
+<p>3. text/plain</p>
+<br><p>When data is supposed to be tranmitted you could chose the encoding type. This is always used with the method="POST"</p>
+<p>You don't need to know every type in detail. Just remember to use either 1 or 2</p>
+<p>Never use 3 as it has no protection</p>
+<p>Multipart/form-data is the most secure encoding type!</p>
+<h2>Action attribute</h2>
+<p>The action attribute tells the webpage to which website of PHP file you want to send the details to</p>
+<p>Sometimes it could be to the same website. So then we use action=""</p>
+<p>We will learn a bit how the PHP files read data from these fields</p>
+<h2>Form Method</h2>
+<p>The form attribute can take two values - either GET(default) or POST</p>
+<p>More will be talked about GET and POST in the next chapter</p>
+<h2>Form Autocomplete</h2>
+
+<p>The autocomplete provides suggestions such as email address and usernames</p>
+<h2>Form Id</h2>
+<p>The form Id is very useful especially when you want to link a &#60;input> element to a form element even when the input element is outside the form element</p>
+<p>We will see an example</p>
+<textarea>
+
+<!DOCTYPE html>
+<Html>
+<body>
+<h1>Sign up</h1>
+<form action="" method="POST" autocomplete="on" id="signup" enctype="multipart/form-data">
+<label for="email">Email</label>
+<input type="email" placeholder="example@email.com" name="email" id="email">
+<label for="password">Password</label>
+<input type="password" name="password" id="password">
+
+</form>
+<input type="submit" value="Sign up" form="signup">
+</body>
+</html>
+</textarea>
+
+<a class="runbut" href ="../../Filedata/HtmlEx/formattribute.html" target="formattribute">Run</a>
+<iframe name="formattribute">
+</iframe>
+<p>So even if the input elements are outside the form element. The form attribute could be used to link to a particular form element</p>
+<br>
+<br>
+<div class="pagenav">
+<a href="HtmlYoutube.html">Back</a>
+<a href="HtmlSelect.html">Next</a>
+</div>
+
+
+<br><br>
+
+</footer>
+</div>
+</div>
+<footer><p>Revisezone.com Copyright 2020 Developers & Coding section</p>
+</div>
+<script src="../../WebScript/Main-script.js">
+</script>
+</body></html>

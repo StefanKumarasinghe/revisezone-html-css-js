@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang ='en-US'>
+<head>
+<meta charset='utf-8'>
+<meta name='description' content='What are Iframes and do they make your website much cooler? Will iframes damage my Google SEO and will it crash my website? Learn how to code them and use them wisely!'>
+<meta name='keywords' content='iframes,Google seo,ranking,website,crash,protect against iframes,dangers of using iframes,can Google crawl iframes'>
+<meta name='author' content='MrWik'><link rel="apple-touch-icon" href="Imagedata/Revisezone/Logo.png"><meta name='theme-color' content='black'>
+<meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="shortcut icon" href="../../Imagedata/Revisezone/Logo.png" type="x-icon/image">
+<link class ="Style" rel='stylesheet' href='../../Style/Master.css' media ="screen and (min-width:1000px)">
+<link class ="Style" rel='stylesheet' href='../../Style/Mobile.css' media ="screen and (max-width:999px)">
+<link class ="Style" rel='stylesheet' href='../../Style/printstyle.css' media ="print">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-170507780-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-170507780-1');
+</script>
+
+<title>HTML Iframes | The Dangerous HTML Tag - Revise Zone</title>
+</head>
+<body onload="saved()">
+  
+  
+<div class="top-nav-main">
+<a href="../../home.html"title ="Home">Home</a>
+<a href="../Cs/CS.html"title ="Computer Science"><abbr>CS</abbr></a>
+<a href="../SEO/SEO.html" title ="SEO">SEO</a>
+<a href="../LearningHtml/Introduction.html">HTML</a>
+
+
+
+
+<div class="login-more">
+<a onclick="NightmodeOn()" id="Mode">Night</a>
+<a onclick="More()" id="more">More</a>
+
+</div>
+</div>
+<div class="dropdesign">
+<span id="goback-white" onclick="Gobackdropdown()">&#10006;</span>
+<div class="flex-box-row">
+<div>
+<h2>Revise Now</h2>
+<h3>Cambridge AS levels</h3>
+<a href="../Physics/Physics.html">Physics</a>
+<a href="../Chemistry/Chemistry.html">Chemistry</a>
+<a href="../Cs/CS.html">Computer Science</a>
+<h3>Programming and coding</h3>
+<a href="../LearningHtml/Introduction.html">Learn HTML</a>
+<a href="../SEO/SEO.html">Learn SEO</a>
+
+
+
+
+</div>
+<div>
+<h2>More</h2>
+<h3>What do you want<br> to do?</h3>
+
+<a href="../Other/ContactUs.html">Contact us</a>
+<a href="../Other/Donate.html">Donate</a>
+<a href="../Other/Support.html">Support</a>
+<a href="../Other/Services.html">More Services</a>
+<a href="https://twitter.com/MrWiscus">Send a tweet</a>
+<a href="../../home.html#socialmedia">Social media</a>
+
+
+
+</div>
+</div>
+</div>
+
+<div class="spacing"></div>
+<div class="grid-layout-main">
+<div>
+<div class="side-nav-universal">
+<br>
+<br>
+<br>
+<h2>HTML Basics</h2>
+<a href="Introduction.html"title="Introduction to html">Learn HTML</a>
+<a href="HtmlBasics.html"title="Basics">HTML Basics</a>
+<a href="Htmlelements.html" title="Html Elements">HTML Elements</a>
+<a href="HtmlAttributes.html" title="Html Attribute">HTML Attributes</a>
+<a href="HtmlComments.html"title="Html Comments">HTML Comments</a>
+<a href="HtmlColors.html"title="Html Colors">HTML Colors</a>
+<a href="HtmlStyle.html"title="Html Style">HTML Style</a>
+<a href="HtmlCSS.html"title="Html CSS">HTML CSS</a>
+<a href="HtmlHeadings.html"title="Html Headings and paragraphs">HTML Headings & Paragraphs</a>
+<a href="HtmlFormatting.html"title="Html Formatting">HTML Formatting</a>
+<a href="HtmlQuotations.html" title="Html Quotations">HTML Quotations</a>
+<a href="HtmlLinks.html"title="Html Links">HTML Links</a>
+<a href="HtmlImages.html" title="Html Images">HTML Images</a>
+<a href="HtmlList.html" title="Html Lists" >HTML Lists</a>
+<br>
+<h2>HTML Intermediate</h2>
+<a href="HtmlTable.html">HTML Tables</a>
+<a href="HtmlBlock.html">HTML Blocks</a>
+<a href="HtmlClasses.html">HTML Classes & Ids</a>
+<a href="HtmlIframes.html">HTML Iframes</a>
+<a href="HtmlHead.html">HTML Head</a>
+<a href="HtmlLayout.html">HTML Layouts</a>
+<a href="HtmlPaths.html">HTML File Paths</a>
+<a href="HtmlPictures.html">HTML Pictures</a>
+<a href="HtmlAudio.html">HTML Audio</a>
+<a href="HtmlVideo.html">HTML Video</a>
+<a href="HtmlYoutube.html">HTML Youtube</a>
+<br>
+<h2>HTML Advance</h2>
+<a href="HtmlForms.html">HTML Forms</a>
+<a href="HtmlSelect.html">HTML Form Attributes</a>
+<a href="HtmlPost.html">HTML POST & GET</a>
+<br>
+<h2>SEO Tips & Others</h2>
+<a href="HtmlSEO.html">SEO Tips</a>
+<a href="HtmlHosting.html">Hosting Sites</a>
+<a href="HtmlSEOTools.html">SEO Tools</a>
+
+
+
+</div>
+</div>
+<div>
+<div class="Mainpage">
+
+<br>
+<br>
+<br>
+<br>
+<div>
+
+
+
+<div class="pagenav">
+<a href="HtmlClasses.html">Back</a>
+<a href="HtmlHead.html">Next</a>
+</div>
+<span  onclick="Mobilebut()"  id = "mobilebutton"><img alt="more topic chapters"  src="../../Imagedata/Revisezone/morecontent.png"/></span>
+<h1>HTML Iframe Tags & Elements</h1>
+<h2>The basic idea</h2>
+<p>An iframe is a very basic element of the HTML document. There purpose is very simple. Think of a website which you load using your broweser. What the iframe does is load another website with in a particular websites. Amazing! So the user can look at two websites at once but, keep in mind if iframes are used in the wrong way. Your website could crash or be infected with malware and even damage your Google SEO/ranking</p>
+<p>We use the &#60;iframe> element to create an inline frame</p>
+<p>We will see an example to understand the use</p>
+<textarea>
+<!DOCTYPE html>
+<html>
+<body>
+
+<iframe style="width:90%; height:40%"src="hi.html">
+A message in case the iframe fails to load!
+</iframe>					
+</body>
+</html>
+</textarea>
+<p>The src attribute is to define the url or the location which the file is to be loaded from</p>
+<p>You can style the iframes with CSS to define its height and width and it's border if you want</p>
+<p>We will not run this because of many reasons but we will show what this iframe will do </p>
+<p>Here what it looks like when our webpage have the same iframe element</p>
+<iframe style="width:90%; height:40%"src="../../Filedata/HtmlEx/example.html">
+A message in case the iframe fails to load!
+</iframe>
+<p>The reason why we didn't run the iframe is because most of running systems are done using iframes</p>
+<p>It is possible to have an iframe with in an iframe but this is known as bad practice and it could damage your Google SEO ranking</p>
+<h2>How iframes affect Google SEO</h2>
+<p>If iframes are used in a wrong way,it will badly affect your Google SEO ranking</p>
+<p>Iframes are suitable for normal purposes such as loading up a webpage with in a your webpage - in this way iframes are highly beneficial and acceptable.</p>
+<p>However, if there are iframes with in iframes, this will slow down or even crash your website</p>
+<p>Another, point to rememeber is that you should never link your iframe to an unknown website as the unknown website could have malware which could ultimately destroy your website</p>
+<p>If iframes are used in the normal way, there is no effect on the Google SEO. This is because Google thinks the iframes are not part of your original website so they just ignore it</p>
+<p>However, if misused, it could damage your SEO and cause big problems</p>
+<p>Iframes are very useful and provides amazing user interface so use it wisely</p>
+<div class="noteparagraphgreen">
+<p>If you want any advice or more details on how to use iframes properly, Revise Zone is here to help! Go to our support section and contact us. We will help you!</p>
+</div>
+<p>Iframes are  very useful but if the coder doesn;t know what he is doing, then first contact us!</p>
+<h2>The Target attribute</h2>
+<p>We did talk about the target attribute under links. The target attributes define the way which the webpage or link should be loaded</p>
+<p>We will see now how you can open a link/url on an iframe</p>
+<textarea>
+<!DOCTYPE html>
+<html>
+<body>
+<a href="https://twitter.com/@MrWiscus" target="iframename">Tweet me</a>
+<iframe name="iframename" style="width:90%; height:40%">
+A message in case the iframe fails to load!
+</iframe>					
+</body>
+</html>
+</textarea>
+<p>As you can see the name attribute is used to identify the iframe element.</p>
+<p>The target attribute contains the iframe name value</p>
+<p>It's very simple</p>
+<p>I will give you a real code example:</p>
+<textarea>
+<!DOCTYPE html>
+<html>
+<body>
+&#60;a href="home.html" target="loader">Revise Zone</a>
+&#60;a href="physics.html" target="loader">Physics</a>
+&#60;a href="Cs.html"> target="loader">Computer science</a>
+<iframe name="loader" style="width:90%; height:40%">
+A message in case the iframe fails to load!
+</iframe>					
+</body>
+</html>
+</textarea>
+<p>Click one of these links and follow me now!</p>
+<p><a href="../../home.html" target="loader">Revise Zone</a></p>
+<p><a href="../Physics/Physics.html" target="loader">Physics</a><p>
+<p><a href="../Cs/CS.html" target="loader">Computer science</a><p>
+<iframe name="loader">
+A message in case the iframe fails to load!
+</iframe>	
+<h2>Some points to remember</h2>
+<p>Use iframes only when you need to. Don't fill your webpage with iframes because it will slow doewn your webpage and affect your Google SEO ranking</p>
+<p>Protect your websitefrom being iframed! It means block your website from being iframed by other websites, especially if your website handles online transactions.
+We will discuss this more later</p>
+<p>Never link an iframe to an unknown website</p>
+<p>Iframes can cause back button problems in Google chrome. Make sure you have a good website which has many links to go back and forth</p>
+
+<br>
+<br>
+<div class="pagenav">
+<a href="HtmlClasses.html">Back</a>
+<a href="HtmlHead.html">Next</a>
+</div>
+
+
+<br><br>
+
+</footer>
+</div>
+</div>
+<footer><p>Revisezone.com Copyright 2020 Developers & Coding section</p>
+</div>
+<script src="../../WebScript/Main-script.js">
+</script>
+</body></html>

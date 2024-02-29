@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang ='en-US'>
+<head>
+<meta charset='utf-8'>
+<meta name='description' content='What are HTML lists and why do we use them? How can we design our lists and what are the different types of lists? Learn how to code your very own lists in HTML'>
+<meta name='keywords' content='Html list,ul tags,ol tags,ordered lists,unordered lists,style html lists,description lists'>
+<meta name='author' content='MrWik'><link rel="apple-touch-icon" href="Imagedata/Revisezone/Logo.png"><meta name='theme-color' content='black'>
+<meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="shortcut icon" href="../../Imagedata/Revisezone/Logo.png" type="x-icon/image">
+<link class ="Style" rel='stylesheet' href='../../Style/Master.css' media ="screen and (min-width:1000px)">
+<link class ="Style" rel='stylesheet' href='../../Style/Mobile.css' media ="screen and (max-width:999px)">
+<link class ="Style" rel='stylesheet' href='../../Style/printstyle.css' media ="print">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-170507780-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-170507780-1');
+</script>
+
+<title>HTML Lists | Ordered & Unordered Lists - Revise Zone</title>
+</head>
+<body onload="saved()">
+  
+  
+<div class="top-nav-main">
+<a href="../../home.html"title ="Home">Home</a>
+<a href="../Cs/CS.html"title ="Computer Science"><abbr>CS</abbr></a>
+<a href="../SEO/SEO.html" title ="SEO">SEO</a>
+<a href="../LearningHtml/Introduction.html">HTML</a>
+
+
+
+
+<div class="login-more">
+<a onclick="NightmodeOn()" id="Mode">Night</a>
+<a onclick="More()" id="more">More</a>
+
+</div>
+</div>
+<div class="dropdesign">
+<span id="goback-white" onclick="Gobackdropdown()">&#10006;</span>
+<div class="flex-box-row">
+<div>
+<h2>Revise Now</h2>
+<h3>Cambridge AS levels</h3>
+<a href="../Physics/Physics.html">Physics</a>
+<a href="../Chemistry/Chemistry.html">Chemistry</a>
+<a href="../Cs/CS.html">Computer Science</a>
+<h3>Programming and coding</h3>
+<a href="../LearningHtml/Introduction.html">Learn HTML</a>
+<a href="../SEO/SEO.html">Learn SEO</a>
+
+
+
+
+</div>
+<div>
+<h2>More</h2>
+<h3>What do you want<br> to do?</h3>
+
+<a href="../Other/ContactUs.html">Contact us</a>
+<a href="../Other/Donate.html">Donate</a>
+<a href="../Other/Support.html">Support</a>
+<a href="../Other/Services.html">More Services</a>
+<a href="https://twitter.com/MrWiscus">Send a tweet</a>
+<a href="../../home.html#socialmedia">Social media</a>
+
+
+
+</div>
+</div>
+</div>
+
+<div class="spacing"></div>
+<div class="grid-layout-main">
+<div>
+<div class="side-nav-universal">
+<br>
+<br>
+<br>
+<h2>HTML Basics</h2>
+<a href="Introduction.html"title="Introduction to html">Learn HTML</a>
+<a href="HtmlBasics.html"title="Basics">HTML Basics</a>
+<a href="Htmlelements.html" title="Html Elements">HTML Elements</a>
+<a href="HtmlAttributes.html" title="Html Attribute">HTML Attributes</a>
+<a href="HtmlComments.html"title="Html Comments">HTML Comments</a>
+<a href="HtmlColors.html"title="Html Colors">HTML Colors</a>
+<a href="HtmlStyle.html"title="Html Style">HTML Style</a>
+<a href="HtmlCSS.html"title="Html CSS">HTML CSS</a>
+<a href="HtmlHeadings.html"title="Html Headings and paragraphs">HTML Headings & Paragraphs</a>
+<a href="HtmlFormatting.html"title="Html Formatting">HTML Formatting</a>
+<a href="HtmlQuotations.html" title="Html Quotations">HTML Quotations</a>
+<a href="HtmlLinks.html"title="Html Links">HTML Links</a>
+<a href="HtmlImages.html" title="Html Images">HTML Images</a>
+<a href="HtmlList.html" title="Html Lists" >HTML Lists</a>
+<br>
+<h2>HTML Intermediate</h2>
+<a href="HtmlTable.html">HTML Tables</a>
+<a href="HtmlBlock.html">HTML Blocks</a>
+<a href="HtmlClasses.html">HTML Classes & Ids</a>
+<a href="HtmlIframes.html">HTML Iframes</a>
+<a href="HtmlHead.html">HTML Head</a>
+<a href="HtmlLayout.html">HTML Layouts</a>
+<a href="HtmlPaths.html">HTML File Paths</a>
+<a href="HtmlPictures.html">HTML Pictures</a>
+<a href="HtmlAudio.html">HTML Audio</a>
+<a href="HtmlVideo.html">HTML Video</a>
+<a href="HtmlYoutube.html">HTML Youtube</a>
+<br>
+<h2>HTML Advance</h2>
+<a href="HtmlForms.html">HTML Forms</a>
+<a href="HtmlSelect.html">HTML Form Attributes</a>
+<a href="HtmlPost.html">HTML POST & GET</a>
+<br>
+<h2>SEO Tips & Others</h2>
+<a href="HtmlSEO.html">SEO Tips</a>
+<a href="HtmlHosting.html">Hosting Sites</a>
+<a href="HtmlSEOTools.html">SEO Tools</a>
+
+
+</div>
+</div>
+<div>
+<div class="Mainpage">
+
+<br>
+<br>
+<br>
+<br>
+<div>
+
+
+
+<div class="pagenav">
+<a href="HtmlImages.html">Back</a>
+<a href="HtmlTable.html">Next</a>
+</div>
+<span  onclick="Mobilebut()"  id = "mobilebutton"><img alt="more topic chapters"  src="../../Imagedata/Revisezone/morecontent.png"/></span>
+<h1>HTML Lists - Ordered & Unordered Lists</h1>
+<h2>HTML ordered lists</h2>
+<p>Ordered lists are another name for numbered lists</p>
+<p>If you want to create a list which is either numbered or ordered we need to use the &#60;ol> element</p>
+<p>There are different numbering methods for ordered lists. We will see an example for each type. For this we need to use the type attribute which define the numbering or ordering method</p>
+<textarea>
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Ordered lists</h2>
+
+
+<ol type="1">
+<li>Pewdiepie</li>
+<li>Dudeperfect</li>
+<li>Mr Beast</li>
+</ol>
+<ol type="a">
+<li>Pewdiepie</li>
+<li>Dudeperfect</li>
+<li>Mr Beast</li>
+</ol>
+<ol type="A">
+<li>Pewdiepie</li>
+<li>Dudeperfect</li>
+<li>Mr Beast</li>
+</ol>
+<ol type="i">
+<li>Pewdiepie</li>
+<li>Dudeperfect</li>
+<li>Mr Beast</li>
+</ol>
+<ol type="I">
+<li>Pewdiepie</li>
+<li>Dudeperfect</li>
+<li>Mr Beast</li>
+</ol>
+
+<ol type="1" start="10">
+<li>Pewdiepie</li>
+<li>Dudeperfect</li>
+<li>Mr Beast</li>
+</ol>
+
+
+
+
+
+</body>
+</html>
+</textarea>
+
+<a class="runbut" href ="../../Filedata/HtmlEx/orderlist.html" target="ol">Run</a>
+<iframe name="ol" >
+</iframe>
+<p>I have also put a start attribute also to show that you can control from which point you want to start the ordered lists</p>
+<p>The values for the type must be remembered </p>
+<p>Type="1" - is the normal numbering pattern</p>
+<p>Type="a" - orders in simple alphabets</p>
+<p>Type="A" - orders in capital alphabets</p>
+<p>Type="i" - orders in simple roman numericals</p>
+<p>Type="I" - orders in capital roman numericals</p>
+<br>
+<p>The &#60;li> tag is used to hold the content for each point. It stands for list item</p>
+<h2>Unordered lists</h2>
+<p>These are list which are not following any order</p>
+<p>We use the &#60;ul> element to create an unordered list</p>
+<p>The &#60;li> tag is used to hold the content for each point. It stands for list item</p>
+<p>It is very similar to ordered lists however instead of numbers we use bullet points</p>
+<p>Let's see an example</p>
+<textarea>
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Unordered lists</h2>
+
+
+<ul>
+<li>Pewdiepie</li>
+<li>Dudeperfect</li>
+<li>Mr Beast</li>
+</ul>
+
+
+
+
+
+
+</body>
+</html>
+</textarea>
+
+
+<a class="runbut" href ="../../Filedata/HtmlEx/ul.html" target="ul">Run</a>
+<iframe name="ul" >
+</iframe>
+<p>The default are small disc which are filled. However, this could be changed using CSS. This is a very important part in web development and styling as lists could be used as navigation links</p>
+<h2>Styling Lists with CSS</h2>
+<p>We will see some ways which we could style the list using the style attribute</p>
+<p>We use the list-style-type: property to define what kind of bullet point you want</p>
+<p>It can take either oone of these values</p>
+<p>disc - this is the default filled discs</p>
+<p>circle - small circles</p>
+<p>square - small regular square</p>
+<p>none - nothing, this is especially used when you want to use the lists as links</p>
+<p>we will see an example below</p>
+<textarea>
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Unordered lists</h2>
+
+
+<ul style="list-style-type:disc">
+<li>Pewdiepie</li>
+<li>Dudeperfect</li>
+<li>Mr Beast</li>
+</ul>
+<ul style="list-style-type:circle">
+<li>Pewdiepie</li>
+<li>Dudeperfect</li>
+<li>Mr Beast</li>
+</ul>
+
+<ul style="list-style-type:square">
+<li>Pewdiepie</li>
+<li>Dudeperfect</li>
+<li>Mr Beast</li>
+</ul>
+
+<ul style="list-style-type:none">
+<li>Pewdiepie</li>
+<li>Dudeperfect</li>
+<li>Mr Beast</li>
+</ul>
+
+
+
+
+
+
+
+</body>
+</html>
+</textarea>
+
+
+<a class="runbut" href ="../../Filedata/HtmlEx/ultypes.html" target="ultypes">Run</a>
+<iframe name="ultypes" >
+</iframe>
+<h2>The power of CSS web styling</h2>
+<p>With CSS you can make unordered list into ordered lists and even more by using CSS coding. However, this is considered to a bad practice.</p>
+<p>Here is an example of how unordered lists can be ordered lists</p>
+<textarea>
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Unordered lists</h2>
+
+
+<ul>
+<li>Pewdiepie</li>
+<li>Dudeperfect</li>
+<li>Mr Beast</li>
+</ul>
+
+
+
+
+
+
+</body>
+</html>
+</textarea>
+
+
+<a class="runbut" href ="../../Filedata/HtmlEx/ul.html" target="list">Run</a>
+<iframe name="list" >
+</iframe>
+<p>The default are small disc which are filled. However, this could be changed using CSS. This is a very important part in web development and styling as lists could be used as navigation links</p>
+<h2>Styling Lists with CSS</h2>
+<p>We will see some ways which we could style the list using the style attribute</p>
+<p>We use the list-style-type: property to define what kind of bullet point you want</p>
+<p>It can take either oone of these values</p>
+<p>disc - this is the default filled discs</p>
+<p>circle - small circles</p>
+<p>square - small regular square</p>
+<p>none - nothing, this is especially used when you want to use the lists as links</p>
+<p>we will see an example below</p>
+<textarea>
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Unordered lists</h2>
+
+
+<ul style="list-style-type:lower-roman">
+<li>Pewdiepie</li>
+<li>Dudeperfect</li>
+<li>Mr Beast</li>
+</ul>
+<ul style="list-style-type:upper-roman">
+<li>Pewdiepie</li>
+<li>Dudeperfect</li>
+<li>Mr Beast</li>
+</ul>
+
+<ul style="list-style-type:lower-alpha">
+<li>Pewdiepie</li>
+<li>Dudeperfect</li>
+<li>Mr Beast</li>
+</ul>
+
+<ul style="list-style-type:upper-alpha">
+<li>Pewdiepie</li>
+<li>Dudeperfect</li>
+<li>Mr Beast</li>
+</ul>
+
+
+
+
+
+
+
+</body>
+</html>
+</textarea>
+
+
+<a class="runbut" href ="../../Filedata/HtmlEx/ulmore.html" target="ulmore">Run</a>
+<iframe name="ulmore" >
+</iframe>
+<p>This shows the other values which the list-style-type property could take. This is part of CSS so it will be covered in the web styling(CSS) chapter</p>
+<p>This is why CSS is also a very powerful styling langauage but also could be misused. If misused this could badly affect you SEO ranking and making your website be ranked very low</p>
+
+<p>The default are small disc which are filled. However, this could be changed using CSS. This is a very important part in web development and styling as lists could be used as navigation links</p>
+<h2>Styling Lists with CSS</h2>
+<p>We will see some ways which we could style the list using the style attribute</p>
+<p>We use the list-style-type: property to define what kind of bullet point you want</p>
+<p>It can take either oone of these values</p>
+<p>disc - this is the default filled discs</p>
+<p>circle - small circles</p>
+<p>square - small regular square</p>
+<p>none - nothing, this is especially used when you want to use the lists as links</p>
+<p>we will see an example below</p>
+<textarea>
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Unordered lists</h2>
+
+
+<ul style="list-style-type:lower-roman">
+<li>Pewdiepie</li>
+<li>Dudeperfect</li>
+<li>Mr Beast</li>
+</ul>
+<ul style="list-style-type:upper-roman">
+<li>Pewdiepie</li>
+<li>Dudeperfect</li>
+<li>Mr Beast</li>
+</ul>
+
+<ul style="list-style-type:lower-alpha">
+<li>Pewdiepie</li>
+<li>Dudeperfect</li>
+<li>Mr Beast</li>
+</ul>
+
+<ul style="list-style-type:upper-alpha">
+<li>Pewdiepie</li>
+<li>Dudeperfect</li>
+<li>Mr Beast</li>
+</ul>
+
+</body>
+</html>
+</textarea>
+
+
+<a class="runbut" href ="../../Filedata/HtmlEx/ulmore.html" target="ulmore">Run</a>
+<iframe name="ulmore" >
+</iframe>
+
+<h2>How lists could be used as links</h2>
+<p>We will see a simple example how a list could be used as links using CSS</p>
+<textarea>
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Subscribe to:</h2>
+
+
+<ul style="list-style-type:none;">
+<li><a href="">Pewdiepie</a></li>
+<li><a href="">Dudeperfect</a></li>
+<li><a href="">Mr Beast</a></li>
+</ul>
+
+</body>
+</html>
+</textarea>
+
+
+<a class="runbut" href ="../../Filedata/HtmlEx/listlinks.html" target="links">Run</a>
+<iframe name="links" >
+</iframe>
+<h2>Description lists</h2>
+<p>The final type of lists are called description lists</p>
+<p>For you to understand we will use an example</p>
+<textarea>
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Subscribe to:</h2>
+
+
+<dl>
+<dt>Pewdiepie</dt>
+<dd>The greatest Youtuber ever lived. Who is the 2nd person to reach 100 million subscribers on Youtube</dd>
+<dt>Mr Beast</dt>
+<dd>The coolest and most awesome Youtuber in the world. Who was recognised for his amazing and interesting content</dd>
+
+
+</body>
+</html>
+</textarea>
+
+
+<a class="runbut" href ="../../Filedata/HtmlEx/descriptionlists.html" target="dl">Run</a>
+<iframe name="dl">
+</iframe>
+<p>The &#60;dl> element is used to hold the decription list. It stands for description lists</p>
+<p>The &#60;dt> is used to define the title of the description point. It stands for description title</p>
+<p>The &#60;dd> is used to hold the description data. It stands for description data</p>
+<p>CSS will open is what improves the style of lists. So don't worry if your list looks a bit dull</p>
+<br>
+<br>
+<div class="pagenav">
+<a href="HtmlImages.html">Back</a>
+<a href="HtmlTable.html">Next</a>
+</div>
+
+
+<br><br>
+
+</footer>
+</div>
+</div>
+<footer><p>Revisezone.com Copyright 2020 Developers & Coding section</p>
+</div>
+<script src="../../WebScript/Main-script.js">
+</script>
+</body></html>
+

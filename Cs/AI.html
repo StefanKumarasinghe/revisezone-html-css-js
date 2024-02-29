@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='description' content="What are the types of AI learning? What is Dijkstra's and A star algorithms and what is reinforce and supervised learning? what is artificial neural networks and how is it related with deep learning">
+  <meta name='keywords' content="AI, reinforce learning, supervised learning, deep learning, artificial neural network, a star algorithm, dijkstra's algorithm">
+  <meta name='author' content='Wiscus'>
+  <link rel="apple-touch-icon" href="Imagedata/Revisezone/Logo.png">
+  <meta name='theme-color' content='black'>
+  <meta name='viewport' content='width=device-width initial-scale=1'>
+  <link rel="shortcut icon" href="../../Imagedata/Revisezone/Logo.png" type="x-icon/image">
+  <link class="Style" rel='stylesheet' href='../../Style/Master.css' media="screen and (min-width:1000px)">
+  <link class="Style" rel='stylesheet' href='../../Style/Mobile.css' media="screen and (max-width:999px)">
+  <link class="Style" rel='stylesheet' href='../../Style/printstyle.css' media="print"><!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170507780-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-170507780-1');
+  </script>
+  <title>Dijkstra's & A* Algorithm and Advance AI | Revise Zone</title>
+</head>
+<body onload="saved()">
+  <div class="progress-container"></div>
+  <div class="top-nav-main">
+    <a href="../../home.html" title="Home">Home</a> <a href="../Chemistry/Chemistry.html" title="Chemistry"><abbr>Chemistry</abbr></a> <a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../LearningHtml/Introduction.html">HTML</a>
+    <div class="login-more">
+      <a onclick="NightmodeOn()" id="Mode">Night</a> <a onclick="More()" id="more">More</a>
+    </div>
+  </div>
+  <div class="dropdesign">
+    <span id="goback-white" onclick="Gobackdropdown()">✖</span>
+    <div class="flex-box-row">
+      <div>
+        <h2>Revise Now</h2>
+        <h3>GCE Subjects</h3><a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../Chemistry/Chemistry.html" title="Chemistry">Chemistry</a> <a href="../Cs/CS.html" title="Computer Science">CS</a> <a href="../Accounting/Introduction.html" title="Accounting">Accounting</a>
+        <h3>Coding Lessons</h3><a href="../LearningHtml/Introduction.html" title="HTML">Learn HTML</a> <a href="../SEO/SEO.html" title="SEO">Learn SEO</a>
+      </div>
+      <div>
+        <h2>More</h2>
+        <h3>What do you want<br>
+        to do?</h3><a href="../Other/ContactUs.html" title="Contact us">Contact us</a> <a href="../Other/Support.html" title="Support">Support</a>
+      </div>
+    </div>
+  </div>
+  <div class="spacing"></div>
+  <div class="grid-layout-main">
+    <div>
+      <div class="side-nav-universal">
+        <br>
+        <br>
+        <br>
+        <h2>Computer Science AS</h2><a href="CS.html" title="Introduction">Introduction</a> <a href="InformationRepresentation.html" title="">Information Representation</a> <a href="Communication.html" title="Communication">Communications</a> <a href="Communication2.html" title="Communication">Communications 2</a> <a href="Hardware.html" title="Hardware">Hardware</a> <a href="LogicGates.html" title="LogicGates">Logic Circuits</a> <a href="ProcessorFundamentals.html" title="Processor">Processor Fundamentals</a> <a href="AssemblyLanguage.html" title="Assembly">Assembly Language</a> <a href="MonitorControlling.html" title="Sensors">Monitor & Control</a> <a href="SystemSoftware.html" title="System Software">System Software</a> <a href="DataSecurity.html" title="Security">Security, Privacy & Data Integrity</a> <a href="Ethics.html" title="Ethics">Ethics</a> <a href="Databases.html" title="databases">Databases</a><br>
+        <h2>AS Practical</h2><a href="Algorithm.html" title="Algorithm">Algorithm</a> <a href="Datastructures.html" title="Data Structures">Data Structures and more</a> <a href="Development.html" title="">Software development</a><br>
+        <br>
+        <h2>Computer Science A2</h2><a href="DataRepresentations.html" title="Data Representation">Data Representation</a> <a href="FileOrganisations.html" title="File Organisation">File Organisation</a> <a href="LogicCircuit.html" title="Logic Circuits">Advance Logic Gates</a><a href="Internet.html" title="Internet">Internet</a> <a href="VirtualMachines.html" title="Virtual Machines">Virtual Machines</a> <a href="SystemA2.html" title="System Software">System Software</a> <a href="Security.html" title="Encryption and Security">Encryption & Security</a> <a href="AI.html" title="Artificial Intelligence">Artificial Intelligence</a><br>
+        <h2>A2 Practicals</h2><a href="../Developer/BinarySearch.html" title="Binary Search" target="blank">Binary Search</a> <a href="../Developer/LinearSearch.html" title="Linear Search" target="blank">Linear Search</a> <a href="../Developer/BubbleSort.html" title="Bubble Sort" target="blank">Bubble Sort</a> <a href="../Developer/InsertionSort.html" title="Inertion Sort" target="blank">Insertion Sort</a> <a href="../Developer/Combined.html" title="Combined Algorithm" target="blank">Combined Algorithm</a> <a href="../Developer/Stack.html" title="Stack" target="blank">Stacks</a> <a href="../Developer/Queue.html" title="Queue" target="blank">Queues</a> <a href="../Developer/LinkedList.html" title="Linked List" target="blank">Linked List</a> <a href="../Developer/BinaryTree.html" title="Binary Tree" target="blank">Binary Tree</a><br>
+        <h2>More</h2><a href="CSReference.html" title="CS Reference">Reference</a> <a href="CSEx.html" title="CS Questions">Pastpaper Questions</a>
+      </div>
+    </div>
+    <div>
+      <div class="Mainpage">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div>
+          <p><a class="extrafeatures" id="audioplay" onclick="audio()" title="Audio Lesson Only">♫</a><a class="extrafeatures" title="Lesson Recap" href="#recap">✐</a></p>
+          <div id="audiobar">
+            <audio controls=""><source src="Audio/AI.mp3" type="audio/mpeg"> Your browser does not support the audio...</audio>
+          </div>
+          <div class="pagenav">
+            <a href="Security.html">Back</a> <a href="../Other/Dev.html">Next</a></a>
+          </div><span onclick="Mobilebut()" id="mobilebutton"><img alt="more topic chapters" src="../../Imagedata/Revisezone/morecontent.png"></span>
+          <h1>Artificial Intelligence</h1>
+          <h2>Dijkstra's Algorithm</h2>
+		  <img src="../../Imagedata/CS/graph.png" alt="Diagram of a graph and nodes in computer science">
+          <p>Many textbooks give unnecessary information such as the code for  Dijkastra's Algorithm. This is unnecessary and you are only required to know how the code works and does. Below is a summarised note on how the algorithm works</p>
+          <p>Points are considered to be nodes. Note that these nodes are graphical and theoretical. These nodes can represent a location or destination or even a decision to take...</p>
+          <p>1. The Starting node is set to 0 and all other nodes are sent to infinity</p>
+          <p>2. The smallest adjacent node route is considered. The value of the distance is checked whether it is lower than the stored value of the node. It should be as the node was inititally set to infinity. If it less then we set that current node with the distance value \ edge value</p>
+          <p>3. Then it checks any nodes adjacent to the current node and goes towards the lowest distance node. If the SUM of the distance (previous distance + distance taken to move to current node) is less than the current node value, then it is updated</p>
+          <p>4. It will show the total distance for a single route or possibility of the diagram. Now the remaining nodes should be explored and adjusted until it reaches the end node</p>
+          <p>5. Sometimes the values of the node may get adjusted more than once as there is a more efficient and lower distance diagram</p>
+          <p>To understand it more, I got a small graph from the internet below.</p>
+		  		  <img src="../../Imagedata/CS/Dijkstra1.png" alt="Dijkstra's algorithm stage 1 tracing">
+				  <p>First it records the distance of adjacent nodes and if it is less than infinity or the previously stored value of the node, the node is then updated</p>
+				  <img src="../../Imagedata/CS/Dijkstra2.png" alt="Dijkstra's algorithm stage 2 tracing">
+				  <p>It goes initially at the shortest route and then explores adjacent nodes again</p>
+				  <img src="../../Imagedata/CS/Dijkstra3.png" alt="Dijkstra's algorithm stage 3 tracing">
+				  <p>After a single route is finished, remaining nodes are then considered</p>
+		   <p></p>		  
+          <blockquote>
+            Note that Dijkstra's Algorithm must consider all possibilities to see which route is the shortest. You also need to trace the graph by updating the values of each node for each route
+          </blockquote>
+          <h2>A* Algorithm</h2>
+          <p>This is more improved version of the Dijkstra's Algorithm as not all outcomes or routes have to be considered</p>
+          <p>The concept is similar to the above code. However, in addition to the above, each node has a unique coordinate. For example the start node has the coordinate 2,3 and the end coordinate has the coordinate 5,8</p>
+          <p>By applying this we can find the shortest possible distance or route it can take which is the displacement. Here is the way to calculate the displacement between the start and end node</p>
+          <h4>(X<sub>1</sub>-X<sub>2</sub>)<sup>2</sup>+(Y<sub>1</sub>-Y<sub>2</sub>)<sup>2</sup> = Displacement</h4>
+          <p>This is the pythagoras theorem used to find distance between two points or a line. This function is called the heuristic function</p>
+          <p>So the displacement or the heuristic value between EACH node and the end node is calculated. This gives us the idea that the length can not be shorter than this</p>
+          <p>So when a single route has been discovered and the sum is recorded for that route, then another route can be discovered but if the distance to that node plus the heuristic value is greater then there is no point going further that path as the path distance is definitely going to be larger.</p>
+          <p>I have put video to explain how it works down below</p>
+          <h2>Machine Learning</h2>
+          <h3>The process of learning from experience to improve its performance</h3>
+          <p>There are 3 types of Artificial Intelligence learning depending on the data they handle and their specialty</p>
+          <ul>
+            <li>Unsupervised Learning</li>
+            <p>Handles and takes in large amounts of unlabeled or categorized data that outputs categorized data</p>
+            <li>Supervised Learning</li>
+            <p>Uses categorized and labeled data and processes it to perform a specific function such as send out analytic reports</p>
+            <p>An example is the youtube or Facebook analytic feeds that tell you how many views for the past 28 days</p>
+            <li>Reinforced Learning</li>
+            <p>A system that handles both labeled and unlabelled data and learns from experience to optimize its future task and functionality. It uses rewards to reinforce the machine to indicate that it is getting better and better</p>
+            <p>An example would be a chess computer that rewards or punishes every move it makes depending on how effective the move was</p>
+            <h2>Regression Analysis</h2>
+            <p>This is by finding patterns in large collections of past data to predict future events or suggestions. For example, you may have done scientific experiments where you need to draw graphs and draw lines of best fit or curve. Using the graph, you can predict other values that you have not tested so as long there is a trend then the machine can predict.</p>
+            <p>If it is a linear pattern ( line of best fit ) it is called linear regression, other complex ones are called polynomial regression</p>
+            <p>An example is a school system seeing a trend between Maths and Science Student's Marks. The higher the mark for one subject, the higher they are for the other subject. Another popular system is Google, where they use it to give search suggestions</p>
+            <blockquote>
+              Note that Categorized data means data that have some form of labeling and can be identified or in other words, it is highly specific data
+            </blockquote>
+            <h2>Artificial Neural Networks</h2>
+            <p>This is based on the idea that the structures and complexity of neural networks in our body give some form of intelligence and so it is used in real-life AI</p>
+            <p>This is very interesting indeed and has been very beneficial to us. I will explain this briefly so you can understand</p>
+			<img src="../../Imagedata/CS/Neural.png" alt=" Artificial neural networks">
+            <p>Using the diagram, the first layer or the first set of nodes on the left side are called <span class="highlight">input</span>nodes/layer</p>
+            <p>The Nodes on the right are called the <span class="highlight">Output</span>nodes/layer</p>
+            <p>The Nodes in between are called <span class="highlight">Hidden</span> layers. Note that there can be many layers in the hidden layer</p>
+            <blockquote>
+              Note that this is a graphical representation. It could be hardware or software
+            </blockquote>
+            <p>Say we need a software that uses AI, it must take in input values that give values close to the real values. In other words, the prediction must be close to the real value</p>
+            <p>The Nodes each have a weightage that adds or multiplies the value it receives and outputs to the next node. The problem is at the start, the weightage each node has is incorrect or not calibrated</p>
+            <p>The system will be given past actual data and give results. However, it's unlikely to give the expected correct result. So this can be compared with actual results to see how deviated the calculated result.</p>
+            <p>By doing this, the system can adjust the weightage of each node so it will give close to the exact value. This process is called the backpropagation of errors. The adjustment occurs from the output nodes first and then it adjusts the node until it reaches the input layer nodes</p>
+            <h3>Back Propagation of errors is the process in machine learning that optimizes the value for the adjustable parameters. The adjusting process occurs from the output layer nodes to the input layer nodes</h3>
+            <blockquote>
+              Forward Propagation of errors is very similar to the backpropagation of errors but the direction of adjusting is reversed.
+            </blockquote>
+            <h2>Deep Learning</h2>
+            <h3>It is Artificial Machine Systems that uses Artificial Neural Network and has many hidden layers to handle very complex task</h3>
+            <p>These are the type of AI you may have watched in movies. Where there AI specialty is clearly visible</p>
+            <div class="pagenav">
+              <a href="Security.html">Back</a> <a href="../Other/Dev.html">Next</a></a>
+            </div><br>
+            <br>
+			 <h2>Recommended</h2>
+        <p>These are things you might like. Clicking these ads can help us improve our free services in the future...</p>
+            <div id="container-2a219c05affd07270c6855c66c9456d4" style="border-radius:20px;"></div>
+        
+            <br id="recap">
+            <div class="general container-extra">
+              <div>
+                <h5>Quick Recap</h5>
+                <h6>Check your Knowledge with a Quick Recap</h6><br>
+                <a style="padding:10px; background-color:#4ea654; border-radius:3px; font:17px Os; color:#e8e4e3; text-decoration:none;" onclick="MiniTask(this,'../../quiz.revisezone.com/Mini/AI.html')">Try out</a>
+                <div id="taskview"></div>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div><br>
+      <br>
+      <footer>
+        <p>Revisezone.com Copyright 2020</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../WebScript/Main-script.js"></script>
+</body>
+</html>

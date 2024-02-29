@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='description' content='What is a router, switch, server, etc? What are fibre optics? Discover the types of satelites and the function of a router or a WAP and more!'>
+  <meta name='keywords' content=''>
+  <meta name='author' content='Wiscus'>
+  <link rel="apple-touch-icon" href="Imagedata/Revisezone/Logo.png">
+  <meta name='theme-color' content='black'>
+  <meta name='viewport' content='width=device-width initial-scale=1'>
+  <link rel="shortcut icon" href="../../Imagedata/Revisezone/Logo.png" type="x-icon/image">
+  <link class="Style" rel='stylesheet' href='../../Style/Master.css' media="screen and (min-width:1000px)">
+  <link class="Style" rel='stylesheet' href='../../Style/Mobile.css' media="screen and (max-width:999px)">
+  <link class="Style" rel='stylesheet' href='../../Style/printstyle.css' media="print"><!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170507780-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-170507780-1');
+  </script>
+  <title>Network Hardware, ISPs, IP addresses, DNS & Satelites - Revise Zone</title>
+</head>
+<body onload="saved()">
+  <div class="progress-container"></div>
+  <div class="top-nav-main">
+    <a href="../../home.html" title="Home">Home</a> <a href="../Chemistry/Chemistry.html" title="Chemistry"><abbr>Chemistry</abbr></a> <a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../LearningHtml/Introduction.html">HTML</a>
+    <div class="login-more">
+      <a onclick="NightmodeOn()" id="Mode">Night</a> <a onclick="More()" id="more">More</a>
+    </div>
+  </div>
+  <div class="dropdesign">
+    <span id="goback-white" onclick="Gobackdropdown()">✖</span>
+    <div class="flex-box-row">
+      <div>
+        <h2>Revise Now</h2>
+        <h3>GCE Subjects</h3><a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../Chemistry/Chemistry.html" title="Chemistry">Chemistry</a> <a href="../Cs/CS.html" title="Computer Science">CS</a> <a href="../Accounting/Introduction.html" title="Accounting">Accounting</a>
+        <h3>Coding Lessons</h3><a href="../LearningHtml/Introduction.html" title="HTML">Learn HTML</a> <a href="../SEO/SEO.html" title="SEO">Learn SEO</a>
+      </div>
+      <div>
+        <h2>More</h2>
+        <h3>What do you want<br>
+        to do?</h3><a href="../Other/ContactUs.html" title="Contact us">Contact us</a> <a href="../Other/Support.html" title="Support">Support</a>
+      </div>
+    </div>
+  </div>
+  <div class="spacing"></div>
+  <div class="grid-layout-main">
+    <div>
+      <div class="side-nav-universal">
+        <br>
+        <br>
+        <br>
+        <h2>Computer Science AS</h2><a href="CS.html" title="Introduction">Introduction</a> <a href="InformationRepresentation.html" title="">Information Representation</a> <a href="Communication.html" title="Communication">Communications</a> <a href="Communication2.html" title="Communication">Communications 2</a> <a href="Hardware.html" title="Hardware">Hardware</a> <a href="LogicGates.html" title="LogicGates">Logic Circuits</a> <a href="ProcessorFundamentals.html" title="Processor">Processor Fundamentals</a> <a href="AssemblyLanguage.html" title="Assembly">Assembly Language</a> <a href="MonitorControlling.html" title="Sensors">Monitor & Control</a> <a href="SystemSoftware.html" title="System Software">System Software</a> <a href="DataSecurity.html" title="Security">Security, Privacy & Data Integrity</a> <a href="Ethics.html" title="Ethics">Ethics</a> <a href="Databases.html" title="databases">Databases</a><br>
+        <h2>AS Practical</h2><a href="Algorithm.html" title="Algorithm">Algorithm</a> <a href="Datastructures.html" title="Data Structures">Data Structures and more</a> <a href="Development.html" title="">Software development</a><br>
+        <br>
+        <h2>Computer Science A2</h2><a href="DataRepresentations.html" title="Data Representation">Data Representation</a> <a href="FileOrganisations.html" title="File Organisation">File Organisation</a> <a href="LogicCircuit.html" title="Logic Circuits">Advance Logic Gates</a><a href="Internet.html" title="Internet">Internet</a> <a href="VirtualMachines.html" title="Virtual Machines">Virtual Machines</a> <a href="SystemA2.html" title="System Software">System Software</a> <a href="Security.html" title="Encryption and Security">Encryption & Security</a> <a href="AI.html" title="Artificial Intelligence">Artificial Intelligence</a><br>
+        <h2>A2 Practicals</h2><a href="../Developer/BinarySearch.html" title="Binary Search" target="blank">Binary Search</a> <a href="../Developer/LinearSearch.html" title="Linear Search" target="blank">Linear Search</a> <a href="../Developer/BubbleSort.html" title="Bubble Sort" target="blank">Bubble Sort</a> <a href="../Developer/InsertionSort.html" title="Inertion Sort" target="blank">Insertion Sort</a> <a href="../Developer/Combined.html" title="Combined Algorithm" target="blank">Combined Algorithm</a> <a href="../Developer/Stack.html" title="Stack" target="blank">Stacks</a> <a href="../Developer/Queue.html" title="Queue" target="blank">Queues</a> <a href="../Developer/LinkedList.html" title="Linked List" target="blank">Linked List</a> <a href="../Developer/BinaryTree.html" title="Binary Tree" target="blank">Binary Tree</a><br>
+        <h2>More</h2><a href="CSReference.html" title="CS Reference">Reference</a> <a href="CSEx.html" title="CS Questions">Pastpaper Questions</a>
+      </div>
+    </div>
+    <div>
+      <div class="Mainpage">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div>
+          <div class="pagenav">
+            <a href="Communication.html">Back</a> <a href="Hardware.html">Next</a>
+          </div><span onclick="Mobilebut()" id="mobilebutton"><img alt="more topic chapters" src="../../Imagedata/Revisezone/morecontent.png"></span>
+          <h1>Network Hardware, ISPs, PSTNs & IP Addresses</h1><br id="reference195">
+          <h2>Transmission mediums</h2>
+          <p>Transmission can be either guided (wired or cable) or unguided(wireless)</p>
+          <p>For each transmission medium there are many options. So we will see for each their properties and advantages and disadvantages</p><br id="reference196">
+          <h2>Cable (guided)</h2>
+          <h3>Transmission which uses a wire such as twisted pair, fibre optic or coaxial cable</h3>
+          <div class="scrollflow">
+            <table class="table-design">
+              <tr>
+                <th>Name of cable</th>
+                <th>Bandwidth</th>
+                <th>Interference</th>
+                <th>Attenuation</th>
+              </tr>
+              <tr>
+                <td>Twisted pair</td>
+                <td>Low</td>
+                <td>Highest</td>
+                <td>Medium</td>
+              </tr>
+              <tr>
+                <td>Coaxial Cable</td>
+                <td>Relatively high</td>
+                <td>Low</td>
+                <td>Highest</td>
+              </tr>
+              <tr>
+                <td>Fibre Optic</td>
+                <td>Highest</td>
+                <td>Lowest</td>
+                <td>Lowest</td>
+              </tr>
+            </table>
+          </div>
+          <figcaption>
+            Another point to remember is that fibre optics are highly expensive and twisted pair is the cheapest
+          </figcaption><br id="reference197">
+          <h2>Wireless (unguided)</h2>
+          <h3>Transmission which uses radio, microwave or infrared.</h3>
+          <div class="scrollflow">
+            <table class="table-design">
+              <tr>
+                <th>Wireless</th>
+                <th>Bandwidth</th>
+                <th>Penetration</th>
+                <th>Attenuation</th>
+              </tr>
+              <tr>
+                <td>Radiowaves</td>
+                <td>Lowest</td>
+                <td>Highest</td>
+                <td>Lowest</td>
+              </tr>
+              <tr>
+                <td>Microwaves</td>
+                <td>Medium</td>
+                <td>Medium</td>
+                <td>Medium</td>
+              </tr>
+              <tr>
+                <td>Infrared Waves</td>
+                <td>Highest</td>
+                <td>Lowest</td>
+                <td>Highest</td>
+              </tr>
+            </table>
+          </div>
+          <p>There is no clear trend for interference, however wireless transmission has more interference than wired transmission</p>
+          <p>Also the need for repeaters is less often used than for wired transmission</p>
+          <p>Depending on the situation the type of wireless transmission used depends</p>
+          <p>Understand that infrared has a short range compare to microwaves and radiowaves. For this reason we use infrared only for short range transmission</p>
+          <h2>Practical uses of Wireless and Wired transmission</h2>
+          <p>Wireless transmission is used in connecting mobile phones to the WAP</p>
+          <p>It is used in Lan networks to reduce the amount of cabling but usually we use twisted pair for LAN networks</p>
+          <p>Wired transmission is used for internet communications and also telephone communications</p>
+          <h2>Satelites</h2>
+          <p>Instead of using wired transmission for world wide communications we can use satelites which uses wireless transmission (microwaves).</p>
+          <p>There are 3 types of satelites depending on their positions</p>
+          <ul>
+            <br id="reference198">
+            <li>Geostationary Satelites</li>
+            <p>These are satelites which has an orbital period of one day and it is about 35000km above the surface of the earth.</p>
+            <p>Also the satelite will positioned above the same point above the earth always.</p>
+            <p>They are usually on top of the equator</p>
+            <p>3 are required to enable global coverage and is usually used for long distance telephone communications or networks</p><br id="reference199">
+            <li>MEO - Satelites</li>
+            <p>This is called medium earth orbit satelites which is used for GPS and 10 are required for global coverage</p><br id="reference200">
+            <li>LEO Satelites</li>
+            <p>The Low earth orbit satelites has the lowest orbital radius. Thus this is used in high speed telecommunciations and internet communications.</p><br>
+            <p>Usually the main reason why we don't use Satelites is because they are highly expensive and difficult to maintain and also as they are very far away they have a delay in transmission.</p>
+            <p>This delay is called latency</p>
+            <h2>LAN Hardware</h2>
+            <p>There are many devices or hardwares in a particular network and they have there own functions</p>
+            <p>We must know in depth the functions of each device</p><br id="reference201">
+            <li>Repeaters</li>
+            <h3>A device connecting two wires which provides a full strength signal to the second wire.</h3>
+            <p>The reason why the word amplifier is wrong is that a amplifier boost both the interference and the signal whereas the repeater boosts the signal only.</p><br id="reference202">
+            <li>Bridge</li>
+            <h3>A device which connects two segments of LAN. It records the Network addresses of the devices in each connected segment.</h3>
+            <p>For example if we want to extend a bus topology with a star topology we could use a bridge and a repeater to produce a larger LAN and a hybrid network.</p><br id="reference203">
+            <li>Switch</li>
+            <h3>A central device which is used to connect devices in a star topology which can send a unicast message</h3>
+            <p>So for commmunications within a particular network such as a WAN we don't need a router. All we need is a switch</p>
+            <p>The switch is the advanced version of the hub as it provides more features than the hub. The hub is also used as a central device but the message is usually send to all the other devices. This causes data collisions and thus corruptions</p><br id="reference204">
+            <li>Server</li>
+            <p>Is a computer which provides a specific service or an application</p><br id="reference205">
+            <li>Network interface card (NIC)</li>
+            <h3>This is not a device but actually a component in a device which uniquely identifies a device on the internet. It contains a hard coded MAC address which is a 48 bit code in hexadecimals</h3><br id="reference206">
+            <li>Wireless Network interface card (WNIC)</li>
+            <h3>This provides the NIC function in a wireless network<br>
+            <br>
+            <br id="reference207"></h3>
+            <li>Wireless Access point (WAP)</li>
+            <h3>A central device used to connect device to a wireless network</h3>
+            <p>A good example is a wireless router</p>
+            <p>However for the WAP to communicate with the device it must have WNIC</p>
+            <p>This is specially used in cell phone networks</p><br id="reference208">
+            <li>Router</li>
+            <h3>Acts as a node on the internet</h3>
+            <p>So usually the router is used when we are connecting two networks together. Actually the router we know is actually different from the ones the ISP use.The routers used by ISP actually acts a point or a node which connects other routers from other ISPs</p>
+            <p>The router also enables you to communicate with different underlying network technologies - this is actually called a gateway but is replaced by the router now.</p>
+            <p>Also as the name suggests the router finds the most suitable route for data packets to be transmitted over the internet</p><img src="../../Imagedata/CS/node.png" alt="Internet nodes and routers">
+            <figcaption>
+              Each router acts as a node
+            </figcaption><br id="reference209">
+            <h2>Ethernet</h2>
+            <p>Is used as a wired transmission for LAN networks.</p>
+            <p>The original ethernet or also known as legacy ethernet was used in LAN networks</p>
+            <p>The central device used in early times was a hub</p>
+            <p>The hub had no control of where the data is sent and it is broadcasted to all the devices</p>
+            <p>This has a higher chance of data collisions and data corruptions</p>
+            <p>There was a method used to avoid data collisions and this is called CSMA/CD - carrier sense multiple access/ collision detection</p>
+            <p>You will need to know briefly this process</p>
+            <p>1. Firstly the transmission medium is checked if it has a voltage. If a voltage is present then it will wait a random time and try again</p>
+            <p>2. When no voltage is detected the transmission is started and there is a continous check for a collision.</p>
+            <p>3. If a collision is detected then the transmission stops and it alerts other endsystems of the presence of a collision.</p>
+            <p>4. Then it waits a random time and tries again.</p>.<br>
+            <p>Nowadays Modern ethernet we don't use this method because a switch is used instead of a hub</p>
+            <p>The Switch can end the message to the required device. Also the switch contains a buffer which can temporarily store data until a transmission medium is freed. So then it can send data without collisions</p>
+            <p>Remember that usually the LAN network follows the star configuration.</p><br id="reference210">
+            <h2>ISP</h2>
+            <h3>It is a company or organisation which links a device to the internet by providing an IP address.</h3>
+            <p>The fact is that this defines access ISP and there are actually many types of ISPs</p>
+            <p>So the access ISP are connected to the middle tier ISP and the middle tier ISP are connected to Tier 1 ISP.</p>
+            <p>This is indeed confusing however lets approach this logically. We know one organisation can't handle the world ISPs. So the ISP are broken down depending on their Hierachy and size.</p>
+            <p>The Tier 1 is the largest ISP and they connect Middle tier ISP to the internet. The Middle Tier ISP connects the access ISPs. The Access ISP connects users like you to the internet</p><br id="reference211">
+            <h2>Public switched telephone network (PSTN)</h2>
+            <p>As we know that the PSTN is an infrastructure of the WAN network and it is owned by a company</p>
+            <p>So the PSTN owns the infrastructure which was original used for telephone communications which now is used as the infrastructure for the Internet. The transmission medium is fibre optics.</p>
+            <p>There are some important things you need to know.</p>
+            <li>The PSTN can send both analogue signals and digital signals</li>
+            <p>It is mainly digital</p>
+            <p>So analogue signals means sound is transmitted</p>
+            <p>So telecommunications use analogue signals to transmit data</p>
+            <p>The internet transmits data in the form of digital electrical signals</p>
+            <li>The PSTN doesn't need power for telecommuniciations but requires power for internet commmunications</li>
+            <p>As analogue signals can be transmitted without power.</p>
+            <li>A dedicated line is made for Telecommunications</li>
+            <p>Whenever you're in a call a dedicated line is made temporarily between the two telephones. However the internet uses a concept called package switching where data is transmitted in the most appropriate route, decided by the router</p>
+            <h2>Application which uses the internet</h2>
+            <p>You will need to know some applications which makes use of the internet</p>
+            <ul>
+              <br id="reference212">
+              <li>World wide web WWW</li>
+              <h3>It is a distributed application which contains documents in the form of webpages structured in to websites which has been made available for anyone to access</h3>
+              <p>Usually they ask what is the difference between the WWW and the internet.</p>
+              <p>So the WWW does not follow any protocols (Ex IP/TCP) and it stands for World wide web. Also it is not a network but an application which contains documents and data</p><br id="reference213">
+              <li>Cloud Computing</li>
+              <h3>Computing service provided through the internet</h3>
+              <p>These services are like file servers and application servers (Ex Google Drive)</p>
+              <p>There are 3 types of Cloud computing services and it could either be public or private</p>
+              <p>Private Cloud: Cloud servers owned and maintained by organisations and are used by the organisation only.</p>
+              <p>Public Cloud: Cloud servers which are used by the public for general use</p>
+              <p>The establishment of the cloud server on a particular location must be known</p>
+              <p>The 3 types of services which are offered by public clouds:</p>
+              <p>1. Infrastructure provision - These include the hardware requirements of a computer system and so these can be used to back up files or store data or provide requirements to execute a particular software</p>
+              <p>2. Platform provision - These provide debugging services to be able to run softwares on different platforms for testing.</p>
+              <p>3. Software or application provision - similar to a application server as it contains softwares which could be used by the user</p><br>
+              <p>The reason why we use Public cloud servers rather than creating our own servers(private cloud) is because it is highly costly and also not alot of technical expertise are required to use public cloud services</p>
+              <p>The only problem with public cloud services are that data can be accessed by the third party. So the user must hope and trust the cloud service provider that they will maintain data security.</p>
+            </ul><br id="reference214">
+            <h2>Bit streaming</h2>
+            <p>They usually ask:</p>
+            <blockquote>
+              What is bit streaming?
+            </blockquote>
+            <h3>During streaming data, data is sent in sequence of bits from the media servers to the receiver through the internet and is temporarily held in a buffer until it is played by a media software.</h3>
+            <p>The above one is a brief explanation and so you need to include more points</p>
+            <p>1. There are two types of bit streaming - on demand and real time bit streaming</p>
+            <p>Real time (live feed) bit streaming is when the bits are transmitted as soon as it is captured and recorded</p>
+            <p>On demand bit streaming is when bits are streamed at a time chosen by the user</p>
+            <p>2. In bit streaming data is compressed from bytes to bits and decoded at the recieving end and so the order of bits sent is same when received</p>
+            <p>3. The buffer has a high watermark and a low watermark which maintains the amount of data stored in the buffer.</p>
+            <p>4. The bandwidth of the connection is higher than what is being played by the media softwares.</p>
+            <p>5. Requires bits to be sent at high speeds to avoid buffering</p>
+            <p>The above points are enough to score full marks</p><br id="reference215">
+            <h2>IP Addressing (Ipv4)</h2>
+            <p>An Ip address is quad dotted number which uses 32 bits to store each address. Each 8 bits can be used to represent a value from 0 to 255.</p>
+            <p>Usually an ip address is in denary form</p>
+            <p>Example - 192.168.2.1</p>
+            <p>Ip addresses are provided by the access ISPs</p>
+            <p>The Ip address is used to identify a location on the internet so that data can be sent to the correct location</p>
+            <p>As Ipv4 can only represent 2<sup>32</sup> differenct address it is not enough and so there are many schemes used to use the IP addresses more efficiently.</p>
+            <p>There are two types of IP addresses</p>
+            <ul>
+              <br id="reference216">
+              <li>Static IP address</li>
+              <p>These are Ip addresses which remains permanent and doesn't change.</p><br id="reference217">
+              <li>Dynamic IP address</li>
+              <p>Changes whenever you log out and connect to the internet</p>
+            </ul>
+            <h2>Original scheme</h2>
+            <p>In the original schemes the IP address were divided into fixed Class A , B or C. These Ip address use the first few bits to define the class and also contained a fixed number of bits used for Network and Host ID</p>
+            <p>The table is not required to be remembered.</p>
+            <p>The problems was that as due to the rigid number of host and network IDs. This left alot of unused number of host IDs or very little amount of Host IDs.</p>
+            <p>For example the Class C uses 21 bits to define the network ID and 8 bits to define the Host ID</p>
+            <p>So this allowed alot of networks to be provided however only 256 hosts can be connected to each network.</p>
+            <p>This caused many problems as the number of host were increasing this class was not suitable.</p><br id="reference218">
+            <h2>Classless Inter domain routing (CIDR)</h2>
+            <p>In this scheme they use network IDs and host IDs however they were not arranged into fixed classes.</p>
+            <p>At the end of the IP address there was an 8 bit suffix to define the number of bits for network ID.</p>
+            <p>This made it more flexibe as the organisation can get the Ip addresses which are most suitable for them. So they can contain the right number of network connections and the number of Host connected to each network.</p>
+            <p>Also now bits are not required to define the class used so this allows more space for Host and Network IDs</p>
+            <p>Remember the above explanation are for organisations which uses a large number of networks. These include access ISP and Tier1 ISPs.</p>
+            <p>For example if the Middle Tier 1 ISP had many access ISP connected to it. It will use a IP address which have a high number of bits for Network ID and somewhat reasonable number of bits for Host .</p><br id="reference219">
+            <h2>Subnetting</h2>
+            <p>A large organization that contains many workstations and quite far away.</p>
+            <p>Say each of them uses a separate network and the use they 8 bits for host ID</p>
+            <p>Then each workstation can connect 256 hosts to each network but each workstation only uses 10-20 hosts, so this is gone for waste as not all the IP addresses are used in each station</p>
+            <p>To make it more efficient we use subnetting.</p>
+            <p>For this we need a router that acts as a node and stores the IP address of the hosts connected to the router.</p>
+            <p>So a single network could be used and then be divided using a router so then it can connect workstations. So rather than using separate networks, the single network can provide IP addresses for the hosts in each workstation.</p>
+            <p>In other words the network is split and each workstation gets an allocated number of IP addresses depending on the number of hosts in each workstation.</p>
+            <p>For this to occur the router must record the IP address of each host in every station.</p><img src="../../Imagedata/CS/subnetting.png" alt="IP addresses and subnetting">
+            <figcaption>
+              A single network is used and each subnetwork is a host and each end system connected to each sub-network is also a host
+            </figcaption><br id="reference220">
+            <h2>Private Network Address- NAT</h2>
+            <p>NAT is Network address translation.</p>
+            <p>We know that Ipv4 is not enough to identify each device on the internet</p>
+            <p>For this reason we use a method which requires only the (private)network address to be unique and the IP address <span class="highlight">within</span> the Network (private address) must also remain unique. However, the private address of a particular network doesn't have to be unique among different networks</p>
+            <p>For example your router has a public address that uniquely identifies the particular network you're using. This address can not be repeated anywhere on earth.</p>
+            <p>However when you connect your device to the WIFI router you will provide an IP address called the private address which can not repeat in the same network but can repeat in a different network. So if your friend connects to the same WIFI router he will not have the same address as you. However, if he goes to his own WIFI router, he might have the same IP address as you.</p>
+            <p>So a component called the NAT box is usually installed on the router which converts the Private address to a public address before it is sent to a different server. It also keeps a log of the request sent by the individual devices on the private network.</p>
+            <p>Remember when I say the word network in this scenario it means private network - network usually in a building home or office use.</p><br id="reference221">
+            <h2>Ipv6</h2>
+            <p>As Ipv4 is not enough for future use, we must use Ipv6.</p>
+            <p>It uses 128 bits to store each address, and so can represent 2<sup>128</sup> addresses.</p>
+            <p>It is usually written in the Hexadecimal form</p><samp>ffff:ffff:::ffff:ffff:ffff:1234</samp>
+            <figcaption>
+              The :: means it contains:0000 inside
+            </figcaption>
+            <h2>Domain name server (DNS)</h2>
+            <p>We will need to know some definition</p><br id="reference222">
+            <h2>DNS service</h2>
+            <h3>It is a hierarchy distributed database which is installed on the DNS servers which maps the domain name to their corresponding Ip addresses</h3>
+            <p>DNS servers are the servers that contain the DNS database.</p>
+            <p>So usually as it is hard to remember Ip addresses, we use domain names to identify a particular web server or website.</p>
+            <p>The process by which the DNS servers map the domain name to the IP address is called Name resolution.</p>
+            <p>Across the world there are few DNS servers called the root servers (top-level DNS servers) and they store the domain names of the top-level domains such as .com</p>
+            <p>Sub domain servers hold subdomains in their system and the Ip address for that particular zone</p>
+            <p>Example - the Britain sub DNS servers may contain domains such as the .edu or .gov which are only related to a specific region.</p>
+            <p>Here is an example of a domain name: Revisezone.com</p><br id="reference223">
+            <h2>Name resolution</h2>
+            <p>You will need to know the steps of mapping a domain name to its Ip address</p>
+            <p>1. First, the domain name is typed on the user browser, then it is sent to the DNS servers.</p>
+            <p>2. If the domain name is in the system or database then the correct Ip address is returned</p>
+            <p>3. If it is not in the database the domain name is forwarded to a different root server and follows the hierarchy of the domain name to retrieve the Ip address. This means if it was a .uk.edu it would first go to UK then the edu sub-domain servers</p>
+            <p>4. If not found the browser will check the cache memory for the old Ip address and use this instead.</p><br>
+            <br>
+            <div class="pagenav">
+              <a href="Communication.html">Back</a> <a href="Hardware.html">Next</a>
+            </div><br>
+            <br>
+			 <h2>Recommended</h2>
+        <p>These are things you might like. Clicking these ads can help us improve our free services in the future...</p>
+            <div id="container-2a219c05affd07270c6855c66c9456d4" style="border-radius:20px;"></div>
+        
+            <div class="general container-extra2 flex-box-row">
+              <div>
+                <h5>End of Chapter Videos</h5>
+                <h6>Collection of Videos to Support Your Understanding.</h6>
+                <h4>Remember these videos are handpicked by me and I feel these are one of the best ones out there. But I constantly update this list for each chapter.The Youtubers are more than welcome to contact me.</h4>
+                <h4>Also, don't forget to Subscribe to our Youtube channel - Wiscus</h4><br>
+                <a style="padding:10px; background-color:#4ea654; border-radius:3px; font:17px Os; color:#e8e4e3; text-decoration:none;" href="https://www.Youtube.com/watch?v=MbSfWN9KlkE&amp;list=PLfh04WZ4q7nUuF839ZBMWUtWJEcFwGXcp" target="blank">Watch</a>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div><br>
+      <br>
+      <footer>
+        <p>Revisezone.com Copyright 2020</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../WebScript/Main-script.js"></script>
+</body>
+</html>

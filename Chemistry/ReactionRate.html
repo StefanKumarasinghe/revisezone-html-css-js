@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang ='en-US' lang='en-GB'>
+<head>
+<meta charset='utf-8'>
+<meta name='description' content='What affect the rate of a reaction? How do we measure it and why is it important?'>
+<meta name='keywords' content='activation energy, catalyst, rate of reaction, concentration,boltzmann curve and graph'>
+<meta name='author' content='Revisezone.com'>
+<meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="shortcut icon" href="../../Imagedata/Revisezone/Logo.png" type="x-icon/image"><meta name='theme-color' content='black'>
+<link class ="Style" rel='stylesheet' href='../../Style/Master.css' media ="screen and (min-width:1000px)">
+<link class ="Style" rel='stylesheet' href='../../Style/Mobile.css' media ="screen and (max-width:999px)">
+<link class ="Style" rel='stylesheet' href='../../Style/printstyle.css' media ="print">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-170507780-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-170507780-1');
+</script>
+
+<title>Rate Kinematics | Boltzmann's Graph</title>
+</head>
+<body onload="saved()">
+<div class="progress-container">
+   
+  </div>
+  
+  
+<div class="top-nav-main">
+<a href="../../home.html"title ="Home">Home</a>
+<a href="../Physics/Physics.html"title ="Physics"><abbr>Physics</abbr></a>
+<a href="../Cs/CS.html" title ="Computer science">CS</a>
+<a href="../Accounting/Introduction.html">Accounting</a>
+
+
+<div class="login-more">
+<a onclick="NightmodeOn()" id="Mode">Night</a>
+<a onclick="More()" id="more">More</a>
+
+</div>
+</div>
+<div class="dropdesign">
+<span id="goback-white" onclick="Gobackdropdown()">&#10006;</span>
+<div class="flex-box-row">
+<div>
+<h2>Revise Now</h2>
+<h3>Cambridge AS levels</h3>
+<a href="../Physics/Physics.html">Physics </a>
+<a href="../Cs/CS.html">Computer Science</a>
+<a href="ChemistryReference.html">Reference</a>
+<a href="ChemistryEx.html">Questions</a>
+<h3>Programming and coding</h3>
+<a href="../LearningHtml/Introduction.html">Learn HTML</a>
+<a href="../SEO/SEO.html">Learn SEO</a>
+
+
+
+
+
+</div>
+<div>
+<h2>More</h2>
+<h3>What do you want<br> to do?</h3>
+
+<a href="../Other/ContactUs.html">Contact us</a>
+<a href="../Other/Donate.html">Donate</a>
+<a href="../Other/Support.html">Support</a>
+<a href="../Other/Services.html">More Services</a>
+<a href="https://twitter.com/MrWiscus">Send a tweet</a>
+<a href="../../home.html#socialmedia">Social media</a>
+
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+<div class="spacing"></div>
+
+
+<div class="grid-layout-main">
+<div>
+<div class="side-nav-universal">
+<br>
+<br>
+<br>
+
+<h2>Chemistry</h2>
+<a href="Chemistry.html">Introduction</a>
+<a href="Moles.html">Moles</a>
+<a href="Empirical.html">Empirical Formulas & More</a>
+<a href="Atomic.html">Atomic Properties</a>
+<a href="Ionisation.html">Ionisation Energies</a>
+<a href="Bonding.html">Bonding</a>
+<a href="IMF.html">Intermolecular Forces</a>
+<a href="Ideal.html">States of Matter & Ideal Gases</a>
+<a href="Structures.html">Giant Covalent & Ionic Structures</a>
+<a href="Enthalpy.html">Enthalpy Change</a>
+<a href="Hess.html">Hess's Law</a>
+<a href="ReactionRate.html">Reaction Rate</a>
+<a href="Equilibrium.html">Equilibrium</a>
+<a href="Redox.html">Redox Reactions</a>
+<a href="Periodicity.html">Periodicity</a>
+<a href="G2.html">Group 2 Elements</a>
+<a href="G7.html">Group 7 Elements</a>
+<a href="Nitrogen.html">Nitrogen & Sulfur</a>
+<br>
+<h2>Organic Chemistry</h2>
+<a href="Organic.html">Introduction to Organic Chemistry</a>
+<a href="Reactions.html">Organic Reactions</a>
+<a href="Alkane.html">Alkanes</a>
+<a href="Alkene.html">Alkenes</a>
+<a href="Halogenoalkane.html">Halogenoalkanes</a>
+<a href="Alcohol.html">Alcohols & Carboxylic acids</a>
+<a href="Carbonyl.html">Aldehydes & Ketones</a>
+<a href="Polymerisation.html">Polymerisation</a>
+<br>
+
+<h2>More</h2>
+<a href="ChemistryReference.html"title="Reference">Reference</a>
+<a href="ChemistryEx.html"title="Chemistry past papers">Chapter Questions</a>
+</div>
+</div>
+<div>
+<div class="Mainpage">
+<br>
+<div>
+<div class="pagenav">
+<br><br><br><br>
+<a href="Hess.html">Back</a>
+<a href="Equilibrium.html">Next</a>
+
+
+</div>
+<span  onclick="Mobilebut()"  id = "mobilebutton"><img src="../../Imagedata/Revisezone/morecontent.png"/></span>
+<h1>Reaction Kinematics & Boltzmann's Graphs</h1>
+
+<br id="reference64">
+<h2>How do we measure rates?</h2>
+<p>There are many ways which we can use to measure the rate of a reaction. This involves in monitoring a change in physical property over time</p>
+<p>For example, a color change reaction will use a colorimeter to check the change in color over a period of time</p>
+<p>Nevertheless, this fundamentally measures the change in concentration of products or reactants over a unit period of time</p>
+<h4>Rate = &delta;Concentration/&delta;Time</h4>
+<figcaption>Where &delta; is small change</figcaption>
+<p>The above equation gives the rate of change in concentration. This is the rate of reaction at a particular point or time. We could also find the average rate which covers a large period of time</p>
+<h4>Average rate = Change in Concentration/Time interval</h4>
+<p>This is how we measure the rate and we usually create a table and plot a graph. The graph helps us to determine the rate at a particular point using a tangent to a point</p>
+<img src="../../Imagedata/Chemistry/concentrationgraph.gif" alt="the concentration graph in rate of reactions">
+<p>We can do this for almost at any point of the graph but exams commonly ask to measure the intial rate ( T = 0 ) as this is used to compare rates of different reactions</p>
+<br id="reference65">
+<h2>What causes a reaction to occur?</h2>
+<p>The current and the next subheading are quite similar but, this talks about the fundamental basis why reactions occur</p>
+<p>For any reaction to occur it must satisfy 3 conditions:</p>
+<p>1. The reactant particles must collide</p>
+<p>2. They must collide successfully ( collide with the minimum energy required (activation energy) for a reaction to occur )</p>
+<p>3. They must collide with the correct orientation( derived from point 2 )</p>
+<p>We will discuss what is activation energy and catalyst later. Now we will take about the factors which increases these fundamental conditions</p>
+<br id="reference66">
+<h2>Factors Affecting rate</h2>
+<p>There are 5 Main Factors which affect the rate of the reaction and most of them have positive correlation(when it increases the rate also increases). For each factor we will give the model answer which will cover all of the marks possible</p>
+<ul>
+<li>Surface area</li>
+<p>Larger the surface area the larger the contact area and higher the opportunities for collisions between reactant particles. So greater successful collision frequency and so the rate increase with surface area</p>
+<p>Please note the Succesful and Collision frequency keyword because as highlighted above these are what ultimately determines the rate</p>
+<li>Concentration</li>
+<p>Higher the concentration, more reactant particles are there per unit volume. This leads to more collisions between reactant particles and so greater successful collision frequency between reactant particles and the rate increases</p>
+<p>This is very easy to imagine - think of a crowded room. You will most likely bump into someone else</p>
+<li>Pressure</li>
+<p>Same as Concentration but for gases</p>
+<li>Temperature</li>
+<p>Higher the temperature, the faster the particles move as they have more kinetic energy. So more particles will have greater or equal to the activation energy. So higher successful collision frequency so higher rate</p>
+<p>A simple way to understand this is that when we heat a gas the KE of particles increases which leads to faster motion. This exponentially increases the rate of reaction as this favours both conditions for a reaction to occur and that's why a 10K increase in Temperature is enough to double the rate</p>
+<li>Presence of a Catalyst</li>
+
+<p>When you add a catalyst it provides a pathway which requires a lower activation energy. So more particles have greater or equal to the activation energy. So greater successful collision frequency and rate increases</p>
+<p>The idea of catalyst will be covered in depth under A2, but the understanding is very simple. Simply, it takes a shortcut!</p>
+<br id="reference67">
+<h2>Catalyst</h2>
+<img src="../../Imagedata/Chemistry/catalystprofile.gif" alt="The energy profile diagram of a catalysed reaction">
+<h3>A subtance which speeds up a chemical reaction by providing a pathway with lower activation energy and which is chemically unaltered at the end of the reaction.</h3>
+<p>When defining catalyst, we always talk about positive catalyst( which speed up a reaction ) so always use the phrase speeds up and not altered</p>
+<p>There are catalyst which slow down the reaction also which are called inhibitors and that's all you need to know</p>
+<p>A famous example of a use of catalyst is in Haber proccess( Ammonia production ) where Iron catalyst is used to speed up the reaction/equilibrium</p>
+<p>There are two types of Catalysts we need to know:</p>
+<br id="reference68">
+<li>Homogeneous Catalyst</li>
+<h3>Catalyst which are at the same state or phase as the reactants</h3>
+<p>A good example is Sulfuric acids in Esterification</p>
+<br id="reference69">
+<li>Heterogeneous Catalyst</li>
+<h3>Catalyst which are not at the same state or phase as the reactants</h3>
+<p>A good example is iron which is a solid catalyst in Haber process</p>
+<p>More will be covered in A2 Chemistry...</p>
+<br id="reference70">
+<h2>Activation Energy - E<sub>a</sub></h2>
+<img src="../../Imagedata/Chemistry/activationenergy.gif" alt="The energy profile diagram">
+
+<h3>The minimum energy required for particles to collide successfully and cause a reaction</h3>
+<p>Usually E<sub>a</sub> determines whether a reaction will happen or not. For example, the marksheme allows marks why Noble gases will not react and this is because they have a very high E<sub>a</sub>, but the suitable answer is because it has a complete electronic configuration</p>
+<p>If a reaction has a high E<sub>a</sub>. It needs a lot of energy and it is most likely to be endothermic</p>
+<br id="reference71">
+<h2>Boltzmann Distribution Graphs</h2>
+<p>An important idea in Physics is that temperature is an average measurement of the kinetic energy. This means that particles at a particular temperature can have more than the average KE and some could be lower, but the total average is constant as long as the temperature remains constant</p>
+<p>This idea is extended in chemistry also and what we need to realise is that these graphs are for a particular temperature</p>
+<img src="../../Imagedata/Chemistry/boltzmanncurve.png" alt="boltzmann distribution curve labelling">
+<p>The peak of each graph shows us the energy of majority of the particles in the sample. This is known as the most probable energy. By logic, we can understand that a higher Temperature graph will have an EMP shifted to the right more than the Lower temperature graph. However, what students need to understand is that the area of the two graphs must be constant for both. This is because this represents the number of molecules ( remember this doesn't follow the basic area equation or else this will represent internal energy)</p>
+<p>So when the EMP is shifted to the right the peak must drop to make the area constant</p>
+<p>The same is true with a lower temperature, the EMP will shift to the left and the peak will be higher. This is a bit confusing at first but it does make sense</p>
+<p>We will now see how each factor will affect the Boltzmann curve and how we can say the rate increases</p>
+<img src="../../Imagedata/Chemistry/boltzman1.jpg" alt="boltzmann distribution graph for temperature">
+<p>This shows how a larger temperature, increases the rate. Remember, the activation energy is usually a constant and it depends on the presense of a catalyst</p>
+<p>In fact, increasing the temperature by 10K will double the area/rate</p>
+<img src="../../Imagedata/Chemistry/boltzmanncatalyst.png" alt="boltzmann distribution graph using a catalyst">
+<p>The presence of a catalyst alters the activation energy so in this case a larger area is displayed</p>
+<div class="pagenav">
+<br><br><br>
+<a href="Hess.html">Back</a>
+<a href="Equilibrium.html">Next</a>
+<br>
+<br>
+
+</div>
+<div class="general container-extra flex-box-row">
+<div>
+<h5>End of Chapter Questions</h5>
+<h6>Collection of Topic Questions to understand the topic more.</h6>
+<br>
+<a style="padding:10px; background-color:#4ea654; border-radius:3px; font:17px Os; color:#e8e4e3;  text-decoration:none;" href="../../Filedata/Questions/Chemistry/14.1-reaction_kinetics-theory-_ial-cie-chemistry_-qp.pdf" target="_blank" >Try out</a>
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+</div>
+<br><br>
+<footer><p>Revisezone.com Copyright 2020</p>
+</footer>
+<script src="../../WebScript/Main-script.js">
+</script>
+</body></html>

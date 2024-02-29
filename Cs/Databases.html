@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='description' content='What is a database and what is a table? Discover, the key elements of a database and also the learn the basic SQL code and normalisation'>
+  <meta name='keywords' content='detabase,key,primary key,secondary key,SQL,code,tuple,attribute,relationships,relation,level,software'>
+  <meta name='author' content='Wiscus'>
+  <link rel="apple-touch-icon" href="Imagedata/Revisezone/Logo.png">
+  <meta name='theme-color' content='black'>
+  <meta name='viewport' content='width=device-width initial-scale=1'>
+  <link rel="shortcut icon" href="../../Imagedata/Revisezone/Logo.png" type="x-icon/image">
+  <link class="Style" rel='stylesheet' href='../../Style/Master.css' media="screen and (min-width:1000px)">
+  <link class="Style" rel='stylesheet' href='../../Style/Mobile.css' media="screen and (max-width:999px)">
+  <link class="Style" rel='stylesheet' href='../../Style/printstyle.css' media="print"><!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170507780-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-170507780-1');
+  </script>
+  <title>Databases, DBMS, DBA, Normalisation & SQL Coding - Revise Zone</title>
+</head>
+<body onload="saved()">
+  <div class="progress-container"></div>
+  <div class="top-nav-main">
+    <a href="../../home.html" title="Home">Home</a> <a href="../Chemistry/Chemistry.html" title="Chemistry"><abbr>Chemistry</abbr></a> <a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../LearningHtml/Introduction.html">HTML</a>
+    <div class="login-more">
+      <a onclick="NightmodeOn()" id="Mode">Night</a> <a onclick="More()" id="more">More</a>
+    </div>
+  </div>
+  <div class="dropdesign">
+    <span id="goback-white" onclick="Gobackdropdown()">✖</span>
+    <div class="flex-box-row">
+      <div>
+        <h2>Revise Now</h2>
+        <h3>GCE Subjects</h3><a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../Chemistry/Chemistry.html" title="Chemistry">Chemistry</a> <a href="../Cs/CS.html" title="Computer Science">CS</a> <a href="../Accounting/Introduction.html" title="Accounting">Accounting</a>
+        <h3>Coding Lessons</h3><a href="../LearningHtml/Introduction.html" title="HTML">Learn HTML</a> <a href="../SEO/SEO.html" title="SEO">Learn SEO</a>
+      </div>
+      <div>
+        <h2>More</h2>
+        <h3>What do you want<br>
+        to do?</h3><a href="../Other/ContactUs.html" title="Contact us">Contact us</a> <a href="../Other/Support.html" title="Support">Support</a>
+      </div>
+    </div>
+  </div>
+  <div class="spacing"></div>
+  <div class="grid-layout-main">
+    <div>
+      <div class="side-nav-universal">
+        <br>
+        <br>
+        <br>
+        <h2>Computer Science AS</h2><a href="CS.html" title="Introduction">Introduction</a> <a href="InformationRepresentation.html" title="">Information Representation</a> <a href="Communication.html" title="Communication">Communications</a> <a href="Communication2.html" title="Communication">Communications 2</a> <a href="Hardware.html" title="Hardware">Hardware</a> <a href="LogicGates.html" title="LogicGates">Logic Circuits</a> <a href="ProcessorFundamentals.html" title="Processor">Processor Fundamentals</a> <a href="AssemblyLanguage.html" title="Assembly">Assembly Language</a> <a href="MonitorControlling.html" title="Sensors">Monitor & Control</a> <a href="SystemSoftware.html" title="System Software">System Software</a> <a href="DataSecurity.html" title="Security">Security, Privacy & Data Integrity</a> <a href="Ethics.html" title="Ethics">Ethics</a> <a href="Databases.html" title="databases">Databases</a><br>
+        <h2>AS Practical</h2><a href="Algorithm.html" title="Algorithm">Algorithm</a> <a href="Datastructures.html" title="Data Structures">Data Structures and more</a> <a href="Development.html" title="">Software development</a><br>
+        <br>
+        <h2>Computer Science A2</h2><a href="DataRepresentations.html" title="Data Representation">Data Representation</a> <a href="FileOrganisations.html" title="File Organisation">File Organisation</a> <a href="LogicCircuit.html" title="Logic Circuits">Advance Logic Gates</a><a href="Internet.html" title="Internet">Internet</a> <a href="VirtualMachines.html" title="Virtual Machines">Virtual Machines</a> <a href="SystemA2.html" title="System Software">System Software</a> <a href="Security.html" title="Encryption and Security">Encryption & Security</a> <a href="AI.html" title="Artificial Intelligence">Artificial Intelligence</a><br>
+        <h2>A2 Practicals</h2><a href="../Developer/BinarySearch.html" title="Binary Search" target="blank">Binary Search</a> <a href="../Developer/LinearSearch.html" title="Linear Search" target="blank">Linear Search</a> <a href="../Developer/BubbleSort.html" title="Bubble Sort" target="blank">Bubble Sort</a> <a href="../Developer/InsertionSort.html" title="Inertion Sort" target="blank">Insertion Sort</a> <a href="../Developer/Combined.html" title="Combined Algorithm" target="blank">Combined Algorithm</a> <a href="../Developer/Stack.html" title="Stack" target="blank">Stacks</a> <a href="../Developer/Queue.html" title="Queue" target="blank">Queues</a> <a href="../Developer/LinkedList.html" title="Linked List" target="blank">Linked List</a> <a href="../Developer/BinaryTree.html" title="Binary Tree" target="blank">Binary Tree</a><br>
+        <h2>More</h2><a href="CSReference.html" title="CS Reference">Reference</a> <a href="CSEx.html" title="CS Questions">Pastpaper Questions</a>
+      </div>
+    </div>
+    <div>
+      <div class="Mainpage">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div>
+          <div class="pagenav">
+            <a href="Ethics.html">Back</a> <a href="Algorithm.html">Next</a>
+          </div><span onclick="Mobilebut()" id="mobilebutton"><img alt="more topic chapters" src="../../Imagedata/Revisezone/morecontent.png"></span>
+          <h1>Database, Normalisation & SQL coding</h1><br id="reference407">
+          <h2>Differences between data stored in files and in Databases</h2>
+          <p>There are 4 things you need to comment in the exam</p>
+          <ul>
+            <li>Data integrity</li>
+            <p>Databases maintains the integrity of the data stored by providing validation and preventing any corrupted or incomplete data</p>
+            <p>The file just stores the data which it is being supplied with and sometimes the data could be corrupted or overwritten</p>
+            <li>Data privacy</li>
+            <p>Databases allow access rights which limits the users access to the data stored in the databases</p>
+            <p>Files do not have any proper access rights. However, the only method to restrict access to data is to make copies of the file and distribute the edited files to the individuals which contain the data only for that particular user</p>
+            <li>Data redundancy</li>
+            <p>If files are distributed and copied then data is unnecessarily redundant and so this will take unneccessary storage</p>
+            <p>The database organises the data in the most efficient way possible to remove data redundancy. And also many different users of different access rights can access the same and only database</p>
+            <li>Data dependancy</li>
+            <p>When data is stored in a file the structure of the file data must be known but, the databases uses queries to store and retrienve data without knowing how data is stored in the database(this is known as the external level).</p>
+            <p>Also when storing new data the programs may have to be changed where as in databases this is handled by the DBMS software and the users just has to add new data</p>
+          </ul><br id="reference408">
+          <h2>Relational databases</h2>
+          <p>You may have heard what databases are, it contains tables which store data</p>
+          <p>However, in AS we need to know what relational databases are</p>
+          <p>A flatline table is table which is considered to be a stand alone table and has no relation with other tables</p>
+          <p>In the relational database model the tables have links between other tables</p>
+          <p>You will need to know some new terms in this model</p>
+          <ul>
+            <br id="reference409">
+            <li>Relation</li>
+            <h3>A Special type of table used in relational databases</h3><br id="reference410">
+            <li>Tuple</li>
+            <h3>Stores data of a particular instance or item in a relation</h3>
+            <p>This is the same as a row or a record</p><br id="reference411">
+            <li>Attribute</li>
+            <h3>Stores data of a particular property of an item or instance in a relation</h3>
+            <p>It is same as a column or a field</p><br id="reference412">
+            <h2>Candidate key</h2>
+            <h3>One or more key attributes which contain unique values for each tuple</h3>
+            <p>In the table(relation) there might be attributes which contain unique values. So this could be used to uniquely identify each record or tuple</p><br id="reference413">
+            <h2>Primary key</h2>
+            <h3>This is a candidate key which is used to uniquely identify each tuple</h3>
+            <p>Each table must have a primary key as it prevents data redundancy as each tuple in the relation is automatically unique when the primary key is unique</p>
+            <p>So as we can see the primary key is chosen from the candidate keys</p><br id="reference414">
+            <h2>Secondary key</h2>
+            <h3>A candidate key is not used as a primary key</h3>
+            <p>This is mainly used for indexing which we will learn later</p><br id="reference415">
+            <h2>Foreign key</h2>
+            <h3>A key which is used to link to a primary key of another table</h3>
+            <p>This is how the relationship between tables are made</p><br id="reference416">
+            <h2>Referential integrity</h2>
+            <h3>The use of a foreign key ensures that a value can only be entered in one table if the same value already exists in the referenced table</h3>
+            <p>This means that foreign key of a table can not be different from the primary key of the referenced table</p>
+            <p>This ensure that the values in the foreign key must match the primary key values</p>
+            <p>Firstly, the attributes are made, then the foreign and primary key are defined</p>
+            <p>Also the primary key can not be updated or changed/deleted if the foreign can't refer to the primary key</p><br id="reference417">
+            <h2>Entity relationship modelling</h2>
+            <p>These are represented using E-R diagrams</p>
+            <p>An entity is an object,thing or person which can store data in fields and rows</p>
+            <p>So an entity has to have many instances or items to be displayed as a table</p>
+            <p>In relational databases the tables must be linked so the E-R modelling helps us to find the link between the entities</p>
+            <p>The exam will us scenario where a database is required to store data</p>
+            <p>1. First we need to identify the entities</p>
+            <p>2. Identify the type of relationship. Remember one to one relationships can be ignored</p><br id="reference418">
+            <h2>Cardinals or relationship</h2>
+            <p>When finding the relationship between two entities we need to use logic</p>
+            <p>There are 4 types of relationships between entities and for each we will give an example</p>
+            <ul>
+              <img src="../../Imagedata/CS/relationships1.png" alt="relationships in databases. One to one and one to many and many to many">
+              <p>However we could also add some additional information</p><img src="../../Imagedata/CS/relationships.jpg" alt="advance relationships and links">
+              <figcaption>
+                These are detailed E-R diagrams which has the maximum and minimum values for each entity also. We can see a zero meaning it could have a mimimum of zero records
+                <figcaption>
+                  This | symbol means that the minimum value is one
+                </figcaption>
+                <p>Detailed E-R diagrams are not usually tested so you can ignore them but you need to know how to draw a normal one</p>
+              </figcaption>
+              <li>One to One</li>
+              <p>It means one instance is linked to one instance in the other table</p>
+              <li>One to many(vice versa)</li>
+              <p>An example is when one band contains many members</p>
+              <li>Many to many</li>
+              <p>We usually say it like this</p>
+              <p>One is to many and many is to one</p>
+              <p>For example like a auction center where many people can bid for a single product(instance) and also many products could be auctioned by a single person</p>
+              <p>Forming the relationships are required and need practice</p>
+              <p>For example what is the relationship between a BAND and the MEMBER entities?</p>
+              <p>It is one to many</p>
+              <p>Representing this relationships in a diagram is called the E-R diagram and they usually give alot of hints</p>
+              <p>The E-R diagram doesn't just contain a relationship between just two entities but many entities</p><img src="../../Imagedata/CS/e-rdiagram.png" alt="e-r diagrams and relationships">
+              <p>There are few things you need to remember everytime you see these questions</p>
+              <p>The table/entity which contains the foreign key is the Many side and the table/entity which contains the primary key is the one side. ALways remember this</p>
+              <p>No matter what keep this in your mind</p><br id="reference419">
+              <h2>Many to Many relationships</h2>
+              <p>It is very hard to represent a many to many relationship in practical databases using foreign keys and primary keys - as then both tables must have foreign keys which is not right</p>
+              <p>So we make an intermediate table called a link entity which joins two entities which has many to many relationships</p>
+              <p>So the Link entity table is a separate table which has two foreign keys which are used to link the primary keys of each entities</p>
+              <p>The two foreign keys are both used as primary keys</p>
+              <p>We will see that more in normalisation</p><br id="reference420">
+              <h2>Normalisation</h2>
+              <p>Normalisation is very similar to the E-R diagrams however, in normalisation this is organising already recorded data in the most efficient way possible whereas E-R diagrams are made before data is recorded</p>
+              <p>Usually groups of data in a flat line table or a stand alone table may have repeating groups and other inefficient things. Normalisation helps to break the single table to several tables called entities and links them together</p>
+              <p>There are 3 steps in normalisation:</p><br id="reference421">
+              <h2>1 NF or 1st Normalisation</h2>
+              <p>The relations can't have repeating groups and so repeating groups are removed</p>
+              <p>Repeating groups are when the attributes have more than one set of the same values</p>
+              <p>Like the below example</p>
+              <div class="scrollflow">
+                <table class="table-design">
+                  <tr>
+                    <th>Surname</th>
+                    <th>Department</th>
+                    <th>Payrate</th>
+                    <th>Country</th>
+                    <th>City</th>
+                  </tr>
+                  <tr>
+                    <td>Donaldson</td>
+                    <td>Accounts</td>
+                    <td>$25</td>
+                    <td>USA</td>
+                    <td>New york</td>
+                  </tr>
+                  <tr>
+                    <td>Newton</td>
+                    <td>HR</td>
+                    <td>$28</td>
+                    <td>UK</td>
+                    <td>London</td>
+                  </tr>
+                  <tr>
+                    <td>Xian</td>
+                    <td>Accounts</td>
+                    <td>$25</td>
+                    <td>China</td>
+                    <td>Shanghai</td>
+                  </tr>
+                </table>
+              </div>
+              <figcaption>
+                We can see Donaldson and Xian have common data
+              </figcaption>
+              <p>The attributes or fields which have the same value are grouped together in a non repeated table and it is linked to another table which contains an attribute which is repeating</p>
+              <p>So the relationship is one to many</p>
+              <p>Let's see the same example. This is in the 1NF</p>
+              <table class="table-design">
+                <caption>
+                  Jobdetails
+                </caption>
+                <tr>
+                  <th>Department</th>
+                  <th>Payrate</th>
+                </tr>
+                <tr>
+                  <td>Accounts</td>
+                  <td>$25</td>
+                </tr>
+                <tr>
+                  <td>HR</td>
+                  <td>$28</td>
+                </tr>
+              </table>
+              <figcaption>
+                So the repeating groups are collapsed together
+              </figcaption>
+              <p>This table is then linked to a separate table.</p>
+              <table class="table-design">
+                <caption>
+                  Employeedetails
+                </caption>
+                <tr>
+                  <th>Department</th>
+                  <th>Surname</th>
+                  <th>Country</th>
+                  <th>City</th>
+                </tr>
+                <tr>
+                  <td>Accounts</td>
+                  <td>Donaldson</td>
+                  <td>USA</td>
+                  <td>New york</td>
+                </tr>
+                <tr>
+                  <td>HR</td>
+                  <td>Newton</td>
+                  <td>UK</td>
+                  <td>London</td>
+                </tr>
+                <tr>
+                  <td>Accounts</td>
+                  <td>Xian</td>
+                  <td>China</td>
+                  <td>Shanghai</td>
+                </tr>
+              </table>
+              <p>As we can see the 2nd table has the repeating groups for the department field but not for the pay rate. So this ensures data redundancy is minimized as possible and it is very significant in large sets of data where many attributes have repeating groups</p>
+              <p>Also we can see the 1st table could be called the Jobdetails entity which the department field acts as the Primary key. The Employeedetails entity is referenced to the Jobdetails entity by using the foreign key department</p>
+              <p>So again by using the rule, the place which has the foreign key is the many sides and the one with the primary key is the one side</p>
+              <p>The relationship is one to many</p>
+              <p>Another point to remember is that the foreign key of the Employeedetails entity is department but what is the primary key. As the department field is not unique it is not enough to uniquely identify each record. So we need to define another key as a primary key.</p>
+              <p>The last name can be used as the primary key. However, we use both the departments and the last name as primary keys. This is because the foreign key of the new table must be also the primary key. So we will use the surname and departments as both primary keys</p><br id="reference422">
+              <h2>2 NF or 2nd Normalisation</h2>
+              <p>A rule in the relational database model is that non-key attributes or the other attributes must depend fully on the primary key or keys. This means we must be able to identify each record uniquely depending on the primary keys only</p>
+              <p>However, sometimes the other attributes may not be dependant on both primary keys but only a single primary key. This is known as partial dependancy</p>
+              <p>I just realized the example above is very poor and just focus on the method. So I will state that the Country and city are dependants on the surname but not on the department key</p>
+              <p>The 2nd normal form removes any partial dependency and it must be already in the 1 NF to do this</p>
+              <table class="table-design">
+                <caption>
+                  Jobdetails - Surnameorigin
+                </caption>
+                <tr>
+                  <th>Department</th>
+                  <th>Surname</th>
+                </tr>
+                <tr>
+                  <td>Accounts</td>
+                  <td>Donaldson</td>
+                </tr>
+                <tr>
+                  <td>HR</td>
+                  <td>Newton</td>
+                </tr>
+                <tr>
+                  <td>Accounts</td>
+                  <td>Xian</td>
+                </tr>
+              </table>
+              <table class="table-design">
+                <caption>
+                  Surname origin
+                </caption>
+                <tr>
+                  <th>Surname</th>
+                  <th>Country</th>
+                  <th>City</th>
+                </tr>
+                <tr>
+                  <td>Donaldson</td>
+                  <td>USA</td>
+                  <td>New york</td>
+                </tr>
+                <tr>
+                  <td>Newton</td>
+                  <td>UK</td>
+                  <td>London</td>
+                </tr>
+                <tr>
+                  <td>Xian</td>
+                  <td>China</td>
+                  <td>Shanghai</td>
+                </tr>
+              </table>
+              <p>As we see we made a separate table so that the country and the city are dependant on the primary key only. In the Surname origin table the primary key is the surname. Now in the previous table, the name changes from Employeedetails to Jobdetails - surnameorigin</p>
+              <p>This example is completely fictional and i just created it.</p>
+              <p>Now in the 2nd table(jobdetails-surnameorigin) both the Surname and Department keys are foreign keys as they link between the two tables</p>
+              <p>They are also both Primary keys</p>
+              <p>The relationship is many to one</p>
+              <p>This is the same as the link entity method to display a many to many relationship logically/practically</p><br id="reference423">
+              <h2>3 NF or 3rd Normalisation</h2>
+              <p>Again back to the point that the non key attributes must depend only on the primary key.</p>
+              <p>Sometimes the non key attributes could be dependant on another non key attribute</p>
+              <p>For example the city depends on the country and so the 3rd normal form removes any Transitive dependancy(non - key dependancy). So a 4th table is made</p>
+              <table class="table-design">
+                <caption>
+                  Surnameorigin
+                </caption>
+                <tr>
+                  <th>Surname</th>
+                  <th>Country</th>
+                </tr>
+                <tr>
+                  <td>Donaldson</td>
+                  <td>USA</td>
+                </tr>
+                <tr>
+                  <td>Newton</td>
+                  <td>UK</td>
+                </tr>
+                <tr>
+                  <td>Xian</td>
+                  <td>China</td>
+                </tr>
+              </table>
+              <table class="table-design">
+                <caption>
+                  Countrydetails
+                </caption>
+                <tr>
+                  <th>Country</th>
+                  <th>City</th>
+                </tr>
+                <tr>
+                  <td>USA</td>
+                  <td>New york</td>
+                </tr>
+                <tr>
+                  <td>UK</td>
+                  <td>London</td>
+                </tr>
+                <tr>
+                  <td>China</td>
+                  <td>Shanghai</td>
+                </tr>
+              </table>
+              <p>As we can see we made a separate table so the city field is only dependant on the country field</p>
+              <p>The primary key of this table is Country and the foreigh key is in the previous table</p>
+              <p>The relationship is many to one</p><br>
+              <p>Normalisation is a method and it is very tricky. But just remember these two principles</p>
+              <p>Normal forms can't have repeating groups or any partial or transitive dependancy</p><br id="reference424">
+              <h2>Database Management System (DBMS)</h2>
+              <p>The database management system can be divided to 3 levels</p>
+              <ul>
+                <br id="reference425">
+                <li>External level</li>
+                <p>This is the level used by the external users of the data in the database. Where they store and retrieve data without any knowledge of the structure of the database. They have access rights to control which data they are able to access</p>
+                <p>The employees in a company use this level</p><br id="reference426">
+                <li>Conceptual level</li>
+                <p>This is the level used by the DBA (Database adminstrator) who creates tables and databases. The DBA is also responsible in setting access rights for the users in the external level. The DBA uses the DBMS software to perform these functions</p><br id="reference427">
+                <li>Internal level</li>
+                <p>This is the level handled by the DBMS software which controls the storage of data in the physical storage(internal schemes). It controls where data is stored in the storages and this is the level where data is directly accessed or stored</p><br id="reference428">
+                <h2>DBA</h2>
+                <h3>This is the person who is in charge of the conceptual level and uses the DBMS software to create the structure of the database</h3>
+                <p>There are some tasks which the DBA is in charge of and you need to know these</p>
+                <p>1. Setting up Regular and incremental Back ups</p>
+                <p>2. Setting up the access rights for users in the external level</p>
+                <p>3. Creating databases and tables and their relationships</p>
+                <p>4. Data dictionary and indexing function could be used by the DBA</p><br id="reference429">
+                <h2>DBMS Software</h2>
+                <p>This software controls the whole database and allows the DBA to create tables and the external usere to store or retrieve data</p>
+                <p>In other words the DBMS software handles the internal operations of the database</p>
+                <p>Usually the DBA doesn't require to know SQL to be able to create the databases or to access or store data</p>
+                <p>The Developer interface provides an interface for the DBA to create the structures easily</p>
+                <p>The Query processor is a special software which is used to retrieve/ manipulate data in the database</p>
+                <p>You will need to know the features provided by the DBMS software</p>
+                <p>1. Performs daily and incremental backups</p>
+                <p>2. Sets access rights for each user</p>
+                <p>3. Validates data when entered - maintains data integrity</p>
+                <p>4. Indexing function to access data faster</p>
+                <p>5. Data dictionary - which gives the detal of how the data in the database are stored in the physical memory to the DBA</p><br id="reference430">
+                <h2>Indexing</h2>
+                <h3>A small secondary table which contains an attribute of unique values so it can point to the tuple of the table much faster</h3>
+                <p>This concept makes accessing data from a large table much faster</p>
+                <p>A separate table called an index table contains an attribute of the table which contains unique values(candidate key)</p>
+                <p>We usually use the secondary key for this , so the index table points it to the corresponding tuple for fast access</p><br id="reference431">
+                <h2>SQL</h2>
+                <p>We need to learn some scripting of the SQL language</p>
+                <p>SQL is divided into two categories</p>
+                <ul>
+                  <li>Data Definition Language (DDL)</li>
+                  <p>To define the structure of the database</p>
+                  <li>Data Manipulation Language (DML)</li>
+                  <p>In manipulating the data in the database such as storing and retrieving data from the database</p>
+                  <p>In reality we don't really separate the language to these two parts</p>
+                  <p>We will show an example for each</p><br id="reference432">
+                  <h2>DDL</h2>
+                  <p>We will see an example</p>
+                  <p>Creating Database structures:</p>
+                  <pre>
+CREATE DATABASE ClientDatabase;
+
+CREATE TABLE Clientdetails(PRIMARY KEY(Client ID varchar(10))
+,ClientName varchar(25),DOB Date,Subscription boolean);
+
+ALTER TABLE Client-booking ADD PRIMARY KEY(Booking ID varchar(25))
+ADD FOREIGN KEY(ClientID REFERENCES Clientdetails(Client ID);
+</pre>
+                  <p>As you can see we need to remember some points</p>
+                  <p>SQL is Case Insensitive</p>
+                  <p>The program statements can go for many lines but each statement must end with ;</p>
+                  <p>We use the Keywords DATABASE and TABLE only in DDL and not in DML</p>
+                  <p>So when we want to define an attribute as a primary key we need to put it in brackets</p>
+                  <p>The ALTER keyword is used to alter an existing table such as adding a new field</p>
+                  <p>For each attribute we need to define the data type, databases don't contain the datatype STRING so we use varchar(x) where x is number of characters</p>
+                  <p>The Database follows all other datatypes except STRING</p><br id="reference433">
+                  <h2>DML</h2>
+                  <ul>
+                    <li>Adding data to the table</li>
+                    <pre>
+INSERT INTO Clientdetails(Client ID, DOB)
+VALUES (2345, 23/7/2002);
+</pre>
+                    <p>There is another way of entering but this is the correct one</p>
+                    <p>The clientdetails is the table name and inside the brackets are the field names</p>
+                    <p>The values must be in the same order as the fields in the brackets</p>
+                    <li>Retrieving data from the database</li>
+                    <pre>
+SELECT DOB
+FROM Clientdetails
+WHERE Client ID = 2345;
+</pre>
+                    <p>So this will return 23/7/2002</p>
+                    <p>We need to select which field name you need to be displayed and from which table and also the where statement gives us the condition or else the whole DOB attribute will be displayed</p>
+                    <pre>
+SELECT DOB
+FROM Clientdetails;
+</pre>
+                    <figcaption>
+                      Has no condition so it displays all the values in DOB attribute/field
+                      <p>We can also display all the fields using the *</p>
+                      <pre>
+SELECT *
+FROM Clientdetails
+WHERE ClientID = 2345;
+</pre>
+                      <p>So this displays all the fields in the table clientdetails</p><br>
+                      <p>If we need to have some format of displaying the data we can either use:</p>
+                      <pre>
+SELECT DOB
+FROM Clientdetails
+WHERE ClientID = 2345
+ORDER BY DOB ASC|DSC;
+</pre>
+                      <figcaption>
+                        So this orders the DOB in order of the Date. The default is Ascending Order
+                      </figcaption>
+                      <p>or we could use:</p>
+                      <pre>
+SELECT DOB
+FROM Clientdetails
+WHERE ClientID = 2345
+GROUP BY Department;
+</pre>
+                      <p>This means that the date of birth is displayed in groups of department</p>
+                      <p>If the department has repeating groups then this could be used</p><br>
+                      <p>The WHERE condition could be further used to compare field values of different tables and not only in the same table</p>
+                      <pre>
+SELECT DOB
+FROM Clientdetails
+INNER JOIN Client-booking
+WHERE Clientdetails.ClientID = 2345 AND Client-booking.BookingID = 2345;
+</pre>
+                      <p>So this is used to display the field value when both conditions of two different table values are correct</p>
+                      <p>We need to use INNER JOIN to join the other table. We also need to use a dot to show it is a field of a particular table</p>
+                      <p>Clientdetails.ClientID means the field ClientID from the table Clientdetails</p>
+                    </figcaption>
+                    <li>Updating/Changing existing data</li>
+                    <p>If we need to change the existing data in the table</p>
+                    <pre>
+UPDATE CLientdetails
+SET ClientID = 2678
+WHERE ClientID = 2345;
+</pre>
+                    <p>So this changes the clientID which was 2345 to 2678</p>
+                    <li>Deleting data from the table</li>
+                    <pre>
+DELETE FROM Clientdetails
+WHERE ClientID = 2678;
+</pre>
+                    <p>If the client is no longer in the business then we need to delete it them from our table</p>
+                    <p>This deletes the whole record which has the the ClientID 2678</p>
+                    <p>Always remember the foreign key records must be first deleted before the primary key records are deleted in the referenced table (referential integrity)</p><br id="reference433">
+                    <h2>Summary</h2>
+                    <p>I will give a small summary of each keywords</p>
+                    <p>CREATE - DDL for creating databases or tables</p>
+                    <p>DATABASE or TABLE - DDL used for defining the name</p>
+                    <p>ALTER - DDL change the structure of an existing table such as adding a new field/attribute</p>
+                    <p>ADD - DDL used in adding new fields</p>
+                    <p>INSERT - DML inserting new data to a table</p>
+                    <p>VALUES - DML order of the values to be inserted in to the corresponding fields</p>
+                    <p>SELECT - DML retrieving data</p>
+                    <p>FROM - DML Identifys from which table</p>
+                    <p>WHERE - DML conditions</p>
+                    <p>GROUP BY - DML groups displayed data</p>
+                    <p>ORDER BY - DML orders displayed data</p>
+                    <p>INNER JOIN - DML used to compare field values from two different tables</p>
+                    <p>UPDATE - DML used to update a table</p>
+                    <p>SET - DML sets a field to a value</p>
+                    <p>DELETE - DML deletes a record from a table</p><br>
+                    <br>
+                    <div class="pagenav">
+                      <a href="Ethics.html">Back</a> <a href="Algorithm.html">Next</a>
+                    </div><br>
+					 <h2>Recommended</h2>
+        <p>These are things you might like. Clicking these ads can help us improve our free services in the future...</p>
+            <div id="container-2a219c05affd07270c6855c66c9456d4" style="border-radius:20px;"></div>
+        
+                    <br>
+                    <div class="general container-extra2 flex-box-row">
+                      <div>
+                        <h5>End of Chapter Videos</h5>
+                        <h6>Collection of Videos to Support Your Understanding.</h6>
+                        <h4>Remember these videos are handpicked by me and I feel these are one of the best ones out there. But I constantly update this list for each chapter.The Youtubers are more than welcome to contact me.</h4>
+                        <h4>Also, don't forget to Subscribe to our Youtube channel - Wiscus</h4><br>
+                        <a style="padding:10px; background-color:#4ea654; border-radius:3px; font:17px Os; color:#e8e4e3; text-decoration:none;" href="https://www.Youtube.com/watch?v=MbSfWN9KlkE&amp;list=PLfh04WZ4q7nXRRngxHNvke4kDtkS4Hpot" target="blank">Watch</a>
+                      </div>
+                    </div>
+                  </ul>
+                </ul>
+              </ul>
+            </ul>
+          </ul>
+        </div>
+      </div><br>
+      <br>
+      <footer>
+        <p>Revisezone.com Copyright 2020</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../WebScript/Main-script.js"></script>
+</body>
+</html>

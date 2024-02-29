@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='description' content='What are the advance data types you need to in A2 computer science and what is mantissa and exponent in floating and fixed point representation of normalised numbers'>
+  <meta name='keywords' content='set data types, enumerated,composite data types, non composite,  mantissa and exponent, floating and fixed point'>
+  <meta name='author' content='Wiscus'>
+  <link rel="apple-touch-icon" href="Imagedata/Revisezone/Logo.png">
+  <meta name='theme-color' content='black'>
+  <meta name='viewport' content='width=device-width initial-scale=1'>
+  <link rel="shortcut icon" href="../../Imagedata/Revisezone/Logo.png" type="x-icon/image">
+  <link class="Style" rel='stylesheet' href='../../Style/Master.css' media="screen and (min-width:1000px)">
+  <link class="Style" rel='stylesheet' href='../../Style/Mobile.css' media="screen and (max-width:999px)">
+  <link class="Style" rel='stylesheet' href='../../Style/printstyle.css' media="print"><!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170507780-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-170507780-1');
+  </script>
+  <title>Data Representations & Data Types</title>
+</head>
+<body onload="saved()">
+  <div class="progress-container"></div>
+  <div class="top-nav-main">
+    <a href="../../home.html" title="Home">Home</a> <a href="../Chemistry/Chemistry.html" title="Chemistry"><abbr>Chemistry</abbr></a> <a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../LearningHtml/Introduction.html">HTML</a>
+    <div class="login-more">
+      <a onclick="NightmodeOn()" id="Mode">Night</a> <a onclick="More()" id="more">More</a>
+    </div>
+  </div>
+  <div class="dropdesign">
+    <span id="goback-white" onclick="Gobackdropdown()">✖</span>
+    <div class="flex-box-row">
+      <div>
+        <h2>Revise Now</h2>
+        <h3>GCE Subjects</h3><a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../Chemistry/Chemistry.html" title="Chemistry">Chemistry</a> <a href="../Cs/CS.html" title="Computer Science">CS</a> <a href="../Accounting/Introduction.html" title="Accounting">Accounting</a>
+        <h3>Coding Lessons</h3><a href="../LearningHtml/Introduction.html" title="HTML">Learn HTML</a> <a href="../SEO/SEO.html" title="SEO">Learn SEO</a>
+      </div>
+      <div>
+        <h2>More</h2>
+        <h3>What do you want<br>
+        to do?</h3><a href="../Other/ContactUs.html" title="Contact us">Contact us</a> <a href="../Other/Support.html" title="Support">Support</a>
+      </div>
+    </div>
+  </div>
+  <div class="spacing"></div>
+  <div class="grid-layout-main">
+    <div>
+      <div class="side-nav-universal">
+        <br>
+        <br>
+        <br>
+        <h2>Computer Science AS</h2><a href="CS.html" title="Introduction">Introduction</a> <a href="InformationRepresentation.html" title="">Information Representation</a> <a href="Communication.html" title="Communication">Communications</a> <a href="Communication2.html" title="Communication">Communications 2</a> <a href="Hardware.html" title="Hardware">Hardware</a> <a href="LogicGates.html" title="LogicGates">Logic Circuits</a> <a href="ProcessorFundamentals.html" title="Processor">Processor Fundamentals</a> <a href="AssemblyLanguage.html" title="Assembly">Assembly Language</a> <a href="MonitorControlling.html" title="Sensors">Monitor & Control</a> <a href="SystemSoftware.html" title="System Software">System Software</a> <a href="DataSecurity.html" title="Security">Security, Privacy & Data Integrity</a> <a href="Ethics.html" title="Ethics">Ethics</a> <a href="Databases.html" title="databases">Databases</a><br>
+        <h2>AS Practical</h2><a href="Algorithm.html" title="Algorithm">Algorithm</a> <a href="Datastructures.html" title="Data Structures">Data Structures and more</a> <a href="Development.html" title="">Software development</a><br>
+        <br>
+        <h2>Computer Science A2</h2><a href="DataRepresentations.html" title="Data Representation">Data Representation</a> <a href="FileOrganisations.html" title="File Organisation">File Organisation</a> <a href="LogicCircuit.html" title="Logic Circuits">Advance Logic Gates</a><a href="Internet.html" title="Internet">Internet</a> <a href="VirtualMachines.html" title="Virtual Machines">Virtual Machines</a> <a href="SystemA2.html" title="System Software">System Software</a> <a href="Security.html" title="Encryption and Security">Encryption & Security</a> <a href="AI.html" title="Artificial Intelligence">Artificial Intelligence</a><br>
+        <h2>A2 Practicals</h2><a href="../Developer/BinarySearch.html" title="Binary Search" target="blank">Binary Search</a> <a href="../Developer/LinearSearch.html" title="Linear Search" target="blank">Linear Search</a> <a href="../Developer/BubbleSort.html" title="Bubble Sort" target="blank">Bubble Sort</a> <a href="../Developer/InsertionSort.html" title="Inertion Sort" target="blank">Insertion Sort</a> <a href="../Developer/Combined.html" title="Combined Algorithm" target="blank">Combined Algorithm</a> <a href="../Developer/Stack.html" title="Stack" target="blank">Stacks</a> <a href="../Developer/Queue.html" title="Queue" target="blank">Queues</a> <a href="../Developer/LinkedList.html" title="Linked List" target="blank">Linked List</a> <a href="../Developer/BinaryTree.html" title="Binary Tree" target="blank">Binary Tree</a><br>
+        <h2>More</h2><a href="CSReference.html" title="CS Reference">Reference</a> <a href="CSEx.html" title="CS Questions">Pastpaper Questions</a>
+      </div>
+    </div>
+    <div>
+      <div class="Mainpage">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div>
+          <p><a class="extrafeatures" id="audioplay" onclick="audio()" title="Audio Lesson Only">♫</a><a class="extrafeatures" title="Lesson Recap" href="#recap">✐</a></p>
+          <div id="audiobar">
+            <audio controls=""><source src="Audio/DataTypes.mp3" type="audio/mpeg"> Your browser does not support the audio...</audio>
+          </div>
+          <div class="pagenav">
+            <a href="Development.html">Back</a> <a href="FileOrganisations.html">Next</a>
+          </div><span onclick="Mobilebut()" id="mobilebutton"><img alt="more topic chapters" src="../../Imagedata/Revisezone/morecontent.png"></span>
+          <h1>Data Representations & Data Types</h1>
+          <p>In the A level Syllabus 9618, you will need to know further advance data types. But before we go into detail, we classify the data types into 2 groups which can be further broken down into another 2 groups</p>
+          <p>There are two types of data types:</p>
+          <ul>
+            <li>User-defined</li>
+            <p>These are data types that are defined by the user or the programmer itself. This means that they are designed by users. Examples are record types, enumerated data types</p>
+            <li>Non User-Defined or Built-in Data Types</li>
+            <p>These are data types that are already defined by the programming language itself, for example str is defined by the programming language as a string.</p>
+            <p>Each Group can be further broken to two more groups, depending on if the data type is independent or not...</p>
+            <li>Composite Data Types</li>
+            <p>These are data types that refer to other data types. For the record type, we can declare each field inside the record type as String, Real or Integer etc</p>
+            <pre>
+TYPE RecordName
+  DECLARE FIELDNAME:DATATYPE
+  DECLARE FIELDNAME:DATATYPE
+  DECLARE FIELDNAME:DATATYPE
+  DECLARE FIELDNAME:DATATYPE
+  .
+  .
+ENDTYPE
+</pre>
+            <p>Examples are important to remember and they include: Sets, Lists, Classes, Arrays, Record Types</p>
+            <figcaption>
+              Classes and Record Types have the same principle
+            </figcaption>
+            <li>Non Composite Data Types</li>
+            <p>These are data types that has no reference to other data types.</p>
+            <p>Examples include: Real, Date, String, Integer, Enumerated Data Type</p>
+            <h2>Enumerated Data Type</h2>
+            <h3>A USER-DEFINED NON COMPOSITE DATA TYPE</h3>
+            <p>This data type declares all the possible solutions or values it can take</p>
+            <p>For example, the variable "ANSWER" is declared using an enumerated data type and can only take the value A, B ,C or D. If a Value of E is given then an error would occur</p>
+            <pre>
+TYPE 
+  DECLARE ANSWER=(A, B, C, D)
+ENDTYPE
+
+</pre>
+            <p>When we use this variable we will declare the variable directly:</p>
+            <pre>
+DECLARE Value: ANSWER
+</pre>
+            <p>Another point to remember is that the enumerated values are not in "".</p>
+            <p>The order matters as there is a numerical weightage which means B is greater than A</p>
+            <h2>Classes & Record Types</h2>
+            <h3>USER-DEFINED COMPOSITE DATA TYPE</h3>
+            <p>We use Record types in pseudocode whereas classes in python and other high-level languages</p>
+            <p>A class gives us the layout or in other words, a record structure for each variable. It's easier to think that each variable is considered to be a record where there are many fields and each field is different</p>
+            <pre>
+class MyClass:
+  def__init__(self):
+      self.__Pointer=1
+      self.__Value=""
+          
+</pre>
+            <p>This is similar to the record type.</p>
+            <h2>Set Data Type</h2>
+            <h3>A NON USER-DEFINED COMPOSITE DATA TYPE</h3>
+            <p>It is considered to be a composite data type which is a built-in data type structure. You can store strings, number, or even boolean</p>
+            <p>What is so special about a set data type is that the values are not ordered or indexed, so it is not possible to extract them in order</p>
+            <p>It also can't have any duplicate values in the data structure. This can be useful especially when we need to store all unique values. You can convert an array to a set then back again</p>
+            <p>The Set Data type is mainly used to apply mathematical operations so the set data type has a set of mathematical operations it can work on</p>
+            <h2>ARRAY & LISTS</h2>
+            <p>Arrays and lists have almost similar functions but, the only difference is that a list can hold different data types under a single variable whereas the arrays can store data of the same data type. But why then is an array a composite data type, this is because the array itself is a data type and it refers to another data type like string</p>
+            <h2>Real Numbers</h2>
+            <p>You are familiar with the concept that we use two's complement to store numbers in the computer. There are two ways in which the computer can store Two's Complement numbers to represent signed real numbers, not just integers.</p>
+            <li>Fixed Point Representations</li>
+            <p>A thing to remember is that this has a <span class="highlight">fixed</span> number of bits for the whole number part and number of bits for the decimal part.</p>
+            <pre>
+0111  0011
+Has 4 bits for whole and 4 bits for decimal
+Which can be converted to:
+0111.0011
+  
+  7    .   1875
+ 
+ 7.1875
+
+</pre>
+            <p>It is clear how we got the 7 but how did we get the decimal part. There is a way to do this</p>
+            <pre>
+0 1 1 1 .   0      0        1       1
+
+8 4 2 1.   0.5   0.25    0.125    0.0625
+
+Behind the decimal is 2<sup>-1</sup>,  2<sup>-2</sup>, 2<sup>-3</sup>, 2<sup>-4</sup></pre>
+            <p>Remember this is the same principle in floating point, the only difference is the decimal place "." is changed</p>
+            <p>If we get a two's complement value like:</p>
+            <pre>1010 0100
+-8 + 2 + 0.25 =-5.75
+
+
+</pre>
+            <p>We convert it to denary almost the same way. You can almost convert it to sign and magnitude form and do the same thing</p>
+            <pre>
+1010 0100 → 11011010
+1 | 101.1100
+which is also -5.75
+
+</pre>
+            <li>Floating Point Representations</li>
+            <p>There is no fixed position for the decimal point or a fixed defined number of bits for whole and decimal. So we use something called the mantissa and the exponent</p>
+            <p>Do you remember the concept of scientific notation 1.6*10<sup>-19</sup></p>
+            <p>The same is for floating point...</p>
+            <p>Let us convert the value 5.75 to floating point representation</p>
+            <p>First we write it in the sign and magnitude form</p>
+            <pre>
+5.75
+
+0101.1100
+then put in the decimal point to either 0.1 when positive and 1.0 when negative
+
+0.101 1100
+so the dot moves 3 sides left
+then exponent part must have the value of 3
+in other words:
+0.1011100 * 2<sup>3</sup> gives us 0101.1100
+
+
+</pre>
+            <p>The answer is overall 0.1011100 for mantissa and 0011 for exponent</p>
+            <p>The decimal doesn't necessarily have to be in the form of 0.1 or 1.0 for example:</p>
+            <pre>
+01.1000 for mantissa 0010
+means *2<sup>2</sup>
+0110.00
+which is just 6
+
+</pre>
+            <p>In this case, this called the non-normalised form or the mantissa is not in the normalised form</p>
+            <div class="noteparagraphred">
+              <p>This normalisation is not the same as the one in databases</p>
+            </div>
+            <p>If it is in the normalised form then it must be either in starting with 0.1 or 10 not 11 or 00</p>
+            <p>For small numbers, the exponent is negative and when you're handling with negative numbers, you must always convert them to two's complement:</p>
+            <pre>
+0101000 for mantissa 1110 for exponent
+</pre>
+            <p>Remember these are always in two's complement so for the exponent 1110 it is -2. So must be multiplied by 2<sup>-2</sup></p>0.00101000 then convert to denary which is 0.15625
+            <p>If the value is negative it is the same principle but we put it to 1.0</p>
+            <p>I always found converting to small negative values to mantissa very hard. So let us try out one:</p>
+            <pre>10100010 for mantissa and  1110 for exponent</pre>
+            <p>So this means 10100010 * 2<sup>-2</sup> but how do we go back, a principle you need to remember is that adding leading 1's to a two's complement negative value doesn't change its value. For example 1000 is same as 11000, both gives -8</p>
+            <pre>111 | 1010010 convert to sign and magnitude which is 100 | 0101110 </pre>
+            <p>It is important that you put leading 1's first then convert to sign and magnitude. Then move the decimal point 2 left so you get 1.0</p>
+            <p>1 | 000101110 is a very long negative small decimal place which you can try to find...</p>
+            <h2>Precision & Range</h2>
+            <p>You don't need to go that in depth, all you need to know is:</p>
+            <p>1. More bits for mantissa, higher the precision</p>
+            <p>2. More bits for exponent, higher the range</p>
+            <p>Usually there is a compromise between these two factors</p>
+            <p>The main problems comes when the number stored is highly precise so it can not be represented causing a rounding error, also if the value is too great, it can cause an overflow error and make the system crash</p>
+            <h2>Highest & Lowest Values</h2>
+            <p>We will take 8 bits for mantissa and 4 bits exponent as an example:</p>
+            <table class="table-design">
+              <tr>
+                <th>Types</th>
+                <th>Mantissa</th>
+                <th>Exponent</th>
+              </tr>
+              <tr>
+                <td>Highest Positive Value</td>
+                <td>01111111</td>
+                <td>0111</td>
+              </tr>
+              <tr>
+                <td>Lowest Positive Value</td>
+                <td>01000000</td>
+                <td>1000</td>
+              </tr>
+              <tr>
+                <td>Highest NegativeValue</td>
+                <td>10000000</td>
+                <td>0111</td>
+              </tr>
+              <tr>
+                <td>Lowest Negative Value</td>
+                <td>10111111</td>
+                <td>1000</td>
+              </tr>
+            </table>
+            <figcaption>
+              These are in normalised forms
+            </figcaption>
+            <div class="pagenav">
+              <a href="Development.html">Back</a> <a href="FileOrganisations.html">Next</a>
+            </div><br>
+            <br>
+			 <h2>Recommended</h2>
+        <p>These are things you might like. Clicking these ads can help us improve our free services in the future...</p>
+            <div id="container-2a219c05affd07270c6855c66c9456d4" style="border-radius:20px;"></div>
+        
+            <br id="recap">
+            <div class="general container-extra">
+              <div>
+                <h5>Quick Recap</h5>
+                <h6>Check your Knowledge with a Quick Recap</h6><br>
+                <a style="padding:10px; background-color:#4ea654; border-radius:3px; font:17px Os; color:#e8e4e3; text-decoration:none;" onclick="MiniTask(this,'../../quiz.revisezone.com/Mini/DataRepresentations.html')">Try out</a>
+                <div id="taskview"></div>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div><br>
+      <br>
+      <footer>
+        <p>Revisezone.com Copyright 2020</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../WebScript/Main-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='description' content="What is a a function and what is a procedure? What's the difference? Discover what are record types and 2 dimensional arrays and more!">
+  <meta name='keywords' content='arrays,2d arrays,tpye record,procedure and fuctions,modules,python and psuedocode'>
+  <meta name='author' content='Wiscus'>
+  <link rel="apple-touch-icon" href="Imagedata/Revisezone/Logo.png">
+  <meta name='theme-color' content='black'>
+  <meta name='viewport' content='width=device-width initial-scale=1'>
+  <link rel="shortcut icon" href="../../Imagedata/Revisezone/Logo.png" type="x-icon/image">
+  <link class="Style" rel='stylesheet' href='../../Style/Master.css' media="screen and (min-width:1000px)">
+  <link class="Style" rel='stylesheet' href='../../Style/Mobile.css' media="screen and (max-width:999px)">
+  <link class="Style" rel='stylesheet' href='../../Style/printstyle.css' media="print"><!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170507780-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-170507780-1');
+  </script>
+  <title>2D Arrays, Procedures, Functions & Record Types</title>
+</head>
+<body onload="saved()">
+  <div class="progress-container"></div>
+  <div class="top-nav-main">
+    <a href="../../home.html" title="Home">Home</a> <a href="../Chemistry/Chemistry.html" title="Chemistry"><abbr>Chemistry</abbr></a> <a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../LearningHtml/Introduction.html">HTML</a>
+    <div class="login-more">
+      <a onclick="NightmodeOn()" id="Mode">Night</a> <a onclick="More()" id="more">More</a>
+    </div>
+  </div>
+  <div class="dropdesign">
+    <span id="goback-white" onclick="Gobackdropdown()">✖</span>
+    <div class="flex-box-row">
+      <div>
+        <h2>Revise Now</h2>
+        <h3>GCE Subjects</h3><a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../Chemistry/Chemistry.html" title="Chemistry">Chemistry</a> <a href="../Cs/CS.html" title="Computer Science">CS</a> <a href="../Accounting/Introduction.html" title="Accounting">Accounting</a>
+        <h3>Coding Lessons</h3><a href="../LearningHtml/Introduction.html" title="HTML">Learn HTML</a> <a href="../SEO/SEO.html" title="SEO">Learn SEO</a>
+      </div>
+      <div>
+        <h2>More</h2>
+        <h3>What do you want<br>
+        to do?</h3><a href="../Other/ContactUs.html" title="Contact us">Contact us</a> <a href="../Other/Support.html" title="Support">Support</a>
+      </div>
+    </div>
+  </div>
+  <div class="spacing"></div>
+  <div class="grid-layout-main">
+    <div>
+      <div class="side-nav-universal">
+        <br>
+        <br>
+        <br>
+        <h2>Computer Science AS</h2><a href="CS.html" title="Introduction">Introduction</a> <a href="InformationRepresentation.html" title="">Information Representation</a> <a href="Communication.html" title="Communication">Communications</a> <a href="Communication2.html" title="Communication">Communications 2</a> <a href="Hardware.html" title="Hardware">Hardware</a> <a href="LogicGates.html" title="LogicGates">Logic Circuits</a> <a href="ProcessorFundamentals.html" title="Processor">Processor Fundamentals</a> <a href="AssemblyLanguage.html" title="Assembly">Assembly Language</a> <a href="MonitorControlling.html" title="Sensors">Monitor & Control</a> <a href="SystemSoftware.html" title="System Software">System Software</a> <a href="DataSecurity.html" title="Security">Security, Privacy & Data Integrity</a> <a href="Ethics.html" title="Ethics">Ethics</a> <a href="Databases.html" title="databases">Databases</a><br>
+        <h2>AS Practical</h2><a href="Algorithm.html" title="Algorithm">Algorithm</a> <a href="Datastructures.html" title="Data Structures">Data Structures and more</a> <a href="Development.html" title="">Software development</a><br>
+        <br>
+        <h2>Computer Science A2</h2><a href="DataRepresentations.html" title="Data Representation">Data Representation</a> <a href="FileOrganisations.html" title="File Organisation">File Organisation</a> <a href="LogicCircuit.html" title="Logic Circuits">Advance Logic Gates</a><a href="Internet.html" title="Internet">Internet</a> <a href="VirtualMachines.html" title="Virtual Machines">Virtual Machines</a> <a href="SystemA2.html" title="System Software">System Software</a> <a href="Security.html" title="Encryption and Security">Encryption & Security</a> <a href="AI.html" title="Artificial Intelligence">Artificial Intelligence</a><br>
+        <h2>A2 Practicals</h2><a href="../Developer/BinarySearch.html" title="Binary Search" target="blank">Binary Search</a> <a href="../Developer/LinearSearch.html" title="Linear Search" target="blank">Linear Search</a> <a href="../Developer/BubbleSort.html" title="Bubble Sort" target="blank">Bubble Sort</a> <a href="../Developer/InsertionSort.html" title="Inertion Sort" target="blank">Insertion Sort</a> <a href="../Developer/Combined.html" title="Combined Algorithm" target="blank">Combined Algorithm</a> <a href="../Developer/Stack.html" title="Stack" target="blank">Stacks</a> <a href="../Developer/Queue.html" title="Queue" target="blank">Queues</a> <a href="../Developer/LinkedList.html" title="Linked List" target="blank">Linked List</a> <a href="../Developer/BinaryTree.html" title="Binary Tree" target="blank">Binary Tree</a><br>
+        <h2>More</h2><a href="CSReference.html" title="CS Reference">Reference</a> <a href="CSEx.html" title="CS Questions">Pastpaper Questions</a>
+      </div>
+    </div>
+    <div>
+      <div class="Mainpage">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div>
+          <div class="pagenav">
+            <a href="Algorithm.html">Back</a> <a href="Development.html">Next</a>
+          </div><span onclick="Mobilebut()" id="mobilebutton"><img alt="more topic chapters" src="../../Imagedata/Revisezone/morecontent.png"></span>
+          <h1>Procedures, Functions, Record Types & 2D Arrays</h1><br id="reference373">
+          <h2>1D Array</h2>
+          <p>We have seen what is an 1D array in the previous chapter</p>
+          <p>We will see how to access the elements in a 1D array</p>
+          <pre>
+FOR i ← 1 TO 10
+    OUTPUT Array[i]
+    Array[i] ← 0
+ENDFOR
+</pre>
+          <p>This code first outputs the elements in the array and then sets the value of each element to 0</p><br id="reference374">
+          <h2>2D Array</h2>
+          <p>We will see how to declare them</p>
+          <pre>
+DECLARE ArrayName:ARRAY[1:10,1:20] OF STRING</pre>
+          <p>This creates an array which has 10 rows and 20 columns and which can store only string values</p>
+          <p>If we want to store a value in the 2D array</p>
+          <pre>ArrayName[1,5] ← 20</pre>
+          <p>This stores the value 20 in 1st row and the 5th column</p>
+          <p>If we want to access the elements in the array</p>
+          <pre>
+FOR Row ← 1 TO 10
+     FOR Column ← 1 TO 20
+              OUTPUT ArrayName[Row,Column]
+     ENDFOR
+ENDFOR
+</pre>
+          <p>This displays all the elements in each row, row by row</p><br id="reference375">
+          <h2>Modules</h2>
+          <p>These are functions or procedures which are able to do a sub task. These could be broken to further procedures and functions</p><br id="reference376">
+          <h2>Functions</h2>
+          <h3>A block of code which performs a specific task and returns a single value</h3>
+          <p>You will need to know how to write them</p>
+          <pre>
+FUNCTION functionName(parameter:datatypes,parameter2:datatypes) RETURN DATATYPE 
+  .....
+  RETURN Value
+ENDFUNCTION
+
+</pre>
+          <p>To call it from the main program</p>
+          <pre>
+ variable ← functionName(arguments1,arguments2)
+</pre>
+          <p>This returns a value</p>
+          <p>What are these parameters and arguments, they are the same thing and these are the values which must be passed from the main code to the modules</p>
+          <p>Also the datatypes of the parameters must be defined and also the return datatype</p>
+          <p>The parameters are entered in the same order as it is received by the procedure or function</p>
+          <p>Another point to remember is that the variables in a module are defined as local variables which means the variables in the module can be different from the main program code</p><br id="reference377">
+          <h2>Procedure</h2>
+          <h3>A block code which performs a specific task and can return either one or more values or no values at all</h3>
+          <pre>
+PROCEDURE ProcedureName(parameter:datatypes,parameter2:datatypes)
+ .....
+ .....
+ .....
+ENDPROCEDURE
+</pre>
+          <p>To call this:</p>
+          <pre>
+CALL procedureName(arguments1,argument2)
+</pre>
+          <p>This doesn't return a value but values(parameters) are given to perform a task and output the result</p>
+          <p>Modules are considered to be self-contained and so the variables in the modules have no link with the main program</p>
+          <p>Let's see an example</p>
+          <pre>
+PROCEDURE Totaller(value1:REAL,value2:REAL)
+ DECLARE value3:REAL
+ value3 ← value1+value2
+ OUTPUT value3
+ENDPROCEDURE
+
+CALL Totaller(Num1,Num2)
+</pre>
+          <figcaption>
+            Any variable created in the module, it must de declared inside the module
+          </figcaption>
+          <p>This reduces the size of the main code and make it easier to build a code</p>
+          <p>Also as, premade modules are tested it makes the code more reliable</p><br id="reference378">
+          <h2>BYVALUE AND BYREF</h2>
+          <p>These are used to indicate how the parameters are supposed to be used</p>
+          <p>BYVALUE means only the value is passed to the module. So any changes to the variable has no affect in the main code</p>
+          <p>This is known as the local scope and by default python follows this</p>
+          <p>BYREF is when the value and the address of the variable is sent so any changes to the variable inside the module affects the main program</p>
+          <p>This is the global scope of a variable. We need to use a global keyword in python</p>
+          <pre>
+PROCEDURE ProcedureName(BYVALUE parameter:datatypes, BYREF parameter2:datatypes)
+ .....
+ .....
+ .....
+ENDPROCEDURE
+</pre><br id="reference379">
+          <h2>Record Type</h2>
+          <p>These are also called userdefined types</p>
+          <p>These variables are very simialar to a record which can store different types of data of a particular item in one variable</p>
+          <p>In A2 we call it an instance and we use classes to implement these</p>
+          <p>So the variable can store many properties(field) of a particular item</p>
+          <p>We will see how to create a record type</p>
+          <pre>
+TYPE RecordName
+  DECLARE FIELDNAME:DATATYPE
+  DECLARE FIELDNAME:DATATYPE
+  DECLARE FIELDNAME:DATATYPE
+  DECLARE FIELDNAME:DATATYPE
+  .
+  .
+ENDTYPE
+</pre>
+          <p>At first, even I was confused. But it's actually pretty simple</p>
+          <p>This defines a record. The fieldname defines a specific property of that particular record.</p>
+          <p>Let's take an example</p>
+          <pre>
+TYPE Studentdetails
+  DECLARE Name:STRING
+  DECLARE Age:INTEGER
+  DECLARE DateOfBIrth:DATE
+ENDTYPE
+</pre>
+          <p>So this record <span class="highlight">format</span> tells us what a variable defined in this record type must have. So it is divided to age and all</p>
+          <p>Now if we declare a variable using the record type</p>
+          <pre>
+DECLARE User1:Studentdetails
+</pre>
+          <p>This is why it's called a user-defined type</p>
+          <p>So the variable John can store 3 different types of information under one identifier</p>
+          <pre>
+User1.Name ← "MR Beast"
+User1.Age ← 28
+User1.DateOfBirth ← "7/5/1998"
+</pre>
+          <p>This is very similar to an array but can hold different datatypes under one identifier and there is more structure to it than an array</p>
+          <p>Also remember that record datatypes are composite datatypes</p>
+          <p>Actually in advance python this is very similar to a dictionary in python</p><br>
+          <p>There are some points you need to remember</p>
+          <p>I'm not sure why but, the exams usually expect us to do this</p>
+          <p>Whenever we transfer a value from the array to a record or vice versa, we must use a temporary variable</p>
+          <pre>
+Temporaryvariable ← User1.age
+Agelist[i] ← Temporaryvariable
+</pre>
+          <p>It is the same when you output values from a record. You need to have a temporary variable</p>
+          <pre>
+Temporaryvariable ← User1.age
+OUTPUT Temporaryvariable
+</pre><br id="reference380">
+          <h2>Abstract Datatypes</h2>
+          <h3>A collection of data with associated properties</h3>
+          <p>These are not actual datatypes but they are an idea or a concept</p>
+          <p>This is more of an A2 topic but, you need to know the basics</p>
+          <p>There are three types of abstract datastructures :</p>
+          <ul>
+            <br id="reference381">
+            <li>Stacks</li>
+            <p>These store data in a way that data is stored in a stack</p>
+            <p>So data which is retrieved from the datastructure is the one which was recently stored( previously stored )</p>
+            <p>In accounting terms, this is similar to the LIFO principle</p>
+            <p>So this means that the data at the start remains at the bottom until the whole datalist is empty</p><br id="reference382">
+            <li>Queues</li>
+            <p>Stores data in way that the data retrieved was the first one stored.</p>
+            <p>This is similar to the FIFO principle</p>
+            <p>So the data entered recenty will eventually be retrieved over time</p><br id="reference383">
+            <li>Link lists</li>
+            <p>This has no proper order in which how data is stored or retrieved. This is defined by the user itself by using another array to define the order</p>
+            <p>We will talk about it more in A2</p><br>
+            <br>
+            <div class="pagenav">
+              <a href="Algorithm.html">Back</a> <a href="Development.html">Next</a>
+            </div><br>
+			<h2>Recommended</h2>
+        <p>These are things you might like. Clicking these ads can help us improve our free services in the future...</p>
+            <div id="container-2a219c05affd07270c6855c66c9456d4" style="border-radius:20px;"></div>
+        
+            <br>
+            <div class="general container-extra flex-box-row">
+              <div>
+                <h5>End of Chapter Questions</h5>
+                <h6>Collection of Topic Questions to understand the topic more.</h6><br>
+                <a style="padding:10px; background-color:#4ea654; border-radius:3px; font:17px Os; color:#e8e4e3; text-decoration:none;" href="../../Filedata/Questions/CS/DatastructureRevision.pdf">Try out</a>
+              </div>
+            </div><br>
+            <br>
+            <div class="general container-extra2 flex-box-row">
+              <div>
+                <h5>End of Chapter Videos</h5>
+                <h6>Collection of Videos to Support Your Understanding.</h6>
+                <h4>Remember these videos are handpicked by me and I feel these are the best ones out there. But I constantly update this list for each chapter. The Youtubers are more than welcome to contact me.</h4>
+                <h4>Also, don't forget to Subscribe to our Youtube channel - Wiscus</h4><br>
+                <a style="padding:10px; background-color:#4ea654; border-radius:3px; font:17px Os; color:#e8e4e3; text-decoration:none;" href="https://www.Youtube.com/watch?v=MbSfWN9KlkE&amp;list=PLfh04WZ4q7nUuqWMdyUs7fg5O0I-XBzI8" target="blank">Watch</a>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div><br>
+      <br>
+      <footer>
+        <p>Revisezone.com Copyright 2020</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../WebScript/Main-script.js"></script>
+</body>
+</html>
