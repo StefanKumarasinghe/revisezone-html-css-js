@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='description' content='What is an Algorithm and what you need to know for your Cambridge computer science practical paper!'>
+  <meta name='keywords' content=''>
+  <meta name='author' content='Wiscus'>
+  <link rel="apple-touch-icon" href="Imagedata/Revisezone/Logo.png">
+  <meta name='theme-color' content='black'>
+  <meta name='viewport' content='width=device-width initial-scale=1'>
+  <link rel="shortcut icon" href="../../Imagedata/Revisezone/Logo.png" type="x-icon/image">
+  <link class="Style" rel='stylesheet' href='../../Style/Master.css' media="screen and (min-width:1000px)">
+  <link class="Style" rel='stylesheet' href='../../Style/Mobile.css' media="screen and (max-width:999px)">
+  <link class="Style" rel='stylesheet' href='../../Style/printstyle.css' media="print"><!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170507780-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-170507780-1');
+  </script>
+  <title>System Softwares & Compilation</title>
+</head>
+<body onload="saved()">
+  <div class="progress-container"></div>
+  <div class="top-nav-main">
+    <a href="../../home.html" title="Home">Home</a> <a href="../Chemistry/Chemistry.html" title="Chemistry"><abbr>Chemistry</abbr></a> <a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../LearningHtml/Introduction.html">HTML</a>
+    <div class="login-more">
+      <a onclick="NightmodeOn()" id="Mode">Night</a> <a onclick="More()" id="more">More</a>
+    </div>
+  </div>
+  <div class="dropdesign">
+    <span id="goback-white" onclick="Gobackdropdown()">✖</span>
+    <div class="flex-box-row">
+      <div>
+        <h2>Revise Now</h2>
+        <h3>GCE Subjects</h3><a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../Chemistry/Chemistry.html" title="Chemistry">Chemistry</a> <a href="../Cs/CS.html" title="Computer Science">CS</a> <a href="../Accounting/Introduction.html" title="Accounting">Accounting</a>
+        <h3>Coding Lessons</h3><a href="../LearningHtml/Introduction.html" title="HTML">Learn HTML</a> <a href="../SEO/SEO.html" title="SEO">Learn SEO</a>
+      </div>
+      <div>
+        <h2>More</h2>
+        <h3>What do you want<br>
+        to do?</h3><a href="../Other/ContactUs.html" title="Contact us">Contact us</a> <a href="../Other/Support.html" title="Support">Support</a>
+      </div>
+    </div>
+  </div>
+  <div class="spacing"></div>
+  <div class="grid-layout-main">
+    <div>
+      <div class="side-nav-universal">
+        <br>
+        <br>
+        <br>
+        <h2>Computer Science AS</h2><a href="CS.html" title="Introduction">Introduction</a> <a href="InformationRepresentation.html" title="">Information Representation</a> <a href="Communication.html" title="Communication">Communications</a> <a href="Communication2.html" title="Communication">Communications 2</a> <a href="Hardware.html" title="Hardware">Hardware</a> <a href="LogicGates.html" title="LogicGates">Logic Circuits</a> <a href="ProcessorFundamentals.html" title="Processor">Processor Fundamentals</a> <a href="AssemblyLanguage.html" title="Assembly">Assembly Language</a> <a href="MonitorControlling.html" title="Sensors">Monitor & Control</a> <a href="SystemSoftware.html" title="System Software">System Software</a> <a href="DataSecurity.html" title="Security">Security, Privacy & Data Integrity</a> <a href="Ethics.html" title="Ethics">Ethics</a> <a href="Databases.html" title="databases">Databases</a><br>
+        <h2>AS Practical</h2><a href="Algorithm.html" title="Algorithm">Algorithm</a> <a href="Datastructures.html" title="Data Structures">Data Structures and more</a> <a href="Development.html" title="">Software development</a><br>
+        <br>
+        <h2>Computer Science A2</h2><a href="DataRepresentations.html" title="Data Representation">Data Representation</a> <a href="FileOrganisations.html" title="File Organisation">File Organisation</a> <a href="LogicCircuit.html" title="Logic Circuits">Advance Logic Gates</a><a href="Internet.html" title="Internet">Internet</a> <a href="VirtualMachines.html" title="Virtual Machines">Virtual Machines</a> <a href="SystemA2.html" title="System Software">System Software</a> <a href="Security.html" title="Encryption and Security">Encryption & Security</a> <a href="AI.html" title="Artificial Intelligence">Artificial Intelligence</a><br>
+        <h2>A2 Practicals</h2><a href="../Developer/BinarySearch.html" title="Binary Search" target="blank">Binary Search</a> <a href="../Developer/LinearSearch.html" title="Linear Search" target="blank">Linear Search</a> <a href="../Developer/BubbleSort.html" title="Bubble Sort" target="blank">Bubble Sort</a> <a href="../Developer/InsertionSort.html" title="Inertion Sort" target="blank">Insertion Sort</a> <a href="../Developer/Combined.html" title="Combined Algorithm" target="blank">Combined Algorithm</a> <a href="../Developer/Stack.html" title="Stack" target="blank">Stacks</a> <a href="../Developer/Queue.html" title="Queue" target="blank">Queues</a> <a href="../Developer/LinkedList.html" title="Linked List" target="blank">Linked List</a> <a href="../Developer/BinaryTree.html" title="Binary Tree" target="blank">Binary Tree</a><br>
+        <h2>More</h2><a href="CSReference.html" title="CS Reference">Reference</a> <a href="CSEx.html" title="CS Questions">Pastpaper Questions</a>
+      </div>
+    </div>
+    <div>
+      <div class="Mainpage">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div>
+          <p><a class="extrafeatures" id="audioplay" onclick="audio()" title="Audio Lesson Only">♫</a><a class="extrafeatures" title="Lesson Recap" href="#recap">✐</a></p>
+          <div id="audiobar">
+            <audio controls=""><source src="Audio/SystemA2.mp3" type="audio/mpeg"> Your browser does not support the audio...</audio>
+          </div>
+          <div class="pagenav">
+            <a href="VirtualMachines.html">Back</a> <a href="Security.html">Next</a>
+          </div><span onclick="Mobilebut()" id="mobilebutton"><img alt="more topic chapters" src="../../Imagedata/Revisezone/morecontent.png"></span>
+          <h1>System Software & Compilation A2</h1>
+          <h2>Kernel Software</h2>
+          <p>The Kernel Software is the interface between the user and the hardware of the computer. It is a layer of the Operating System in which handles all the underlying functions of a computer</p>
+          <h2>Input / Output Managements</h2>
+          <p>When you connect an input or output device the operating system will do some very important functions:</p>
+          <p>1. Install the driver of the device</p>
+          <p>2. Handes any interrupts from the device</p>
+          <p>3. Handles in buffer signals</p>
+          <p>4. Handles any queue control signals</p>
+          <p>Due to high speeds of the operating system, it is very rare that an input or output device will communicate directly with the operating system. So sometimes the input and output signals are stored in buffer in the main memory and sent to the processor only when the time slice for the input / output device starts.</p>
+          <p>This process of dividing time slices is called process scheduling or management which will be discussed in the next heading.</p>
+          <h2>Process Scheduling</h2>
+          <p>The reason we need this is because the cpu can only handle one instruction at a time. This is an important thing to remember which means that an algorithm must be used in order to decide which process or instruction is to be loaded to the CPU. This type of scheduling is called low-level scheduling.</p>
+          <p>The other type of scheduling is high level scheduling in which a decision must be made on what process can be stored in the main memory from the hard drive. Note that the Main memory can hold many processes or instructions but it is a small number as the storage of Main memory is small</p>
+          <h2>What is a process?</h2>
+          <blockquote>
+            This is the AS level definition
+          </blockquote>
+          <h3>An execution of a program</h3>
+          <blockquote>
+            This is the definition for A2
+          </blockquote>
+          <h3>A program in memory with associated PCB</h3>
+          <p>What is a PCB block ( program control block )? It is block that holds the required data for the process. A PCB is like an array of data that has the required data for the process to executed successfully</p>
+          <h2>Process States</h2>
+          <p>There are 5 stages of a process in which we will discuss about:</p>
+          <ul>
+            <li>New Stage</li>
+            <p>In this Stage, the process has just entered the main memory and is getting its associated data ( PCB ) to be ready to be running</p>
+            <li>Ready Stage</li>
+            <p>The Process is ready to start running and performing it's task</p>
+            <li>Running Stage</li>
+            <p>The Process is running inside the CPU</p>
+            <li>Waiting / Block Stage</li>
+            <p>In this Stage, the system is waiting for a input or output signal</p>
+            <li>Terminated</li>
+            <p>The Process is completed and terminated</p><img src="../../Imagedata/CS/process.jpg" alt="stages of a process">
+            <blockquote>
+              A good thing to remember is that the process must exist in the memory for the cpu to access it as the cpu has direct access to main memory only!
+            </blockquote>
+            <p>For the above diagram, an interrupt can be generated to move the state from running to ready or another input/output interrupt can be generated to move the state to the waiting state</p>
+            <h2>High level Process Scheduling</h2>
+            <p>There are two types of Scheduling algorithms depending on whether the priority of each task is considered or not!</p>
+            <li>Non-Preemptive</li>
+            <p>This does not consider the priority of each task and does not halt the process half way but makes sure the full process is completed and then the next process is fetched</p>
+            <p>This is very time consuming and can be sometimes inefficient. For example, the cpu may have to wait for the printer to send signals and stay idle as it can only handle one task. So this does not allow for multi tasking!</p>
+            <li>Preemptive</li>
+            <p>Does consider the priority of each task and uses interrupts to halt processes and multitask. Which means each job recieves a time slice to execute the process.</p>
+            <h2>Examples of Preemptive & Non-preemptive</h2>
+            <p>The Idea is that the examples below can be used for both but their functions have to be changed. We can use:</p>
+            <p>1. First In First Out</p>
+            <p>2. Round Robin</p>
+            <p>3. LIFO</p>
+            <p>The reason why we can apply them for both is that the only difference is that rather than using whole processes in non-preemptive we use time slice or an allocation period for the preemptive</p>
+            <p>However, the below can only be used for Preemptive as they consider time as a factor</p>
+            <p>1. Longest Job First Out</p>
+            <p>2. Shortest Job First Served</p>
+            <blockquote>
+              Round Robin means a cyclic shift in which the process is given an equal time and once the time slice is done, it circularly moves to the next task
+            </blockquote>
+            <h2>Memory Management</h2>
+            <p>The Main memory has limited memory and sometimes the computer may require more of it. The way to solve this is to implement virtual memory</p>
+            <p>The idea is that the computer will allocate some of its storage as memory so it can act like RAM or Main memory. The only issue is that the speed of a hard drive is slower than the Main memory</p>
+            <p>When answering a question just remember these points:</p>
+            <p>1. Virtual Memory extends the RAM or increases the size of RAM</p>
+            <p>2. The Virtual Memory is divided into equal size pages</p>
+            <p>3. The Main memory is divided into equal size frames or page frames</p>
+            <p>4. The frame size is equal to the page size</p>
+            <p>5. A page table contains the process page number and whether it is present in memory and also the Physical (Main memory) Address and the corresponding Logical ( Virtual Memory ) Address</p>
+            <blockquote>
+              The New Cambridge A level Text Book confused me for days and I finally understood that the concept in the book was incorrect. I have verified this from trusted sources. The Book refers to the page as part of a process that is misleading the process size must indeed be the same as the frame but it's called a Job not a page
+            </blockquote>
+            <h2>What is partitioning and Segmentation?</h2>
+            <p>The idea is similar to pages and frames but, partitioning is the breaking down of memory to variable sizes whereas segmentation is breaking down of virtual memory to variable sizes!</p>
+            <h2>What is Stored in the Page Table</h2>
+            <p>In the recent past papers I noticed this question popped up, so I will simply tell you the points you need to write:</p>
+            <p>1. If the process is present in memory</p>
+            <p>2. Logical and Corresponding Physical Address</p>
+            <p>3. Time of Entry</p>
+            <blockquote>
+              Time of Entry is the digital time when the process entered the main memory. Note that this is not the length of time
+            </blockquote>
+            <h2>Page Faults</h2>
+            <p>Interrupts are generated all the time in the processor especially during the end of a time slice. However, there is a special type of error</p>
+            <p>If the processor requires a process, then it must be present in the Main memory as discussed before. If it is not present in the main memory then this condition is called a page fault. An interrupt is generated so the process is to be fetched from the virtual memory. If it is still not present, then the process can not be executed</p>
+            <h2>Disk Thrashing</h2>
+            <p>This is a very interesting situation and somewhat very easy to understand</p>
+            <p>When a large job is loaded from the virtual memory to the main memory and the loaded job needs to load another job from the virtual memory, in some cases both can't fit inside the main memory. But both jobs are dependent on each other and both must be loaded in the Main memory. But the Main memory can not do that and so there will be swapping of the two jobs between the Virtual and Main memory and as both are dependant on each other, this will lead to infinite loading called disk thrashing. Disk Thrashing could also occur for finite swapping but it is usually very large</p>
+            <h2>Compiling</h2>
+            <p>We have discussed compilers in the previous chapters. Here we will see the steps of compiling. There are 5 steps in compilations and these 5 steps fall under 2 categories</p>
+            <li>Lexical Analysis</li>
+            <p>In this stage, the comments are removed, and also whitespaces and errors are detected and removed. Also, the identifiers and operators are separated and identified using tokens that are stored in the keyword table.</p>
+            <p>For example:</p>
+            <pre>A + B = Total</pre>
+            <p>A, B, Total + and = are lexemes</p>
+            <p>Look at the other example:</p>
+            <pre>
+Total = (A*B)+C
+Total   =  (   A   *   B    )   +    C
+</pre>
+            <figcaption>
+              Each lexeme is a separate item
+            </figcaption>
+            <h2>Keyword & Symbol Table</h2>
+            <p>The line of code is separated to lexemes. Each lexeme has a corresponding token which is stored in a keyword table. For example, operator and keywords and special lexemes are stored in the keyword table</p>
+            <p>In the symbol table, we record the identifiers and the corresponding data types. It is similar to an identifier table</p>
+            <blockquote>
+              It is sometimes misleading that the symbol table records identifiers and the keyword table records token. So please practice this!
+            </blockquote>
+            <p>More on Symbol tables are <a href="https://revisezone.com/Html/Cs/Algorithm.html#reference354">here</a></p>
+            <li>Syntax Analysis</li>
+            <p>In this stage, the grammar of the language is understood and converted in a way that can be understood by the computer. This includes using a parse tree or syntax tree to determine order of calculation.</p><img src="../../Imagedata/CS/syntaxtree.png" alt="syntax or parse tree">
+            <p>Also in the real world, we have rules of precedence in mathematics such as</p>
+            <pre>
+A+ 2*B
+</pre>
+            <figcaption>
+              This is called the infix form
+            </figcaption>
+            <p>By the laws of BIDMAS we do the multiplication first before additions. When converting this form to a way that doesn't require rules of precedence or brackets</p>
+            <pre>
+A+ ( 2*B )
+Is the infix form
+</pre>
+            <pre>
+A2B*+
+Is the Post-Fix or RPN form
+</pre>
+            <p>The RPN form doesn't need the requirement for rules of precedence or any brackets. Also the code can be read from left to right only</p>
+            <p>A basic understanding of converting RPN to Normal or Infix form is by doing the steps below</p>
+            <p>1. If it is a identifier or variable then push it to the stack</p>
+            <p>2. If it is an operator then pop the last two variables or values and record the value, example 23+ is 5</p>
+            <p>3. Keep repeating the process</p>
+            <p>Let us see an example:</p>
+            <pre>
+Convert 23456*+/*3*
+</pre>
+            <p>By doing the method above keep on repeating until you reach * then simplify the last 2 variables, Make sure you read from left to right, so when i mean last i mean the leftmost side</p>
+            <pre>
+Convert 234(30)+/*3*
+Convert 23(34)/*3*
+Convert 2(3/34)*3*
+Convert ((3/34)*2)3*
+Convert (3/34)*2*3
+</pre>
+            <p>We read from left to right so the infix form must have the correct value. The values on the right are placed on the right. For example:</p>
+            <pre>If A+ B*C
+
+Then BC*A+ is not correct
+but ABC*+ is correct
+SO ORDER MATTERS!
+
+</pre>
+            <h4>To test your understanding convert D/((A*B)+C) infix to RPN/Postfix form</h4>
+            <details>
+              <summary>
+                Reveal Answer
+              </summary>
+              <p>DAB*C+/</p>
+            </details>
+            <h2>Solving RPN using a Stack</h2>
+            <p>You can solve the RPN using the method above. When adding variables we add to the bottom of the stack. Then for each step, take a new column.</p>
+            <p>If it is an operator then pop the last or top two variable and record the value and so on. Keep repeating the process and read from left to right only</p>
+            <p>Here is an example:</p><img src="../../Imagedata/CS/rpnstack.png" alt="rpn stack diagram">
+            <h2>Parse Tree Or Syntax Tree</h2>
+            <p>The Syntax tree is a graphical representation of the RPN form. It shows the rules of precendence. The ones at the bottom leaves are done first and the nodes are the operators</p><img src="../../Imagedata/CS/syntaxtree.png" alt="syntax or parse tree">
+            <li>Senamantic Analysis</li>
+            <h2>BNF</h2>
+            <p>This is Similar to the Syntax Analysis. In this, it handles the format of data</p>
+            <p>Some notations you need to remember are:</p>
+            <p>| The Or Symbol</p>
+            <p>&lt;Variable&gt; is an item</p>
+            <p>::= Assign or equals to</p>
+            <p>For example:</p>
+            <pre>
+&lt;Letter&gt;::=A|B|C|D
+&lt;Number&gt;::=0|1|2|3
+&lt;Password&gt;::=&lt;Letter&gt;&lt;Letter&gt;&lt;Number&gt;&lt;Number&gt;
+</pre>
+            <p>So in this case the password must start with 2 letters and have 2 numbers</p>
+            <pre>So AC12 is a valid password but, AH12 is not as H is not an option in letters and also AHE2 is not  valid as it must have 2 letters and 2 Digits also. Finally AA2 is also wrong</pre>
+            <h4>Is 33AA a valid password</h4>
+            <details>
+              <summary>
+                See Answer Here
+              </summary>
+              <p>No, the numbers must be last...</p>
+            </details>
+            <h2>Recursive BNF</h2>
+            <p>If the person is able to enter as much as data items they want then they can use a recursive function. For example if the password must start with a letter but can have many digits or letters after that we show it like this</p>
+            <pre>
+
+&lt;Password&gt;::=&lt;Letter&gt;&lt;Letter&gt;&lt;Letter&gt;|&lt;Password&gt;&lt;Letter&gt;|&lt;Password&gt;&lt;Number&gt;
+
+</pre>
+            <p>The above shows the password must start with 3 letters and stop or continue adding futher digits or letters. Think of it as a value. Once the password has 3 letters it can be used as a new variable again and added with digits or letters</p>
+            <h4>Is AAAA a valid password</h4>
+            <details>
+              <summary>
+                See Answer Here
+              </summary>
+              <p>Yes, as there are 3 Letters of "A" and the next one can be a digit or a letter</p>
+            </details>
+            <h4>Is AAA a valid password</h4>
+            <details>
+              <summary>
+                See Answer Here
+              </summary>
+              <p>Yes, as there are 3 Letters of "A" and there is no need to add another one</p>
+            </details>
+            <p>It is good to remember these symbols and all and another thing to remember is that if the BNF has a certain symbol then we need to add them</p>
+            <pre>23.33
+&lt;Value&gt;::=&lt;Number&gt;&lt;Number&gt;.&lt;Number&gt;&lt;Number&gt;
+
+
+</pre>
+            <h2>Syntax Diagram</h2>
+            <p>A Syntax diagram is the graphical representation of the BNF form. BNF is written in words where as in Syntax diagrams we need to draw diagrams. Below are the corresponding diagrams for each BNF notation or symbols</p><img src="../../Imagedata/CS/syntaxdiagram.png" alt="syntax diagram">
+            <p>To show a recursive BNF then we use the one for constant above</p>
+            <li>Code Generation</li>
+            <p>This generates the final object code</p>
+            <li>Code Optimisation</li>
+            <p>This makes any improvements in the code to increase efficiency and reduce memory usage. For example,</p>
+            <pre>
+LDD A
+ADD B
+STO C
+LDD C
+ADD E
+STO E
+#THIS IS A COMMENT
+</pre>
+            <p>Could be simplified to this to reduce memory usage and lines of code</p>
+            <pre>
+LDD A
+ADD B
+ADD E
+STO E
+</pre>
+            <p>Also comments are removed here</p>
+            <div class="pagenav">
+              <a href="VirtualMachines.html">Back</a> <a href="Security.html">Next</a>
+            </div><br>
+            <br>
+            <br id="recap">
+            <div class="general container-extra">
+              <div>
+                <h5>Quick Recap</h5>
+                <h6>Check your Knowledge with a Quick Recap</h6><br>
+                <a style="padding:10px; background-color:#4ea654; border-radius:3px; font:17px Os; color:#e8e4e3; text-decoration:none;" onclick="MiniTask(this,'../../quiz.revisezone.com/Mini/SystemA2.html')">Try out</a>
+                <div id="taskview"></div>
+              </div>
+            </div><br>
+          </ul>
+        </div>
+      </div><br>
+      <br>
+      <footer>
+        <p>Revisezone.com Copyright 2020</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../WebScript/Main-script.js"></script>
+</body>
+</html>

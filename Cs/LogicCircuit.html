@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='description' content='SR & JK flip flops and half and full adders in computer science and simplifying boolean algebra'>
+  <meta name='keywords' content='full adders, half adders, sr flip flops, jk flip flops, boolean algebra, sum of product'>
+  <meta name='author' content='Wiscus'>
+  <link rel="apple-touch-icon" href="Imagedata/Revisezone/Logo.png">
+  <meta name='theme-color' content='black'>
+  <meta name='viewport' content='width=device-width initial-scale=1'>
+  <link rel="shortcut icon" href="../../Imagedata/Revisezone/Logo.png" type="x-icon/image">
+  <link class="Style" rel='stylesheet' href='../../Style/Master.css' media="screen and (min-width:1000px)">
+  <link class="Style" rel='stylesheet' href='../../Style/Mobile.css' media="screen and (max-width:999px)">
+  <link class="Style" rel='stylesheet' href='../../Style/printstyle.css' media="print"><!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170507780-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-170507780-1');
+  </script>
+  <title>Advance Logic Circuits | Boolean Algebra | Revise Zone</title>
+</head>
+<body onload="saved()">
+  <div class="progress-container"></div>
+  <div class="top-nav-main">
+    <a href="../../home.html" title="Home">Home</a> <a href="../Chemistry/Chemistry.html" title="Chemistry"><abbr>Chemistry</abbr></a> <a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../LearningHtml/Introduction.html">HTML</a>
+    <div class="login-more">
+      <a onclick="NightmodeOn()" id="Mode">Night</a> <a onclick="More()" id="more">More</a>
+    </div>
+  </div>
+  <div class="dropdesign">
+    <span id="goback-white" onclick="Gobackdropdown()">✖</span>
+    <div class="flex-box-row">
+      <div>
+        <h2>Revise Now</h2>
+        <h3>GCE Subjects</h3><a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../Chemistry/Chemistry.html" title="Chemistry">Chemistry</a> <a href="../Cs/CS.html" title="Computer Science">CS</a> <a href="../Accounting/Introduction.html" title="Accounting">Accounting</a>
+        <h3>Coding Lessons</h3><a href="../LearningHtml/Introduction.html" title="HTML">Learn HTML</a> <a href="../SEO/SEO.html" title="SEO">Learn SEO</a>
+      </div>
+      <div>
+        <h2>More</h2>
+        <h3>What do you want<br>
+        to do?</h3><a href="../Other/ContactUs.html" title="Contact us">Contact us</a> <a href="../Other/Support.html" title="Support">Support</a>
+      </div>
+    </div>
+  </div>
+  <div class="spacing"></div>
+  <div class="grid-layout-main">
+    <div>
+      <div class="side-nav-universal">
+        <br>
+        <br>
+        <br>
+        <h2>Computer Science AS</h2><a href="CS.html" title="Introduction">Introduction</a> <a href="InformationRepresentation.html" title="">Information Representation</a> <a href="Communication.html" title="Communication">Communications</a> <a href="Communication2.html" title="Communication">Communications 2</a> <a href="Hardware.html" title="Hardware">Hardware</a> <a href="LogicGates.html" title="LogicGates">Logic Circuits</a> <a href="ProcessorFundamentals.html" title="Processor">Processor Fundamentals</a> <a href="AssemblyLanguage.html" title="Assembly">Assembly Language</a> <a href="MonitorControlling.html" title="Sensors">Monitor & Control</a> <a href="SystemSoftware.html" title="System Software">System Software</a> <a href="DataSecurity.html" title="Security">Security, Privacy & Data Integrity</a> <a href="Ethics.html" title="Ethics">Ethics</a> <a href="Databases.html" title="databases">Databases</a><br>
+        <h2>AS Practical</h2><a href="Algorithm.html" title="Algorithm">Algorithm</a> <a href="Datastructures.html" title="Data Structures">Data Structures and more</a> <a href="Development.html" title="">Software development</a><br>
+        <br>
+        <h2>Computer Science A2</h2><a href="DataRepresentations.html" title="Data Representation">Data Representation</a> <a href="FileOrganisations.html" title="File Organisation">File Organisation</a> <a href="LogicCircuit.html" title="Logic Circuits">Advance Logic Gates</a><a href="Internet.html" title="Internet">Internet</a> <a href="VirtualMachines.html" title="Virtual Machines">Virtual Machines</a> <a href="SystemA2.html" title="System Software">System Software</a> <a href="Security.html" title="Encryption and Security">Encryption & Security</a> <a href="AI.html" title="Artificial Intelligence">Artificial Intelligence</a><br>
+        <h2>A2 Practicals</h2><a href="../Developer/BinarySearch.html" title="Binary Search" target="blank">Binary Search</a> <a href="../Developer/LinearSearch.html" title="Linear Search" target="blank">Linear Search</a> <a href="../Developer/BubbleSort.html" title="Bubble Sort" target="blank">Bubble Sort</a> <a href="../Developer/InsertionSort.html" title="Inertion Sort" target="blank">Insertion Sort</a> <a href="../Developer/Combined.html" title="Combined Algorithm" target="blank">Combined Algorithm</a> <a href="../Developer/Stack.html" title="Stack" target="blank">Stacks</a> <a href="../Developer/Queue.html" title="Queue" target="blank">Queues</a> <a href="../Developer/LinkedList.html" title="Linked List" target="blank">Linked List</a> <a href="../Developer/BinaryTree.html" title="Binary Tree" target="blank">Binary Tree</a><br>
+        <h2>More</h2><a href="CSReference.html" title="CS Reference">Reference</a> <a href="CSEx.html" title="CS Questions">Pastpaper Questions</a>
+      </div>
+    </div>
+    <div>
+      <div class="Mainpage">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div>
+          <p><a class="extrafeatures" id="audioplay" onclick="audio()" title="Audio Lesson Only">♫</a><a class="extrafeatures" title="Lesson Recap" href="#recap">✐</a></p>
+          <div id="audiobar">
+            <audio controls=""><source src="Audio/Logic.mp3" type="audio/mpeg"> Your browser does not support the audio...</audio>
+          </div>
+          <div class="pagenav">
+            <a href="FileOrganisations.html">Back</a> <a href="Internet.html">Next</a>
+          </div><span onclick="Mobilebut()" id="mobilebutton"><img alt="more topic chapters" src="../../Imagedata/Revisezone/morecontent.png"></span>
+          <h1>Logic Circuit</h1>
+          <h2>Types of Logic Circuits</h2>
+          <p>There are two types of logic circuits depending on whether they use the output bit as feedback for the input bit or not:</p>
+          <ul>
+            <li>Combinational Circuits</li>
+            <h3>These output bits of these circuit is directly dependant on the input bits only</h3>
+            <p>Examples are Half adders and Full adders</p>
+            <h2>Summary to binary additions</h2>
+            <p>Lets see an example</p>
+            <pre>
+      01011101
+      01111011+
+      ________
+      11011000
+</pre>
+            <p>To do this just follow the normal addition</p>
+            <p>Binary addition begins from the rightmost side</p>
+            <p>If 1 + 1 then it gives 0 and 1 is carried</p>
+            <p>If 1 + 0 then it gives 1 and no carry</p>
+            <p>If 1 + 1 + 1 then it give 1 and a carry of 1</p>
+            <p>If 1 + 1 + 1 + 1 then it gives 0 and a carry of 2</p>
+            <h2>Half Adders</h2>
+			<img src="../../Imagedata/CS/halfadder.png" alt="Half adder diagram">
+            <p>This is a combinational circuit that is designed to add 2 bits and give the sum and the carry bit. So there is 2 inputs and 2 outputs</p>
+            <p>We can take  the summing and the carrying section separately and construct it using basic logic gates.</p>
+            <p>The Carry bit can be represented using a simple AND gate as both inputs must be 1 to make it 1</p>
+            <p>The Sum bit can be represented using an XOR gate. It easy to draw a xor gate, but questions may construct the XOR gate using other gates.</p>
+            <h2>Full Adders</h2>
+			<img src="../../Imagedata/CS/fulladder.png" alt="full adder diagram example">
+            <p>They are used to add a series of bits together. For example, 2 binary numbers that have more than 1 bit each.</p>
+            <p>So it is two half adders combined to make a full adder. The full adder takes 3 inputs, the two input bits and a carry input bit from the previous carry output bit. This will output the new carry out bit and sum bit</p>
+            <blockquote>
+              Note that you can get the impression that full adders are part of sequential circuits but they are not. There are no explicit links between the input and output points
+            </blockquote>
+            <li>Sequential Circuits</li>
+            <h3>The Output is directly dependant on the input and the previous output bit</h3>
+            <p>So there is a direct link between the input and output side. We will learn now 2 main types of sequential circuits:</p>
+            <li>SR Flip flops</li>
+            <p>You can use either a NOR or NAND gate for this but the most common is the NOR Gate</p>
+            <p>First note down these rules:</p>
+            <pre>
+NOR GATE:
+When one of the input bits is 1 then Output is always 0
+When both are 0 then Output is always 1
+</pre>
+            <p>Please look at the logic gate below</p>
+            <table class="table-design">
+              <caption>
+                Truth Table
+              </caption>
+              <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>Output</th>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+              </tr>
+            </table>
+            <p>Here is a common diagram of a SR flip flop</p>
+			<img src="../../Imagedata/CS/SR.png" alt="SR flip flop diagram">
+            <p>We will ASSUME that initially the output bit Q is 1 and Output bit for <span class="ov">Q</span> is 0</p>
+            <p>Remember that we always need the previous values Q and <span class="ov">Q</span> to continue the tracing or truth table for the system. Below is the truth table</p>
+            <table class="table-design">
+              <caption>
+                Truth Table
+              </caption>
+              <tr>
+                <th>R</th>
+                <th>S</th>
+                <th>Q</th>
+                <th><span class="ov">Q</span></th>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+            </table>
+            <p>It's always better to have an order or fixed flow of data. Start from the top R which gives Q and then it goes down and compares with S to give <span class="ov">Q</span>. Better to remember it like this!</p>
+            <p>Also Note that the Q and the <span class="ov">Q</span> is used in the next cycle for the new sets of R and S. Remember that R is compared with <span class="ov">Q</span> and S with Q. This may change depending on different diagrams</p>
+            <blockquote>
+              The flow is a ZIG ZAG movement from previous <span class="ov">Q</span> to next Q
+            </blockquote>
+            <p>There is a rule you need to remember and that is that <span class="ov">Q</span> and Q must be inverted so both can not be the same. Then why is the last condition both 0. This is in fact an errornous state where the bits are invalid. There are measures taken to prevent both S and R being 1 or else this is an error</p>
+            <li>JK flip flops</li>
+            <p>More advanced version of the SR flip flops and this has 3 inputs as it has an additional input called clock or pulse</p>
+			<img src="../../Imagedata/CS/JK.png" alt="JK flip flop diagram">
+            <p>We usually use NAND gates for JK flip flops. So let us see the truth table of a NAND gate</p>
+            <table class="table-design">
+              <caption>
+                Truth Table
+              </caption>
+              <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>Output</th>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+              </tr>
+            </table>
+            <pre>
+
+
+Only when both inputs are 1 the output is always 0
+So if one of the inputs are 0 then the input is always 1
+</pre>
+            <p>Let us now see the truth table for JK flip flops</p>
+            <blockquote>
+              It is not required to have 8 columns as we will only see the outcomes when the clock is 1, If it isn't 1, the JK flip flop is inactive or not started
+            </blockquote>
+            <table class="table-design">
+              <caption>
+                Truth Table
+              </caption>
+              <tr>
+                <th>Clock</th>
+                <th>J</th>
+                <th>K</th>
+                <th>Q</th>
+                <th><span class="ov">Q</span></th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>Toggles</td>
+                <td>Toggles</td>
+              </tr>
+            </table>
+            <blockquote>
+              You can't trace the first set of Q and <span class="ov">Q</span> as they are given
+            </blockquote>
+            <p>The meaning of toggle is somewhat confusing, it means the value of Q and <span class="ov">Q</span> is switched from the previous Q and <span class="ov">Q</span> states. This means if the before state is 0 for Q and 1 for <span class="ov">Q</span> then the value for Q is now 0 and <span class="ov">Q</span> is 1</p>
+            <h2>Uses of Flip Flops</h2>
+            <h3>Used in memory to store the previous bit</h3>
+            <h2>Advantages of JK flip flops over SR flip flops</h2>
+            <p>1. JK flip flops can be synchronised and started when both J and K input bits arrive by setting the clock to 0 while inactive</p>
+            <p>2. JK flip flops do not have error states instead it has a toggle state</p>
+            <h2>Boolean Algebra Laws</h2>
+            <p>Logic Circuits can be simplified to simpler circuits so you can use less gates and circuits. Using Boolean Algebra we can simplify large boolean expressions to simpler expressions for example:</p>
+            <pre>
+A AND ( A AND B ) 
+Can be simplified to:
+A AND B
+#So this uses less gates
+
+</pre>
+            <p>Booloean algebra is written using special notations such as . for AND and + for OR and Overline for Complements or NOT</p>
+            <p>It is required that you memorise this table</p>
+            <table class="table-design">
+              <caption>
+                Laws
+              </caption>
+              <tr>
+                <th>Name of Law</th>
+                <th>AND Form</th>
+                <th>OR Form</th>
+              </tr>
+              <tr>
+                <td>Identity</td>
+                <td>1.A=A</td>
+                <td>0+A</td>
+              </tr>
+              <tr>
+                <td>Null</td>
+                <td>0.A=0</td>
+                <td>1+A=1</td>
+              </tr>
+              <tr>
+                <td>imdemponent</td>
+                <td>A.A=A</td>
+                <td>A+A=A</td>
+              </tr>
+              <tr>
+                <td>Inverse</td>
+                <td>A.<span class="ov">A</span>=0</td>
+                <td>A+<span class="ov">A</span>=1</td>
+              </tr>
+              <tr>
+                <td>Distributive</td>
+                <td>A+B.C=(A+B)(A+C)</td>
+                <td>A(B+C)= A.B+A.C</td>
+              </tr>
+              <tr>
+                <td>Absorption</td>
+                <td>A(A+B)=A</td>
+                <td>A+A.B = A</td>
+              </tr>
+              <tr>
+                <td>De Morgan's</td>
+                <td><span class="ov">A.B</span>=<span class="ov">A</span>+<span class="ov">B</span></td>
+                <td><span class="ov">A+B</span>=<span class="ov">A</span>.<span class="ov">B</span></td>
+              </tr>
+            </table>
+            <p>Some laws are hard to predict such as the distributive law, we will prove it!</p>
+            <pre>
+(A+B)(A+C)
+A.A + A.B + A.C  + B.C
+ A   + A.B + A.C + B.C
+ //USE ABSORPTON LAW NOW
+ AS A(1+B)=A
+      A  +    A.C + B.C
+               A +  B.C
+</pre>
+            <p>Solving and simplify boolean algebra are like normal algebra, you do not have to put A.B but can write it as AB. All the complex laws are derived from the top laws, so please remember the basics</p>
+            <h2>K-MAPS</h2>
+            <p>Is the Graphical method for simplifying boolean algebra or logic circuits</p>
+            <p>Most of the time, they will give a truth table and tell us to draw the K-Map table. To do this we need to understand the sum of products</p>
+            <p>You know that the truth table considers all the outcomes of a logic gate. Likewise the sum of product is the sum of all possibilities in a written form. For example, look at the AND GATE truth table</p>
+            <table class="table-design">
+              <caption>
+                Truth Table
+              </caption>
+              <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>Output</th>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+              </tr>
+            </table>
+            <p>I will not show the diagram of this truth table and we will use Boolean Algebra to simplify this</p>
+            <details>
+            <summary>Forming the Sum of products</summary>
+        
+            <pre>
+             We need to convert the above to the sum of product form
+             We only consider the ones that give the outcome one. If the input value is 0 then we need to put a dash on top as it is complement or NOT
+
+              <span class="ov">A</span>.<span class="ov">B</span>+<span class="ov">A</span>.B + A.<span class="ov">B</span>+A.B
+           </pre>
+            </details>
+            <details><summary>Simplifying using Boolean Algebra</summary>
+			<pre>
+            <span class="ov">A</span>.<span class="ov">B</span>+<span class="ov">A</span>.B + A.<span class="ov">B</span>
+            <span class="ov">A</span>(<span class="ov">B</span>+B) + A<span class="ov">B</span>
+            <span class="ov">A</span> + A<span class="ov">B</span>
+			This is called reversing the absorption law
+			<span class="ov">A</span> + <span class="ov">A</span><span class="ov">B</span>+ A<span class="ov">B</span>
+			<span class="ov">A</span> + <span class="ov">B</span>(<span class="ov">A</span> + A<span class="ov">)</span>
+			<span class="ov">A</span> + <span class="ov">B</span>
+			Use De Morgan's Law
+			<span class="ov">A.B</span>
+			So this is the NAND GATE
+		   </pre>
+			</details>
+			<p>Let us see another example where we can use K-maps</p>
+			<h4>
+			<span class="ov">A</span><span class="ov">B</span>C + <span class="ov">A</span>BC +ABC +AB<span class="ov">C</span>
+			</h4>
+			<p>The place where is it NOT then we consider it as 0</p>
+			<img src="../../Imagedata/CS/Kmap.png" alt="K-map diagram example">
+			<p>The format is very important for the K-MAP table as the order on how you arrange matters. So remember it is 00 01 11 10 for two input on one side</p>
+			<p>Also you only can circle pair or 1's that are in groups of 2, 4 or 8 or 16 and that's all. In the above example, there are 3 groups of 2's. </p>
+			<img src="../../Imagedata/CS/Kmap1.gif" alt="K-map diagram example">
+			<blockquote>You always take the highest group number rather than splitting them</blockquote>
+			
+			<p>In some scene, we can circle from one side and continue on the other side as it acts like a cyclic shift like this</p>
+			<img src="../../Imagedata/CS/Kmap3.gif" alt="K-map diagram example">
+			<p>Also you can't circle diagonally like this</p>
+			<img src="../../Imagedata/CS/kmap2.png" alt="K-map diagram example">
+			<p>So back to the example again:</p>
+			<img src="../../Imagedata/CS/Kmap.png" alt="K-map diagram example">
+			<p>So now so for each group we need to do it like this</p>
+			<pre>
+			ABC + ABC + ABC
+			001     011      111
+			011     111      110
+			Now for each Column we need to see what is same
+			
+			AC +BC + AB
+			01    11     11
+			01    1 1    11
+			If the row is 0 we put a dash over it
+			<span class="ov">A</span>C +BC + AB
+			This the simplified expression
+			</pre>
+			<blockquote>They can ask you for 4 inputs, then it is 4 by 4 which has 16 slots!</blockquote>
+            <div class="pagenav">
+              <a href="FileOrganisations.html">Back</a> <a href="Internet.html">Next</a>
+            </div><br>
+			<h2>Recommended</h2>
+        <p>These are things you might like. Clicking these ads can help us improve our free services in the future...</p>
+            <div id="container-2a219c05affd07270c6855c66c9456d4" style="border-radius:20px;"></div>
+        
+            <br>
+            <br id="recap">
+            <div class="general container-extra">
+              <div>
+                <h5>Quick Recap</h5>
+                <h6>Check your Knowledge with a Quick Recap</h6><br>
+                <a style="padding:10px; background-color:#4ea654; border-radius:3px; font:17px Os; color:#e8e4e3; text-decoration:none;" onclick="MiniTask(this,'../../quiz.revisezone.com/Mini/LogicCircuit.html')">Try out</a>
+                <div id="taskview"></div>
+              </div>
+            </div>
+			
+          </ul>
+        </div>
+      </div><br>
+      <br>
+      <footer>
+        <p>Revisezone.com Copyright 2020</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../WebScript/Main-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='description' content='How are softwares developed? How are they tested and how are they coded. What methods or model do we use when developing softwares and apps? Learn them now!'>
+  <meta name='keywords' content='softwares,waterfall,increment,RAD,testing,code,stages of software development,design,maintainance,customers,software engineers'>
+  <meta name='author' content='Wiscus'>
+  <link rel="apple-touch-icon" href="Imagedata/Revisezone/Logo.png">
+  <meta name='theme-color' content='black'>
+  <meta name='viewport' content='width=device-width initial-scale=1'>
+  <link rel="shortcut icon" href="../../Imagedata/Revisezone/Logo.png" type="x-icon/image">
+  <link class="Style" rel='stylesheet' href='../../Style/Master.css' media="screen and (min-width:1000px)">
+  <link class="Style" rel='stylesheet' href='../../Style/Mobile.css' media="screen and (max-width:999px)">
+  <link class="Style" rel='stylesheet' href='../../Style/printstyle.css' media="print"><!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170507780-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-170507780-1');
+  </script>
+  <title>Stages & Models of Software & App Development - Revise Zone</title>
+</head>
+<body onload="saved()">
+  <div class="progress-container"></div>
+  <div class="top-nav-main">
+    <a href="../../home.html" title="Home">Home</a> <a href="../Chemistry/Chemistry.html" title="Chemistry"><abbr>Chemistry</abbr></a> <a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../LearningHtml/Introduction.html">HTML</a>
+    <div class="login-more">
+      <a onclick="NightmodeOn()" id="Mode">Night</a> <a onclick="More()" id="more">More</a>
+    </div>
+  </div>
+  <div class="dropdesign">
+    <span id="goback-white" onclick="Gobackdropdown()">✖</span>
+    <div class="flex-box-row">
+      <div>
+        <h2>Revise Now</h2>
+        <h3>GCE Subjects</h3><a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../Chemistry/Chemistry.html" title="Chemistry">Chemistry</a> <a href="../Cs/CS.html" title="Computer Science">CS</a> <a href="../Accounting/Introduction.html" title="Accounting">Accounting</a>
+        <h3>Coding Lessons</h3><a href="../LearningHtml/Introduction.html" title="HTML">Learn HTML</a> <a href="../SEO/SEO.html" title="SEO">Learn SEO</a>
+      </div>
+      <div>
+        <h2>More</h2>
+        <h3>What do you want<br>
+        to do?</h3><a href="../Other/ContactUs.html" title="Contact us">Contact us</a> <a href="../Other/Support.html" title="Support">Support</a>
+      </div>
+    </div>
+  </div>
+  <div class="spacing"></div>
+  <div class="grid-layout-main">
+    <div>
+      <div class="side-nav-universal">
+        <br>
+        <br>
+        <br>
+        <h2>Computer Science AS</h2><a href="CS.html" title="Introduction">Introduction</a> <a href="InformationRepresentation.html" title="">Information Representation</a> <a href="Communication.html" title="Communication">Communications</a> <a href="Communication2.html" title="Communication">Communications 2</a> <a href="Hardware.html" title="Hardware">Hardware</a> <a href="LogicGates.html" title="LogicGates">Logic Circuits</a> <a href="ProcessorFundamentals.html" title="Processor">Processor Fundamentals</a> <a href="AssemblyLanguage.html" title="Assembly">Assembly Language</a> <a href="MonitorControlling.html" title="Sensors">Monitor & Control</a> <a href="SystemSoftware.html" title="System Software">System Software</a> <a href="DataSecurity.html" title="Security">Security, Privacy & Data Integrity</a> <a href="Ethics.html" title="Ethics">Ethics</a> <a href="Databases.html" title="databases">Databases</a><br>
+        <h2>AS Practical</h2><a href="Algorithm.html" title="Algorithm">Algorithm</a> <a href="Datastructures.html" title="Data Structures">Data Structures and more</a> <a href="Development.html" title="">Software development</a><br>
+        <br>
+        <h2>Computer Science A2</h2><a href="DataRepresentations.html" title="Data Representation">Data Representation</a> <a href="FileOrganisations.html" title="File Organisation">File Organisation</a> <a href="LogicCircuit.html" title="Logic Circuits">Advance Logic Gates</a><a href="Internet.html" title="Internet">Internet</a> <a href="VirtualMachines.html" title="Virtual Machines">Virtual Machines</a> <a href="SystemA2.html" title="System Software">System Software</a> <a href="Security.html" title="Encryption and Security">Encryption & Security</a> <a href="AI.html" title="Artificial Intelligence">Artificial Intelligence</a><br>
+        <h2>A2 Practicals</h2><a href="../Developer/BinarySearch.html" title="Binary Search" target="blank">Binary Search</a> <a href="../Developer/LinearSearch.html" title="Linear Search" target="blank">Linear Search</a> <a href="../Developer/BubbleSort.html" title="Bubble Sort" target="blank">Bubble Sort</a> <a href="../Developer/InsertionSort.html" title="Inertion Sort" target="blank">Insertion Sort</a> <a href="../Developer/Combined.html" title="Combined Algorithm" target="blank">Combined Algorithm</a> <a href="../Developer/Stack.html" title="Stack" target="blank">Stacks</a> <a href="../Developer/Queue.html" title="Queue" target="blank">Queues</a> <a href="../Developer/LinkedList.html" title="Linked List" target="blank">Linked List</a> <a href="../Developer/BinaryTree.html" title="Binary Tree" target="blank">Binary Tree</a><br>
+        <h2>More</h2><a href="CSReference.html" title="CS Reference">Reference</a> <a href="CSEx.html" title="CS Questions">Pastpaper Questions</a>
+      </div>
+    </div>
+    <div>
+      <div class="Mainpage">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div>
+          <div class="pagenav">
+            <a href="Datastructures.html">Back</a><a href="DataRepresentations.html">A2</a>
+          </div><span onclick="Mobilebut()" id="mobilebutton"><img alt="more topic chapters" src="../../Imagedata/Revisezone/morecontent.png"></span>
+          <h1>Stages of Software Development</h1><br id="reference384">
+          <h2>Features provided by a IDE or IDLE</h2>
+          <p>There are some features provided by an IDLE editior which helps you to create programs more easily:</p>
+          <ul>
+            <li>Pretty printing</li>
+            <p>This color codes or changes the style of the code for keywords and other components such as functions,comments and identifiers which helps us to identify each type easily</p>
+            <li>Context-Sensitive prompt</li>
+            <p>These provides suggestions for identifiers or the choice of keywords when typing the code</p>
+            <li>Dynamic Syntax check</li>
+            <p>The editior checks for syntax errors even before the code is run and alerts the user</p>
+            <li>Expanding and collapsing code blocks</li>
+            <p>These are used to collapse codes such as functions classes or similar code to a single line so it can help reduce the code in the editor and make it easier to scroll</p>
+            <li>Debugging</li>
+            <p>IDE provides debugging features such as breakpoint to help debug the code</p>
+            <h2>Stages of Software development</h2>
+            <p>We will talk about each step in depth</p>
+            <p>There are 5 stages of software development</p>
+            <ul>
+              <br id="reference385">
+              <li>Analysis/Requirements</li>
+              <p>Identifying the problem and the purpose of your program. Also the requirements it needs such as hardware and software</p>
+              <p>These stage identifies the efficient solution to the problem the algorithm offers. The problem can be solved by either breaking down the large problem to smaller sub problems(stepwise refinement) or expanding on a subproblem to create the full complete program( bottom - top )</p><br id="reference386">
+              <li>Design</li>
+              <p>This stage deals with the design of the solution(algorithm) and any datastructures and identifiers that are used.</p>
+              <p>In order words, this deals how the code must work</p>
+              <p>This is also the stage where the code is written in pseudocode or represented using structured charts</p><br id="reference387">
+              <li>Implementation or Coding</li>
+              <p>This stage identifies which programming language is appropriate for the algorithm and this stage is the where the coding is done by the software developers</p><br id="reference388">
+              <li>Testing</li>
+              <p>This tests the program to check for any errors</p>
+              <p>There are many testing methods to make sure the program is error free before it is released</p><br id="reference389">
+              <li>maintenance</li>
+              <p>After the code is released for the users to use, errors and bugs may arise and also the program may have to improve on somethings</p>
+            </ul><br>
+            <p>We will now see each stage in detail</p>
+            <h2>Analysis</h2>
+            <p>Not required in detail</p><br id="reference390">
+            <h2>Design</h2>
+            <p>This stage deals with how the code must be written</p>
+            <p>Usually the solution or the algorithm must be wriiten in pseudocode</p>
+            <p>The program may contain sub-tasks called modules and a structured chart is used to show the link between these modules</p>
+            <p>For example , if your program was to perform additions of two numbers, then one module could be used to enter the two numbers and the other module could be to calculate the total ( Just remember this is a very simple code ).</p>
+            <p>So the structured charts is the graphical representation of how data should flow from one module to another</p>
+            <p>So the Input module can take two values and send it to the totalling module</p>
+            <p>If you don't know what are structured charts, I recommend you to watch the video section below which explains the key things in structured charts</p>
+            <p>A thing to remember is that structured charts is a collection of modules linked to each other. And so to represent it in pseudocode we need to call the procedures</p><br id="reference391">
+            <h2>Coding</h2>
+            <p>This is very simple and involves writing the algorithm in the most suitable language</p>
+            <p>Python is a powerful language which uses an interpreter.</p>
+            <p>It can be used to produce many games and graphics. However, we use C++ to write games. This is because C++ runs extremely fast compared to python</p>
+            <h2>Testing</h2>
+            <p>There are 3 Types of errors:</p>
+            <ul>
+              <br id="reference392">
+              <li>Syntax errors</li>
+              <h3>These are errors which the program statements doesn't follow the rules of the programming language</h3>
+              <p>The code may have wrong grammer or wrong keywords which are not recognised by the language</p>
+              <p>These errors are usually identified by compilers and interpreters. However, interpreters identify them when the line is executed, so the whole code must be executed</p><br id="reference393">
+              <li>Logical errors</li>
+              <h3>Error in the design of the code which gives us unexpected results</h3>
+              <p>If the program doesn't function as it is supposed to or intended to then there is a logical error</p>
+              <p>It will give wrong or unexpected outputs</p><br id="reference394">
+              <li>Run-time errors</li>
+              <h3>Errors which cause the program to freeze or crash. For example division by zero or memory overflow errors</h3>
+              <p>These errors are identified when the program is executed and tested</p>
+              <h2>Testing Methods</h2>
+              <p>There are many testing methods which you have to know</p><br id="reference395">
+              <h2>Stub testing</h2>
+              <p>This makes sure that a procedure is callable.</p>
+              <p>So the procedure contains an output statement to show that the procedure is callable when it is called from the main program</p><br id="reference396">
+              <h2>Black-box Testing</h2>
+              <p>It is used and run by a person who has not seen the algorithm</p>
+              <p>So this compares the expected results with the actual results the program outputs.</p><br id="reference397">
+              <h2>White-box testing</h2>
+              <p>It is tested by a person who has seen the program code and so the program is tested in every aspect by using specific input data called test data</p>
+              <p>So this is done by carefully testing the data by putting extreme, erroneous and normal data.</p>
+              <p>Normal data - is data within an acceptable range</p>
+              <p>Extreme data - is data which are boundary values but must be accepted/correct</p>
+              <p>Erroneous data - is data out of an acceptable range. So it is considered wrong and not accepted</p>
+              <p>Then the algorithm is traced using a tracing table which stores the current contents of the variable as the program executes</p><br id="reference398">
+              <h2>Integration</h2>
+              <p>Once the individual modules are tested by the software developers and are error free, the collection of modules must work properly as a whole complete system. This is known as integration testing</p>
+              <p>As this checks makes sure that data is passed to the right modules</p>
+              <p>This is done by incrementing the modules to the testing. So it makes it easier to identify the errors between modules</p><br id="reference399">
+              <h2>Alpha testing and Beta testing</h2>
+              <p>Alpha testing is when the program is heavily tested in house by dedicated testors</p>
+              <p>In-house means testing done within the company or the organisation</p>
+              <p>Beta testing is when the program is issued to a limited number of users which use the program for their use and reports any feedbacks or errors to the company</p><br id="reference400">
+              <h2>Acceptance testing</h2>
+              <p>Softwares which were designed for a specific customer will receive the program and test to see if it meets their specific requirements. This is known as acceptance testing.</p>
+              <p>If it does meet the requirements then the customer will sign off the software completion</p>
+              <h2>maintenance</h2>
+              <p>maintenance could mean alot of things, so we will discuss 3 types of maintenance</p>
+              <ul>
+                <br id="reference401">
+                <li>Corrective maintenance</li>
+                <h3>maintenance in which errors/bugs are identified and corrected</h3>
+                <p>When the program is released and used by users, errors or bugs may arise from the use of the program. This must be identified and corrected</p><br id="reference402">
+                <li>Adaptive maintenance</li>
+                <h3>Ammending the program so it contains enhanced functionaility and can respond to changes in requirements</h3>
+                <p>Such as a program may have to be adjusted to meet the new updated requirements</p><br id="reference403">
+                <li>Perfective maintenance</li>
+                <h3>This makes sure the program is improved to have better performance and maintainability</h3>
+                <p>maintainability means the program is more efficient and easily maintainable</p>
+                <p>Also the performance improvements could include faster execution</p>
+                <h2>Methods/Models of Software development</h2>
+                <p>There are 3 ways the company can approach to develop softwares:</p>
+                <ul>
+                  <br id="reference404">
+                  <li>Waterfall Model</li><img src="../../Imagedata/CS/waterfallmodel.png" alt="This shows a detail diagram of the waterfall method which part of engineering anf which must be known according to the Cambridge computer science">
+                  <p>This is a methodology which ensures the requirement or analysis of the program is clearly identified before the program is built</p>
+                  <p>The development occurs in stages where each stage is completed before it goes to the next stage. This is because the output of the current stage is the input of the next stage</p>
+                  <p>There are some advantages of the waterfall method:</p>
+                  <p>1. Each step must be completed before the next step is handled so it makes it more simpler</p>
+                  <p>2. Very easy to manage and follow and easier to understand</p>
+                  <p>3. Used for small softwares where the requirements are easier to identify.</p><br>
+                  <p>There are also some disadvanatages</p>
+                  <p>1. It is not suitable for large softwares as the requirements are very large</p>
+                  <p>2. Not suitable for long ongoing projects</p>
+                  <p>3. Can not accommodate changing requirements. It is usually costly</p>
+                  <p>4. A working testable program is made only at the later stages of the development</p><br id="reference405">
+                  <li>Iterative or incremental model</li>
+                  <p>The software developers doesn't require to have the complete requirement of the system but focuses on the sub-set requirements of the system. Then there are repeated reviews for further requirements which eventually leads to the complete system being built</p>
+                  <p>A good example is when your application receives updates which the features of the system improves</p>
+                  <p>There are some advantages you need to know:</p>
+                  <p>1. There is working model of the system earlier in the stages of development so errors and bugs are found earlier. So this is way easier than correcting errors later</p>
+                  <p>2. Parallel development can be planned</p>
+                  <p>3. Less costly to change the scope or the requirements</p>
+                  <p>4. Suitable for large programs which can be broken down to sub tasks</p>
+                  <p>5. Each increment produces an operational product</p>
+                  <p>6. Allows customers to test the updated increments and give feedback to the company</p><br>
+                  <p>There are some disadvantages</p>
+                  <p>1. This only can be used for softwares which can be broken in to sub task</p>
+                  <p>2. Requires more resources</p>
+                  <p>3. For identifying incremental requirements it may require you to define the complete requirement to some degree</p>
+                  <p>4. There might be errors in the design of the complete system as the whole system requirement is not fully understoood in the beginning</p><br id="reference406">
+                  <h2>Rapid application development (RAD)</h2>
+                  <p>This involves building and testing modules in parallel and releasing them as proto-types</p>
+                  <p>So these prototypes are part of the complete system and are tested by users to see if they meet the user requirement and feedback is given to the company</p>
+                  <p>The company then improves and adjusts the module depending on the feedback they receive and integrate them to produce the complete system</p>
+                  <p>The main difference between iterative and RAD is that RAD requires the user(customers) involvement throughout the complete cycle where as iterative implements and tests each increments and releases each increment at a time</p>
+                  <p>Also RAD releases the modules as prototypes.</p>
+                  <p>RAD requires very little planning and analysis as the requirements are based on the customers(feedback)</p>
+                  <p>There are some advantages:</p>
+                  <p>1. Faster development</p>
+                  <p>2. Encourages customer feedback as the model depends on the customers requirement</p>
+                  <p>3. Can accommodate changing requirements</p>
+                  <p>4. Productivity increases with fewer people</p>
+                  <p>5. As the implementation of modules occur at the start, it can be used to find integrating errors more easily and faster</p>
+                  <p>6. Produces reusable components such as modules</p><br>
+                  <p>There are also disadvantages:</p>
+                  <p>1. Only program which can be modularised can follow the RAD model</p>
+                  <p>2. Requires a team of specialised software engineers</p>
+                  <p>3. Requires the user involvement troughout the development cycle</p><br>
+                  <br>
+                  <div class="pagenav">
+                    <a href="Datastructures.html">Back</a><a href="DataRepresentations.html">A2</a>
+                  </div><br>
+				  <h2>Recommended</h2>
+        <p>These are things you might like. Clicking these ads can help us improve our free services in the future...</p>
+            <div id="container-2a219c05affd07270c6855c66c9456d4" style="border-radius:20px;"></div>
+        
+                  <br>
+                  <div class="general container-extra2 flex-box-row">
+                    <div>
+                      <h5>End of Chapter Videos</h5>
+                      <h6>Collection of Videos to Support Your Understanding.</h6>
+                      <h4>Remember these videos are handpicked by me and I feel these are the best ones out there. But I constantly update this list for each chapter. The Youtubers are more than welcome to contact me.</h4>
+                      <h4>Also, don't forget to Subscribe to our Youtube channel - Wiscus</h4><br>
+                      <a style="padding:10px; background-color:#4ea654; border-radius:3px; font:17px Os; color:#e8e4e3; text-decoration:none;" href="https://www.Youtube.com/watch?v=MbSfWN9KlkE&amp;list=PLfh04WZ4q7nXoOcUmvLM7ivYXNjvq9RTq" target="blank">Watch</a>
+                    </div>
+                  </div>
+                </ul>
+              </ul>
+            </ul>
+          </ul>
+        </div>
+      </div><br>
+      <br>
+      <footer>
+        <p>Revisezone.com Copyright 2020</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../WebScript/Main-script.js"></script>
+</body>
+</html>

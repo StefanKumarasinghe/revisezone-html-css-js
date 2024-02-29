@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='description' content='What are logic gates and what are truth tables? How to create logic circuits and how do we simplify them? Learn everything you need to know about Logic Gates!'>
+  <meta name='keywords' content='logic gates,logic circuits, simplifying logic gates,truth table, AND and or gates'>
+  <meta name='author' content='Wiscus'>
+  <link rel="apple-touch-icon" href="Imagedata/Revisezone/Logo.png">
+  <meta name='theme-color' content='black'>
+  <meta name='viewport' content='width=device-width initial-scale=1'>
+  <link rel="shortcut icon" href="../../Imagedata/Revisezone/Logo.png" type="x-icon/image">
+  <link class="Style" rel='stylesheet' href='../../Style/Master.css' media="screen and (min-width:1000px)">
+  <link class="Style" rel='stylesheet' href='../../Style/Mobile.css' media="screen and (max-width:999px)">
+  <link class="Style" rel='stylesheet' href='../../Style/printstyle.css' media="print"><!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170507780-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-170507780-1');
+  </script>
+  <title>Logic Gates, Truth Tables & Logic Circuits - Revise Zone</title>
+</head>
+<body onload="saved()">
+  <div class="progress-container"></div>
+  <div class="top-nav-main">
+    <a href="../../home.html" title="Home">Home</a> <a href="../Chemistry/Chemistry.html" title="Chemistry"><abbr>Chemistry</abbr></a> <a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../LearningHtml/Introduction.html">HTML</a>
+    <div class="login-more">
+      <a onclick="NightmodeOn()" id="Mode">Night</a> <a onclick="More()" id="more">More</a>
+    </div>
+  </div>
+  <div class="dropdesign">
+    <span id="goback-white" onclick="Gobackdropdown()">✖</span>
+    <div class="flex-box-row">
+      <div>
+        <h2>Revise Now</h2>
+        <h3>GCE Subjects</h3><a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../Chemistry/Chemistry.html" title="Chemistry">Chemistry</a> <a href="../Cs/CS.html" title="Computer Science">CS</a> <a href="../Accounting/Introduction.html" title="Accounting">Accounting</a>
+        <h3>Coding Lessons</h3><a href="../LearningHtml/Introduction.html" title="HTML">Learn HTML</a> <a href="../SEO/SEO.html" title="SEO">Learn SEO</a>
+      </div>
+      <div>
+        <h2>More</h2>
+        <h3>What do you want<br>
+        to do?</h3><a href="../Other/ContactUs.html" title="Contact us">Contact us</a> <a href="../Other/Support.html" title="Support">Support</a>
+      </div>
+    </div>
+  </div>
+  <div class="spacing"></div>
+  <div class="grid-layout-main">
+    <div>
+      <div class="side-nav-universal">
+        <br>
+        <br>
+        <br>
+        <h2>Computer Science AS</h2><a href="CS.html" title="Introduction">Introduction</a> <a href="InformationRepresentation.html" title="">Information Representation</a> <a href="Communication.html" title="Communication">Communications</a> <a href="Communication2.html" title="Communication">Communications 2</a> <a href="Hardware.html" title="Hardware">Hardware</a> <a href="LogicGates.html" title="LogicGates">Logic Circuits</a> <a href="ProcessorFundamentals.html" title="Processor">Processor Fundamentals</a> <a href="AssemblyLanguage.html" title="Assembly">Assembly Language</a> <a href="MonitorControlling.html" title="Sensors">Monitor & Control</a> <a href="SystemSoftware.html" title="System Software">System Software</a> <a href="DataSecurity.html" title="Security">Security, Privacy & Data Integrity</a> <a href="Ethics.html" title="Ethics">Ethics</a> <a href="Databases.html" title="databases">Databases</a><br>
+        <h2>AS Practical</h2><a href="Algorithm.html" title="Algorithm">Algorithm</a> <a href="Datastructures.html" title="Data Structures">Data Structures and more</a> <a href="Development.html" title="">Software development</a><br>
+        <br>
+        <h2>Computer Science A2</h2><a href="DataRepresentations.html" title="Data Representation">Data Representation</a> <a href="FileOrganisations.html" title="File Organisation">File Organisation</a> <a href="LogicCircuit.html" title="Logic Circuits">Advance Logic Gates</a><a href="Internet.html" title="Internet">Internet</a> <a href="VirtualMachines.html" title="Virtual Machines">Virtual Machines</a> <a href="SystemA2.html" title="System Software">System Software</a> <a href="Security.html" title="Encryption and Security">Encryption & Security</a> <a href="AI.html" title="Artificial Intelligence">Artificial Intelligence</a><br>
+        <h2>A2 Practicals</h2><a href="../Developer/BinarySearch.html" title="Binary Search" target="blank">Binary Search</a> <a href="../Developer/LinearSearch.html" title="Linear Search" target="blank">Linear Search</a> <a href="../Developer/BubbleSort.html" title="Bubble Sort" target="blank">Bubble Sort</a> <a href="../Developer/InsertionSort.html" title="Inertion Sort" target="blank">Insertion Sort</a> <a href="../Developer/Combined.html" title="Combined Algorithm" target="blank">Combined Algorithm</a> <a href="../Developer/Stack.html" title="Stack" target="blank">Stacks</a> <a href="../Developer/Queue.html" title="Queue" target="blank">Queues</a> <a href="../Developer/LinkedList.html" title="Linked List" target="blank">Linked List</a> <a href="../Developer/BinaryTree.html" title="Binary Tree" target="blank">Binary Tree</a><br>
+        <h2>More</h2><a href="CSReference.html" title="CS Reference">Reference</a> <a href="CSEx.html" title="CS Questions">Pastpaper Questions</a>
+      </div>
+    </div>
+    <div>
+      <div class="Mainpage">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div>
+          <div class="pagenav">
+            <a href="Hardware.html">Back</a> <a href="ProcessorFundamentals.html">Next</a>
+          </div><span onclick="Mobilebut()" id="mobilebutton"><img alt="more topic chapters" src="../../Imagedata/Revisezone/morecontent.png"></span>
+          <h1>Logic Gates & Truth Tables & Logic Circuits</h1>
+          <p>Logic circuits are made from logic gates</p>
+          <h2>Logic gates</h2>
+          <p>These manipulate the bits entered to the gate and output a bit depending on the type of the gate used</p>
+          <p>We usually use a truth table to show the different combinations of bits which can be entered to the logic gate and their corresponding outputs. A bit can be either 0 or 1</p>
+          <p>You will need to know some of these gates and how to draw them and draw their truth table:</p>
+          <ul>
+            <br id="reference258">
+            <li>NOT Gate</li><img src="../../Imagedata/CS/NOTgate.png" alt="Not gate computer science">
+            <p>This only has a single input, so this leads to 2<sup>1</sup> possibilities.</p>
+            <p>So the gate outputs the value opposite from which was entered. For example if a 0 was entered, it then outputs 1 (vice versa)</p>
+            <table class="table-design">
+              <caption>
+                Truth Table
+              </caption>
+              <tr>
+                <th>Input</th>
+                <th>Output</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>1</td>
+              </tr>
+            </table><br id="reference259">
+            <li>AND Gate</li><img src="../../Imagedata/CS/ANDgate.png" alt="AND gate computer science ">
+            <p>There can have two or more inputs</p>
+            <p>In this both the inputs must be true for the output to be true.</p>
+            <table class="table-design">
+              <caption>
+                Truth Table
+              </caption>
+              <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>Output</th>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+            </table>
+            <p>It is very important to note down that if we have 2 inputs this gives us 2<sup>2</sup> possibilties and so we have 4 combinations.</p>
+            <p>Also it better if you memorise the pattern of the input values as it is very useful.</p>
+            <p>So the first column is half 00 and half 11</p>
+            <p>The next column we have 0101</p><br id="reference260">
+            <li>OR Gate</li><img src="../../Imagedata/CS/ORgate.png" alt="OR gate computer science">
+            <p>This also can have two or more input values.</p>
+            <p>In this gate either one of the input values must be true for the output to be true.</p>
+            <table class="table-design">
+              <caption>
+                Truth Table
+              </caption>
+              <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>Output</th>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+            </table><br id="reference261">
+            <li>NAND Gate</li><img src="../../Imagedata/CS/NANDgate.png" alt="NAND gate Computer science">
+            <p>It is the opposite of the AND gate. This is done by using a NOT gate after the AND gate.</p>
+            <p>The output is TRUE only when both Inputs are not TRUE which means only when inputs are both true the output is false. If one input is true and the other one is not then the output is still true</p>
+            <p>In simpler terms the output is true when neither A or B are both true</p>
+            <table class="table-design">
+              <caption>
+                Truth Table
+              </caption>
+              <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>Output</th>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+              </tr>
+            </table>
+            <p>If you do forget how to draw the table just draw the opposite of the AND truth table.</p><br id="reference262">
+            <li>NOR Gate</li><img src="../../Imagedata/CS/NORgate.png" alt="NOR gate computer science">
+            <p>It can have 2 or more inputs</p>
+            <p>The Output is only TRUE if the neither the input values are TRUE.</p>
+            <p>So if one of the input values are true the output values is false.</p>
+            <table class="table-design">
+              <caption>
+                Truth Table
+              </caption>
+              <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>Output</th>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+              </tr>
+            </table><br id="reference263">
+            <li>XOR</li><img src="../../Imagedata/CS/XORgate.png" alt="Xor gate Computer science">
+            <p>It only can have 2 inputs</p>
+            <p>The output is TRUE when the input values are different (not same).</p>
+            <table class="table-design">
+              <caption>
+                Truth Table
+              </caption>
+              <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>Output</th>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+              </tr>
+            </table>
+          </ul>
+          <h2>3 Inputs</h2>
+          <p>Most questions usually have 3 inputs (A B C) and so this leads to 2<sup>3</sup> possibilities = 8 combinations</p>
+          <p>So now there are 8 rows and 3 inputs. So we also need to remember this pattern</p>
+          <table class="table-design">
+            <caption>
+              Truth Table
+            </caption>
+            <tr>
+              <th>A</th>
+              <th>B</th>
+              <th>C</th>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>0</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+          </table>
+          <p>We need to Memorise this form of inputs</p>
+          <p>The 1st column is half 0000 and half is 1111</p>
+          <p>The 2nd column is 00110011</p>
+          <p>The 3rd column is 01010101</p><br>
+          <p>We create the truth table based on the number of input values the ciruit <span class="highlight">begins</span> with and not with the intermediate values</p><br id="reference264">
+          <h2>Logic expressions and Problem statements</h2>
+          <p>The definitions are not required to be remembered but the understanding is important.</p>
+          <p>Usually questions gives us problem statement as the example below:</p>
+          <blockquote>
+            The systems reorders if the inventory level is below 10 units or if the user makes a large order
+          </blockquote>
+          <p>A logic proposition is the statement which can be either TRUE or FALSE. Ex - the user makes a large order can be true or false.</p>
+          <p>This must be converted to a logic expression which then we replace the the logic proposition with simple variables such as:</p>
+          <p>System reorder(output) - X</p>
+          <p>Inventory below 10 units - A</p>
+          <p>Large order - B</p>
+          <p>This is like a normal simple logic gate but usually most examples contains 3 inputs.</p>
+          <p>X = A OR B</p>
+          <p>There are somethings you need to remember. By default we name the variable of a logic proposition with a variable A - this when the value of the variable is 1.However, if we want to represent the variable which has a value of 0 (FALSE). We must use NOT A</p>
+          <p>Lets see an example - the system sends an alarm if the chemical process is not working - 0 or if the user has switched off the system - 1</p>
+          <p>X = NOT C OR S</p>
+          <p>The reason why we define it this way is that we expect the output X to be 1 and usually they state this in logic expressions</p>
+          <h2>Truth Table for logic circuits</h2>
+          <p>After finding the Logic expression we must draw the logic circuits and there is a simple way to do this</p>
+          <p>This is an example</p>
+          <h4>X = (NOT A AND NOT B) AND C</h4>
+          <p>Usually the brackets will be given but sometimes they don't give brackets such as the below example:</p>
+          <h4>X = NOT A AND NOT B AND C</h4>
+          <p>In this way we read from the left to the right when drawing the logic ciruits so this means we draw NOT A AND NOT B first then we Add the AND C. Note that I didn't make an intermediate variable for NOT A OR NOT B as they are very easy to do.</p>
+          <p>So when we draw the truth tables for these its best to get the intermediate values</p>
+          <h4>D = (NOT A OR NOT B)</h4>
+          <p>We name a new variable for the intermediate steps. Then the D AND C are compared</p>
+          <h4>X = D AND C</h4>
+          <p>Usually logic cirucits are not that easy and sometimes there could be many intermediate variables. Also you need to remember as 3 inputs are used there should be 8 possibilites.</p>
+          <p>If we want we could make intermediate variables for NOT A - E and NOT B - F</p><img src="../../Imagedata/CS/Logicex.jpg" alt="logic gates example and questions computer science. This shows an example of a past paper question of the Cambridge computer syllabus of logic gates and circuits">
+          <figcaption>
+            The logic circuit
+          </figcaption><br>
+          <div class="scrollflow">
+            <table class="table-design">
+              <caption>
+                Truth Table
+              </caption>
+              <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+                <th>E(NOT A)</th>
+                <th>F(NOT B)</th>
+                <th>D</th>
+                <th>X</th>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+            </table>
+          </div>
+          <figcaption>
+            D - NOT A AND NOT B
+            <figcaption>
+              E - NOT A.
+            </figcaption>
+            <figcaption>
+              F - NOT B
+            </figcaption>
+            <p>This shows that the output is only true when both A and B are FALSE and C is TRUE</p><br id="reference265">
+            <h2>Simplifying the circuits or removing variety</h2>
+            <p>In some questions they give a logic ciruit and ask us draw the logic circuits to draw only using a single type of Gate - NAND or NOR</p>
+            <p>There are some points you need to note:</p>
+            <p>There are infinite possibilites of replacing a gate with another gate and so there is no proper answer. Also if you do want to find the gates used to replace a particular gate, you can use my method</p>
+            <p>Say for example the AND gate must be replaced using only NAND gates</p>
+            <p>I know my output must be 0001</p>
+            <p>And the output for NAND is 1110</p>
+            <p>I need to see a connection between these two outputs</p>
+            <p>In other word if I compared the output of NAND gate with another NAND gate(or more)it must give me 0001</p>
+            <table class="table-design">
+              <tr>
+                <th>NAND values</th>
+                <th>Missing Input</th>
+                <th>Required Output</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>-</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>-</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>-</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>0</td>
+                <td>-</td>
+                <td>1</td>
+              </tr>
+            </table>
+            <p>For you to identify this requires practice and a bit of trial and error</p>
+            <p>As we know that the next gate must be a NAND gate(or else this could lead to infinite possibilities).</p>
+            <p>So the value of the first NAND gate is compared with another NAND gate.</p>
+            <p>So to get 0001 as required output I must try 1110</p>
+            <p>Which is same as the first row. This means the output is split or duplicated as the diagram below</p><img src="../../Imagedata/CS/ANDNAND.jpg" alt="Simplifying logic gates in Cambridge computer science"><br>
+            <p>They will ask to replace NOR With OR gate as this is because OR and AND and NOT gates are fundamental gates which are used to create more complex gates</p>
+            <p>Below I gave some very common examples which you have to remember</p><img src="../../Imagedata/CS/ANDNAND.jpg" alt="Simplifying logic gates in Cambridge computer science">
+            <figcaption>
+              AND Gate can be replaced using NAND Gates only
+            </figcaption><br>
+            <img src="../../Imagedata/CS/ANDNOR.jpg" alt="Simplifying logic gates in Cambridge computer science">
+            <figcaption>
+              AND Gate can be replaced using NOR Gates only
+            </figcaption><br>
+            <img src="../../Imagedata/CS/ORNAND.jpg" alt="Simplifying logic gates in Cambridge computer science">
+            <figcaption>
+              OR Gate can be replaced using NAND Gates only
+            </figcaption><br>
+            <img src="../../Imagedata/CS/ORNOR.jpg" alt="Simplifying logic gates in Cambridge computer science">
+            <figcaption>
+              OR Gate can be replaced using NOR Gates only
+            </figcaption><br>
+            <p>If we need to simplify just reverse the process</p><br>
+            <br>
+            <div class="pagenav">
+              <a href="Hardware.html">Back</a> <a href="ProcessorFundamentals.html">Next</a>
+            </div><br>
+			<h2>Recommended</h2>
+        <p>These are things you might like. Clicking these ads can help us improve our free services in the future...</p>
+            <div id="container-2a219c05affd07270c6855c66c9456d4" style="border-radius:20px;"></div>
+        
+            <br>
+            <div class="general container-extra2 flex-box-row">
+              <div>
+                <h5>End of Chapter Videos</h5>
+                <h6>Collection of Videos to Support Your Understanding.</h6>
+                <h4>Remember these videos are handpicked by me and I feel these are one of the best ones out there. But I constantly update this list for each chapter.The Youtubers are more than welcome to contact me.</h4>
+                <h4>Also, don't forget to Subscribe to our Youtube channel - Wiscus</h4><br>
+                <a style="padding:10px; background-color:#4ea654; border-radius:3px; font:17px Os; color:#e8e4e3; text-decoration:none;" href="https://www.Youtube.com/watch?v=MbSfWN9KlkE&amp;list=PLfh04WZ4q7nX1OIaW4tc7UNXa0spJjBJr" target="blank">Watch</a>
+              </div>
+            </div>
+          </figcaption>
+        </div>
+      </div><br>
+      <br>
+      <footer>
+        <p>Revisezone.com Copyright 2020</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../WebScript/Main-script.js"></script>
+</body>
+</html>

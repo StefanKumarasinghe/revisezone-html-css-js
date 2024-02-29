@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='description' content="How to convert binary to denary? How does a computer store images/graphics, internal numbers, characters/text (Two's complement &amp; BCD). And what is lossless and lossy data compressions?">
+  <meta name='keywords' content="sound,binary,denary to binary,two's complement,sign and magnitude,BCD, overflow errors,vector images,bitmap,pixels,ADC,lossy,lossless,RLE,compressions">
+  <meta name='author' content='Wiscus'>
+  <link rel="apple-touch-icon" href="Imagedata/Revisezone/Logo.png">
+  <meta name='theme-color' content='black'>
+  <meta name='viewport' content='width=device-width initial-scale=1'>
+  <link rel="shortcut icon" href="../../Imagedata/Revisezone/Logo.png" type="x-icon/image">
+  <link class="Style" rel='stylesheet' href='../../Style/Master.css' media="screen and (min-width:1000px)">
+  <link class="Style" rel='stylesheet' href='../../Style/Mobile.css' media="screen and (max-width:999px)">
+  <link class="Style" rel='stylesheet' href='../../Style/printstyle.css' media="print"><!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170507780-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-170507780-1');
+  </script>
+  <title>Graphics, Sound, Two's complement & Data Compressions - Revise Zone</title>
+</head>
+<body onload="saved()">
+  <div class="progress-container"></div>
+  <div class="top-nav-main">
+    <a href="../../home.html" title="Home">Home</a> <a href="../Chemistry/Chemistry.html" title="Chemistry"><abbr>Chemistry</abbr></a> <a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../LearningHtml/Introduction.html">HTML</a>
+    <div class="login-more">
+      <a onclick="NightmodeOn()" id="Mode">Night</a> <a onclick="More()" id="more">More</a>
+    </div>
+  </div>
+  <div class="dropdesign">
+    <span id="goback-white" onclick="Gobackdropdown()">✖</span>
+    <div class="flex-box-row">
+      <div>
+        <h2>Revise Now</h2>
+        <h3>GCE Subjects</h3><a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../Chemistry/Chemistry.html" title="Chemistry">Chemistry</a> <a href="../Cs/CS.html" title="Computer Science">CS</a> <a href="../Accounting/Introduction.html" title="Accounting">Accounting</a>
+        <h3>Coding Lessons</h3><a href="../LearningHtml/Introduction.html" title="HTML">Learn HTML</a> <a href="../SEO/SEO.html" title="SEO">Learn SEO</a>
+      </div>
+      <div>
+        <h2>More</h2>
+        <h3>What do you want<br>
+        to do?</h3><a href="../Other/ContactUs.html" title="Contact us">Contact us</a> <a href="../Other/Support.html" title="Support">Support</a>
+      </div>
+    </div>
+  </div>
+  <div class="spacing"></div>
+  <div class="grid-layout-main">
+    <div>
+      <div class="side-nav-universal">
+        <br>
+        <br>
+        <br>
+        <h2>Computer Science AS</h2><a href="CS.html" title="Introduction">Introduction</a> <a href="InformationRepresentation.html" title="">Information Representation</a> <a href="Communication.html" title="Communication">Communications</a> <a href="Communication2.html" title="Communication">Communications 2</a> <a href="Hardware.html" title="Hardware">Hardware</a> <a href="LogicGates.html" title="LogicGates">Logic Circuits</a> <a href="ProcessorFundamentals.html" title="Processor">Processor Fundamentals</a> <a href="AssemblyLanguage.html" title="Assembly">Assembly Language</a> <a href="MonitorControlling.html" title="Sensors">Monitor & Control</a> <a href="SystemSoftware.html" title="System Software">System Software</a> <a href="DataSecurity.html" title="Security">Security, Privacy & Data Integrity</a> <a href="Ethics.html" title="Ethics">Ethics</a> <a href="Databases.html" title="databases">Databases</a><br>
+        <h2>AS Practical</h2><a href="Algorithm.html" title="Algorithm">Algorithm</a> <a href="Datastructures.html" title="Data Structures">Data Structures and more</a> <a href="Development.html" title="">Software development</a><br>
+        <br>
+        <h2>Computer Science A2</h2><a href="DataRepresentations.html" title="Data Representation">Data Representation</a> <a href="FileOrganisations.html" title="File Organisation">File Organisation</a> <a href="LogicCircuit.html" title="Logic Circuits">Advance Logic Gates</a><a href="Internet.html" title="Internet">Internet</a> <a href="VirtualMachines.html" title="Virtual Machines">Virtual Machines</a> <a href="SystemA2.html" title="System Software">System Software</a> <a href="Security.html" title="Encryption and Security">Encryption & Security</a> <a href="AI.html" title="Artificial Intelligence">Artificial Intelligence</a><br>
+        <h2>A2 Practicals</h2><a href="../Developer/BinarySearch.html" title="Binary Search" target="blank">Binary Search</a> <a href="../Developer/LinearSearch.html" title="Linear Search" target="blank">Linear Search</a> <a href="../Developer/BubbleSort.html" title="Bubble Sort" target="blank">Bubble Sort</a> <a href="../Developer/InsertionSort.html" title="Inertion Sort" target="blank">Insertion Sort</a> <a href="../Developer/Combined.html" title="Combined Algorithm" target="blank">Combined Algorithm</a> <a href="../Developer/Stack.html" title="Stack" target="blank">Stacks</a> <a href="../Developer/Queue.html" title="Queue" target="blank">Queues</a> <a href="../Developer/LinkedList.html" title="Linked List" target="blank">Linked List</a> <a href="../Developer/BinaryTree.html" title="Binary Tree" target="blank">Binary Tree</a><br>
+        <h2>More</h2><a href="CSReference.html" title="CS Reference">Reference</a> <a href="CSEx.html" title="CS Questions">Pastpaper Questions</a>
+      </div>
+    </div>
+    <div>
+      <div class="Mainpage">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div>
+          <div class="pagenav">
+            <a href="CS.html">Back</a> <a href="Communication.html">Next</a>
+          </div><span onclick="Mobilebut()" id="mobilebutton"><img alt="more topic chapters" src="../../Imagedata/Revisezone/morecontent.png"></span>
+          <h1>Graphics, Sound, Two's Complement & Data Compression</h1>
+          <h2>Key terms</h2>
+          <p>You will need to know some key terms before we get started:</p>
+          <p>1. Most Significant bit (MSB) - this is the bit in the binary number which is on the leftmost side of the bnary number and it carries the highest denary weight</p>
+          <p>2. Least Significant bit(LSB) - this is the bit on the rightmost side. It carries the lowest denary weight of one</p>
+          <p>3. Bit 0 is also considered as the LSB</p>
+          <h2>Conversion</h2>
+          <p>You will need to know how to convert from one number system to another:</p>
+          <p>1. Binary to Denary (vice versa)</p>
+          <p>2. Denary to Hex (vice versa)</p>
+          <p>3. Binary to Hex (vice versa)</p>
+          <p>We will talk about how each on is done briefly and I will also put a video for you to watch at the end of the chapter</p><br id="reference145">
+          <h2>Binary to Denary</h2>
+          <p>Let's take a simple binary number</p>
+          <pre>00110011</pre>
+          <p>The binary value has a place value of 2<sup>x</sup></p>
+          <p>The LSB has a weight of 1 and the 2nd bit has a weight of 2 and so on</p>
+          <p>So whenever there is a 1 you take that particular place value weight of that digit</p>
+          <p>Do the same for all other digits which are 1</p>
+          <p>Then take the sum of all the weights and it will give you the denary value</p>
+          <pre>
+0  0  1  1  0  0  1  1
+
+-  - 32  16 -  -  2  1
+
+     32+16+2+1 = 51
+</pre>
+          <p>There is also another method you can follow</p>
+          <pre>00110011</pre>
+          <p>You start with the MSB</p>
+          <p>First mutliply the MSB with 2 then get the value</p>
+          <p>After you find the value you add either 1 or 0 depending on the next bit</p>
+          <p>Then the new value is multiplied by 2 again and the whole process continues</p>
+          <p>When you receive the last digit(LSB) you just add the bit to the value and this gives you the denary value</p>
+          <pre>
+0 * 2 = 0
+(add 0)
+0 * 2 = 0
+(add 1)
+1 * 2 = 2
+(add 1)
+3 * 2 = 6
+(add 0)
+6 * 2 = 12
+(add 0)
+12* 2 = 24
+(add 1)
+25* 2 = 50
+(Finally just add 1)
+50 +1 = 51
+</pre>
+          <p>This is my opinion a good method to follow</p><br id="reference146">
+          <h2>Denary to binary</h2>
+          <p>There are also two methods for this</p>
+          <p>We will take the denary value 254 as the example</p>
+          <p>So we keep dividing the denary value by 2. We will sometimes get a remainder of 1 or 0. Then you read the remainders from the <span class="highlight">bottom</span> to the top which gives us the binary number</p>
+          <pre>
+2|254
+2|127 → 0
+2|63  → 1
+2|31  → 1
+2|15  → 1
+2|7   → 1
+2|3   → 1
+2|1   → 1
+0     → 1
+
+
+Binary number = 11111110<sub>2</sub>
+</pre>
+          <figcaption>
+            You keep dividing by 2 until we get the final value as 0. Then we read the remainders from bottom to top
+          </figcaption>
+          <p>We will also talk about the next method also</p>
+          <p>These requires you to know the binary weight properly such as 1 , 2 , 4 , 8 , 16 , 32....</p>
+          <p>This is very useful to convert a decimal number to a binary number (This is an A2 topic so we will discuss that later)</p>
+          <pre>
+254 - 128 → 1
+126 - 64  → 1
+62 -  32  → 1
+30 -  16  → 1
+14 -  8   → 1
+6  -  4   → 1
+2  -  2   → 1
+0  -  1   → 0 // as 0 is not large enough to reduct 1
+                      from it
+</pre>
+          <figcaption>
+            For this method we read from top to bottom
+          </figcaption>
+          <p>It is better to chose one method or else you would get confused</p><br id="reference147">
+          <h2>Binary to Hex</h2>
+          <p>This is the easiest conversion</p>
+          <p>We group the binary numbers to nibbles starting from the right and we find the denary value of each nibble and this is converted to Hex ( very similar to BCD )</p>
+          <pre>
+0011011
+</pre>
+          <p>As we can see, this has 7 bits so how can we group in 4 bits</p>
+          <pre>(0)001   1011</pre>
+          <p>You need to add a 0 to the start to make it 4bits</p>
+          <pre> 
+     0001    1011
+
+       1      11
+
+       1      B
+           
+         = 1B<sub>16</sub>
+</pre>
+          <p>To convert from Hex to binary follow the reverse order</p>
+          <pre>
+   1   B
+ 
+   1   11
+
+ 0001  1011
+</pre><br id="reference148">
+          <h2>Hex to denary (Vice versa)</h2>
+          <p>There is a method to convert hex to denary and back directly but I won't recommend it to you</p>
+          <p>Its better to convert denary to binary then Hex ( vice versa ) as this is more simpler and less error prone</p><br id="reference149">
+          <h2>Prefixes</h2>
+          <p>Same as physics, we don't like to give storage or other specifications in large numbers, we usually like to give it in 1 d.p</p>
+          <p>Here are the Decimal/denary prefixes</p>
+          <table class="table-design">
+            <tr>
+              <th>Prefix</th>
+              <th>Magnitude</th>
+              <th>Symbol</th>
+            </tr>
+            <tr>
+              <td>kilo</td>
+              <td>10<sup>3</sup></td>
+              <td>KB</td>
+            </tr>
+            <tr>
+              <td>Mega</td>
+              <td>10<sup>6</sup></td>
+              <td>MB</td>
+            </tr>
+            <tr>
+              <td>Giga</td>
+              <td>10<sup>9</sup></td>
+              <td>GB</td>
+            </tr>
+            <tr>
+              <td>Tera</td>
+              <td>10<sup>12</sup></td>
+              <td>TB</td>
+            </tr>
+          </table>
+          <figcaption>
+            This table uses Bytes as an example
+          </figcaption>
+          <p>This means that the size of data is grouped in quantities and the prefix tells us the size of data</p>
+          <p>However, recent questions don't ask this now but, lets see one example</p>
+          <blockquote>
+            Convert 200000 Bits to MB
+          </blockquote>
+          <p>First convert the bits to bytes</p>
+          <h4>200000/8 = 25000Bytes</h4>
+          <p>Then to convert to MB just divide by 10<sup>6</sup></p>
+          <h4>25000/1000000 = 0.025MB</h4>
+          <p>But now we use binary prefixes because it is the correct way of representing quantities</p>
+          <table class="table-design">
+            <tr>
+              <th>Prefix</th>
+              <th>Magnitude</th>
+              <th>Symbol</th>
+            </tr>
+            <tr>
+              <td>Kibi</td>
+              <td>2<sup>10</sup></td>
+              <td>KiB</td>
+            </tr>
+            <tr>
+              <td>Mebi</td>
+              <td>2<sup>20</sup></td>
+              <td>MiB</td>
+            </tr>
+            <tr>
+              <td>Gibi</td>
+              <td>2<sup>30</sup></td>
+              <td>GiB</td>
+            </tr>
+            <tr>
+              <td>Tebi</td>
+              <td>2<sup>40</sup></td>
+              <td>TiB</td>
+            </tr>
+          </table>
+          <figcaption>
+            The 2<sup>10</sup> means 1024 Bytes
+          </figcaption>
+          <p>This is a bit complex and requires you to do a lot of workings</p>
+          <p>Lets take the same example</p>
+          <blockquote>
+            Convert 200000 Bits to MiB
+          </blockquote>
+          <p>Note now it MiB</p>
+          <h4>200000/8 = 25000Bytes</h4>
+          <h4>25000/1024 = 24.4KiB</h4>
+          <h4>24.4/1024 = 0.024MiB</h4>
+          <p>So really they will usually specify which one they want. If they say KB use denary prefixes. If they use KiB use binary prefixes</p>
+          <p>Also if they say Mib instead of MiB it means they want Mebibits not Mebibytes and so you don't have to divide by 8</p><br id="reference150">
+          <h2>Internal Coding Numbers</h2>
+          <p>The computer follows two's complement when storing numbers</p>
+          <p>There are two types of integer which the computer can store - unsigned and signed integer</p>
+          <p>Signed integers are integers which can be either positive or negative whereas unsigned integer is always positive</p><br id="reference151">
+          <h2>Sign and Magnitude</h2>
+          <p>This is the common form when we display signed integers</p>
+          <p>The Most significant bit determines the sign ( 1 - negative and 0 - positive ) where as the rest of the bits define the magnitude</p>
+          <p>For example 10110110</p>
+          <p>The Most significant bit is 1 and so this is a negative number</p>
+          <p>If we convert the rest of the bits to denary 54 which is the magnitude</p>
+          <p>So this byte represents -54 only if this byte is a signed integer</p>
+          <p>If it is not a signed integer we just use normal conversions like the above examples</p>
+          <p>So most questions give the byte in a sign and magnitude form ( unless they state the form ) and this must be converted to two's complement</p>
+          <p>They might ask like this</p>
+          <blockquote>
+            Convert this signed integer to 2's complement -
+          </blockquote>
+          <pre>
+                 10011110
+</pre>
+          <figcaption>
+            Remeber this is in sign and magnitude form
+          </figcaption>
+          <p>Before you know how to convert it we need to first define 2's complement</p><br id="reference152">
+          <h2>Two's Complement</h2>
+          <h3>This is one's complement plus 1</h3>
+          <p>What is one's complement?</p>
+          <h3>One's complement is when the bits in a byte are substracted from 1 ( so making a 1 to 0 and 0 to 1</h3>
+          <p>An example is 00100100 is converted to 11011011 - so every bit is changed</p>
+          <p>To find two's complement we just need to add 1 to the 11011011</p>
+          <p>don't use this method as it is quite confusing</p>
+          <p>To convert a binary number to two's complement directly, follow this steps</p>
+          <p>Lets take an example</p>
+          <pre>
+            10011100
+</pre>
+          <p>Ignore the first 0's on the right side</p>
+          <p>And also ignore the first 1 on the right</p>
+          <p>Then invert all other bits - convert 1 to 0 and 0 to 1</p>
+          <p>So we will get:</p>
+          <pre>
+ 01100<span class="highlight">100</span></pre>
+          <figcaption>
+            The first 0's and the first 1 doesn't change
+          </figcaption>
+          <p>This is a much easier method and usually used to change negative sign and magnitude binary numbers</p>
+          <h2>Here's the catch!</h2>
+          <p>The computer follows 2's complement and so sign and magnitude numbers must be converted using the above method</p>
+          <p>However you use this method only when the sign and magnitude is negative, infact this is a very confusing part</p>
+          <p>If the binary number is positive then the sign and magnitude is the <span class="highlight">same</span> as the two's complement form</p>
+          <p>Lets see an example:</p>
+          <blockquote>
+            Convert 01101111 to 2's complement
+          </blockquote>
+          <p>The answer is again 01101111 and we will see why later</p>
+          <blockquote>
+            Convert 10010010 to 2's complement
+          </blockquote>
+          <p>So for this we need to use the above method and so you will get 01101110</p>
+          <p>However this is not the answer because the first bit(MSB) is changed from 1 to 0 and so it will become a positive number</p>
+          <p>For this reason the Two's complement should have the same sign as the sign and magnitude form</p>
+          <p>The final answer must be 11101110</p>
+          <h2>Why do they follow this</h2>
+          <p>There is a reason why they follow this wierd method and it's because it makes converting from Two's complement to denary much quicker and direct</p>
+          <p>To convert a 2's complement to the corresponding denary value can be done by reversing the process such as finding the sign and magitude form and then finding the denary value</p>
+          <p>Or</p>
+          <p>There is another simpler method</p>
+          <blockquote>
+            The below binary value is in 2's complement. Find the denary value
+          </blockquote>
+          <pre>               11011010</pre>
+          <p>The most significant bit is 1 so the number is negative</p>
+          <p>We know that the MSB carries the highest value of 128</p>
+          <p>The method follows like this:</p>
+          <p>First find the value of the sign which is negative and then add the positive value of the magnitude(remaining bits)</p>
+          <pre> -128 + (64 + 16 + 8 +2 ) = -38</pre>
+          <p>As the MSB is 1 then the value would obviously be negative</p>
+          <p>This is the easiest and fastest method</p>
+          <p>So this makes sense why the sign and magitude of positive number is the same as the two's complement</p>
+          <blockquote>
+            The below binary value is in 2's complement. Find the denary value
+          </blockquote>
+          <pre>               01011010</pre>
+          <p>By following the same method above we will get 38</p>
+          <p>I don't know if textbooks follow this explanation but in my opinion this is the most simplest explanation I could give</p><br id="reference153">
+          <h2>Properties</h2>
+          <p>There are some properties of 2's complement and sign and magnitude you need to know</p>
+          <p>Two's complement has only one representation for 0 where as sign and magnitude have two forms - one for -0 and one for 0. This is actually an advantage of two's complement</p>
+          <p>The maximum value which can be represented for signed integers using 4 bits is 2<sup>n</sup>-1 = 7</p>
+          <p>The largest negative number formed is -2<sup>n</sup> = -8</p><br id="reference154">
+          <h2>Binary aritmethics</h2>
+          <p>Lets see an example</p>
+          <pre>
+      01011101
+      01111011+
+      ________
+      11011000
+</pre>
+          <p>To do this just follow the normal addition</p>
+          <p>Binary addition begins from the rightmost side</p>
+          <p>If 1 + 1 then it gives 0 and 1 is carried</p>
+          <p>If 1 + 0 then it gives 1 and no carry</p>
+          <p>If 1 + 1 + 1 then it give 1 and a carry of 1</p>
+          <p>If 1 + 1 + 1 + 1 then it gives 0 and a carry of 2</p>
+          <p>There is a pattern if you can see if the summed value is a multiple of 2 then we get 0 if not we get 1</p>
+          <p>The carry is the number of 2's which can fit the summed value</p>
+          <p>don't worry I will include a video for all these calculations below</p>
+          <p>There is also another longer method and that includes converting the binary number to denary and doing the calculation</p>
+          <p>Lets see an example now to substract binary numbers</p>
+          <pre>
+      01111101
+      01111011-
+      ________
+      00000010
+</pre>
+          <p>Binary substraction begins from the right side to the left side</p>
+          <p>If 1 - 0 then it would be 1</p>
+          <p>If 1 - 1 then it would be 0</p>
+          <p>If 0 - 1 then it gives 1 and borrows one from the next digit</p>
+          <p>Why does it becomes 1? Because when we borrow 1 we get 2</p><br id="reference155">
+          <h2>Overflow errors</h2>
+          <h3>It is when the result of a calculation is larger than the number of bits used to define the storage for the result</h3>
+          <p>So sometimes when you add 2 binary number the result may have more number of bits</p>
+          <pre>      1111
+      1111+
+      _____
+    (1)1110
+</pre>
+          <p>Sometimes these overflow can cause the result to become negative when we add two positive numbers</p>
+          <pre>      0111
+      0111+
+      _____
+      1110
+</pre>
+          <p>Or when two negative numbers are added it can produce a positive number</p>
+          <pre>      10100000
+      10100000+
+      ________
+    (1)01000000
+</pre>
+          <p>The (1) will not be recorded as it won't fit in the storage, so then computer will read this as a positive number which is wrong</p>
+          <p>Both of these examples are overflow errors and the processor must be able to identify these - we will see them more in Assembly language chapter</p><br id="reference156">
+          <h2>BCD - Binary coded decimal</h2>
+          <p>Denary digits are represented using nibbles or 4 bits</p>
+          <p>4 bits can be used to represent a single denary digit from 0 to 9</p>
+          <p>If the nibble contains a value of more than 9 then it is called an invalid BCD</p>
+          <p>There are 2 types of BCD - packed BCD or one BCD per byte</p>
+          <p>In packed BCD it means that 2 digits of denary can be represented using 1 byte, whereas in one BCD per byte only one digit is represented(the remaining bits are 0's)</p>
+          <p>Example, Packed BCD - 11011001 and One BCD per byte - 11010000</p>
+          <p>So how do you convert it to denary digits</p>
+          <p>For example 00100111 is a packed BCD</p>
+          <p>We can break it to two nibbles</p>
+          <pre> 0010     1001</pre>
+          <p>Each nibble could be converted to the corresponding denary value</p>
+          <table class="table-design">
+            <tr>
+              <th>0010</th>
+              <th>1001</th>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>9</td>
+            </tr>
+          </table>
+          <p>This gives a value of 29</p>
+          <p>If the nibble had a value of more than 9 then it is invalid</p>
+          <p>BCD is used to display denary digits in calculators and watches</p>
+          <p>You also need to know how to perform calculations and addition with BCD</p>
+          <p>When we do addition with BCD we isolate each nibble such as the example below</p>
+          <p>29 + 45</p>
+          <pre>
+
+   0010   1001     (29)
+   0100   0101     (45)
+   ____   ____
+   0110   1110
+          0110
+   0110 (1)0100 
+   
+   0111   0100     (74)
+   </pre>
+          <figcaption>
+            We can see that 1110 that this is an invalid BCD 1110 which has a value of 14. So this must be corrected by adding 0110 or 6
+          </figcaption><br>
+          <p>So to correct this we need to always add 0110 or 6</p>
+          <p>We can see after adding 0110 we get a carry of 1 which taken to the next BCD and added</p>
+          <p>If the next BCD also was invalid then we had to add 0110 and 1 = 0111 and there will be a carry to the next BCD</p>
+          <h2>Internal coding of character</h2>
+          <p>There are two ways which text and characters can be represented</p><br id="reference157">
+          <ul>
+            <li>ASCII</li>
+            <p>American standard code for information interchange</p>
+            <p>Originally ASCII uses 7 bits to store each character(this is known as the ANSI ASCII)</p>
+            <p>The bits required to store each ASCII character are known as character codes</p>
+            <p>This could be used to represent 128 different characters which is enough to represent the english set and numbers and other command keys</p>
+            <p>The new ASCII is called the Extended ASCII as it is used to represent modified alphabets such as the ISO - Latin characters</p>
+            <p>This uses 8 bits or 1 byte to store each character and this could represent 256 characters</p>
+            <p>This is still not enough to represent other characters from different languages</p><br id="reference158">
+            <li>Unicode</li>
+            <p>The standard uses 2 bytes to store each character allowing 65536 possible characters</p>
+            <p>However most of the time its usually less as some bits are required to describe the encoding used</p>
+            <p>UTF - 8 and UTF - 16 bits means that in UTF - 8 the system handles each 8 bits at a time.</p>
+            <p>Unicode use the term code point instead of character code</p>
+            <p>Unicode is able to represent all the characters in the world and many other language so it used more commonly than ASCII</p>
+            <p>Unicode code point are usually represented using Hexadecimals - for example U - FFFF</p>
+            <h2>Notes in ASCII</h2>
+            <p>All you need to know is ASCII is enough to represent the english character set and numbers and some commands</p>
+            <p>Characters which are in sequence are changed by the ASCII value of 1 - Ex A and B are only different by one value</p>
+            <p>The difference between the uppercase and lowercase ASCII characters is in bit 5 - Ex (A=65) where as (a=97) so difference in 32</p>
+          </ul>
+          <h2>Representation of graphics</h2>
+          <p>There are 2 types of graphics:</p>
+          <ul>
+            <br id="reference159">
+            <li>Vector Graphics</li>
+            <h3>Graphics made out of drawing objects and their associated properties</h3>
+            <p id="reference160">So these drawing objects are shapes</p>
+            <h3>A drawing object is component which is defined using geometric formulae</h3>
+            <p id="reference161">This follows a very simple idea, the image is made up of shapes or components which are defined using a drawing list</p>
+            <h3>A drawing list is a list which contains one set values that contains many attributes for each drawing objects</h3>
+            <p id="reference162">So the drawing list contains a list of attributes which defines a property of the drawing object</p>
+            <h3>A property is an aspect of the appearance of the drawing object</h3>
+            <p>An example of the property includes the radius or the color or the border</p>
+            <p>Vector graphics are stored in the SVG format and requires a graphic plotter to output them directly</p>
+            <p>Vector graphics are relative to the canvas and so it is scalable without geting distorted and pixelated</p>
+            <p>Also when image is scaled both the dimensions are scaled so the image doesn't get squashed or stretched</p>
+            <p>Another important point is that vector graphics uses a lot of processing power however less storage compared to BMP graphics and it is also used to represent simple images such as shapes</p>
+            <p>If an vector graphics must be displayed on a screen or printed then it must be be converted to bitmap form</p><br id="reference163">
+            <li>Bitmap Graphics</li>
+            <h3>An image which is made out of elements or components called pixels which stores a color and its position in the BMP matrix</h3>
+            <p id="reference164">The pixels are displayed in a 2D matrix where the color of each pixel and its position in the 2D matrix is stored</p>
+            <h3>Pixel is the smallest component which is identified using its color and position in the 2D matrix</h3>
+            <p id="reference165">So each pixel can represent a color and the number of bits required to store each pixel is known as color depth</p>
+            <h3>Color depth is the number of bits required to store each pixel</h3>
+            <p>The color depth of the pixel determines how many possible colors the pixel can represent</p>
+            <p>For example 24 bit color depth means that 2<sup>24</sup> colors can be represented</p>
+            <p>Some questions use the word bit depth for images and this means the number of bits required to store each primary color</p>
+            <p id="reference166">For example if you have a bit depth of 8 bits it means it requires 8 bits to store each primary color of RGB and so the color depth will be 24 bits</p>
+            <h3>Bit depth is the number of its required to store each primary color</h3><br>
+            <p id="reference167">So back to BMP images it is made of many tiny pixels in a 2D matrix. To find the number of pixels in a image we need to find the product of the pixel high and pixel wide of an image, this is known as the image resolution</p>
+            <h3>Image resolution is the product of the number of pixels high and number of pixels wide an image is</h3>
+            <p>In a simpler terms, it means how many pixels are there in an image</p>
+            <p id="reference168">The same concept could be applied for display screen</p>
+            <h3>The screen resolution is the product of the number of pixels high and number of pixels wide the screen can display</h3>
+            <p>So whatever we see through the screen, it is limited by the screen resolutuion - for example if the screen is 2K but the image is 4K we will only see a 2K image</p><br>
+            <p>There are some points on Bitmap graphics - it uses the file extension .BMP(raw file) where as the compressed versions are .PNG and .JPG</p>
+            <p>Also the bitmap images can be enlargened but, when we enlarge the image even the pixels are enlarged and so the image seems pixelated and distorted</p>
+            <p>Bitmap images are good for storing photographs and pictures but uses way alot of storage</p><br id="reference169">
+            <h2>Image file size</h2>
+            <p>They will ask us to calculate the file size of an image</p>
+            <p>We find the number of pixels(using the image resolution) and multiply it by the color depth</p>
+            <h4>File size = Resolution * Color depth</h4>
+            <p>Even bit depth could be used but we need to then multiply by 3</p>
+            <h4>File size = Resolution * Bit depth * 3</h4>
+            <p>Depending on what you took for the color depth ( if we took it in bits ) then the file size will be in bits</p>
+            <p>In my opinion it's better to use bytes as you may have to convert it to MiB</p>
+            <p>Let's take an example</p>
+            <blockquote>
+              What is the image size if the pixel height is 500 and the pixels wide 1000 and the color depth is 24 bits
+            </blockquote>
+            <h4>File size = Resolution * Bit depth * 3</h4>
+            <h4>Resolution = Pixels high * pixels wide</h4>
+            <h4>File size = 500 * 1000 * 3</h4>
+            <figcaption>
+              Notice that i used 3bytes instead of 24 bits so my final answer will be in bytes
+              <h4>File size = 1500000 Bytes</h4>
+              <p>To convert it to MiB we need to divide by 1024 and again by 1024</p><br id="reference170">
+              <h2>File header</h2>
+              <p>The above calculated value gives the space required only to store the graphics however at the start of the file there is a file header which provides metadata of the file</p>
+              <h3>Number of bits at the start of a image file which is used to define the coding used such as the color depth and the resolution</h3>
+              <p>These are the things defined by the file header:</p>
+              <p>1. Image resolution</p>
+              <p>2. Color depth and the coding schemes</p>
+              <p>3. Image name and type</p>
+              <p>4. Compression techniques used(if any)</p><br id="reference171">
+              <h2>Sound Representation</h2>
+              <p>Sound waves in the air are analogue waves which contain a range of values and amplitudes and must be converted to the digital forms, we will discuss each point in detail</p><br id="reference172">
+              <h2>Sampling</h2><img src="../../Imagedata/CS/sampling.png" alt="sampling">
+              <h3>It is taking regular measurements of amplitudes at set timed intervals (regular intervals)</h3>
+              <p>So for the ADC convertor to convert from analogue signals to digital it must take the amplitude at regular intervals and digitise them to binary.</p>
+              <p>Another point to remember that there is usually a band-limiting filter in the sound encoder(instrument for recording and digitising sound) to remove high frequency which can not be heard by the human ear</p><br id="reference173">
+              <h2>Sampling Rate</h2>
+              <p>This is also known as sampling frequency</p>
+              <h3>The number of samples recorded per second</h3>
+              <p>This makes the sound more clearer/smooth and high quality as there is more changes in the sound per second</p><br id="reference174">
+              <h2>Sampling resolution</h2>
+              <h3>The number of bits required to store each sample</h3>
+              <p>This is also known as bit depth</p>
+              <p>The definition is easy however the understanding is also required - greater bits required to store each samples means more possibilities of amplitude can be recorded, this means if 3 bits are used to store each sample, then the sample can represent 8 different sound levels or amplitudes</p>
+              <p>Usually 16 bits are required for good quality and to avoid any quantinising errors</p>
+              <p>Higher sampling resolution means the sound is more crisp</p><br id="reference175">
+              <h2>Sound file size</h2>
+              <p>The method for calculating sound file size is also required</p>
+              <h4>File size = Sampling resolution * Sampling frequency * Duration * channels</h4>
+              <figcaption>
+                The channel parts are usually not asked - but it could be either 1 or 2
+              </figcaption>
+              <figcaption>
+                The duration means the time length of the sound
+              </figcaption>
+              <p>Again if we use bits for the sampling resolution we get the answer in bits</p>
+              <p>Duration must be in seconds</p>
+              <h2>Compression Teachniques</h2>
+              <p>Remember that there are two types of compressions:</p>
+              <ul>
+                <br id="reference176">
+                <li>Lossless Compression</li>
+                <h3>This when no data is removed and the process could be reversed to obtain the original file - these include RLE and Huffman coding algorithms</h3>
+                <p>Usually there are two algorithms used for lossless compression:</p><br id="reference177">
+                <br>
+                <p>RLE - Run length encoding is done by specifying the number of times a character is repeated followed by the value of the character</p>
+                <p>For an example AAAAAAAA - 8A</p>
+                <p>RLE is not strictly marked as it is the concept which matters, usually RLE can be in Hex or Binary and the order of the representation doesn't really matter - so 8A is same as A8</p><br id="reference178">
+                <br>
+                <p>Huffman coding - this replaces the most frequently used characters or words with shorter codes</p>
+                <p>Huffman is known by many other names such as indexing, dictionary</p>
+                <p>Usually we have a table which contains the character which is being replaced and their shorter codes</p>
+                <p>Huffman coding can be used for sound also to replace most frequent amplitudes with shorter codes</p><br id="reference179">
+                <h2>Lossy Compression</h2>
+                <h3>This method removes unnecessary data which the process can not be reversed to obtain the original file</h3>
+                <p>This is done by reducing the image or sound quality by reducing the color depth or the sampling resolutions</p>
+                <p>Removing slight changes in shade of color in images with one color</p>
+                <p>Using perceptual shaping where frequency which are inaudible are either removed or stored with lower sampling resolutions</p>
+                <p>The resolution of the image can also be reduced</p>
+                <p>The problem is the quality is reduced but managable to the user</p><br>
+                <p>When defining each type of compression give an example for each</p><br>
+                <br>
+                <div class="pagenav">
+                  <a href="CS.html">Back</a> <a href="Communication.html">Next</a>
+                </div><br>
+				<h2>Recommended</h2>
+        <p>These are things you might like. Clicking these ads can help us improve our free services in the future...</p>
+            <div id="container-2a219c05affd07270c6855c66c9456d4" style="border-radius:20px;"></div>
+        
+                <br>
+                <div class="general container-extra flex-box-row">
+                  <div>
+                    <h5>End of Chapter Questions</h5>
+                    <h6>Collection of Topic Questions to understand the topic more.</h6><br>
+                    <a style="padding:10px; background-color:#4ea654; border-radius:3px; font:17px Os; color:#e8e4e3; text-decoration:none;" href="../../Filedata/Questions/CS/InformationRevision.pdf" target="_blank">Try out</a>
+                  </div>
+                </div><br>
+                <br>
+                <div class="general container-extra2 flex-box-row">
+                  <div>
+                    <h5>End of Chapter Videos</h5>
+                    <h6>Collection of Videos to Support Your Understanding.</h6>
+                    <h4>Remember these videos are handpicked by me and I feel these are one of the best ones out there. But I constantly update this list for each chapter.The Youtubers are more than welcome to contact me.</h4>
+                    <h4>Also, don't forget to Subscribe to our Youtube channel - Wiscus</h4><br>
+                    <a style="padding:10px; background-color:#4ea654; border-radius:3px; font:17px Os; color:#e8e4e3; text-decoration:none;" href="https://www.Youtube.com/watch?v=MbSfWN9KlkE&amp;list=PLfh04WZ4q7nW8SP8DooNrUpLDdE93AhDw" target="blank">Watch</a>
+                  </div>
+                </div>
+              </ul>
+            </figcaption>
+          </ul>
+        </div>
+      </div><br>
+      <br>
+      <footer>
+        <p>Revisezone.com Copyright 2020</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../WebScript/Main-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='description' content='What is  encryption and what are the types of encryption methods? What is a digital signature or digital certificate or message digest. Learn about about quantum cryptography now!'>
+  <meta name='keywords' content='encryption, symmetric encryption, digital certificate, message digest, ssl and tls, quantum cryptography'>
+  <meta name='author' content='Wiscus'>
+  <link rel="apple-touch-icon" href="Imagedata/Revisezone/Logo.png">
+  <meta name='theme-color' content='black'>
+  <meta name='viewport' content='width=device-width initial-scale=1'>
+  <link rel="shortcut icon" href="../../Imagedata/Revisezone/Logo.png" type="x-icon/image">
+  <link class="Style" rel='stylesheet' href='../../Style/Master.css' media="screen and (min-width:1000px)">
+  <link class="Style" rel='stylesheet' href='../../Style/Mobile.css' media="screen and (max-width:999px)">
+  <link class="Style" rel='stylesheet' href='../../Style/printstyle.css' media="print"><!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170507780-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-170507780-1');
+  </script>
+  <title>Digital Signatures & Encryption | Revise Zone</title>
+</head>
+<body onload="saved()">
+  <div class="progress-container"></div>
+  <div class="top-nav-main">
+    <a href="../../home.html" title="Home">Home</a> <a href="../Chemistry/Chemistry.html" title="Chemistry"><abbr>Chemistry</abbr></a> <a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../LearningHtml/Introduction.html">HTML</a>
+    <div class="login-more">
+      <a onclick="NightmodeOn()" id="Mode">Night</a> <a onclick="More()" id="more">More</a>
+    </div>
+  </div>
+  <div class="dropdesign">
+    <span id="goback-white" onclick="Gobackdropdown()">✖</span>
+    <div class="flex-box-row">
+      <div>
+        <h2>Revise Now</h2>
+        <h3>GCE Subjects</h3><a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../Chemistry/Chemistry.html" title="Chemistry">Chemistry</a> <a href="../Cs/CS.html" title="Computer Science">CS</a> <a href="../Accounting/Introduction.html" title="Accounting">Accounting</a>
+        <h3>Coding Lessons</h3><a href="../LearningHtml/Introduction.html" title="HTML">Learn HTML</a> <a href="../SEO/SEO.html" title="SEO">Learn SEO</a>
+      </div>
+      <div>
+        <h2>More</h2>
+        <h3>What do you want<br>
+        to do?</h3><a href="../Other/ContactUs.html" title="Contact us">Contact us</a> <a href="../Other/Support.html" title="Support">Support</a>
+      </div>
+    </div>
+  </div>
+  <div class="spacing"></div>
+  <div class="grid-layout-main">
+    <div>
+      <div class="side-nav-universal">
+        <br>
+        <br>
+        <br>
+        <h2>Computer Science AS</h2><a href="CS.html" title="Introduction">Introduction</a> <a href="InformationRepresentation.html" title="">Information Representation</a> <a href="Communication.html" title="Communication">Communications</a> <a href="Communication2.html" title="Communication">Communications 2</a> <a href="Hardware.html" title="Hardware">Hardware</a> <a href="LogicGates.html" title="LogicGates">Logic Circuits</a> <a href="ProcessorFundamentals.html" title="Processor">Processor Fundamentals</a> <a href="AssemblyLanguage.html" title="Assembly">Assembly Language</a> <a href="MonitorControlling.html" title="Sensors">Monitor & Control</a> <a href="SystemSoftware.html" title="System Software">System Software</a> <a href="DataSecurity.html" title="Security">Security, Privacy & Data Integrity</a> <a href="Ethics.html" title="Ethics">Ethics</a> <a href="Databases.html" title="databases">Databases</a><br>
+        <h2>AS Practical</h2><a href="Algorithm.html" title="Algorithm">Algorithm</a> <a href="Datastructures.html" title="Data Structures">Data Structures and more</a> <a href="Development.html" title="">Software development</a><br>
+        <br>
+        <h2>Computer Science A2</h2><a href="DataRepresentations.html" title="Data Representation">Data Representation</a> <a href="FileOrganisations.html" title="File Organisation">File Organisation</a> <a href="LogicCircuit.html" title="Logic Circuits">Advance Logic Gates</a><a href="Internet.html" title="Internet">Internet</a> <a href="VirtualMachines.html" title="Virtual Machines">Virtual Machines</a> <a href="SystemA2.html" title="System Software">System Software</a> <a href="Security.html" title="Encryption and Security">Encryption & Security</a> <a href="AI.html" title="Artificial Intelligence">Artificial Intelligence</a><br>
+        <h2>A2 Practicals</h2><a href="../Developer/BinarySearch.html" title="Binary Search" target="blank">Binary Search</a> <a href="../Developer/LinearSearch.html" title="Linear Search" target="blank">Linear Search</a> <a href="../Developer/BubbleSort.html" title="Bubble Sort" target="blank">Bubble Sort</a> <a href="../Developer/InsertionSort.html" title="Inertion Sort" target="blank">Insertion Sort</a> <a href="../Developer/Combined.html" title="Combined Algorithm" target="blank">Combined Algorithm</a> <a href="../Developer/Stack.html" title="Stack" target="blank">Stacks</a> <a href="../Developer/Queue.html" title="Queue" target="blank">Queues</a> <a href="../Developer/LinkedList.html" title="Linked List" target="blank">Linked List</a> <a href="../Developer/BinaryTree.html" title="Binary Tree" target="blank">Binary Tree</a><br>
+        <h2>More</h2><a href="CSReference.html" title="CS Reference">Reference</a> <a href="CSEx.html" title="CS Questions">Pastpaper Questions</a>
+      </div>
+    </div>
+    <div>
+      <div class="Mainpage">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div>
+          <p><a class="extrafeatures" id="audioplay" onclick="audio()" title="Audio Lesson Only">♫</a><a class="extrafeatures" title="Lesson Recap" href="#recap">✐</a></p>
+          <div id="audiobar">
+            <audio controls=""><source src="Audio/Encryption.mp3" type="audio/mpeg"> Your browser does not support the audio...</audio>
+          </div>
+          <div class="pagenav">
+            <a href="SystemA2.html">Back</a> <a href="AI.html">Next</a>
+          </div><span onclick="Mobilebut()" id="mobilebutton"><img alt="more topic chapters" src="../../Imagedata/Revisezone/morecontent.png"></span>
+          <h1>Encryption & Digital Signatures</h1>
+          <p>Encryption is the process of converting a message to a form that can not be understood. We need a key to encrypt the message and a key to decrypt it. The Message before encryption is called the plain text whereas, the message after encryption is the ciphertext/cypher text</p>
+          <h2>Types of Encryption</h2>
+          <p>There are two types of encryption:</p>
+          <ul>
+            <li>Symmetric Encryption</li>
+            <p>The same key is used to encrypt and decrypt the message. Only the sender and receiver should know the key. The key is usually 256 bits long but the main problem is transferring the key from the sender to the receiver. So if the key is intercepted everything is compromised</p>
+            <li>Assymetric Encryption</li>
+            <p>A key is used to encrypt the message and a different key is used to decrypt the message. But one key is hidden and the other key is known to the public. The key known to the public is called the public key and the key that is hidden is called the private key</p>
+            <p>Any key could be used to encrypt the message or decrypt the message but in each condition, it will be different.</p>
+            <p>In order to verify the source of a message or to make sure the message came from a trusted person, then the sender would use his private key to encrypt the message and the <span class="highlight">sender's</span> public key is known to everyone and they can decrypt the message and prove it's from that person as the private and public key pair is a match</p>
+            <p>In order to send a message so it can be read by that person only then we use the <span class="highlight">reciever's</span> public key to encrypt the message and so only the receiver will be able to decrypt it using their private key</p>
+            <blockquote>
+              The main problem is verifying whether the private key is actually the senders. We can prove the public key matches with the private key but how do we know that the private key is some else pretending to be the sender
+            </blockquote>
+            <p>To illustrate this point, let's consider a website that is pretending to be Apple.com. You will be able to communicate with them but you can't authenticate them. So to get around this we need a digital certificate</p>
+            <h2>Digital Certificate</h2>
+            <p>A Digital Certificate is not an actual hardcopy certificate. It is a certificate that holds the details of the owner's public key that is verified by a trusted 3rd party called the CA.</p>
+            <p>The Below diagram explains how a digital certificate is made</p>
+			<img src="../../Imagedata/CS/certificate.png" alt="Digital certificate acquiring">
+            <p>1. First, the details of the owner and his public key are given to the CA</p>
+            <p>2. The CA will verify the owner that requested the digital certificate using the National Card</p>
+            <p>3. The CA will encrypt the holder's public key using the CA's private key to form the digital signature</p>
+            <p>4. The digital certificate is sent to the holder and he puts it on his or her website</p>
+            <p>5. When a person views this website, he accesses the certificate and uses the trusted CA's public key to decrypt the digital signature to get the websites public key to start communicating</p>
+            <h2>What is in a DIgital Certificate?</h2>
+            <p>This came in a past paper so I will just tell you the points:</p>
+            <p>1. Serial Number</p>
+            <p>2. Owner's Public key and details</p>
+            <p>3. CA's digital signature</p>
+            <p>4. Hashing Algorithm</p>
+            <h2>Digital Signature</h2>
+            <p>What's the difference between a digital signature and a digital certificate?</p>
+            <h3>Digital Signature is the encrypted hashed message</h3>
+            <h3>Message Digest is the hashed message</h3>
+            <p>Now another thing that is important in security is duplication or making sure that the message is not altered. In this case, we need the idea of a message digest. Below shows the steps of transferring data</p>
+            <p>1. Data is hashed to form the message digest. A Hashing algorithm makes sure the message is converted to a fixed length of data</p>
+            <p>2. The message digest is encrypted using the sender's private key and this is the digital signature formed</p>
+            <p>3. The Hashing Algorithm is sent also</p>
+            <p>4. The Digital Signature is received and decrypted using the sender's public key to get the message digest. The message digest could be used to get the actual message.</p>
+            <p>5. The actual message is hashed using the hashing algorithm again to form the message digest</p>
+            <p>6. The two message digests are compared to see if they match. If they match then, the message is not altered</p>
+            <blockquote>
+              Understand that we use the message digest to prove that the message is unaltered
+            </blockquote>
+            <h2>Types of Symmetric Encryption</h2>
+            <p>There are many methods of generating a key for symmetric encryption and that is by using permutation and shifting. This is not required for you to know! If the Key is made available only to both parties then it is impossible to break by the brute force method. For example, a 256 bit Key will take 2<sup>256</sup> tries. The brute force method is the process of trying all possible combination in order to get the correct key</p>
+            <h2>SSL & TLS</h2>
+            <p>SSL Stands for Secure Socket Layer and TLS stands for Transport Layer Security</p>
+            <p>TLS is the new advance version of SSL.</p>
+            <p>SSL is the layer that enables safe transmission of data across the HTTP protocol, that's why you see your HTTPS (secure) which is more secure. It encrypts data so it is usually used for online banking and online eCommerce sites and for secure file and mail transfer</p>
+            <blockquote>
+              It is necessary for you to mention the word secure
+            </blockquote>
+            <p> TLS has advance security such as session caching and enhanced encryption. This means the session key only is available for a short period.</p>
+            <p>We will talk about the steps of the SSL protocol:</p>
+            <p>1. A request is sent to the website by the client for the digital certificate and SSL certificate</p>
+            <p>2. If the client or browser is able to verify then a request is sent to the website using the website public key to start transmission.</p>
+            <p>3. If the website accepts it then it sends an acknowledgment with the session key</p>
+            <p>4. The client uses the session key to start communication that is highly secure</p>
+            <h2>Quantum Cryptography</h2>
+            <p>These use light through special medium or wires such as fiber optics to encrypt messages</p>
+            <p>Yous don't have to read this paragraph as it is a highly advance explanation</p>
+            <p class="noteparagraphgreen">In Quantum cryptography, light signals are sent at different polarisations of light. We know light waves are transverse waves that vibrate perpendicular to the energy of the way and it is clear that in most diagrams, the waves vibrate up and down but, actually in the 3d world, they can vibrate horizontally or even diagonally. According, to Heisenberg's Uncertainty principle, the exact position and momentum of a wave or particle can not be known due to the wave-particle duality. which means if a hacker tries to intercept the fiber optics and tries to measure the polarisation of the light he himself destroys the message and does not allow it to pass. The idea is that the act of measuring can cause data to be destroyed</p>
+            <p>The basic idea is that the polarisation of the light is hard to determine without destroying the message itself and so it is highly secure</p>
+            <p>1. It is non-repudiation or can not be altered</p>
+            <p>2. More secure or harder to tap</p>
+            <p>3. Can be used to send longer keys</p>
+            <p>Quantum Cryptography is used heavily in the symmetric encryption process and is used mainly to transfer the key for symmetric encryption. I will explain how this key is transferred and is considered to a be secret code</p>
+            <h2>Explanation of Quantum Cryptography</h2>
+			<img src="../../Imagedata/CS/polarise.png" alt="Digital certificate acquiring">
+            <p>Both the receiver and sender decide the value for the polarisation of lightwaves. For example, Up & Left are 1 and Diagonals are 0. The tricky part is that this is not fixed and this is done randomly. For example, one bit could be 0 for diagonal and another bit could be 1 for diagonal again. The assigning process is done randomly by the sender. Then the sender sends the polarised light (that was randomly generated and corresponds to each bit) and also the receiver assigns randomly the polarisation basis for each bit POSITION at the receiver's end. Now according to probability, there is a chance that some are going to match. Then the sender will tell the receiver the basis of his polarised value for each bit POSITION to the sender and the reciever will see which ones are matched and tell the sender the position where they match. The Polarisation where they match is the bits used. This somehow creates a secret code (the key) between them only</p>
+            <p>Let me put it in an easy illustration of the similar concept. Say the sender randomly generates 2<sup>4</sup> bit keys in a specified order only known to the sender</p>
+            <pre>
+0110
+0001
+0111
+...
+Random order
+</pre>
+            <p>Say the sender also randomly generates</p>
+            <pre>
+
+0111
+0110
+0001
+...
+Random order
+</pre>
+            <p>The receiver sends his set of 2<sup>4</sup> keys and the sender compares it and tells which position matches. If this was done using quantum cryptography then the hacker can't read what is sent and they don't know the position that matches. In some cases, there can be no matches but this is unlikely</p>
+            <p>Likewise, in actual cryptography, polarisations of light are sent randomly and are assigned with 1 or 0 and the places where they match are sent</p>
+			<div class="pagenav">
+              <a href="SystemA2.html">Back</a> <a href="AI.html">Next</a>
+            </div><br>
+            <br>
+            <br id="recap">
+            <div class="general container-extra">
+              <div>
+                <h5>Quick Recap</h5>
+                <h6>Check your Knowledge with a Quick Recap</h6><br>
+                <a style="padding:10px; background-color:#4ea654; border-radius:3px; font:17px Os; color:#e8e4e3; text-decoration:none;" onclick="MiniTask(this,'../../quiz.revisezone.com/Mini/Security.html')">Try out</a>
+                <div id="taskview"></div>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div><br>
+      <br>
+      <footer>
+        <p>Revisezone.com Copyright 2020</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../WebScript/Main-script.js"></script>
+</body>
+</html>

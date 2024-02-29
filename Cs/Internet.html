@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='description' content='Advance Alevel Internet lessons on packet switching and circuit switching and more'>
+   <meta name='keywords' content=' tcp protocols, https protocols, transport layer, application protocol, circuit switching, packet switching, FTP, bit torrent, QbbitTorrent'>
+  <meta name='author' content='Wiscus'>
+  <link rel="apple-touch-icon" href="Imagedata/Revisezone/Logo.png">
+  <meta name='theme-color' content='black'>
+  <meta name='viewport' content='width=device-width initial-scale=1'>
+  <link rel="shortcut icon" href="../../Imagedata/Revisezone/Logo.png" type="x-icon/image">
+  <link class="Style" rel='stylesheet' href='../../Style/Master.css' media="screen and (min-width:1000px)">
+  <link class="Style" rel='stylesheet' href='../../Style/Mobile.css' media="screen and (max-width:999px)">
+  <link class="Style" rel='stylesheet' href='../../Style/printstyle.css' media="print"><!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170507780-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-170507780-1');
+  </script>
+  <title>Internet | Packet & Circuit Switching | Revise Zone</title>
+</head>
+<body onload="saved()">
+  <div class="progress-container"></div>
+  <div class="top-nav-main">
+    <a href="../../home.html" title="Home">Home</a> <a href="../Chemistry/Chemistry.html" title="Chemistry"><abbr>Chemistry</abbr></a> <a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../LearningHtml/Introduction.html">HTML</a>
+    <div class="login-more">
+      <a onclick="NightmodeOn()" id="Mode">Night</a> <a onclick="More()" id="more">More</a>
+    </div>
+  </div>
+  <div class="dropdesign">
+    <span id="goback-white" onclick="Gobackdropdown()">✖</span>
+    <div class="flex-box-row">
+      <div>
+        <h2>Revise Now</h2>
+        <h3>GCE Subjects</h3><a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../Chemistry/Chemistry.html" title="Chemistry">Chemistry</a> <a href="../Cs/CS.html" title="Computer Science">CS</a> <a href="../Accounting/Introduction.html" title="Accounting">Accounting</a>
+        <h3>Coding Lessons</h3><a href="../LearningHtml/Introduction.html" title="HTML">Learn HTML</a> <a href="../SEO/SEO.html" title="SEO">Learn SEO</a>
+      </div>
+      <div>
+        <h2>More</h2>
+        <h3>What do you want<br>
+        to do?</h3><a href="../Other/ContactUs.html" title="Contact us">Contact us</a> <a href="../Other/Support.html" title="Support">Support</a>
+      </div>
+    </div>
+  </div>
+  <div class="spacing"></div>
+  <div class="grid-layout-main">
+    <div>
+      <div class="side-nav-universal">
+        <br>
+        <br>
+        <br>
+        <h2>Computer Science AS</h2><a href="CS.html" title="Introduction">Introduction</a> <a href="InformationRepresentation.html" title="">Information Representation</a> <a href="Communication.html" title="Communication">Communications</a> <a href="Communication2.html" title="Communication">Communications 2</a> <a href="Hardware.html" title="Hardware">Hardware</a> <a href="LogicGates.html" title="LogicGates">Logic Circuits</a> <a href="ProcessorFundamentals.html" title="Processor">Processor Fundamentals</a> <a href="AssemblyLanguage.html" title="Assembly">Assembly Language</a> <a href="MonitorControlling.html" title="Sensors">Monitor & Control</a> <a href="SystemSoftware.html" title="System Software">System Software</a> <a href="DataSecurity.html" title="Security">Security, Privacy & Data Integrity</a> <a href="Ethics.html" title="Ethics">Ethics</a> <a href="Databases.html" title="databases">Databases</a><br>
+        <h2>AS Practical</h2><a href="Algorithm.html" title="Algorithm">Algorithm</a> <a href="Datastructures.html" title="Data Structures">Data Structures and more</a> <a href="Development.html" title="">Software development</a><br>
+        <br>
+        <h2>Computer Science A2</h2><a href="DataRepresentations.html" title="Data Representation">Data Representation</a> <a href="FileOrganisations.html" title="File Organisation">File Organisation</a> <a href="LogicCircuit.html" title="Logic Circuits">Advance Logic Gates</a><a href="Internet.html" title="Internet">Internet</a> <a href="VirtualMachines.html" title="Virtual Machines">Virtual Machines</a> <a href="SystemA2.html" title="System Software">System Software</a> <a href="Security.html" title="Encryption and Security">Encryption & Security</a> <a href="AI.html" title="Artificial Intelligence">Artificial Intelligence</a><br>
+        <h2>A2 Practicals</h2><a href="../Developer/BinarySearch.html" title="Binary Search" target="blank">Binary Search</a> <a href="../Developer/LinearSearch.html" title="Linear Search" target="blank">Linear Search</a> <a href="../Developer/BubbleSort.html" title="Bubble Sort" target="blank">Bubble Sort</a> <a href="../Developer/InsertionSort.html" title="Inertion Sort" target="blank">Insertion Sort</a> <a href="../Developer/Combined.html" title="Combined Algorithm" target="blank">Combined Algorithm</a> <a href="../Developer/Stack.html" title="Stack" target="blank">Stacks</a> <a href="../Developer/Queue.html" title="Queue" target="blank">Queues</a> <a href="../Developer/LinkedList.html" title="Linked List" target="blank">Linked List</a> <a href="../Developer/BinaryTree.html" title="Binary Tree" target="blank">Binary Tree</a><br>
+        <h2>More</h2><a href="CSReference.html" title="CS Reference">Reference</a> <a href="CSEx.html" title="CS Questions">Pastpaper Questions</a>
+      </div>
+    </div>
+    <div>
+      <div class="Mainpage">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div>
+          <p><a class="extrafeatures" id="audioplay" onclick="audio()" title="Audio Lesson Only">♫</a><a class="extrafeatures" title="Lesson Recap" href="#recap">✐</a></p>
+          <div id="audiobar">
+            <audio controls=""><source src="Audio/Internet.mp3" type="audio/mpeg"> Your browser does not support the audio...</audio>
+          </div>
+          <div class="pagenav">
+            <a href="LogicCircuit.html">Back</a> <a href="VirtualMachines.html">Next</a>
+          </div><span onclick="Mobilebut()" id="mobilebutton"><img alt="more topic chapters" src="../../Imagedata/Revisezone/morecontent.png"></span>
+          <h1>Internet & Networks</h1>
+          <p>There are two ways in which data can be transmitted. It can either be broken down to smaller bits or packets and be sent along many routes but, all of the packets will reach the same destination or we can just send the data in a continuous stream along a single route or wire</p>
+          <ul>
+            <li>Circuit Switching</li>
+            <h3>Sending Continuous streams of data along a single temporary route</h3>
+            <p>When we make phone calls, temporary links between the sender and reciever are made in which data is sent thorugh this route only. The building of links is done by the circuit switching centers which are owned by the PSTN</p>
+            <p>This connection only lasts until the phone call or until the activity stays active. Data is sent through switching centers in full duplex mode.</p>
+            <h2>Advantages of Circuit Switching</h2>
+            <p>1. Doesn't require to share bandwith</p>
+            <p>2. More secure as there is less errors so no need for error correction methods</p>
+            <h2>Disadvantages</h2>
+            <p>1. More slower and takes more time at the start before transmission to verify and set up links. However, speed is a hard factor to conclude on</p>
+            <p>2. More Expensive to maintain or use</p>
+            <p>3. If connection fails no other alternatives</p>
+            <blockquote>
+              Remember that these questions can come in different way. They may be ask this directly or they might ask it indirectly. For example, they can ask you the advantages of a leased permanent wire
+            </blockquote>
+            <h2>Packet Switching</h2>
+            <h3>Data broken down to packets in which are sent along many routes that reach the same destination</h3>
+            <p>Think of a parcel which contains 3 items. I can ship the 3 items separately to the same address along different routes or use the single route</p>
+            <p>The same principle applies for packet switching in which data is broken down to packets and in which each packet has an ip address to direct it to its destination.</p>
+            <h2>Advantages of Packet Switching</h2>
+            <p>1. More Cheaper to maintain and use</p>
+            <p>2. Can use all of the bandwith so more efficient</p>
+            <p>3. No need for verification at the start of the transmission</p>
+            <h2>Disadvantages</h2>
+            <p>1. Bits can get easily corrupted</p>
+            <p>2. Shared Bandwith</p>
+            <p>When we decide which one we chose we always consider if the data to be sent is confidential and must be error free and must be sent in the same order as arrived. Then we use Circuit Switching. If we don't need these requirements and want to send a normal large file over the internet, the best is packet switching</p>
+            <p>We have come across the basic stuff in the AS level, this chapter will cover the most advance sections in Networks.</p>
+            <p>It is Router's responsibility to make sure that the data packets are sent to the correct destination through the best route. So each router has its own routing table which holds the network address of it adjacent routers and there condition ( whether active or not ) and etc</p>
+            <p>It is important to remember what is in a routing table:</p>
+            <p>1. Next hop address ( Adjacent Routers )</p>
+            <p>2. Subnet Mask</p>
+            <p>3. Network ID ( Current Router )</p>
+            <p>4. Outgoing Interface</p>
+            <h2>Protocols</h2>
+            <h3>A protocol is a set of rules in which both the sender and the receiver follows when transmitting data</h3>
+            <p>The most famous protocol is the TCP/IP protocol but, this is called a protocol suite as it has many layers. We will discuss each layer in detail:</p>
+            <blockquote>
+              TCP stands for Transmission Control Protocol
+            </blockquote>
+            <li>Application Layer</li>
+            <p>This layer handles the type of message of the data to be transmitted. The way we determine the type is by changing the port number of the data packets but what do you really mean by different types of data?</p>
+            <p>Many Protocols that are under this layer are the HTTP, FTP, SMTP POP3, IMAP etc protocols</p>
+            <blockquote>
+              Remember protocols are a set of rules. HTTP is a protocol, so is an IP protocol but both have different functions and HTTP is a subset protocol of the main protocol TCP/IP suite protocol. Each Protocol in the Application layer will be further discussed
+            </blockquote>
+            <li>Transport Layer</li>
+            <p>Controls and handles the breaking of data into packets and making sure the headers of the data packets have the correct details. Some examples are the TCP protocol</p>
+            <blockquote>
+              I know it's confusing when the TCP protocol is within the TCP/IP Suite protocol but really the TCP/IP suite is a protocol that handles all data transmission across the internet. Whereas the TCP and the IP protocols are two independent protocols in the suite
+            </blockquote>
+            <li>Internet Layer</li>
+            <p>Controls the movement of data packets within the networks and between the routers until it reaches its source destination. Some examples are the IP protocol which is responsible for sending data depending on the IP address in the data packet header.</p>
+            <li>Network / DataLink Layer</li>
+            <p>Its function is similar to the internet layer. It handles communications between the two networks in which data is transmitted. In fact, the Internet Layer is a subset of the Network layer. So this includes the LAN Network also. An example is the Ethernet Protocol</p>
+            <h2>Examples of Application Layer Protocols:</h2>
+            <li>HTTP</li>
+            <p>Sends any request to a website to get a webpage or to send data such as financial and sensitive data (HTTPS)</p>
+            <li>FTP</li>
+            <p>To send files over the internet</p>
+            <li>SMTP</li>
+            <p>The send mails over the internet</p>
+            <p>When sending an email, we use this protocol to send the mail to the mail server. This is called the push protocol</p>
+            <p>The mail server also uses the same protocol when sending it to another person's server. Remember, this is old technology and sites like Gmail have hidden most of these features...</p>
+            <p>It's very easy to send a mail from one Gmail account to another Gmail account without using the SMTP protocol as the files are stored in the same server, However, if Gmail needs to send files to Outlook, both communicates using SMTP</p>
+            <li>POP3</li>
+            <p>The Pull protocol is used to extract emails from the server to your computer. Same as downloading emails on Gmail onto your computer...</p>
+            <p>However, these emails are not stored on the server. And can only be stored on your computer which is not exactly Gmail...</p>
+            <li>IMAP</li>
+            <p>It stores the emails on the server itself so it can be accessed where ever you want if you have an internet connection. For this reason, IMAP is better and popular and the recent version</p>
+            <p>However, the server may have full access to the emails so they can be deleted or leaked so it is less secure</p>
+            <p>Nevertheless, Gmail and most email services offer both IMAP and POP3</p>
+            <blockquote>
+              I forgot to mention this when they say, why do we use encryption like SSL for the Application protocols. Always mention the word "secure" like secure file transfers and secure email transfers
+            </blockquote>
+            <h2>Ethernet Protocol</h2>
+            <p>Remember, it is a protocol. That handles and avoid data collisions</p>
+            <p>you may remember the CSMA/CD from the AS section, there is a bit more you need to include in your answers when they ask you to describe how the ethernet protocol avoids collisions</p>
+            <p>1. A collision is when the voltage rises to a peak because both signals combine</p>
+            <p>2. Checks or listens to the Activity of the line.</p>
+            <p>3. It waits for a random time if the line is busy which increases every time it's busy. So the random time increases</p>
+            <p>4. Also, send a jamming signal</p>
+            <p>5. If free, data is sent and there is a continuous check for other signals</p>
+            <p>6. Data is sent to devices using MAC / Network addresses</p>
+            <p>It is good to remember that the ethernet protocol is part of the Datalink or Network layer as this suggest that down the layers of the TCP/IP protocol it is mostly hardware</p>
+            <p>Ethernet Protocol is further broken down into other 4 layers</p>
+            <li>LLC / Logical Link Control</li>
+            <p>Top most layer that is responsible for the transmission of data between the device and the network layer. It is also responsible for the integrity of data</p>
+            <li>MAC</li>
+            <p>The MAC protocol is responsible for assigning the mac address to the header of each packet and handling errors due to collisions</p>
+            <li>PCS</li>
+            <p>Coding data to be ready for transmitted or decoding data received to be sent to MAC protocol</p>
+            <li>PMA</li>
+            <p>The Physical hardware responsible for sending data and receiving data</p>
+            <p>To make it easier to understand, let us take a laptop connected to the internet using an ethernet cable. The First 3 layers are done inside the laptop itself and the last layer is only the cable...</p>
+            <h2>Peer to Peer File Sharing</h2>
+            <p>You probably have used BitTorrent or Utorrent or QbitTorrent to download files over the internet. But do you know how it works? We know what is a peer to peer network and we know that there is no centralized server or website. In fact, when we download a file we are not downloading from the website but from many other users just like you</p>
+            <p>When you have a torrent file, they contain the address of Tracking Servers that have the IP address and details of all the peers in the swarm network</p>
+            <blockquote>
+              A swarm is a keyword used to describe the networks and peers are the people who want to download that specific file
+            </blockquote>
+            <p>The Tracking website controls the movement of data from one peer to another</p>
+            <blockquote>
+              In BitTorrent, when you are downloading a file, you are also uploading the file so that another person can download it from you. So in a way, a 1GB file could take 1.5GB of Data Internet
+            </blockquote>
+            <p>Peers who upload more than they download are called seeds</p>
+            <p>Peers who download more than they upload are called leeches</p>
+            <p>Leeches are choked or cut of the network eventually</p>
+            <blockquote>
+              GIve it a try, go to your torrent settings, and make your upload speed 0, the download speed will be 0 eventually
+            </blockquote>
+            <p>There is no control of the movement of data, so it can be illegal but it's very hard to be caught, and if caught the consequences are dire. But many people use it by using a VPN which masks your IP address. But remember torrenting is not always illegal especially with its not illegal contents...</p>
+            <div class="pagenav">
+              <a href="LogicCircuit.html">Back</a> <a href="VirtualMachines.html">Next</a>
+            </div><br>
+			<h2>Recommended</h2>
+        <p>These are things you might like. Clicking these ads can help us improve our free services in the future...</p>
+            <div id="container-2a219c05affd07270c6855c66c9456d4" style="border-radius:20px;"></div>
+        
+            <br>
+            <br id="recap">
+            <div class="general container-extra">
+              <div>
+                <h5>Quick Recap</h5>
+                <h6>Check your Knowledge with a Quick Recap</h6><br>
+                <a style="padding:10px; background-color:#4ea654; border-radius:3px; font:17px Os; color:#e8e4e3; text-decoration:none;" onclick="MiniTask(this,'../../quiz.revisezone.com/Mini/Internet.html')">Try out</a>
+                <div id="taskview"></div>
+              </div>
+            </div><br>
+          </ul>
+        </div>
+      </div><br>
+      <footer>
+        <p>Revisezone.com Copyright 2020</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../WebScript/Main-script.js"></script>
+</body>
+</html>

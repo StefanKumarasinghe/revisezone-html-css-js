@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='description' content='What is the Von neumann model and how do we apply now? What is a CPU/Processor and how does it work. Learn the basic components of a CPU such as the register,clock and buses. Discover how computers handle interrupts and other errors'>
+  <meta name='keywords' content='interrupts,von neumann model,memory,buses,register,cpu,alu,processor,clock frequency, address,data,register notations'>
+  <meta name='author' content='Wiscus'>
+  <link rel="apple-touch-icon" href="Imagedata/Revisezone/Logo.png">
+  <meta name='theme-color' content='black'>
+  <meta name='viewport' content='width=device-width initial-scale=1'>
+  <link rel="shortcut icon" href="../../Imagedata/Revisezone/Logo.png" type="x-icon/image">
+  <link class="Style" rel='stylesheet' href='../../Style/Master.css' media="screen and (min-width:1000px)">
+  <link class="Style" rel='stylesheet' href='../../Style/Mobile.css' media="screen and (max-width:999px)">
+  <link class="Style" rel='stylesheet' href='../../Style/printstyle.css' media="print"><!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170507780-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-170507780-1');
+  </script>
+  <title>Processor, Memory Unit, Register Notations & Interrupts - Revise Zone</title>
+</head>
+<body onload="saved()">
+  <div class="progress-container"></div>
+  <div class="top-nav-main">
+    <a href="../../home.html" title="Home">Home</a> <a href="../Chemistry/Chemistry.html" title="Chemistry"><abbr>Chemistry</abbr></a> <a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../LearningHtml/Introduction.html">HTML</a>
+    <div class="login-more">
+      <a onclick="NightmodeOn()" id="Mode">Night</a> <a onclick="More()" id="more">More</a>
+    </div>
+  </div>
+  <div class="dropdesign">
+    <span id="goback-white" onclick="Gobackdropdown()">✖</span>
+    <div class="flex-box-row">
+      <div>
+        <h2>Revise Now</h2>
+        <h3>GCE Subjects</h3><a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../Chemistry/Chemistry.html" title="Chemistry">Chemistry</a> <a href="../Cs/CS.html" title="Computer Science">CS</a> <a href="../Accounting/Introduction.html" title="Accounting">Accounting</a>
+        <h3>Coding Lessons</h3><a href="../LearningHtml/Introduction.html" title="HTML">Learn HTML</a> <a href="../SEO/SEO.html" title="SEO">Learn SEO</a>
+      </div>
+      <div>
+        <h2>More</h2>
+        <h3>What do you want<br>
+        to do?</h3><a href="../Other/ContactUs.html" title="Contact us">Contact us</a> <a href="../Other/Support.html" title="Support">Support</a>
+      </div>
+    </div>
+  </div>
+  <div class="spacing"></div>
+  <div class="grid-layout-main">
+    <div>
+      <div class="side-nav-universal">
+        <br>
+        <br>
+        <br>
+        <h2>Computer Science AS</h2><a href="CS.html" title="Introduction">Introduction</a> <a href="InformationRepresentation.html" title="">Information Representation</a> <a href="Communication.html" title="Communication">Communications</a> <a href="Communication2.html" title="Communication">Communications 2</a> <a href="Hardware.html" title="Hardware">Hardware</a> <a href="LogicGates.html" title="LogicGates">Logic Circuits</a> <a href="ProcessorFundamentals.html" title="Processor">Processor Fundamentals</a> <a href="AssemblyLanguage.html" title="Assembly">Assembly Language</a> <a href="MonitorControlling.html" title="Sensors">Monitor & Control</a> <a href="SystemSoftware.html" title="System Software">System Software</a> <a href="DataSecurity.html" title="Security">Security, Privacy & Data Integrity</a> <a href="Ethics.html" title="Ethics">Ethics</a> <a href="Databases.html" title="databases">Databases</a><br>
+        <h2>AS Practical</h2><a href="Algorithm.html" title="Algorithm">Algorithm</a> <a href="Datastructures.html" title="Data Structures">Data Structures and more</a> <a href="Development.html" title="">Software development</a><br>
+        <br>
+        <h2>Computer Science A2</h2><a href="DataRepresentations.html" title="Data Representation">Data Representation</a> <a href="FileOrganisations.html" title="File Organisation">File Organisation</a> <a href="LogicCircuit.html" title="Logic Circuits">Advance Logic Gates</a><a href="Internet.html" title="Internet">Internet</a> <a href="VirtualMachines.html" title="Virtual Machines">Virtual Machines</a> <a href="SystemA2.html" title="System Software">System Software</a> <a href="Security.html" title="Encryption and Security">Encryption & Security</a> <a href="AI.html" title="Artificial Intelligence">Artificial Intelligence</a><br>
+        <h2>A2 Practicals</h2><a href="../Developer/BinarySearch.html" title="Binary Search" target="blank">Binary Search</a> <a href="../Developer/LinearSearch.html" title="Linear Search" target="blank">Linear Search</a> <a href="../Developer/BubbleSort.html" title="Bubble Sort" target="blank">Bubble Sort</a> <a href="../Developer/InsertionSort.html" title="Inertion Sort" target="blank">Insertion Sort</a> <a href="../Developer/Combined.html" title="Combined Algorithm" target="blank">Combined Algorithm</a> <a href="../Developer/Stack.html" title="Stack" target="blank">Stacks</a> <a href="../Developer/Queue.html" title="Queue" target="blank">Queues</a> <a href="../Developer/LinkedList.html" title="Linked List" target="blank">Linked List</a> <a href="../Developer/BinaryTree.html" title="Binary Tree" target="blank">Binary Tree</a><br>
+        <h2>More</h2><a href="CSReference.html" title="CS Reference">Reference</a> <a href="CSEx.html" title="CS Questions">Pastpaper Questions</a>
+      </div>
+    </div>
+    <div>
+      <div class="Mainpage">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div>
+          <div class="pagenav">
+            <a href="LogicGates.html">Back</a> <a href="AssemblyLanguage.html">Next</a>
+          </div><span onclick="Mobilebut()" id="mobilebutton"><img alt="more topic chapters" src="../../Imagedata/Revisezone/morecontent.png"></span>
+          <h1>Processor, Interrupts & Register Notations</h1><br id="reference266">
+          <h2>Von Neumann architecture</h2>
+          <p>You will need to remember some characteristics of the von neumann architecture.</p>
+          <p>1. A single processor is used.</p>
+          <p>2. The processor has direct acces to the memory</p>
+          <p>3. The model contains a single memory unit which stores both intructions and data - this are called stored programs</p>
+          <p>4. The instructions are executed one after another in sequence</p><br id="reference267">
+          <h2>The CPU</h2>
+          <p>There are many components of the cpu which you have to remember</p>
+          <p>These include registers, the system buses, the internal clocks and more</p>
+          <p>The CPU has an internal clock which is also known as the CPU clock. This clock tells us the frequency which the processor operates at. It tells us the number of activities performed by the CPU per second - Ex 1.7GHz means that the system performs 1.7 billion calculations per second</p>
+          <h3>An internal clock is a clock which controls the cycles of activity (clock frequency) of the processor per second</h3>
+          <p>There is also a thing called system clock which controls the cycles or clock frequency of the components out of the processor, this includes the input and out devices.</p>
+          <h3>The system clock controls the number of activities processed per second outside the proccesor.</h3>
+          <p>Usually the system clock is less than the CPU clock.</p><br id="reference268">
+          <h2>Registers</h2>
+          <h3>A component of the processor which is an area of memory that stores data temporarily in order for fast access of data</h3>
+          <p>There are many registers in the proccesor and you will need to know some of these registers</p>
+          <p>First of all we need to know that there are two types of registers and they are:</p>
+          <ul>
+            <br id="reference269">
+            <li>General purpose register</li>
+            <p>A register used for general purposes and to store any type of data. An example is the Accumalator(ACC)</p>
+            <p>We will also need to know the definition of the accumalator register</p>
+            <p>This will be covered below</p>
+            <p>You need to know that this register is located in the ALU and it stores the data or value which is currently being executed and after it is executed - Example is when we add a value to the ACC</p>
+            <p>Also the accumalator can store one value only at a time</p><br id="reference270">
+            <li>Special purpose register</li>
+            <p>These are register which are used for special purposes and they store specific types of data</p>
+            <p>There are many special purpose registers you have to know</p>
+            <table class="table-design">
+              <caption>
+                Special registers
+              </caption>
+              <tr>
+                <th>Name</th>
+                <th>Abbreviation</th>
+                <th>Definiton</th>
+              </tr>
+              <tr>
+                <td>Memory address register</td>
+                <td>MAR</td>
+                <td>This register holds the address in which data is to be written to or read from the main memory or I/O devices</td>
+              </tr>
+              <tr>
+                <td>Memory data register</td>
+                <td>MDR</td>
+                <td>This register holds the address in which data is read from or to be written to the main memory or I/O devices</td>
+              </tr>
+              <tr>
+                <td>Index register</td>
+                <td>IX</td>
+                <td>Register which is used for indexed addressing - used for vector additions and more</td>
+              </tr>
+              <tr>
+                <td>Program counter</td>
+                <td>PC</td>
+                <td>The register(in the control unit) which holds the address in which instructions or data is to be fetched from</td>
+              </tr>
+              <tr>
+                <td>Current instruction register</td>
+                <td>CIR</td>
+                <td>The register(in the control unit) which stores the instructions and decodes it to opcode and operand. See more below</td>
+              </tr>
+              <tr>
+                <td>Status register</td>
+                <td>SR</td>
+                <td>Contains independant bits which flags a certain condition</td>
+              </tr>
+            </table>
+            <figcaption>
+              The points related to CIR and SR is important
+            </figcaption>
+            <h2>SR and CIR</h2>
+            <p>Most questions asks you to define these two registers - so we will define them in depth:</p>
+            <ul>
+              <br id="reference271">
+              <li>SR</li>
+              <p>The status register contains bits which are independant of each other and they flag a certain event such as an overflow, carry or negative flag</p><br id="reference272">
+              <li>CIR</li>
+              <p>The CIR has many functions such as decoding the instructions to operand and opcode. Then the opcode of the instruction is sent to the control unit and the control unit then sends control signals to perform the action and execute the intructions</p>
+              <p>The definitions of opcode and operand will be covered in the next lesson</p>
+            </ul><br id="reference273">
+            <h2>Control unit</h2>
+            <h3>Is a component of the CPU which sends and receives control signals from other system components. This make sure that data is synchronised and executed in a sequential manner</h3>
+            <p>The control unit is the same as CU and contains two registers - the CIR and PC</p><br id="reference274">
+            <h2>Arithmetical logic unit</h2>
+            <h3>A component of the CPU which performs arithmetical calculations and comparisons</h3>
+            <p>It is the same as ALU and contains one general purpose register - the ACC</p><br id="reference275">
+            <h2>System bus</h2>
+            <h3>A set of wires which transmits bits simultaneously (parallel transmission) which allows components in a system to communicate.</h3>
+            <p>There are 3 types of system buses:</p>
+            <ul>
+              <br id="reference276">
+              <li>Address Bus</li>
+              <p>This bus only carries addresses, usually from the MAR to the memory or I/O</p>
+              <p>The bus is unidirectional bus so it can transfer addresses in one direction only</p>
+              <p>Usually the bus width of the address bus tell us the maximum number of memory locations in the memory - Ex A 64 bit bus width means 2<sup>64</sup> memory locations</p><br id="reference277">
+              <li>Data Bus</li>
+              <p>This Bus can carry data - which includes instructions and addresses, usually form the memory to the MDR and also from the MDR to the memory.</p>
+              <p>This is because the bus is a bidirectional bus which can transfer data both directions</p><br id="reference278">
+              <li>Control Bus</li>
+              <p>This bus is used to send control signals to carry out the opcode and also timing signals to make sure the components are synchronised and operating at the same clock freqency.</p>
+              <p>This is a bi-directional bus so it can send signals and also receive signals - Example receive signals from I/O</p>
+              <h2>More on System buses</h2>
+              <p>There are more things about system buses such as the bus width and the word. We will discus that next.</p>
+              <p>But before that we need to know where address buses and control buses and data buses are used</p>
+              <p>Address bus - Used to transfer addresses from the CPU to memory or the I/O. Remember this is unidirectional</p>
+              <p>Data bus - Used to transfer data back and forth from the I/O or memory to the CPU.</p>
+              <p>Control bus - Send signals back and forth from any system component such as the I/O or the memory or other components to the CPU.</p><br id="reference279">
+              <h2>Factors affecting the system performance</h2>
+              <p>There are few factors which you need to know:</p>
+              <ul>
+                <li>Clock frequency and the number of cores</li>
+                <p>Higher clock frequency means that more activities can be done per second and so the execution of programs are faster.</p>
+                <p>A core means an independant processor which can perform calculations independantly. So when there are more cores it means more calculations could be performed simultaneously.</p>
+                <li>Word length</li>
+                <h3>A defined number of bytes which the system handles as one unit</h3>
+                <p>The word length is usually same as the bus width</p>
+                <p>So the word means how many bits are sent or processed at a time. So usually you computer has an architecture of 32 or 64 bits and this means for each cycle of the clock the CPU processes 32 bits or 64 bits.</p>
+                <p>Usually the size of the register is equal to the word length</p>
+                <li>Cache memory</li>
+                <p>Cache memory are not registers but are an area of memory which can store data temporarily for fast access of data. We have discussed this in the hardware chapter.</p>
+                <li>Address bus width</li>
+                <p>This is sometimes given in mark shemes so write this last.</p>
+                <p>The bus width of the address bus determines the maximum number of memory locations.</p>
+                <p>This is why some computers has a maximum memory of 8 or 4 Gb RAM sticks</p><br id="reference280">
+                <h2>I/O ports</h2>
+                <p>Input and output devices are very important as they let the user communicate with the applications. However for it to communicate there must be an interface - in order words a translator for the I/O devices to communicate with the CPU</p>
+                <p>So that's why we use an I/O controller which is connected between the CPU and the I/O ports</p>
+                <p>The I/O ports are used to connect peripheral devices to the system.</p><br id="reference281">
+                <h2>USB</h2>
+                <p>This stands for universal serial bus</p>
+                <p>We call it a bus because it it parallel transmission however this is a bit confusing as it uses both serial and parallel transmission. Serialised and then deserialised</p>
+                <p>Usb is used to connect peripheral devices through the USB ports such as your keyboard</p>
+                <p>There are some points or advantages you need to know.</p>
+                <p>1. The USB is plug and play which means the device could be used and controlled as soon as it is plugged in.</p>
+                <p>2. It is now an standard for industrial use</p>
+                <p>3. It is supported by many OS</p>
+                <p>4. It can only be fitted one way and the newest version is 3.2</p><br id="reference282">
+                <h2>Special multimedia ports</h2>
+                <p>Usually USB cable would not have a high bandwith and so we need to use other ports such as a VGA ( visual graphics array - blue wire head ) or HDMI (High definition multimedia interface).</p>
+                <p>However the HDMI cable has a higher bandwith than VGA and so can transmit higher graphics and also sound/audio whereas VGA can only transmit graphics</p><br id="reference283">
+                <h2>Fetch execute cycle</h2>
+                <h3>The process of instructions stored in the memory being fetched , decoded and executed in sequence is known as the fetch execute cycle</h3>
+                <p>You need to remember these steps</p>
+                <p>1. First there is a check whether there is anymore instructions to be executed</p>
+                <p>2. If instructions are required to be executed then the address will be loaded to the PC</p>
+                <p>3. The address in the PC will be copied to the MAR and then the PC will increment by 1 and the next address will be loaded</p>
+                <p>4. The MAR points to the memory address ( through the address bus ) and the instruction will be fetched and loaded to the MDR</p>
+                <p>5. The MDR then sends it to the CIR where it is decoded to the operand and opcode.</p>
+                <p>6. The CU will send control signals and excute the instructions - example load a value to the ACC</p>
+                <p>7. After one cycle is complete the CPU then looks for any interrupt to be handled - we will discuss this next.</p><br>
+                <p>The above one shows one cycle and sometimes you need to do 2 or more cycles to do a simple calculation.</p>
+                <p>Also remember the time taken for the cycle depends on the clock frequency</p><br id="reference284">
+                <h2>Register notations</h2>
+                <p>The above steps could be written in register notation but there are some rules you need to know.</p><kbd>MAR ← [PC]</kbd><kbd>MDR ← [[MAR]]; PC ← [PC]+1</kbd><kbd>CIR ← [MDR]</kbd>
+                <p>This is very important to remember . You need to know that the registers which data is stored to is always recorded on the left.</p>
+                <p>Also we use [] brackets to show that the contents of that register is transfered</p>
+                <p>Sometimes we use double brackets [[]] This is used for [[MAR]] because to highlight that the MAR contains the address which contains the contents or data.</p><br>
+                <p>The next register notation is a bit advanced and this is usually known as the decoding stage where part of the instruction(opcode) is taken and sent to the CU. We will discuss this in the next chapter.</p><kbd>CU ← [CIR[x:y]]</kbd><br id="reference285">
+                <h2>Interrupt handling</h2>
+                <p>Usually interrupt can be caused by several reasons but, we first need to know what an interrupt is.</p>
+                <h3>An interrupt is a signal generated by the software or hardware which requests the CPU's attention to service it.</h3>
+                <p>Interrupts are usually caused by:</p>
+                <p>1. Hardware faults - example no paper in the printer</p>
+                <p>2. Software error</p>
+                <p>3. Timing signals - Inorder for programs run simultaneously.</p>
+                <p>4. I/O signals - Try holding the shift key for 10 seconds</p>
+                <p>5. User interactions</p><br>
+                <p>The CPU must be able to identify the priority of the interrupt and so there is an interrupt register which flags the interrupt type.</p>
+                <p>Usually the interrupt service is done at the end of the fetch execute cycle.</p><br>
+                <p>1. Firstly the contents of the execution is stored safe in memory so it can be accessed later.</p>
+                <p>2. The CPU then loads and executes the start address of the ISR ( interrupt service routine ) which handles and services the interrupt.</p>
+                <p>3. The CPU checks for anymore interrupts (using the interrupt register) and then repeats the execution of the ISR</p>
+                <p>4. If no more interrupts are found then the contents are retrieved to the registers and the process continues normally.</p><br>
+                <br>
+                <div class="pagenav">
+                  <a href="LogicGates.html">Back</a> <a href="AssemblyLanguage.html">Next</a>
+                </div><br>
+				<h2>Recommended</h2>
+        <p>These are things you might like. Clicking these ads can help us improve our free services in the future...</p>
+            <div id="container-2a219c05affd07270c6855c66c9456d4" style="border-radius:20px;"></div>
+        
+                <br>
+                <div class="general container-extra flex-box-row">
+                  <div>
+                    <h5>End of Chapter Questions</h5>
+                    <h6>Collection of Topic Questions to understand the topic more.</h6><br>
+                    <a style="padding:10px; background-color:#4ea654; border-radius:3px; font:17px Os; color:#e8e4e3; text-decoration:none;" href="../../Filedata/Questions/CS/ProcessorRevision.pdf" target="_blank">Try out</a>
+                  </div>
+                </div><br>
+                <br>
+                <div class="general container-extra2 flex-box-row">
+                  <div>
+                    <h5>End of Chapter Videos</h5>
+                    <h6>Collection of Videos to Support Your Understanding.</h6>
+                    <h4>Remember these videos are handpicked by me and I feel these are one of the best ones out there. But I constantly update this list for each chapter.The Youtubers are more than welcome to contact me.</h4>
+                    <h4>Also, don't forget to Subscribe to our Youtube channel - Wiscus</h4><br>
+                    <a style="padding:10px; background-color:#4ea654; border-radius:3px; font:17px Os; color:#e8e4e3; text-decoration:none;" href="https://www.Youtube.com/watch?v=MbSfWN9KlkE&amp;list=PLfh04WZ4q7nVr4b5n54y70hiID73g-mR7" target="blank">Watch</a>
+                  </div>
+                </div>
+              </ul>
+            </ul>
+          </ul>
+        </div>
+      </div><br>
+      <br>
+      <footer>
+        <p>Revisezone.com Copyright 2020</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../WebScript/Main-script.js"></script> 
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MMl_HTMLorMML"></script>
+</body>
+</html>

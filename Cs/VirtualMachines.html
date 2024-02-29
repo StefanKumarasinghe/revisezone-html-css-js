@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='description' content="What is a virtual machine and what is it used for, and what the types of computers and processors used such as SIMD MIMD MISD and SIMD which are part of flynn's architecture">
+  <meta name='keywords' content='SIMD, MIMD, SIMD, MISD, RISC, CISC virtual machine, Minecraft, JAVA'>
+  <meta name='author' content='Wiscus'>
+  <link rel="apple-touch-icon" href="Imagedata/Revisezone/Logo.png">
+  <meta name='theme-color' content='black'>
+  <meta name='viewport' content='width=device-width initial-scale=1'>
+  <link rel="shortcut icon" href="../../Imagedata/Revisezone/Logo.png" type="x-icon/image">
+  <link class="Style" rel='stylesheet' href='../../Style/Master.css' media="screen and (min-width:1000px)">
+  <link class="Style" rel='stylesheet' href='../../Style/Mobile.css' media="screen and (max-width:999px)">
+  <link class="Style" rel='stylesheet' href='../../Style/printstyle.css' media="print"><!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170507780-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-170507780-1');
+  </script>
+  <title>Hardware & Virtual Machines</title>
+</head>
+<body onload="saved()">
+  <div class="progress-container"></div>
+  <div class="top-nav-main">
+    <a href="../../home.html" title="Home">Home</a> <a href="../Chemistry/Chemistry.html" title="Chemistry"><abbr>Chemistry</abbr></a> <a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../LearningHtml/Introduction.html">HTML</a>
+    <div class="login-more">
+      <a onclick="NightmodeOn()" id="Mode">Night</a> <a onclick="More()" id="more">More</a>
+    </div>
+  </div>
+  <div class="dropdesign">
+    <span id="goback-white" onclick="Gobackdropdown()">✖</span>
+    <div class="flex-box-row">
+      <div>
+        <h2>Revise Now</h2>
+        <h3>GCE Subjects</h3><a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../Chemistry/Chemistry.html" title="Chemistry">Chemistry</a> <a href="../Cs/CS.html" title="Computer Science">CS</a> <a href="../Accounting/Introduction.html" title="Accounting">Accounting</a>
+        <h3>Coding Lessons</h3><a href="../LearningHtml/Introduction.html" title="HTML">Learn HTML</a> <a href="../SEO/SEO.html" title="SEO">Learn SEO</a>
+      </div>
+      <div>
+        <h2>More</h2>
+        <h3>What do you want<br>
+        to do?</h3><a href="../Other/ContactUs.html" title="Contact us">Contact us</a> <a href="../Other/Support.html" title="Support">Support</a>
+      </div>
+    </div>
+  </div>
+  <div class="spacing"></div>
+  <div class="grid-layout-main">
+    <div>
+      <div class="side-nav-universal">
+        <br>
+        <br>
+        <br>
+        <h2>Computer Science AS</h2><a href="CS.html" title="Introduction">Introduction</a> <a href="InformationRepresentation.html" title="">Information Representation</a> <a href="Communication.html" title="Communication">Communications</a> <a href="Communication2.html" title="Communication">Communications 2</a> <a href="Hardware.html" title="Hardware">Hardware</a> <a href="LogicGates.html" title="LogicGates">Logic Circuits</a> <a href="ProcessorFundamentals.html" title="Processor">Processor Fundamentals</a> <a href="AssemblyLanguage.html" title="Assembly">Assembly Language</a> <a href="MonitorControlling.html" title="Sensors">Monitor & Control</a> <a href="SystemSoftware.html" title="System Software">System Software</a> <a href="DataSecurity.html" title="Security">Security, Privacy & Data Integrity</a> <a href="Ethics.html" title="Ethics">Ethics</a> <a href="Databases.html" title="databases">Databases</a><br>
+        <h2>AS Practical</h2><a href="Algorithm.html" title="Algorithm">Algorithm</a> <a href="Datastructures.html" title="Data Structures">Data Structures and more</a> <a href="Development.html" title="">Software development</a><br>
+        <br>
+        <h2>Computer Science A2</h2><a href="DataRepresentations.html" title="Data Representation">Data Representation</a> <a href="FileOrganisations.html" title="File Organisation">File Organisation</a> <a href="LogicCircuit.html" title="Logic Circuits">Advance Logic Gates</a><a href="Internet.html" title="Internet">Internet</a> <a href="VirtualMachines.html" title="Virtual Machines">Virtual Machines</a> <a href="SystemA2.html" title="System Software">System Software</a> <a href="Security.html" title="Encryption and Security">Encryption & Security</a> <a href="AI.html" title="Artificial Intelligence">Artificial Intelligence</a><br>
+        <h2>A2 Practicals</h2><a href="../Developer/BinarySearch.html" title="Binary Search" target="blank">Binary Search</a> <a href="../Developer/LinearSearch.html" title="Linear Search" target="blank">Linear Search</a> <a href="../Developer/BubbleSort.html" title="Bubble Sort" target="blank">Bubble Sort</a> <a href="../Developer/InsertionSort.html" title="Inertion Sort" target="blank">Insertion Sort</a> <a href="../Developer/Combined.html" title="Combined Algorithm" target="blank">Combined Algorithm</a> <a href="../Developer/Stack.html" title="Stack" target="blank">Stacks</a> <a href="../Developer/Queue.html" title="Queue" target="blank">Queues</a> <a href="../Developer/LinkedList.html" title="Linked List" target="blank">Linked List</a> <a href="../Developer/BinaryTree.html" title="Binary Tree" target="blank">Binary Tree</a>s<br>
+        <h2>More</h2><a href="CSReference.html" title="CS Reference">Reference</a> <a href="CSEx.html" title="CS Questions">Pastpaper Questions</a>
+      </div>
+    </div>
+    <div>
+      <div class="Mainpage">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div>
+          <p><a class="extrafeatures" id="audioplay" onclick="audio()" title="Audio Lesson Only">♫</a><a class="extrafeatures" title="Lesson Recap" href="#recap">✐</a></p>
+          <div id="audiobar">
+            <audio controls=""><source src="Audio/VM.mp3" type="audio/mpeg"> Your browser does not support the audio...</audio>
+          </div>
+          <div class="pagenav">
+            <a href="Internet.html">Back</a> <a href="SystemA2.html">Next</a>
+          </div><span onclick="Mobilebut()" id="mobilebutton"><img alt="more topic chapters" src="../../Imagedata/Revisezone/morecontent.png"></span>
+          <h1>Hardware & Virtual Machines</h1>
+          <p>There are 2 types of computers with different instruction sets depending on their functions and uses and structures</p>
+          <ul>
+            <li>RISC / Reduced Instruction Set Computers</li>
+            <p>Uses the processors hardware such as use of registers and logic gates to execute instructions. So they have a hard-wired control unit</p>
+            <p>It has a reduced simple instruction set as it handles very simple instructions</p>
+            <p>Executes very simple and reduced instruction which takes one clock cycle to execute</p>
+            <p>Uses mainly the registers to store data</p>
+            <p>Uses Fewer addressing modes and fixed length instructions</p>
+            <p>Supports pipelining which we will discuss later</p>
+            <li>CISC / Complex Intstruction Set Computer</li>
+            <p>Mainly uses coding and software to execute instructions so they have a microprogrammed control unit</p>
+            <p>Uses a large instruction set as it handles very large complex instruction sets</p>
+            <p>Each instruction will take many clock cycles</p>
+            <p>Has more addressing modes</p>
+            <p>Uses Less registers and mainly the memory</p>
+            <p>Harder to pipeline</p>
+            <h2>Pipelining</h2>
+            <p>The idea of pipelining is to make more efficient and faster way to execute instructions. Each instruction can be broken down to five steps:</p>
+            <p>1. Instruction Fetch</p>
+            <p>2. Decode</p>
+            <p>3. Operand Fetch</p>
+            <p>4. Execute</p>
+            <p>5. Write Back</p>
+            <p>In pipelining, each step is handled by a separate unit within the processor. So multiple steps could be done simultaneously. For this reason, pipelining is a form of instruction level parallelism</p>
+            <blockquote>
+              Make note that a single instruction is divided into separate steps and handled by different units.
+            </blockquote>
+            <p>We will discuss an example now:</p><img src="../../Imagedata/CS/pipeline.png" alt="pipeline">
+            <blockquote>
+              Note the image is a 6 stage pipelining system. You only are required to know the 5 stage one
+            </blockquote>
+            <p>So for the first clock cycle, one step of the 1st instruction is processed. Then in the next cycle, the 2nd step of the 1st instuction is processed and the 1st step of the 2nd instruction is processed</p>
+            <p>In another way, for each clock cycle, there are many parts of different instructions processed. It is important you understand the basics of this table above and how it increases the speed of the processor. Alternatively, there are 5 units proccesing each step, the speed is 5 times faster so if a processing of instruction with no pipelining is 0.1 then with pipelining it is 0.02sec. This is an average as there are 5 instructions completed every 0.1 so we assume it takes 0.02 but no need to go that in depth</p>
+            <h2>Limitation of Pipelining</h2>
+            <p>The main problem is that previous instructions may have to be fully completed for the current instruction to be executed</p>
+            <p>For example:</p>
+            <pre>
+A←B+C
+E←A+2
+</pre>
+            <p>So this shows the first instruction must be completed to give the value for the 2nd instruction. Usually, this could be improved by changing the order of the instruction to make it more efficient</p>
+            <p>Note that this problem is called data dependency and cause bubbles or holes to form in registers called <span class="highlight">stalling</span> until the previous instruction is fully completed</p>
+            <p>Another big problem is when there are interrupts generated by the CPU. In this case, the contents of the first 3 clock cycles are erased to load the base address of the ISR which can cause disruptions. If there many interrupts, there must be ways to avoid this...</p>
+            <h2>Computer Architecture</h2>
+            <p>This will discuss the types of processors:</p>
+            <li>SISD</li>
+            <p>Single Instruction Single Data Stream</p>
+            <p>A processor that handles a single instruction at a time and fetches a single stream of data from the memory</p>
+            <p>There is only a single unit or core. This is usually used for embedded systems such as washing machine where the instructions are simple</p>
+            <li>SIMD</li>
+            <p>Single Instruction Multiple Data Stream</p>
+            <p>Has a single instruction that requires multiple data. For example, in vector and graphic processing, we need to collect data from different pixels to execute the instruction</p>
+            <p>It has a single processor that is divided into many units, called cores but a different type of core. These cores are usually used in graphics GPU card where there can be more than 1000s of them</p>
+            <li>MISD</li>
+            <p>Multiple Instruction Single Data Stream</p>
+            <p>There are many instructions applied to the data. There are no practical examples of these. The only one which is close is a video encoder that processes the data each time it processes the video</p>
+            <li>MIMD</li>
+            <p>Multiple Instruction Multiple Data Streams</p>
+            <p>The Processor has many cores that can execute each instruction separately. Each Core has its own control unit</p>
+            <p>Common examples are the intel processors in your laptops and supercomputers</p>
+            <h2>Massively parallel Computers</h2>
+            <p>A system in which the computers are linked towards performing a specific task. It is similar to a MIMD processor, but the cores are instead separate computers</p>
+            <p>The main problem associated with Massively parallel computers is that a lot of wiring is required. Also, it will take a lot of space and it is very costly. There might be some delay when communicating between computers. The program must also be divided into many sections so that each computer can handle them and send signals between computers</p>
+            <h2>Virtual Machines</h2>
+            <p>These are not actual hardware systems but software systems. A virtual machine is a system that is able to host a different environment. The Virtual machine is <span class="highlight">hosted</span> by the host OS. This is the original OS of your system. The Virtual machine is able to host many other guest OS that runs within the host OS. See the diagram below.</p><img src="../../Imagedata/CS/VM.png" alt="Virtual machines diagram">
+            <p>The software between the host OS and the Virtual Machine Software handles communications and signals between the host OS and the virtual machine.</p>
+            <p>The Guest OS handles any request between the guest software ( software to be tested ) and the virtual machine. It also handles any virtual hardware</p>
+            <p>The Host OS handles any request between the virtual machine software and the actual hardware of the computer. Note that there is a specific path of data flow.</p>
+            <p>A very good example is JAVA. JAVA is a virtual machine that emulates a new environment. For you to run Minecraft ( testing software ) you need to run and have JAVA installed</p>
+            <h2>Advantages & Disadvantages of Virtual Machines</h2>
+            <p>1. It is efficient for testing software in different OS rather than having a separate computer with that OS so it saves cost</p>
+            <p>2. Many Softwares can run in parallel so a different system can be running while another guest software is not working</p>
+            <p>3. However, there are more lines of code due to the emulation code</p>
+            <p>4. As many guest Operating Systems run in parallel, it reduces performances and slows them down.</p>
+            <p>5. Sometimes the virtual hardware may not be compatible with the actual hardware</p>
+            <blockquote>
+              You may have realized by now that Tlauncher, Myboy are common examples of virtual hardware software.
+            </blockquote>
+            <div class="pagenav">
+              <a href="Internet.html">Back</a> <a href="SystemA2.html">Next</a>
+            </div><br>
+            <br>
+			 <h2>Recommended</h2>
+        <p>These are things you might like. Clicking these ads can help us improve our free services in the future...</p>
+            <div id="container-2a219c05affd07270c6855c66c9456d4" style="border-radius:20px;"></div>
+        
+            <br id="recap">
+            <div class="general container-extra">
+              <div>
+                <h5>Quick Recap</h5>
+                <h6>Check your Knowledge with a Quick Recap</h6><br>
+                <a style="padding:10px; background-color:#4ea654; border-radius:3px; font:17px Os; color:#e8e4e3; text-decoration:none;" onclick="MiniTask(this,'../../quiz.revisezone.com/Mini/VM.html')">Try out</a>
+                <div id="taskview"></div>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div><br>
+      <br>
+      <footer>
+        <p>Revisezone.com Copyright 2020</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../WebScript/Main-script.js"></script>
+</body>
+</html>

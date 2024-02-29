@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='description' content='How do sensors work and what are they used for? What is the difference between a controlling &amp; Monitoring system? And what are bitwise operations?'>
+  <meta name='keywords' content='Wiscus'>
+  <link rel="apple-touch-icon" href="Imagedata/Revisezone/Logo.png">
+  <meta name='theme-color' content='black'>
+  <meta name='viewport' content='width=device-width initial-scale=1'>
+  <link rel="shortcut icon" href="../../Imagedata/Revisezone/Logo.png" type="x-icon/image">
+  <link class="Style" rel='stylesheet' href='../../Style/Master.css' media="screen and (min-width:1000px)">
+  <link class="Style" rel='stylesheet' href='../../Style/Mobile.css' media="screen and (max-width:999px)">
+  <link class="Style" rel='stylesheet' href='../../Style/printstyle.css' media="print"><!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170507780-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-170507780-1');
+  </script>
+  <title>Monitor & Controlling Systems | Bitwise Operations- Revise Zone</title>
+</head>
+<body onload="saved()">
+  <div class="progress-container"></div>
+  <div class="top-nav-main">
+    <a href="../../home.html" title="Home">Home</a> <a href="../Chemistry/Chemistry.html" title="Chemistry"><abbr>Chemistry</abbr></a> <a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../LearningHtml/Introduction.html">HTML</a>
+    <div class="login-more">
+      <a onclick="NightmodeOn()" id="Mode">Night</a> <a onclick="More()" id="more">More</a>
+    </div>
+  </div>
+  <div class="dropdesign">
+    <span id="goback-white" onclick="Gobackdropdown()">✖</span>
+    <div class="flex-box-row">
+      <div>
+        <h2>Revise Now</h2>
+        <h3>GCE Subjects</h3><a href="../Physics/Physics.html" title="Physics">Physics</a> <a href="../Chemistry/Chemistry.html" title="Chemistry">Chemistry</a> <a href="../Cs/CS.html" title="Computer Science">CS</a> <a href="../Accounting/Introduction.html" title="Accounting">Accounting</a>
+        <h3>Coding Lessons</h3><a href="../LearningHtml/Introduction.html" title="HTML">Learn HTML</a> <a href="../SEO/SEO.html" title="SEO">Learn SEO</a>
+      </div>
+      <div>
+        <h2>More</h2>
+        <h3>What do you want<br>
+        to do?</h3><a href="../Other/ContactUs.html" title="Contact us">Contact us</a> <a href="../Other/Support.html" title="Support">Support</a>
+      </div>
+    </div>
+  </div>
+  <div class="spacing"></div>
+  <div class="grid-layout-main">
+    <div>
+      <div class="side-nav-universal">
+        <br>
+        <br>
+        <br>
+        <h2>Computer Science AS</h2><a href="CS.html" title="Introduction">Introduction</a> <a href="InformationRepresentation.html" title="">Information Representation</a> <a href="Communication.html" title="Communication">Communications</a> <a href="Communication2.html" title="Communication">Communications 2</a> <a href="Hardware.html" title="Hardware">Hardware</a> <a href="LogicGates.html" title="LogicGates">Logic Circuits</a> <a href="ProcessorFundamentals.html" title="Processor">Processor Fundamentals</a> <a href="AssemblyLanguage.html" title="Assembly">Assembly Language</a> <a href="MonitorControlling.html" title="Sensors">Monitor & Control</a> <a href="SystemSoftware.html" title="System Software">System Software</a> <a href="DataSecurity.html" title="Security">Security, Privacy & Data Integrity</a> <a href="Ethics.html" title="Ethics">Ethics</a> <a href="Databases.html" title="databases">Databases</a><br>
+        <h2>AS Practical</h2><a href="Algorithm.html" title="Algorithm">Algorithm</a> <a href="Datastructures.html" title="Data Structures">Data Structures and more</a> <a href="Development.html" title="">Software development</a><br>
+        <br>
+        <h2>Computer Science A2</h2><a href="DataRepresentations.html" title="Data Representation">Data Representation</a> <a href="FileOrganisations.html" title="File Organisation">File Organisation</a> <a href="LogicCircuit.html" title="Logic Circuits">Advance Logic Gates</a><a href="Internet.html" title="Internet">Internet</a> <a href="VirtualMachines.html" title="Virtual Machines">Virtual Machines</a> <a href="SystemA2.html" title="System Software">System Software</a> <a href="Security.html" title="Encryption and Security">Encryption & Security</a> <a href="AI.html" title="Artificial Intelligence">Artificial Intelligence</a><br>
+        <h2>A2 Practicals</h2><a href="../Developer/BinarySearch.html" title="Binary Search" target="blank">Binary Search</a> <a href="../Developer/LinearSearch.html" title="Linear Search" target="blank">Linear Search</a> <a href="../Developer/BubbleSort.html" title="Bubble Sort" target="blank">Bubble Sort</a> <a href="../Developer/InsertionSort.html" title="Inertion Sort" target="blank">Insertion Sort</a> <a href="../Developer/Combined.html" title="Combined Algorithm" target="blank">Combined Algorithm</a> <a href="../Developer/Stack.html" title="Stack" target="blank">Stacks</a> <a href="../Developer/Queue.html" title="Queue" target="blank">Queues</a> <a href="../Developer/LinkedList.html" title="Linked List" target="blank">Linked List</a> <a href="../Developer/BinaryTree.html" title="Binary Tree" target="blank">Binary Tree</a><br>
+        <h2>More</h2><a href="CSReference.html" title="CS Reference">Reference</a> <a href="CSEx.html" title="CS Questions">Pastpaper Questions</a>
+      </div>
+    </div>
+    <div>
+      <div class="Mainpage">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div>
+          <div class="pagenav">
+            <a href="AssemblyLanguage.html">Back</a> <a href="SystemSoftware.html">Next</a>
+          </div><span onclick="Mobilebut()" id="mobilebutton"><img alt="more topic chapters" src="../../Imagedata/Revisezone/morecontent.png"></span>
+          <h1>Monitoring & Controlling Systems & Bitwise Operations</h1><br id="reference306">
+          <h2>What you need to know?</h2>
+          <p>Controlling systems are systems which measure a physical properties and alerts the user if the system is out of range.</p>
+          <p>There is very little difference between a monitoring process and a controlling software. The only difference is that the controlling does an extra role and sends signals to an actuator to alter the system</p>
+          <p>You will need to know the hardware used in monitoring and controlling systems. Also we need to remember the steps when the process occurs.</p>
+          <p>Usually these points are the same in every marksheme and will help you to score the marks.</p><br id="reference307">
+          <h2>Sensors</h2>
+          <h3>It is an input device which measures a physical property of the environment and sends digital signals to the processor</h3>
+          <p>There are many types of sensors you have to know and identify</p>
+          <ul>
+            <li>Temperature sensor</li>
+            <p>To measure the temperature of a system or to keep a chemical process at a constant temperature. To maintain a constant temperature is a controlling system</p>
+            <li>Ph sensor</li>
+            <p>Usually used in testing water or liquids or the soil</p>
+            <li>Infrared sensor</li>
+            <p>To detect motion - used in security systems</p>
+            <li>Pressure sensor</li>
+            <p>This measures the pressure of a gas or a system</p>
+            <li>Sound sensors and more..</li>
+            <p>These sensors are rarely asked but it's good to know</p>
+            <p>Sound sensors- used to measure the intensity of the sound</p>
+            <p>Light sensor - used to measure the light intensity</p>
+            <p>Magnetic sensor - used to detect magnetic fields(compass apps) and for ABS systems in cars</p>
+            <h2>How to answer a general question</h2>
+            <p>They will ask:</p>
+            <blockquote>
+              Explain the monitoring process in detail
+            </blockquote>
+            <p>1. Indentify the type of sensor used such as Temperature sensor</p>
+            <p>2. The sensor measures the physical properties and send electrical signals, these signals are then converted form analogue signals to digital(binary) signals using an ADC convertor.</p>
+            <p>3. These signals are sent to a microproccesor where they are compared with the desired or stored values</p>
+            <p>4. If the measured values are not within the desired range a signal is sent to an alarm to alert the user and the data is stored in a system</p>
+            <p>5. If it is within the range the process doesn't do anything and continuues to operate the system until the system is terminated</p><br>
+            <p>Infact the only difference between a monitoring and controlling systems is the 4th point.</p><br id="reference308">
+            <h6>Controlling Systems</h6>
+            <p>A system which measures the physical properties of a system and send signals to an actuator to alter the system depending on the readings</p><br id="reference309">
+            <h2>Actuator</h2>
+            <h3>A hardware or device which receives signals from the processor to alter the system.</h3>
+            <p>A good example is a cooler or a fan on your CPU, the fan spins faster when you're gaming.</p>
+            <h2>How to answer a general question</h2>
+            <p>1. Indentify the type of sensor used such as Temperature sensor</p>
+            <p>2. The sensor measures the physical properties and send electrical signals, these signals are then converted form analogue signals to digital(binary) signals using a ADC convertor.</p>
+            <p>3. These signals are sent to a microproccesor where they are compared with the desired or stored values</p>
+            <p>4. If the results are not within the desired range then a digital signal is sent to an actuator. The digital signal must be converted to analogue signals using DAC convertor.The actuator will be switched on to alter the system.</p>
+            <p>5. If within the range, the process continously compares the readings to make sure the readings are within the desired range.</p><br>
+            <br id="reference310">
+            <h2>Closed loop feedback system</h2>
+            <p>This is quite easy to understand. This is a system or an environment which when the actuator operates , the next reading it measures will be directly altered by the controlling system</p>
+            <p>Think of a closed room and the A.C is switched on. The A.C will controll the temperature of the room but if the room is open the reading measured wouldn't be directly altered by the actuator.</p>
+            <p>So the readings which the controlling system measures are actually feedbacks if whether the actuator is operating properly and doing its function.</p><br id="reference311">
+            <h2>Bitwise Operations</h2>
+            <p>Bitwise operator are heavily used in assembly language. It compares two binary numbers or denary(must be converted to binary) and outputs a result depending on the operator used</p>
+            <p>When dealing with bitwise operations. The individual bits are considered</p>
+            <pre>
+01100101 AND 01110111
+</pre>
+            <p>Usually when representing a binary number we use b01100101</p>
+            <p>So the individual bits are compared</p>
+            <pre>
+01100101 AND
+01110111
+________
+01100101
+
+
+</pre>
+            <p>Each corresponding bits are compared depending on the operator used. So in this case, we use AND, so both bits must be 1 for the final value to be 1</p>
+            <p>This can be applied for different boolean operators such as OR and XOR</p>
+            <p>Bitwise operations are used heavily in python but it is not in your syllabus</p><br>
+            <br>
+            <div class="pagenav">
+              <a href="AssemblyLanguage.html">Back</a> <a href="SystemSoftware.html">Next</a>
+            </div><br>
+            <br>
+            <div class="general container-extra2 flex-box-row">
+              <div>
+                <h5>End of Chapter Videos</h5>
+                <h6>Collection of Videos to Support Your Understanding.</h6>
+                <h4>Remember these videos are handpicked by me and I feel these are one of the best ones out there. But I constantly update this list for each chapter.The Youtubers are more than welcome to contact me.</h4>
+                <h4>Also, don't forget to Subscribe to our Youtube channel - Wiscus</h4><br>
+                <a style="padding:10px; background-color:#4ea654; border-radius:3px; font:17px Os; color:#e8e4e3; text-decoration:none;" href="https://www.Youtube.com/watch?v=MbSfWN9KlkE&amp;list=PLfh04WZ4q7nXvaa2fMl2jCrBSVVIjKaF1" target="blank">Watch</a>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div><br>
+      <br>
+      <footer>
+        <p>Revisezone.com Copyright 2020</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../../WebScript/Main-script.js"></script>
+</body>
+</html>
