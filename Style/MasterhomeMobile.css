@@ -1,0 +1,814 @@
+/*This is the links*/
+@font-face {
+	font-family:robotothin;
+	src:url(Fontdesign/Basic/Roboto/Roboto-Thin.ttf);
+}
+@font-face {
+	font-family:raleway;
+	src:url(Fontdesign/Basic/raleway/Raleway-Thin.ttf);
+}
+@font-face {
+	font-family:Os;
+	src:url(Fontdesign/Basic/Os/OpenSans-Light.ttf);
+}
+@font-face {
+	font-family:ralewayregular;
+	src:url(Fontdesign/Basic/raleway/Raleway-Regular.ttf);
+}
+/*Smooth Scrolling*/
+html {
+  scroll-behavior:smooth;
+}
+
+body{
+	margin:0px;
+	
+}
+
+.flex-box-row{
+	display:flex;
+	justify-content:space-evenly;
+	flex-flow:column nowrap;
+	
+
+}
+
+.containerstyle{
+
+	border-radius:1000px;
+
+	
+}
+.containerstyle img{
+    width:100px;
+	height:100px;
+	margin:5%;
+	margin:auto;
+	display:block;
+	border-radius:1000px;
+
+}
+#mainfront{
+	width:700px;
+	height:350px;
+	
+	
+}
+#slider{
+	width:500%;
+	
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+.overflowslider{
+	overflow-x:auto;
+}
+
+.imageblock{
+	height:200px;
+	width:200px;
+}
+.fundtext p{
+font-size:18px;	
+}
+.sideblock{
+    
+	margin:2%;
+	width:400px;
+
+} 
+.sideblock p{
+text-align:center;
+
+}
+.flex-row{
+	align-content:center;
+	align-items:center;
+	justify-content:space-evenly;
+	display:flex;
+	flex-flow:row nowrap;
+}
+
+
+/*Home page design*/
+
+ /*Contentdesign*/
+ .separateblock {
+	
+
+
+ }
+ .mainbody-block {
+margin:5%;
+
+
+}
+.mainbody-block h1 {
+font:bold 85px ralewayregular;
+color:black;
+text-align:center;
+margin:15% 3% 3% 3%;
+
+
+}
+
+.mainbody-block  h2 {
+font:bold 40px raleway;
+color:black;
+text-align:justify;
+margin:10%,auto;
+}
+.mainbody-block  p {
+font:bold 18px raleway;
+color:black;
+
+text-align:center;
+margin:3%;
+}
+
+input[type="text"],input[type="password"]  {
+	padding:2%;
+	background-color:light gray;
+	Border-radius:2px;
+	border:none;
+	outline:none;
+	Width:50%;
+	display:block;
+	margin:auto;
+	font:14px Os;
+	
+}
+input[type="text"]:invalid,input[type="password"]:invalid{
+box-shadow:0px 0px 3px 1px #ff4444;
+
+	
+}
+input[type="text"]:valid,input[type="password"]:valid{
+box-shadow:0px 0px 5px 2px green;
+
+	
+}
+input[type="submit"]{
+	padding:2%;
+background-color:light gray;
+	Border-radius:3px;
+	border:none;
+	outline:none;
+	Width:30%;
+	display:block;
+	margin:auto;
+	font:20px Os;
+	
+	
+	
+}
+input[type="submit"]:hover{
+	padding:2%;
+background-color:white;
+color:black;
+transition:background-color 0.4s linear,color 0.4s linear;
+	
+	
+	
+}
+
+input[type="checkbox"]{
+	
+
+	
+display:block;
+margin:auto;
+	
+	
+}
+.home-signin-block label p{
+font:16px Os;
+color:white;
+margin:3% auto;
+text-align:center;
+
+
+
+}
+.optionblock {
+	margin:2%;
+}
+.optionblock div{
+	
+width:80px;
+height:80px;
+background-color:light gray;	
+border-radius:10px;
+box-shadow:0 0 3px black;
+margin:1%;
+	
+}
+.optionblock div h2{
+	
+font:bold 20px ralewayregular;
+color:white;
+text-align:center;
+}
+.optionblock div p{
+	margin:5%;
+font:bold 15px ralewayregular;
+color:white;
+text-align:center;
+}
+.home-signin-block a{
+font:15px Os;
+color:white;
+
+text-align:center;
+
+
+
+
+}
+
+
+
+
+/*Layout design*/
+.container-home1,.container-home2,.container-home3,.container-home4{
+	width:90px;
+	height:90px;
+	background-color:transparent;
+	display:block;
+	overflow:hidden;
+	border-radius:200px;
+	box-sizing:border-box;
+	margin:2%;
+	
+}
+.container-home1 a{
+	
+    display:block;
+	padding-top:36%;
+	
+	background-color:#29063F;
+	height:100%;
+	width:100%;
+	
+	
+}
+.container-home2 a{
+    height:100%;
+	
+	display:block;
+	background-color:#03403E;
+	width:100%;
+	padding-top:36%;
+}
+.container-home2:hover,.container-home3:hover,.container-home1 a:hover,.container-home4 a:hover{
+	background-color:red;
+	transition:background-color 0.5s;
+	}
+.container-home3 a{
+	display:block;
+	background-color:#3F0629;
+	height:100%;
+	width:100%;
+	padding-top:36%;
+	
+}
+.container-home4 a{
+
+	display:block;
+	background-color:#9B0057;
+	height:100%;
+	width:100%;
+	padding-top:36%;
+}
+.MoreOptionhome  a {
+font: 16px Os;
+color:white;
+text-align:center;
+text-decoration:none;
+}
+summary a {
+
+text-decoration:none;
+}
+/*Special design*/
+#home-more-button {
+	position:fixed;
+	top:10px;
+	left:10px;
+	font:20px Os;
+
+	cursor:pointer;
+	
+}
+#home-more-button img {
+	width:40%;
+
+
+}
+.home-signin-block{
+	width:90vw;
+	height:50%;
+	display:block;
+	box-sizing:border-box;
+	background-color:black;
+	margin:2% 1% 2% 5%;
+	padding:25px;
+	border-radius:10px;
+}
+.home-signin-block h2{
+	font:30px Os;
+	color:White;
+	text-align:center;
+
+
+	
+}.home-signin-block p{
+	font:16px Os;
+	color:White;
+	text-align:center;	margin:2% 0% 5% 0%;
+	
+}
+
+.MoreOptionhome{
+	margin:5% 5% 7% 5%;
+	background:#f0f0f0;
+	padding:1%;
+    border-radius:10px;
+	
+}
+.MoreOptionhome  h2 {
+font:bold 30px raleway;
+color:black;
+text-align:justify;
+margin:10% 2% 0% 2%;
+}
+.MoreOptionhome>p {
+font:bold 16px raleway;
+color:black;
+text-align:justify;
+margin:2% 2% 5% 2%;
+}
+
+.MoreOptionhome4{
+	margin:7% 5%;
+	padding:1%;
+	
+
+	
+}
+.MoreOptionhome4  h2 {
+font:bold 40px raleway;
+color:black;
+text-align:justify;
+margin:10% 2% 0% 2%;
+}
+.MoreOptionhome4>p {
+font:bold 16px raleway;
+color:black;
+text-align:justify;
+margin:2% 2% 5% 2%;
+}
+.MoreOptionhome4  a {
+font: 16px Os;
+color:white;
+text-align:center;
+text-decoration:none;
+}
+
+.moresubimages img {
+	width:40px;
+	height:40px;
+	margin:1%;
+	outline:none;
+	border-radius:100px;
+	display:block;
+	margin:auto;
+	
+}
+.flex-box-row-home{
+	display:flex;
+	justify-content:space-evenly;
+	flex-flow:row nowrap;
+	align-items:center;
+}
+.MoreOptionhome2{
+	margin:5%;
+	padding:1%;
+	border-radius:10px;
+}
+.MoreOptionhome2  h2 {
+font:bold 30px raleway;
+color:black;
+text-align:right;
+margin:10%,auto;
+}
+.MoreOptionhome2>p {
+font:bold 16px raleway;
+color:black;
+text-align:right;
+margin:10%,auto;
+}
+#summarystyle p {
+font:bold 17px raleway;
+color:black;
+text-align:center;
+margin:10%,auto;
+}
+.MoreOptionhome2  a {
+font: 16px Os;
+color:white;
+text-align:center;
+text-decoration:none;
+}
+
+
+.MoreOptionhome2  summary{
+font: 20px Os;
+color:black;
+text-align:center;
+outline:none;
+}
+.MoreOptionhome3  summary{
+font: 20px Os;
+color:black;
+text-align:center;
+outline:none;
+}
+.MoreOptionhome4 summary {
+font: 20px Os;
+color:black;
+text-align:center;
+outline:none;
+}
+.MoreOptionhome summary {
+font: 20px Os;
+color:black;
+text-align:center;
+outline:none;
+}
+
+summary {
+font:bold 20px raleway;
+color:black;
+text-align:center;
+outline:none;
+}
+details p{
+font:bold 17px raleway;
+color:black;
+text-align:center;
+margin:2%;
+}
+
+
+
+
+
+.MoreOptionhome3{
+	margin:5%;
+	padding:1%;
+	background:#f0f0f0;
+	border-radius:10px;
+}
+.MoreOptionhome3  h2 {
+font:bold 40px raleway;
+color:black;
+text-align:center;
+margin:5% 2% 0% 2%;
+}
+.MoreOptionhome3>p {
+font:bold 18px raleway;
+color:black;
+text-align:center;
+margin:2% 2% 5% 2%;
+}
+.MoreOptionhome3  a {
+font: 16px Os;
+color:white;
+text-align:center;
+text-decoration:none;
+}
+
+footer  p {
+font:bold 15px raleway;
+color:black;
+text-align:center;
+margin:10%,auto;
+}	
+#goback-white{
+	color:black;
+	font: bold 20px raleway;
+margin:2%;
+	
+	cursor:pointer;
+}
+	
+ 
+
+
+/*Dropdown design*/
+.dropdesign{
+	
+position:fixed;
+overflow:auto;
+background-color:white;
+box-shadow:0px 2px 3px lightgray;
+width:100%;
+height:0%;
+z-index:2;
+resize:none;
+}
+
+
+
+.dropdesign h2{
+	text-align:center;
+	color:black;
+	font:bold 60px Os;
+margin-bottom:10px;
+	
+}
+.dropdesign h3{
+	text-align:center;
+	color:black;
+	font:6vw ralewayregular;
+	
+}
+.dropdesign p{
+	text-align:Center;
+	color:black;
+	font:bold 16px robotothin;
+	margin:5%;
+	
+}
+.dropdesign  a {
+font:bold 16px ralewayregular;
+color:black;
+display:block;
+text-align:center;
+margin:2% 0;
+text-decoration:none;
+}
+noscript{
+font:bold 10px raleway;
+color:black;
+text-align:center;
+margin:10%,auto;
+}
+
+.submore {
+display:none;
+	
+	
+}
+
+
+.optionlist {
+	overflow:auto;
+	height:400px;
+	width:20%;
+	background-color:black;
+	box-shadow:0 0 1px  black;
+	border-radius:10px;
+	
+
+}
+#searchbar{
+	opacity:0.5; width:50%; position:absolute; left:15%; top:-0.5%;border-radius:3px; box-shadow:0 0 3px #dddddd;
+  max-height:100%;
+}
+#searchbar:hover{
+	opacity:1;
+    overflow:auto;
+	transition:opacity 0.3s ease-in;
+	
+	}
+
+.faq {
+margin:2%;
+}	
+.faq summary{
+	
+	font:bold 18px ralewayregular;
+	text-align:left;
+}
+.faq p {
+	text-align:left;
+	font-size:14px;
+margin:1%;
+}
+#mobileedit {
+	font-size:60px;
+	text-align:center;
+	
+}
+
+/*Selection*/
+::-moz-selection { /* Code for Firefox */
+  color: #efefef;
+  background: black;
+}
+
+::selection {
+   color: #efefef;
+  background: black;
+}
+
+/*POP ADS*/
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+button:active{
+	border:none;
+	outline:none;
+}
+
+/* Float cancel and delete buttons and add an equal width */
+.cancelbtn, .deletebtn {
+  float: left;
+  width: 50%;
+
+}
+
+/* Add a color to the cancel button */
+.cancelbtn {
+	 font-family:ralewayregular;
+  background-color: purple;
+  font-size:16px;
+  color: white;
+}
+
+/* Add a color to the delete button */
+.deletebtn {
+	 font-family:ralewayregular;
+	 font-size:16px;
+  background-color: black;
+}
+
+/* Add padding and center-align text to the container */
+.container {
+  padding: 30px;
+  text-align: center;
+  z-index:10;
+
+  
+}
+
+.containerstyle{
+	overflow:hidden;
+
+	
+}
+#mainfront{
+	width:700px;
+
+	
+	
+}
+#reviseedit {
+	text-align:center;
+	font-size:50px;
+}
+#slider{
+	width:500%;
+
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+.overflowpage{
+	overflow:auto;
+	height:600px;
+}
+.imageblock{
+	height:100%;
+	width:100%
+}
+.fundtext p{
+font-size:16px;	
+
+text-align:center;
+
+}
+.sideblock{
+
+	margin:1%;
+	width:400px;
+	height:170px;
+}
+.sideblock p{
+text-align:center;
+}
+.flex-row{
+	align-content:center;
+	align-items:center;
+	justify-content:space-evenly;
+	display:flex;
+	flex-flow:row nowrap;
+}
+
+#modalimage{
+	
+ height:100px;
+ width:100px;
+}
+
+/* The Modal (background) */
+.modal {
+  font-family:ralewayregular;	
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgba(0,0,0, 0.5);
+  padding-top: 50px;
+  opacity:0;
+}
+
+/* Modal Content/Box */
+.modal-content {
+	  border-radius:20px;
+  background-color: #fefefe;
+  margin: 1% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  padding:3%;
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Modal Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 5px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and delete button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .deletebtn {
+     width: 100%;
+  }
+}	
+
+#youtubeframe{
+width:97%;
+height:30%;
+}
+
+#donatebox {
+	display:none;
+}
+#donateholder {
+display:none; }
+#donatetext {
+text-align:left;}
+
+#donatebut {
+	margin:2%;
+}
+#donateheading{
+	margin-top:-5%;
+}
+.amazonpay {
+	 border-radius:6px;
+	margin:auto;
+	width:90% !important;
+	display:block;
+}

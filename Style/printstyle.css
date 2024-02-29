@@ -1,0 +1,496 @@
+/*This is the links*/
+@font-face {
+	font-family:robotothin;
+	src:url(Fontdesign/Basic/Roboto/Roboto-Thin.ttf);
+}
+@font-face {
+	font-family:raleway;
+	src:url(Fontdesign/Basic/raleway/Raleway-Thin.ttf);
+}
+@font-face {
+	font-family:Os;
+	src:url(Fontdesign/Basic/Os/OpenSans-Light.ttf);
+}
+
+
+@font-face {
+	font-family:ralewayregular;
+	src:url(Fontdesign/Basic/raleway/Raleway-Regular.ttf);
+}
+
+
+/*Body Design*/
+body {
+
+ margin:0px;
+ 
+
+ background-color:#fafafa;
+}
+body a{
+	cursor:pointer;
+}
+#GeneralBody {
+	
+	background-color:#fcfcfc;
+}
+
+
+
+
+
+
+
+/*Imagestyle*/
+.imagestyle1{
+	max-width:200px;
+	max-height:300px;	
+}
+
+
+
+
+
+
+
+
+
+
+.general {
+	
+	width:90%;
+}
+
+
+
+
+
+
+/*Grid and layouts*/
+.container-extra {
+	display:none
+}
+.container-extra2 {
+		display:none
+
+}
+.grid-layout-main{
+	
+
+display:grid;
+	
+grid-template-columns:4% 92% 4%;
+background-color:transparent;
+
+
+}
+.top-nav-main {
+	display:none;
+
+}
+
+
+}
+.side-nav-universal {
+display:none;
+
+
+
+}
+.side-nav-universal h2{
+display:none;
+}
+
+.side-nav-universal a {
+display:none;
+}
+
+
+.mainpage {
+	overflow-y:auto;
+	overflow-x:auto;
+	width:100%;
+	height:100%;
+	
+	
+}
+
+/*Table design*/
+
+.table-design {
+	width:80%;
+	height:30%;
+	display:table;
+	overflow-x:auto;
+}
+.table-design td,th {
+	width:20%;
+	padding:1%;
+	text-align:center;
+	font:bold 17px robotothin;
+	vertical-align:center;
+	border:2px solid;
+	
+}
+
+
+
+
+
+
+
+
+
+
+/*Pagenav*/
+
+.pagenav {
+	
+	display:none;
+}
+
+#mobilebutton {
+	
+	display:none;
+
+
+}
+
+
+
+
+
+
+
+
+/*Content design*/
+
+.Mainpage ul {
+	margin:0px;
+	padding:0px;
+	list-style-type:circle;	
+}
+.Mainpage li {
+	margin:5%;
+	font: bold 19px Os;
+	color:#32a852;	
+}
+.Mainpage figcaption {
+	
+	font:10px Os;
+}
+.Mainpage figure {
+	
+	margin:2%;
+}
+.Mainpage h4 {
+	font:  23px Os;
+	color:#9B0057;
+	word-spacing:1px;
+	
+}
+.Mainpage h3 {
+	font: bold 21px Os;
+	color:#0b4752;
+	word-spacing:1px;
+	
+}
+.Mainpage h5{
+	font: 30px Os;
+	color:#B90E77;
+	
+}
+.Mainpage h6{
+	font:bold 30px Os;
+	margin:7% 0%;
+	color:#95170D;	
+}
+.Mainpage h1{
+	font:bold 9vw robotothin;
+	margin:7% 0%;
+	color:#117384;	
+	text-shadow:0 0 1px gray;
+}
+.Mainpage img {
+	max-width:80%;
+}
+.Mainpage h2{
+	
+	font: bold 6vw ralewayregular;	
+}
+
+.Mainpage p {
+	font: bold 15px ralewayregular;
+	text-align:justify;
+	word-spacing:1px;
+	display:block;	
+}
+.Mainpage blockquote {
+	font:italic bold 16px Os;
+	color:#95170D;
+	word-spacing:1px;	
+}
+.Mainpage kbd {
+	font-size:15px ;
+	display:block;
+	line-height:30px;
+}
+.Mainpage samp{
+	font-size:20px;
+}
+.Mainpage pre{
+	font-size:5vw;
+	
+
+}
+.highlight {
+	font:bold 17px Os;
+	background-color:lightgray;
+	padding:3px;
+	border-radius:4px;
+}
+.Mainpage caption {
+	font:25px Os;
+}
+.Mainpage textarea {
+	width:100%;
+	Height:200px;
+	resize:vertical;
+	font:bold 15px ralewayregular;
+		color:#ff2222;
+	overflow:auto;
+	border:none;
+	outline:none;
+	border-radius:2px;
+		background-color:#f2f2f2;
+}
+
+.Mainpage iframe {
+	Width:100%;
+	height:200px;
+    border:none;
+	outline:none;
+	overflow:auto;
+	border-radius:2px;
+	background-color:#f2f2f2;
+	
+
+	
+}
+.Mainpage .runbut{
+padding:1% 2%;
+display:block;
+font:bold 18px ralewayregular;
+color:white;
+text-decoration:none;
+background-color:green;
+border-radius:2px;
+width:10%;
+margin:1% 0%;
+box-shadow:0 0 2px black;
+
+}
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Dropdown design*/
+.dropdesign{
+display:none;
+}
+.dropdesign a{
+display:none;
+}
+
+.dropdesign h2{
+	display:none;
+}
+.dropdesign h3{
+display:none;
+}
+.dropdesign p{
+	
+	display:none;
+	
+}
+
+
+
+
+
+
+/*Special design*/
+#motionball1{
+	width:50px;
+	height:50px;
+	animation: motionball1 20s;
+	animation-fill-mode:forwards;
+	
+}
+#goback-white{
+	color:white;
+	font: bold 18px raleway;
+	position:relative;
+	left:1%;
+	cursor:pointer;
+}
+#more {
+	cursor:pointer;
+}
+
+
+
+
+
+/*Footerdesign*/
+footer p{
+	font:15px Os;
+	text-align:center;
+
+}
+
+
+
+
+
+/*Special classes*/
+.login-more {
+	position:relative;
+	left:4%;
+}
+.flex-box-row{
+	display:flex;
+	justify-content:space-evenly;
+	flex-flow:row nowrap;
+}
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+.general h1 {
+	display:none;
+}
+.general h2 {
+display:none;
+	
+	
+}
+.general h3 {
+	display:none;
+	
+}
+.general h4 {
+	display:none;
+	
+}
+.general h5 {
+	display:none;
+}
+.general h6 {
+	display:none;
+}
+.general li {
+display:none;
+}.general ul {
+	display:none;
+}
+.general a {
+	display:none;
+}
+.general p {
+display:none;
+	
+}
+
+
+.noteparagraphred {
+	padding:1%;
+	background-color:#ffaaaa;
+	border-radius:10px;
+	margin:1%;
+}
+.noteparagraphgreen {
+	padding:1%;
+	background-color:#aaffaa;
+	margin:1%;
+	border-radius:10px;
+}
+
+.noteparagraphgray {
+	padding:1%;
+	background-color:#dedede;
+	margin:1%;
+	border-radius:10px;
+}
+
+
+
+
+
+
+.home-signin-block label p{
+display:none;
+}
+
+.home-signin-block a{
+display:none;
+}
+
+/*Special design*/
+#home-more-button {
+display:none;
+}
+.home-signin-block{
+display:none;
+}
+.home-signin-block h2{
+	display:none;
+}.home-signin-block p{
+	display:none;
+}

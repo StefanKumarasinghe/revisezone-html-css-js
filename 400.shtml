@@ -1,0 +1,40 @@
+<html lang="en-US">
+<head><meta charset="utf-8"><meta name='viewport' content='width=device-width initial-scale=1'>
+	<link href="Imagedata/Revisezone/Logo.png" rel="shortcut icon" type="x-icon/image" />
+	<title>Bad Request</title>
+	<link class="Style" href="https://revisezone.com/Style/Masterhome.css" media="screen and (min-width:1000px)" rel="stylesheet" />
+	<link class="Style" href="https://revisezone.com/Style/MasterhomeMobile.css" media="screen and (max-width:999px)" rel="stylesheet" />
+	<style>
+	body p{
+	font:15px ralewayregular;
+	}
+	body h1 {
+	font:100px raleway;
+	}
+	.flex-row{
+	justify-content:center;
+	height:100%;
+	align-content:center;
+	}
+	.flex-row div{
+
+	margin:2%;
+	}
+	</style>
+	
+</head>
+
+<body >
+<div class="flex-row">
+<h1 style="text-align: center;">400</h1>
+
+<div>
+<p style="text-align: center;">Oops. Bad Request..</p>
+
+<p style="text-align: center;"><a href="https://revisezone.com" style="text-decoration:none;">Go Back</a></p>
+
+<p style="text-align: center;">Revise Zone - Largest online learning platform!</p>
+</div>
+</div>
+</body>
+</html>
