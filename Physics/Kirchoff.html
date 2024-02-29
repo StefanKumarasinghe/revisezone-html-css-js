@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang ='en-US'>
+<head>
+<meta charset='utf-8'>
+<meta name='description' content="What are  Kirchoff's laws and why are they important? Learn how to tackle questions on potentiometer, potential difference, LDR, Ohm's law, diodes and more">
+<meta name='keywords' content="current,voltage,Kirchoff's laws,resistance,parallel resistance,series,potential divider,potentiometer,LDR,filament bulb graph,diode graph,pastpaers,cells">
+<meta name='author' content='MrWik'><link rel="apple-touch-icon" href="Imagedata/Revisezone/Logo.png"><meta name='theme-color' content='black'>
+<meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="shortcut icon" href="../../Imagedata/Revisezone/Logo.png" type="x-icon/image">
+<link class ="Style" rel='stylesheet' href='../../Style/Master.css' media ="screen and (min-width:1000px)">
+<link class ="Style" rel='stylesheet' href='../../Style/Mobile.css' media ="screen and (max-width:999px)">
+<link class ="Style" rel='stylesheet' href='../../Style/printstyle.css' media ="print">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-170507780-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-170507780-1');
+</script>
+
+<title>Internal Resistance, DC circuits & Kirchoff's  - Revise Zone</title>
+</head>
+<body onload="saved()">
+<div class="progress-container">
+   
+  </div>
+  
+  
+<div class="top-nav-main">
+<a href="../../home.html"title ="Home">Home</a>
+<a href="../Chemistry/Chemistry.html"title ="Chemistry"><abbr>Chemistry</abbr></a>
+<a href="../Cs/CS.html" title ="Computer science">CS</a>
+<a href="../Accounting/Introduction.html">Accounting</a>
+
+
+
+
+<div class="login-more">
+<a onclick="NightmodeOn()" id="Mode">Night</a>
+<a onclick="More()" id="more">More</a>
+
+</div>
+</div>
+<div class="dropdesign">
+<span id="goback-white" onclick="Gobackdropdown()">&#10006;</span>
+<div class="flex-box-row">
+<div>
+<h2>Revise Now</h2>
+<h3>Cambridge AS levels</h3>
+<a href="../Cs/CS.html">Computer Science</a>
+<a href="../Chemistry/Chemistry.html">Chemistry</a>
+<a href="PhysicsReference.html">Reference</a>
+<a href="PhysicsEx.html">Questions</a>
+<h3>Programming and coding</h3>
+<a href="../LearningHtml/Introduction.html">Learn HTML</a>
+<a href="../SEO/SEO.html">Learn SEO</a>
+
+
+
+
+
+</div>
+<div>
+<h2>More</h2>
+<h3>What do you want<br> to do?</h3>
+
+<a href="../Other/ContactUs.html">Contact us</a>
+<a href="../Other/Donate.html">Donate</a>
+<a href="../Other/Support.html">Support</a>
+<a href="../Other/Services.html">More Services</a>
+<a href="https://twitter.com/MrWiscus">Send a tweet</a>
+<a href="../../home.html#socialmedia">Social media</a>
+
+
+
+</div>
+</div>
+</div>
+
+<div class="spacing"></div>
+
+
+<div class="grid-layout-main">
+<div>
+<div class="side-nav-universal">
+<br>
+<br>
+<br>
+
+<h2>Physics AS</h2>
+
+<a href="Physics.html"title="Introduction">Introduction</a>
+<a href="PhysicalQuantities.html"title="Base quantities and more">Physical Quantities & Base units</a>
+<a href="Vectors.html" title="Vectors and scalars">Vectors & Scalars </a>
+<a href="Kinematics.html"title="Kinematics">Kinematics</a>
+<a href="Pressure.html"title="Pressure and density">Pressure & Density</a>
+<a href="Dynamics.html"title="Dynamics">Dynamics</a>
+<a href="Momentum.html"title="Momentum">Momentum</a>
+ 
+<a href="Energy.html"title="Energy">Energy, power & efficiency</a>
+<a href="Deformation.html"title="Deformations">Deformation of solids</a>
+<a href="Waves.html"Title="Introduction">Waves</a>
+<a href="Superposition.html"title="Superposition">Superposition</a>
+<a href="Stationarywaves.html"title="Stationary waves">Stationary waves</a>
+<a href="ElectricFields.html"title="Electric fields">Electric fields</a>
+<a href="Electricity.html"title="Electricity">Electricity</a>
+<a href="Kirchoff.html"title="More">Circuits & Kirchoff's laws</a>
+<a href="Radioactivity.html"title="Radioactivity">Radioactive Physics</a>
+<a href="PracticalAS.html"title="As practical">AS Practical</a><a href="paper5.html"title="Paper 5">Paper 5</a>
+<br>
+<h2>More</h2>
+<a href="PhysicsReference.html"title="Radioactivity">Reference</a>
+<a href="PhysicsEx.html"title="As practical">Pastpaper Questions</a>
+</div>
+</div>
+<div>
+<div class="Mainpage">
+<br><br><br><br>
+<span  onclick="Mobilebut()"  id = "mobilebutton"><img alt="more topic chapters"  src="../../Imagedata/Revisezone/morecontent.png"/></span>
+
+
+<div>
+<div class="pagenav">
+<a href="Electricity.html">Back</a>
+<a href="Radioactivity.html">Next</a>
+</div>
+
+<h1>DC Circuits & Kirchoff's Laws</h1>
+<br id="reference98">
+<h2>Kirchoff's 1st Law</h2>
+<img src="../../Imagedata/Physics/Kirchoffcurrent.png"  alt="This is kirchoff's first law where current is conserved">
+<h3>The total current entering a point must be equal to the total current leaving at the same point</h3>
+<p>This Law uses the law of conservation of charge</p>
+<p>So actually current splits when it passes through a junction. The less resistance path way has the greatest current</p>
+<br id="reference99">
+<h2>Kirchoff's 2nd Law</h2>
+<img src="../../Imagedata/Physics/Kirchoffvoltage.jpg"alt="This is kirchoff's second law where the total emf in a loop is equal to the total PD of the same loop">
+<h3>The Sum of the EMF in a loop must be equal to the Sum of potential differences across the same loop.</h3>
+<p>So this follows the law of conservation of energy as the energy gained must be equal to the energy lost</p>
+<p>The direction of the Emf of the battery does matter.</p>
+<p>If 2 or more batteries are in a loop, we need to find the sum of the Emfs (taking the sign into account)</p>
+<p>Actually that missing P.d is occupied by the lower Emf battery and it charges the lower Emf battery. So the resultant Emf is the Emf to be occupied by the external circuits</p>
+<p>Now by applying the 2nd law we know that the P.d sum must equal to the Sum of the emfs</p>
+<h4>V = IR</h4>
+<p>We need to find the current which passes through a particular resistance. This is done by using Kirchoff's first law.</p>
+<p>After finding the P.D occupied by the total resistance across a single loop, this must equal to the sum of emfs</p>
+<p>For a simple circuit which is in series, we know that current remains constant!</p>
+<h4>EMF = IR<sub>1</sub> + IR<sub>2</sub></h4>
+<p>However, when there are many loops we get different currents</p>
+<h2>How to find power</h2>
+<p>Power is always calculated the same way. If we need to find the power released by the circuit, we use I<sup>2</sup>R</p>
+<p> If we want to calculate the power of the battery, we use the EMF of that particular battery * the current it passes through</p>
+<h4>Power = VI</h4>
+<p>Why don't we use the net Emf? This is because, we find this net Emf to find the Emf across the external circuit only, Not including the batteries.</p>
+<p>Actually the larger battery supplies it full power. However, the Emf of the second battery, which is lower than the 1st becomes a potential difference as part of the bigger Emf. In other words, the larger Emf is used to charge the smaller battery!</p>
+<p>If both Batteries are in the same direction they provide a greater Emf and there is no charging happening</p>
+<img src="../../Imagedata/Physics/kirchoffex.jpg" alt="A 9702 Physics Past paper worked example question for kirchoff's law">
+<br id="reference100">
+<h2>Resistance Derivation</h2>
+<li>Resistance in series </li>
+<h4>R<sub>Total</sub> = R<sub>1</sub> + R<sub>2</sub></h4>
+<p>This derivation uses Kirchoff's 2nd law as the voltage is divided in a series circuit</p>
+<h4>IR<sub>Total</sub> = IR<sub>1</sub> + IR<sub>2</sub></h4>
+<p>As current is constant, we can cancel it</p>
+<h4>R<sub>Total</sub> = R<sub>1</sub> + R<sub>2</sub></h4>
+<li>Resistance in parallel</li>
+<h4>1/R<sub>Total</sub> = 1/R<sub>1</sub> + 1/R<sub>2</sub></h4>
+<p>This uses the Kirchoff's first law</p>
+<p>So in this, current splits in parallel but, voltage is constant</p>
+<h4>I<sub>Total</sub> = I<sub>1</sub> + I<sub>2</sub></h4>
+<h4>V/R<sub>Total</sub> = V/R<sub>1</sub> + V/R<sub>2</sub></h4>
+<p> So we cancel out the voltage</p>
+<h4>1/R<sub>Total</sub> = 1/R<sub>1</sub> + 1/R<sub>2</sub></h4>
+<p>Both derivation uses the conservation of charge</p>
+<p>This is because, in the first derivation, current remains constant and in the second derivation, current splits but the total remains constant</p>
+<br id="reference101">
+<h2>Internal Resistance</h2>
+<p>Usually a cell has its own resistance and thus occupies some of the EMF provided by the cell</p>
+<h4>EMF = Lost Voltage + Terminal Voltage</h4>
+<p>The Terminal Voltage is the voltage in the external circuit. So when the internal resistance is greater. The greater the Lost Volts or Voltage occupied by the internal resistance.</p>
+<p>If we want to reduce the lost volts and increase the voltage supplied to the external resistance. The battery must contain a lower internal resistance or the current in the circuit must decrease. This is done by increasing the resistance of the external circuit</p>
+<h4>IR<sub>Total</sub> = IR<sub>Internal resistance</sub> + IR<sub>External resistance</sub></h4>
+<p>Current remains constant in a series circuit</p>
+<p>We just assume that the internal resistance acts as a normal fixed resistance</p>
+<br id="reference102">
+<h2>Potential divider</h2>
+<p>So as we discussed:</p>
+<h4>V &prop; R</h4>
+<p>Greater the resistance, greater the potential difference it occupies.</p>
+<p>And we also discussed how to find the Voltage occupied by the resistance compared to the total resistance in a circuit.</p>
+<img src="../../Imagedata/Physics/potentialdivider.jpg" alt="This a potential divider and this is to calculate how voltage is split in a potential difference">
+<h4>V<sub>Out</sub> = V<sub>In</sub> * R<sub>1</sub>/R<sub>1</sub>+R<sub>2</sub></h4>
+<p>So we find the ratio of the particular resistance compared to the whole resistance of the circuit.</p>
+<p>This could be applied for internal resistance to find lost volts</p>
+<br id="reference103">
+<h2>Potentiometer</h2>
+<p>In this, we need to know some new terms:</p>
+<ul>
+<li>Driver cell</li>
+<p>This is known as the main cell in the circuit</p>
+<li>Unknown cell</li>
+<p>This is the cell which the emf is to be found or compared</p>
+</ul>
+<p>This is an example of a potentiometer circuit</p>
+<img src="../../Imagedata/Physics/potentiometerex.jpg" alt="A diagram of a potentiometer and how it is used to compare or find the emf of the unknown cell">
+<p>Notice how the unknown cell is in the opposite direction of the driver cell.</p>
+<p>You will need to know this! Usually wires are assumed to have 0 resistance. However, Wire AB contains a significant amount of resistance.</p>
+<p>Also the Resistance of the wire increases linearly when the Length of AC increases.</p>
+<p>So we know that when the resistance increases the Voltage occupied from the driver cell increases and so for a certain length of AC, the Voltage occupied from the driver cell is equal to the unknown cell EMF</p>
+<p>Because the batteries are in the opposite direction and the Voltage occupied from the driver cell is equal to the EMF of the unknown cell, they cancel out each other giving a net Emf of 0V and so the galvonometer or the ammeter will show a zero reading and there is no potential difference or current in the smaller circuit.</p>
+<p>So For most questions. There are no other resistance or internal resistance. And Assuming all the potential difference is occupied by the Wire AB, the ratio of AC and AB will tell us how much Voltage is occupied.</p>
+<h4>EMF<sub>unknown</sub> = EMF<sub>Driver Cell</sub> * AC/AB</h4>
+<p>This only happens when the ammeter is zero</p>
+<br>
+<p>However, some question do have internal resistance and a fixed resistor. Like the one below</p>
+<img src="../../Imagedata/Physics/potentiometer.jpg" alt="potentiometer with internal resistance and using a voltmeter or to compare emfs">
+<p>In this case, it becomes a bit complicated</p>
+<p>The Unknown cells internal resistance can be neglected. This is because, when the current is zero in the smaller cirucit. The lost volts is Zero</p>
+<p>Due to this internal resistance in the driver cell, we place a voltmeter Across the Wire AB (The full Wire). So then we can apply this equation again. However, keep in mind that when the Contacts is moved from A to B, The voltmeter reading changes</p>
+<h4>EMF<sub>unknown</sub> = Voltage<sub>voltmeter</sub> * AD/AB</h4>
+<br>
+<p>This also could be used to compare two or more Unknown cells to see which one has the greater EMF</p>
+<img src="../../Imagedata/Physics/Emfcompare.png" alt=" this diagram shows a potentiometer as an emf compare. greater length means greater voltage occupied so greater emf to cancel!">
+<p>Which ever uses the greatest length of wire to make the ammeter zero has a higher EMF. This is because, more Voltage must be occupied in order to cancel the unknown cell EMF</p>
+<h1>DC Circuits</h1>
+<p>You will need to know some of the components in common circuits and their properties</p>
+<br id="reference104">
+<h2>LDR</h2>
+<p>This is known as the light dependant resistor</p>
+<p>The resistance of the component decreases when the light intensity increases and so the current flow of the circuit increases and also the voltage occupied by the component decreases</p>
+<p>This is used in potential dividers</p>
+<br id="reference105">
+<h2>Thermistor</h2>
+<p>We usually talk about the negative Thermistor cofficient(NTC)</p>
+<p>The resistance of the component decreases when the temperature increases and so the current flow increases and the voltage occupied decreases</p>
+<br id="reference106">
+<h2>Ohmic Device</h2>
+
+<p>An Ohmic device is a device which follows Ohm's law and we need to know the graph</p>
+<img src="../../Imagedata/Physics/ohmicgraph.gif" alt="The ohmic device graph is a straight line where current is directly proportional to pd">
+<br id="reference107">
+<h2>Diode</h2>
+
+<p>A diode is a component which only allows current pass in one direction. It has a low resistance when the current flows in forward-bias.</p>
+<p>When the current is reversed this is known as the reverse bias and the resistance is almost infinity</p>
+<p>When the current flows in forward bias and reaches a certain voltage known as the key value (0.6v) the resistance decreases exponentially</p>
+<img src="../../Imagedata/Physics/diodegraph.png" alt="A diode graph which the voltage increases exponentially">
+<figcaption>The resistance decreases exponentially in forward bias when the voltage increases. Sometimes the graph seems to be a straight line but, it is actually exponential</figcaption>
+<br id="reference108">
+<h2>Filament Bulb</h2>
+<img src="../../Imagedata/Physics/filament.gif" alt="A filament graph where it follows an s shape">
+<p>When the current flow increases, the temperature increases and so the resistance increases and causes the graph to curve</p>
+<p>This graph is current against voltage so the gradient is 1/r</p>
+<p>So when the gradient decreases, it means the resistance is increasing</p>
+<p>Easy way to remember is that this is like a S curve graph</p>
+
+
+<p>
+<br>
+<br>
+<div class="pagenav">
+<a href="Electricity.html">Back</a>
+<a href="Radioactivity.html">Next</a>
+</div>
+<br>
+<h2>Recommended</h2>
+        <p>These are things you might like. Clicking these ads can help us improve our free services in the future...</p>
+            <div id="container-2a219c05affd07270c6855c66c9456d4" style="border-radius:20px;"></div>
+        
+<br>
+
+<div class="general container-extra flex-box-row">
+<div>
+<h5>End of Chapter Questions</h5>
+<h6>Collection of Topic Questions to understand the topic more.</h6>
+<br>
+<a style="padding:10px; background-color:#4ea654; border-radius:3px; font:17px Os; color:#e8e4e3;  text-decoration:none;" href="../../Filedata/Questions/Physics/KirchoffTheory1.pdf" target="_blank" >Try out</a>
+</div>
+</div>
+<br>
+<br>
+<div class="general container-extra2 flex-box-row">
+<div>
+<h5>End of Chapter Videos</h5>
+<h6>Collection of Videos to Support Your Understanding.</h6>
+<h4>Remember these videos are handpicked by me and I feel these are the best ones out there. But I constantly update this list for each chapter. The Youtubers are more than welcome to contact me.</h4>
+<h4>Also, don't forget to Subscribe to our Youtube channel - MrWik</h4>
+<br>
+<a style="padding:10px; background-color:#4ea654; border-radius:3px; font:17px Os; color:#e8e4e3; text-decoration:none; " href="https://www.Youtube.com/watch?v=MbSfWN9KlkE&list=PLfh04WZ4q7nUrjczRpXtp7ftFKbsOly-1" target="blank" >Watch</a>
+</div>
+</div>
+</div>
+</div>
+<br><br>
+<footer><p>Revisezone.com Copyright 2020</p>
+</footer>
+</div>
+</div>
+</div>
+<script src="../../WebScript/Main-script.js">
+</script>
+</body></html>
